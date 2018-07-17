@@ -17,6 +17,7 @@ Class Sessions:  14 classes, 7 labs
 ## Prerequisites:  
 
 MOB 1.1 <br>
+MOB 1.2 <br>
 
 ## Learning Objectives or Competencies
 
