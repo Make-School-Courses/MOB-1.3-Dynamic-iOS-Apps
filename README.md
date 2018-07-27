@@ -1,6 +1,6 @@
 # Dynamic iOS Apps
 
-## Course Description 
+## Course Description
 
 This course will introduce you to the basics of building an iOS app in Swift. We will cover topics like autolayout, uikit, etc.
 
@@ -12,7 +12,7 @@ Total Out-of-Class Hours: 75 hours <br>
 Total Hours: 112.5 hours <br>
 Units:  3 units <br>
 Delivery Method:  Residential <br>
-Class Sessions:  14 classes, 7 labs 
+Class Sessions:  14 classes, 7 labs
 
 ## Prerequisites:  
 
@@ -24,7 +24,7 @@ MOB 1.2 <br>
 Students by the end of the course will be able to ...
 
 1. Understand the relationship between functions and closures
-1. Use closures in existing swift functions like map, filter, sort 
+1. Use closures in existing swift functions like map, filter, sort
 1. Use callbacks to pass information between views/objects
 1. Use delegation to pass information between views/objects
 1. Identify and use the target-action communication pattern in UIKit code
@@ -35,20 +35,42 @@ Students by the end of the course will be able to ...
 
 Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
 
-1. Lesson Title
-    - **Before Class**
-    - **Class Topic**
+1. Introduction to building dynamic iOS applications
+    - **Building Dynamic iOS Applications**
+1. Functions & Closures
+    - **What is a closures**
+      - What are functions?
+      - Relationship between functions and closures
+      - Escaping and Non-escaping closures
+      - Use cases of closures
+      - Drawbacks for using closures
     - **In Class Activities**
     - **After Class**
-1. Lesson Title
-    - **Class Topic**
+1. Callbacks
+    - **Using closures and callbacks**
+      - Using callbacks for networking
+      - Using callbacks for long arbitrary running tasks
     - **In Class Activities**
-    - **After Class**
-1. Lesson Title
-    - **Class Topic**
+      - Networking with closures
+      - Notifying after long running tasks with closures
+1. App Build-Out with Closures
+    - **Implementing Closures**
+      - Applying closures to problem solving
+      - Identify opportunities for closures in code
     - **In Class Activities**
-    - **After Class**
-
+      - Build with closures
+1. Protocols & Delegation
+    - **Using protocols to define contracts**
+      - Construct and use protocols to define 'contracts' in code
+      - Describe the requirements of a protocol
+      - Identify delegation in UIKit
+    - **In Class Activities**
+      - Diagram delegation between two views/viewcontrollers
+1. Target-Action
+    - **Using Target Action**
+      -
+    - **In Class Activities**
+      - Diagram delegation between two views/viewcontrollers
 ## Tutorials & Projects
 
 - [Mood Tracker Tutorial]()
