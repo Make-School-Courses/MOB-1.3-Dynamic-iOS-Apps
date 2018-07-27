@@ -68,14 +68,28 @@ Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
       - Diagram delegation between two views/viewcontrollers
 1. Target-Action
     - **Using Target Action**
-      -
     - **In Class Activities**
       - Diagram delegation between two views/viewcontrollers
+1. Memory Management in Swift
+    - **Identify and Use Memory Management techniques**
+      - Retain cycle
+      - ARC
+      - Strong/Weak/Unowned reference
+      - Allocation/Deallocation of memory
+    - **In Class Activities**
+      - Pair and diagram a object's relationship with references
+      - Pair and diagram a retain cycle
+      - Complete ARC playground
 ## Tutorials & Projects
 
-- [Mood Tracker Tutorial]()
-- [Tutorial with delegates/closures 2]()
+Tutorials:
+
+- [Tutorial with delegates/closures]()
 - [Build an App with Communication Patterns Project]()
+
+Projects:
+
+- [Mood Tracker](/project-mood-tracker)
 
 ## Evaluation
 
