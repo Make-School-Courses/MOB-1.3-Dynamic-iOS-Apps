@@ -71,15 +71,16 @@ Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
     - **In Class Activities**
       - Diagram delegation between two views/viewcontrollers
 1. Memory Management in Swift
-    - **Identify and Use Memory Management techniques**
-      - Retain cycle
-      - ARC
+    - **Memory Management**
+      - Automatic Reference Counting(ARC)
       - Strong/Weak/Unowned reference
       - Allocation/Deallocation of memory
     - **In Class Activities**
       - Pair and diagram a object's relationship with references
       - Pair and diagram a retain cycle
       - Complete ARC playground
+    - **After Class**
+
 ## Tutorials & Projects
 
 Tutorials:
