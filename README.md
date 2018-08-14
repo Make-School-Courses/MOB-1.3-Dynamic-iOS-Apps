@@ -2,7 +2,7 @@
 
 ## Course Description
 
-This course will introduce you to the basics of building an iOS app in Swift. We will cover topics like autolayout, uikit, etc.
+This course covers the programming concepts needed to create dynamic iOS applications that can respond to user events.  Key concepts include closures, callbacks and delegations.  Students will understand how these constructs work and how they are used to pass information between views and objects.  Common communication patterns and roles will also be explored.
 
 ## Course Specifics
 
@@ -16,7 +16,6 @@ Class Sessions:  14 classes, 7 labs
 
 ## Prerequisites:  
 
-MOB 1.1 <br>
 MOB 1.2 <br>
 
 ## Learning Objectives or Competencies
