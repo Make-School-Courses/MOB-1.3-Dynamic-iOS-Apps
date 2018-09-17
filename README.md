@@ -2,7 +2,7 @@
 
 ## Course Description
 
-This course covers the programming concepts needed to create dynamic iOS applications that can respond to user events.  Key concepts include closures, callbacks and delegations.  Students will understand how these constructs work and how they are used to pass information between views and objects.  Common communication patterns and roles will also be explored.
+This course covers the programming concepts needed to create dynamic iOS applications that can respond to user events. Key concepts include closures, callbacks and delegations. Students will understand how these constructs work and how they are used to pass information between views and objects. Common communication patterns and roles will also be explored. Students will also learn how to fetch and parse information from the internet through APIs. They will interact with public API's with and without authentication, make network requests in iOS using native Swift tools, model a networking layer in iOS, and parse a JSON network response using native Swift tools.
 
 ## Course Specifics
 
@@ -17,6 +17,7 @@ Class Sessions:  14 classes, 7 labs
 ## Prerequisites:  
 
 MOB 1.2 <br>
+BEW 1.1 <br>
 
 ## Learning Objectives or Competencies
 
@@ -27,24 +28,29 @@ Students by the end of the course will be able to ...
 1. Use callbacks to pass information between views/objects
 1. Use delegation to pass information between views/objects
 1. Identify and use the target-action communication pattern in UIKit code
-1. Identify the role (NS)Notification in transferring information in an iOS app
-1. Identify the main methods of communication in iOS Apps
+1. Identify and use (NS)Notification in transferring information in an iOS app
+1. Understand how memory management works in Swift
+1. Build apps that fetch and parse data from the internet
+1. Interact with public API's with or without authentication
+1. Make a network request in iOS using native Swift tools
+1. Model a networking layer in iOS
+1. Parse a JSON network response using native Swift tools
 
 ## Lessons
 
-Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
+Should be ~12 planned lessons (7 weeks x 2 meetings per week -~1 holiday -~1 workshop)
 
-1. Introduction to building dynamic iOS applications
-    - **Building Dynamic iOS Applications**
 1. Functions & Closures
-    - **What is a closures**
+    - **Building Dynamic iOS Applications**
+      - Introduction to building dynamic iOS applications
+    - **What is a closure?**
       - What are functions?
       - Relationship between functions and closures
       - Escaping and Non-escaping closures
       - Use cases of closures
       - Drawbacks for using closures
-    - **In Class Activities**
     - **After Class**
+      - Tutorial on Functions & Closures
 1. Callbacks
     - **Using closures and callbacks**
       - Using callbacks for networking
@@ -52,12 +58,6 @@ Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
     - **In Class Activities**
       - Networking with closures
       - Notifying after long running tasks with closures
-1. App Build-Out with Closures
-    - **Implementing Closures**
-      - Applying closures to problem solving
-      - Identify opportunities for closures in code
-    - **In Class Activities**
-      - Build with closures
 1. Protocols & Delegation
     - **Using protocols to define contracts**
       - Construct and use protocols to define 'contracts' in code
@@ -79,17 +79,43 @@ Should be ~13 planned lessons (7 weeks x 2 meetings per week -~1 holiday)
       - Pair and diagram a retain cycle
       - Complete ARC playground
     - **After Class**
+1. Making Network Requests with URLSession
+    - **URLSession**
+    - **In Class Activities**
+    - **After Class**
+1. Making Authenticated Network Requests
+    - **Authentication**
+    - **In Class Activities**
+    - **After Class**
+1. Building a networking domain in iOS
+    - **Modeling a networking layer**
+    - **In Class Activities**      
+    - **After Class**
+1. JSON
+    - **Parsing JSON**
+    - **In Class Activities**      
+    - **After Class**
+1. Alamofire
+    - **Alamofire**
+    - **In Class Activities**      
+    - **After Class**
+1. Working with images from the web
+    - **URLSession**
+    - **In Class Activities**      
+    - **After Class**
+1. Workshop class
+    - **In Class Activities**      
+    - **After Class**  
 
 ## Tutorials & Projects
 
 Tutorials:
 
-- [Tutorial with delegates/closures]()
-- [Build an App with Communication Patterns Project]()
-
-Projects:
-
-- [Mood Tracker](/project-mood-tracker)
+- [Tutorial with Functions & Closures]()
+- [App with Communication Patterns]()
+- [Product Hunt Tutorial]()
+- [Intermediate Networking and API with authentication Tutorial]()
+- [Alamofire Tutorial]()
 
 ## Evaluation
 
