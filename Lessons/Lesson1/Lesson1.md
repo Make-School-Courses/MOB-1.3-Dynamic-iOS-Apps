@@ -29,13 +29,13 @@ You probably have already used closures in your apps by now without noticing or 
 
 - Apple in 2019 - Discussion time<br>
 [Letter from Tim Cook to Apple investors](https://www.apple.com/newsroom/2019/01/letter-from-tim-cook-to-apple-investors/)<br>
-**Q:** What's the current situation in China?
+**Q:** What's the current situation in China?<br>
 **Q:** How often are people upgrading their iPhones?
 
 ## What is a Closure? (15 min)
 
 Apple's definition:<br>
-<b>"Closures are self-contained blocks of functionality that can be passed around and used in your code."
+**"Closures are self-contained blocks of functionality that can be passed around and used in your code."**
 
 In essence, a closure is a block of code that you can assign to a variable or constant. Then pass it around in your code and execute its content later somewhere else.
 
