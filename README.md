@@ -29,71 +29,46 @@ Students by the end of the course will be able to ...
 
 1. Understand and use closures
 1. Use callbacks and delegation to pass information between views/objects
-1. Identify and use the target-action communication pattern in UIKit code
-1. Identify and use NSNotification in transferring information in an iOS app
+1. Identify and use different communication pattern in iOS
 1. Understand how memory management works in Swift
 1. Interact with public APIs with or without authentication
-1. Make a network request in iOS using a networking layer
+1. Make a network request in iOS using a networking layer and library alternatives
 1. Parse a JSON network response using native Swift tools
 
 ## Schedule
 ---
-### M/W Template
-**Course Dates:** Monday, January 21 – Wednesday, March 6, 2019 (7 weeks)
-
-**Class Times:** Monday and Wednesday at 3:30–5:20pm (10 class sessions)
-
-| Class |          Date          |                 Topics                  |
-|:-----:|:----------------------:|:---------------------------------------:|
-|  -  | Monday, January 21             | **MLK Jr. Day** |
-|  1 | Wednesday, January 23    | [Lesson 1] |
-|  2 | Monday, January 28             | [Lesson 2] |
-|  3 |  Wednesday, January 30             | [Lesson 3] |
-|  4 | Monday, February 4             | [Lesson 4] |
-|  5 |  Wednesday, February 6             | [Lesson 5] |
-|  6 | Monday, February 11             | [Lesson 6] |
-|  7 |  Wednesday, February 13            | [Lesson 7] |
-|  -  | Monday, February 18             | **President's Day (Observed)** |
-|  8  | **Tuesday, February 19**             | [Lesson 8] |
-|  9 |  Wednesday, February 20            | [Lesson 9] |
-|  10 | Monday, February 25             | [Lesson 10] |
-|  11 |  Wednesday, February 27            | [Lesson 11] |
-|  12 | Monday, March 4             | Final Class (presentations, etc) |
-|  13 |  Wednesday, March 6            | Final Exams/Presentations |
-
-### Tu/Th Template
 **Course Dates:** Tuesday, January 22 – Thursday, March 7, 2019 (7 weeks)
 
 **Class Times:** Tuesday and Thursday at 3:30–5:20pm (12 class sessions)
 
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
-|  1 |  Tuesday, January 22              | [Lesson 1] |
-|  2 | Thursday, January 24             | [Lesson 2] |
-|  3 |  Tuesday, January 29             | [Lesson 3] |
-|  4 | Thursday, January 31             | [Lesson 4] |
-|  5 |  Tuesday, February 5             | [Lesson 5] |
-|  6 | Thursday, February 7             | [Lesson 6] |
-|  7 |  Tuesday, February 12             | [Lesson 7] |
-|  8 | Thursday, February 14             | [Lesson 8] |
+|  1 |  Tuesday, January 22              | [Functions and Closures] |
+|  2 | Thursday, January 24             | [Closures and callbacks] |
+|  3 |  Tuesday, January 29             | [Protocols & Delegation] |
+|  4 | Thursday, January 31             | [Communication patterns] |
+|  5 |  Tuesday, February 5             | [Memory Management] |
+|  6 | Thursday, February 7             | [JSON in iOS] |
+|  7 |  Tuesday, February 12             | [Network Requests with URLSession]|
+|  8 | Thursday, February 14             | [Requests with authentication] |
 |  - |  Tuesday, February 19             | **President's Day (Observed)** |
-|  9 | Thursday, February 21             | [Lesson 9] |
-|  10 |  Tuesday, February 26             | [Lesson 10] |
-|  11 | Thursday, February 28             | [Lesson 11] |
+|  9 | Thursday, February 21             | [Building a networking domain] |
+|  10 |  Tuesday, February 26             | [Firebase + Alamofire] |
+|  11 | Thursday, February 28             | [Sockets] |
 |  12 |  Tuesday, March 5             | Final Class (presentations, etc) |
 |  13 | Thursday, March 7             | Final Exams/Presentations |
 
-[Lesson 1]: Lessons/Lesson1.md
-[Lesson 2]: Lessons/Lesson2.md
-[Lesson 3]: Lessons/Lesson3.md
-[Lesson 4]: Lessons/Lesson4.md
-[Lesson 5]: Lessons/Lesson5.md
-[Lesson 6]: Lessons/Lesson6.md
-[Lesson 7]: Lessons/Lesson7.md
-[Lesson 8]: Lessons/Lesson8.md
-[Lesson 9]: Lessons/Lesson9.md
-[Lesson 10]: Lessons/Lesson10.md
-[Lesson 11]: Lessons/Lesson11.md
+[Functions and Closures]: Lessons/Lesson1/Lesson1.md
+[Closures and callbacks]: Lessons/Lesson2/Lesson2.md
+[Protocols & Delegation]: Lessons/Lesson3/Lesson3.md
+[Communication patterns]: Lessons/Lesson4/Lesson4.md
+[Memory Management]: Lessons/Lesson5.md
+[JSON in iOS]: Lessons/Lesson6.md
+[Network Requests with URLSession]: Lessons/Lesson7.md
+[Requests with authentication]: Lessons/Lesson8.md
+[Building a networking domain]: Lessons/Lesson9.md
+[Firebase + Alamofire]: Lessons/Lesson10.md
+[Sockets]: Lessons/Lesson11.md
 
 ## Tutorials & Class Assignments
 
@@ -102,8 +77,8 @@ Tutorials are to help you get started in a topic.  They are graded on completion
 - [Tutorial with Functions & Closures]()
 - [App with Communication Patterns]()
 - [Product Hunt Tutorial]()
-- [Intermediate Networking and API with authentication Tutorial]()
-- [Alamofire Tutorial]()
+- [Alamofire + Firebase Tutorial]()
+- [Sockets project]()
 
 ## Class Assignments [Remove header if you like]
 - List (with links) of all course-level assignments (i.e. tutorials, challenge sets, contractor project, custom projects, etc)
