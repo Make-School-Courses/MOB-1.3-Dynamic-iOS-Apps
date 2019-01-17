@@ -61,7 +61,7 @@ Selectors are not part of the default Swift runtime behavior so we include `@obj
 
 ### How does this look like?
 
-```
+```Swift
 let loginButton = UIButton(type: .roundedRect)
 loginButton.setTitle("Login", for: .normal)
 loginButton.addTarget(self, action: #selector(
@@ -77,7 +77,7 @@ When the event `.touchUpInside` occurs, send the message execute `login` to `sel
 
 Here's the method called
 
-```
+```Swift
 @objc func login(sender: UIButton){
        print("Button tapped")
        print(sender.titleLabel?.text)
@@ -86,11 +86,11 @@ Here's the method called
 
 An alternative to improve readability
 
-```
+```Swift
 loginButton.addTarget(self, action: .buttonTapped, for: .touchUpInside)
 ```
 
-```
+```Swift
 fileprivate extension Selector {
     static let buttonTapped = #selector(LoginViewController.login)
 }
@@ -108,7 +108,7 @@ Try this:
 1. Subclass UIButton.
 1. Add a dictionary as a property that has strings as keys and any value as the values.
 1. Include initializers
-```
+```Swift
 override init(frame: CGRect)
 required init?(coder aDecoder: NSCoder)
 ```
@@ -136,7 +136,7 @@ Has 3 components
 
 ### Registering for notifications
 
-```
+```Swift
 print("Added Observer")
 NotificationCenter.default.addObserver(self, selector: #selector(receivedNotification(_:)), name: Notification.Name("receivedNotification"), object: nil)
 ```
@@ -145,7 +145,7 @@ This adds an entry to the Notification Center. Every app has a default notificat
 
 Function that gets called.
 
-```
+```Swift
 @objc func receivedNotification(_ notification:Notification) {
   // Do something here
   print("Received notification")
@@ -157,7 +157,7 @@ Note: Observers need to be removed, or else you send a message to something that
 
 ### Posting notifications
 
-```
+```Swift
 print("Post Notification")
 NotificationCenter.default.post(name: Notification.Name("receivedNotification"), object: self)
 ```
@@ -165,7 +165,7 @@ Needs the name of the notification and the object that posts the notification.
 
 ### Unsubscribing
 
-```
+```Swift
 deinit {
   print("Removed Observer")
   NotificationCenter.default.removeObserver(self, name: Notification.Name("receivedNotification"), object: nil)

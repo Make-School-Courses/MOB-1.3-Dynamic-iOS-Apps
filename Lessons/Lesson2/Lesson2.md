@@ -17,7 +17,7 @@
 ## Why you should know this
 Some uses cases of closures:
 - Animations
-```
+```Swift
 UIView.animate(withDuration: 0.2, animations: {
     // Animate things
 }) { finished in
@@ -27,7 +27,7 @@ UIView.animate(withDuration: 0.2, animations: {
 - Fetching data from external APIs
 - Completion handlers
 - Creating views
-```
+```Swift
 let customView: UIView = {
  let view = UIView()
  return customView
@@ -54,7 +54,7 @@ We've talked about how a function can receive a closure as parameter.
 
 Example:
 
-```
+```Swift
 func getBrunch(optionClosure:()->()) {
     print("Going for brunch.")
     getBrunch() //called from the closure
@@ -68,7 +68,7 @@ getBrunch(optionClosure: {
 
 If it turns out that it is the last parameter, the closure can be passed similar to a function body between `{}`.
 
-```
+```Swift
 func getBrunch(msg:String, optionClosure:()->()) {
     print(msg)
     optionClosure()
@@ -98,7 +98,7 @@ Variables, functions and closures have a scope. This scope determines if we can 
 
 Example
 
-```
+```Swift
 let name = "Mike"
 let goodbye = {
     print("See you later, \(name)!")
@@ -114,7 +114,7 @@ The closure assigned to `goodbye` closes over the local variable `name` since it
 
 Here's another example of closures closing over variables.
 
-```
+```Swift
 func addScore(_ points: Int) -> Int
 {
     let score = 42
@@ -168,7 +168,7 @@ Closures are used in completion handlers.
 
 Take a look at the following snippet analyze how closures are being used and what is the order in which lines get executed.
 
-```
+```Swift
 // Function called from the completion reference
 func completionHandler(value: Int) {
     print("Function completion handler value: \(value)")

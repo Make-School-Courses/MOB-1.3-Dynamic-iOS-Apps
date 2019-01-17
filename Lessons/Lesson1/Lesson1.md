@@ -49,7 +49,7 @@ I write a post on the Slack channel saying to complete a tutorial. Sometime late
 
 #### Example: closure with statements
 
-```
+```Swift
 var brunch = {
     print("Coffee and bagels")
 }
@@ -61,7 +61,7 @@ Everything inside the braces `{}` is the closure. And it is assigned to a variab
 **Q:** What is the type of the closure? <br>
 We can add it in the decaration.
 
-```
+```Swift
 var brunch: () -> () = {
     print("Coffee and bagels")
 }
@@ -71,7 +71,7 @@ brunch()
 
 #### Example: closure with parameters
 
-```
+```Swift
 let brunchOption:(String) -> () = { option in
     print(option)
 }
@@ -87,7 +87,7 @@ When calling the closure, since it accepts a String, we pass the string in that 
 
 #### Example: closure that returns a value
 
-```
+```Swift
 let brunchOptionLocation:(String) -> (String) = { option in
     let greeting = option + " @ Castro St."
     return greeting
@@ -102,7 +102,7 @@ print(result)
 
 #### Example: passing a closure as a function parameter
 
-```
+```Swift
 func getBrunch(optionClosure:()->()) {
     print("Going for brunch.")
 }
@@ -122,7 +122,7 @@ Closures are very similar to functions. In fact, functions are a special type of
 
 Take the following function and turn it into a closure. Note each step you make in the transformation. Include how you would call it.
 
-```
+```Swift
 func add(number1: Int, number2: Int) -> Int {
  return number1 + number2
 }
@@ -153,7 +153,7 @@ The `sorted(by:)` method accepts a closure that takes two arguments of the same 
 
 First approach, using a functions and passing it as a parameter.
 
-```
+```Swift
 func backward(_ s1: String, _ s2: String) -> Bool {
     return s1 > s2
 }
@@ -163,24 +163,24 @@ var reversedNames = names.sorted(by: backward)
 *Note: For characters in strings, “greater than” means “appears later in the alphabet than”. This means that the letter "B" is “greater than” the letter "A".*
 
 Second approach, using a closure expression syntax.
-```
+```Swift
 reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
     return s1 > s2
 })
 ```
 
 Since the body of the closure is short, we can write in in one line.
-```
+```Swift
 reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 > s2 } )
 ```
 
 Also, because the sorting closure is passed as an argument to a method, Swift can **infer the types of its parameters and the type of the value it returns**.
-```
+```Swift
 reversedNames = names.sorted(by: { s1, s2 in return s1 > s2 } )
 ```
 
 Swift automatically provides **shorthand argument names** to inline closures, which can be used to refer to the values of the closure’s arguments by the names $0, $1, $2, and so on.
-```
+```Swift
 reversedNames = names.sorted(by: { $0 > $1 } )
 ```
 
