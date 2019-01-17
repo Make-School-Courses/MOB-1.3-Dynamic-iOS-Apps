@@ -122,7 +122,7 @@ For delegates to work we can already imagine we will need to setup a few things 
 The first part will take place in `SecondViewController`.
 
 ### Step 1: Adding the protocol
-```swift
+```Swift
 protocol BackgroundColorDelegate{
     func colorSelected(color:UIColor)
 }
