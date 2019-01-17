@@ -27,12 +27,12 @@ Class Sessions:  14 classes, 7 labs
 
 Students by the end of the course will be able to ...
 
-1. Understand and use closures
+1. Explain and use closures
 1. Use callbacks and delegation to pass information between views/objects
 1. Identify and use different communication pattern in iOS
-1. Understand how memory management works in Swift
-1. Interact with public APIs with or without authentication
-1. Make a network request in iOS using a networking layer and library alternatives
+1. Explain how memory management works in Swift
+1. Use public APIs with or without authentication
+1. Demonstrate how to make a network request in iOS using a networking layer
 1. Parse a JSON network response using native Swift tools
 
 ## Schedule
