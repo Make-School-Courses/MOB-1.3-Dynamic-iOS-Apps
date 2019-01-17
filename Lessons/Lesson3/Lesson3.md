@@ -128,11 +128,11 @@ protocol BackgroundColorDelegate{
 }
 ```
 ### Step 2: Creating a delegate property
-```
+```Swift
 var delegate: BackgroundColorDelegate?
 ```
 ### Step 3: Adding the delegate method call
-```
+```Swift
 //Dismiss view controller and call method
 self.delegate?.colorSelected(color: someColor)
 ```
@@ -143,12 +143,12 @@ Now we move to `FirstViewController`
 Include `BackgroundColorDelegate` in the class declaration.
 
 ### Step 5: Creating a reference of SecondViewController specifying the delegate
-```
+```Swift
 let secondVC = segue.destination as! SecondViewController
             secondVC.delegate = self
 ```
 ### Step 6: Use the method of the protocol
-```
+```Swift
 func colorSelected(color: UIColor) {
   // set background color
 }
