@@ -55,8 +55,8 @@ Students by the end of the course will be able to ...
 |  9 | Thursday, February 21             | [Building a networking domain] |
 |  10 |  Tuesday, February 26             | [Firebase + Alamofire] |
 |  11 | Thursday, February 28             | [Sockets] |
-|  12 |  Tuesday, March 5             | Final Class (presentations, etc) |
-|  13 | Thursday, March 7             | Final Exams/Presentations |
+|  12 |  Tuesday, March 5             | Final Class/Presentations |
+|  13 | Thursday, March 7             | Final Exams |
 
 [Functions and Closures]: Lessons/Lesson1/Lesson1.md
 [Closures and callbacks]: Lessons/Lesson2/Lesson2.md
@@ -72,21 +72,19 @@ Students by the end of the course will be able to ...
 
 ## Tutorials & Class Assignments
 
-Tutorials are to help you get started in a topic.  They are graded on completion only.
+Tutorials are to help you get started in a topic.  Tutorials and class assignments are graded on completion only.
 
-- [Tutorial with Functions & Closures]()
-- [App with Communication Patterns]()
-- [Product Hunt Tutorial]()
-- [Alamofire + Firebase Tutorial]()
+- [Tutorial for Closures & ARC](https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC)
+- [Product Hunt Tutorial](https://www.makeschool.com/academy/track/product-hunt-api-tutorial)
+- [Communication patterns Exercise](https://github.com/amelinagzz/pom-starter)
+- [Alamofire + Firebase Exercise]()
 - [Sockets project]()
 
-## Class Assignments [Remove header if you like]
-- List (with links) of all course-level assignments (i.e. tutorials, challenge sets, contractor project, custom projects, etc)
-- Under each assignment link the rubric used to evaluate it or describe how it is evaluated.
-- Projects should be linked to a project page which has a description & requirements.
+## Final project
+- [Final project](Projects/FinalProject.md)
 
-### Projects
-**All projects will require a minimum of 10 commits, and must take place throughout the entirety of the course**
+### Projects and Tutorials
+**All projects and tutorials will require a minimum of 10 commits, and must take place throughout the entirety of the course**
 
 - **Good Example:** 40+ commits throughout the length of the course, looking for a healthy spattering of commits each week (such as 3-5 per day).
 - **Bad Example:** 10 commits on one day during the course and no others. Students who do this will be at severe risk of not passing the class.
@@ -110,7 +108,7 @@ Projects are a chance for you to build and ship code that is based on class conc
 ## Evaluation
 To pass this course you must meet the following requirements:
 
-- Complete all required tutorials
+- Complete all required tutorials & assignments
 - Pass all projects according to the associated project rubric
 - Pass the final summative assessment >=75%
 - Actively participate in class and abide by the attendance policy
