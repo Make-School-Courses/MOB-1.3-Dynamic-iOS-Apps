@@ -1,8 +1,8 @@
 # Final project for MOB 1.3
 
 ### Important Dates
-Date Assigned: February 7
-Github repository due date: March 5 (Github repository)
+Date Assigned: February 7<br>
+Github repository due date: March 5 (Github repository)<br>
 Testflight due date: March 7
 
 ### Description and Requirements
