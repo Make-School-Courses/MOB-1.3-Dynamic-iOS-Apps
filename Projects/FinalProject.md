@@ -2,14 +2,14 @@
 
 ### Important Dates
 Date Assigned: February 7<br>
-Github repository due date: March 5 (Github repository)<br>
-Testflight due date: March 7
+Github repository due date: March 7 (Github repository)<br>
+Testflight due date: March 8
 
 ### Description and Requirements
 
 For this term you will complete an individual project that solves a problem using an iOS app. The domain is up to you and the main purpose of this assignment is to have a new entry in your personal portfolio. That means the app **MUST** be available in the App Store by the end of March this year.
 
-All students will give a small presentation on March 5 on their project (5 min max per student). And will have an individual grading session (final code review) to be scheduled later in the term.
+All students will give a small presentation on March 7 on their project (5 min max per student). And will have an individual grading session (final code review) to be scheduled later in the term.
 
 Your solution should incorporate the following tools learned throughout the term:
 - Closures
