@@ -1,5 +1,9 @@
 # Dynamic iOS Apps
 
+| Guide | Slack | Office Hours | Shortlink | Tracker |
+| :-: | :-: | :-: | :-: | :-: |
+| [**Adriana**](mailto:adriana@makeschool.com) | _#mob1-3_ | Wed 11:00-12:00 | [make.sc/mob1.3](https://make.sc/mob1.3) | [make.sc/trackmob1.3](https://make.sc/trackmob1.3) |
+
 ## Course Description
 
 This course covers the programming concepts needed to create dynamic iOS applications that can respond to user events. Key concepts include closures, callbacks and delegations. Students will understand how these constructs work and how they are used to pass information between views and objects. Common communication patterns and roles will also be explored. Students will also learn how to fetch and parse information from the Internet through APIs. They will interact with public APIs with and without authentication, make network requests in iOS using native Swift tools, model a networking layer in iOS, and parse a JSON network response using native Swift tools.
@@ -20,8 +24,8 @@ Class Sessions:  14 classes, 7 labs
 
 ## Prerequisites:  
 
-- MOB 1.2
-- BEW 1.1
+- [MOB 1.2](https://github.com/Make-School-Courses/MOB-1.2-Introduction-to-iOS-Development-in-Swift)
+- [BEW 1.1](https://github.com/Make-School-Courses/BEW-1.1-RESTful-and-Resourceful-MVC-Architecture)
 
 ## Learning Objectives or Competencies
 
@@ -41,8 +45,8 @@ Students by the end of the course will be able to ...
 
 **Class Times:** Tuesday and Thursday at 3:30–5:20pm (12 class sessions)
 
-| Class |          Date          |                 Topics                  |
-|:-----:|:----------------------:|:---------------------------------------:|
+| Class |          Date          |                 Topics                  |       Deliverable Starts On     | Due On |
+|:-----:|:----------------------:|:---------------------------------------:|:----------------------------:|-----------|
 |  1 |  Tuesday, January 22              | [Functions and Closures] |
 |  2 | Thursday, January 24             | [Closures and callbacks] |
 |  3 |  Tuesday, January 29             | [Protocols & Delegation] |
@@ -77,10 +81,12 @@ Tutorials are to help you get started in a topic.  Tutorials and class assignmen
 - [Tutorial for Closures & ARC](https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC)
 - [Product Hunt Tutorial](https://www.makeschool.com/academy/track/product-hunt-api-tutorial)
 - [Communication patterns Exercise](https://github.com/amelinagzz/pom-starter)
-- [Alamofire + Firebase Exercise]()
-- [Sockets project]()
+- Alamofire + Firebase Exercise
+- Sockets project
 
 ## Final project
+
+Individual project covering core concepts from this course.
 - [Final project](Projects/FinalProject.md)
 
 ### Projects and Tutorials
@@ -101,9 +107,6 @@ We want to encourage best practices that you will see working as a professional 
 Through this requirement, we hope to encourage you to think about projects with an iterative, modular mindset. Doing so will allow you to break projects down into smaller milestones that come together to make your fully-realized solution.
 
 Projects are a chance for you to build and ship code that is based on class concepts.  Many are open ended allowing you to be creative and to have individual work for your portfolio.
-
-
-### Other Class assignments
 
 ## Evaluation
 To pass this course you must meet the following requirements:

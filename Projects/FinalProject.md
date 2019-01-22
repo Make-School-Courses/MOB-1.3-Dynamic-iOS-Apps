@@ -1,9 +1,9 @@
 # Final project for MOB 1.3
 
 ### Important Dates
-Date Assigned: February 7<br>
-Github repository due date: March 5 (Github repository)<br>
-Testflight due date: March 7
+Date Assigned: **February 7**<br>
+Github repository due date: **March 5** (Github repository)<br>
+Testflight due date: **March 7**
 
 ### Description and Requirements
 
@@ -29,3 +29,5 @@ Your solution should incorporate the following tools learned throughout the term
 ### Rubric
 
 A full list of expectations for the project can be found in [this rubric](https://docs.google.com/document/d/1skBVPeFrflcgts-qzx84Ym2dDHRJPbtS1SoqoZeamY0/edit?usp=sharing)
+
+To pass the project you need to score **at least 22 points** out of the 32 possible.
