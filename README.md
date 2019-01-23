@@ -45,22 +45,22 @@ Students by the end of the course will be able to ...
 
 **Class Times:** Tuesday and Thursday at 3:30–5:20pm (12 class sessions)
 
-| Class |          Date          |                 Topics                  |       Deliverable Starts On     | Due On |
+| Class |          Date          |                 Topics                  |       Deliverable Starts     | Due On    |
 |:-----:|:----------------------:|:---------------------------------------:|:----------------------------:|-----------|
-|  1 |  Tuesday, January 22              | [Functions and Closures] |
-|  2 | Thursday, January 24             | [Closures and callbacks] |
-|  3 |  Tuesday, January 29             | [Protocols & Delegation] |
-|  4 | Thursday, January 31             | [Communication patterns] |
-|  5 |  Tuesday, February 5             | [Memory Management] |
-|  6 | Thursday, February 7             | [JSON in iOS] |
-|  7 |  Tuesday, February 12             | [Network Requests with URLSession]|
-|  8 | Thursday, February 14             | [Requests with authentication] |
-|  - |  Tuesday, February 19             | **President's Day (Observed)** |
-|  9 | Thursday, February 21             | [Building a networking domain] |
-|  10 |  Tuesday, February 26             | [Firebase + Alamofire] |
-|  11 | Thursday, February 28             | [Sockets] |
-|  12 |  Tuesday, March 5             | Final Exams |
-|  13 | Thursday, March 7             | Final Class/Presentations |
+|  1 |  Tuesday, January 22              | [Functions and Closures] |             [Closures tutorial]     |  Class 3  |
+|  2 | Thursday, January 24             | [Closures and callbacks] | ||
+|  3 |  Tuesday, January 29             | [Protocols & Delegation] | ||       
+|  4 | Thursday, January 31             | [Communication patterns] |        [Communication Patterns exercise]| Class 5|
+|  5 |  Tuesday, February 5             | [Memory Management] |              [ARC page from tutorial]     |  Class 7|
+|  6 | Thursday, February 7             | [JSON in iOS] | ||
+|  7 |  Tuesday, February 12             | [Network Requests with URLSession]| [Product Hunt Tutorial]    | Class 9 |
+|  8 | Thursday, February 14             | [Requests with authentication] | ||
+|  - |  Tuesday, February 19             | **President's Day (Observed)** | ||
+|  9 | Thursday, February 21             | [Building a networking domain] | ||
+|  10 |  Tuesday, February 26             | [Firebase + Alamofire] |        FB + AF exercise          |  Class 12 |
+|  11 | Thursday, February 28             | [Sockets] |                     Sockets activity          |  Class 12 |
+|  12 |  Tuesday, March 5             | Final Exams | ||
+|  13 | Thursday, March 7             | Final Class/Presentations | ||
 
 [Functions and Closures]: Lessons/Lesson1/Lesson1.md
 [Closures and callbacks]: Lessons/Lesson2/Lesson2.md
@@ -73,6 +73,10 @@ Students by the end of the course will be able to ...
 [Building a networking domain]: Lessons/Lesson9.md
 [Firebase + Alamofire]: Lessons/Lesson10.md
 [Sockets]: Lessons/Lesson11.md
+[Closures tutorial]: https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC
+[Communication Patterns exercise]: https://github.com/amelinagzz/pom-starter
+[ARC page from tutorial]: https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC
+[Product Hunt Tutorial]: https://www.makeschool.com/academy/track/product-hunt-api-tutorial
 
 ## Tutorials & Class Assignments
 
