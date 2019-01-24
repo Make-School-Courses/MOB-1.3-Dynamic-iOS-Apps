@@ -187,9 +187,13 @@ metamorphosis(initialStage:"🐛", completion: flyAway)
 ```
 **Q:** What is the for loop simulating?<br>
 **Q:** Can you make the last call using a trailing closure?<br>
-**Q:** Does is make sense to use @escaping for this example? Where would it be?
+**Q:** Does is make sense to use @escaping for this example? Why?
 
 Now implement your own example. Make sure to put in a context, get creative 🌮 👽 💣.
+
+## Challenges HOF
+[Repl.it](https://repl.it/classroom/invite/51YgUuP) challenges on HOF (5 exercises)<br>
+For more on how to use them read [this article](https://medium.com/if-let-swift-programming/higher-order-functions-in-swift-d8175243d0ee). Specially the chaining part.
 
 ## Wrap Up (5 min)
 
