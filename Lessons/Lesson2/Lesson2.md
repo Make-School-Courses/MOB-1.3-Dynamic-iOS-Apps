@@ -140,7 +140,7 @@ Once everyone is done, discuss the solution.
 
 ## Escaping and non escaping closures
 
-Closures come in two different variants - escaping and non-escaping. When a closure is escaping (as marked by the @escaping parameter attribute) it means that it will be stored somehow (either as a property, or by being captured by another closure). Non-escaping closures on the other hand, cannot be stored and must instead be executed directly when used.
+Closures come in two different variants - escaping and non-escaping. When a closure is escaping it means that it will be stored somehow (either as a property, or by being captured by another closure). Non-escaping closures on the other hand, cannot be stored and must instead be executed directly when used.
 
 In an **escaping closure**, the lifecycle looks like this:
 
@@ -166,37 +166,40 @@ A non-escaping closure does not outlive the function from where it was called.
 
 Closures are used in completion handlers.
 
-Take a look at the following snippet analyze how closures are being used and what is the order in which lines get executed.
+Take a look at the code snippet and analyze how closures are being used and the order in which lines get executed.
 
 ```Swift
-// Function called from the completion reference
-func completionHandler(value: Int) {
-    print("Function completion handler value: \(value)")
+func flyAway(finalStage: String){
+    print("\(finalStage) emerged, flying away... ")
 }
 
-// The computation function
-func computeValue(start: Int, completion: (Int) -> Void) {
-
-    var start = start
-    for _ in 1...100 {
-        start += 1
+func metamorphosis(initialStage:String, completion: (String) -> Void){
+    print("Caterpillar creates cocoon.")
+    // They stay inside for up to 21 days.
+    for _ in 1...21 {
+        print("\(initialStage) inside cocoon")
     }
-    completion(start) // completion -> completionHandler(value: Int) -> Void
+    completion("🦋")
 }
 
-// Compute a value and then send the finished value to the function completion handler
-computeValue(start: 1, completion: completionHandler)
+metamorphosis(initialStage:"🐛", completion: flyAway)
+
 ```
-Once discussed with everyone, implement your own. Make sure to put in a context, no matter if you just invent it.
+**Q:** What is the for loop simulating?<br>
+**Q:** Can you make the last call using a trailing closure?<br>
+**Q:** Does is make sense to use @escaping for this example? Where would it be?
+
+Now implement your own example. Make sure to put in a context, get creative 🌮 👽 💣.
 
 ## Wrap Up (5 min)
 
-Now that we know more about closures. Think of a metaphor or analogy that will help remember how they work. Share with the rest of the class.
+Now that we know more about closures. Think of a metaphor or analogy that will help you remember how they work. Share with the rest of the class.
 
 - Finish tutorial on closures
 - Read about capture lists. The following tutorial has 2 parts and covers the topic really good with a coding example that you can download. [Part 1](https://medium.com/swift-programming/swift-closures-everyday-gems-part-1-of-2-c1a50c08a458) and [Part 2](https://medium.com/swift-programming/swift-closures-everyday-gems-part-2-of-2-8607157b11c5)
 
 ## Additional Resources
+1. [Slides]()
 1. [Closing over - diagram and article](https://learnappmaking.com/closures-swift-how-to/#capturing)
 1. [Completion Handler](https://www.agnosticdev.com/content/how-define-swift-completion-handlers)
 1. [Completion Handlers - article](https://www.bobthedeveloper.io/blog/completion-handlers-in-swift-with-bob)

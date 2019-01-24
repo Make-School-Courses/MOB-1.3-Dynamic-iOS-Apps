@@ -45,8 +45,8 @@ Students by the end of the course will be able to ...
 
 **Class Times:** Tuesday and Thursday at 3:30–5:20pm (12 class sessions)
 
-| Class |          Date          |                 Topics                  |       Deliverable Starts     | Due On    |
-|:-----:|:----------------------:|:---------------------------------------:|:----------------------------:|-----------|
+| Class |          Date          |                 Topics                  |      Deliverable Starts    | Due On    |
+|:-----:|:----------------------:|:---------------------------------------:|:--------------------------:|-----------|
 |  1 |  Tuesday, January 22              | [Functions and Closures] |             [Closures tutorial]     |  Class 3  |
 |  2 | Thursday, January 24             | [Closures and callbacks] | ||
 |  3 |  Tuesday, January 29             | [Protocols & Delegation] | ||       
