@@ -68,12 +68,12 @@ As long as an instance’s reference count is greater than 0, the instance remai
 
 As soon as its reference count becomes 0, its memory is deallocated, and its deinit() method will run.
 
-***< need simple example code here ? diagram? >***
+***< TODO: need simple example code here ? diagram? >***
 
 
 ## In Class Activity I (20 min)
 
-***< need to add starte app link >***
+***< TODO: need to add starte app link >***
 
 Part 1 - Individual
 1. Download LeakyStarship starter app
@@ -83,49 +83,12 @@ Part 1 - Individual
 Part 2 - In Pairs
 1. Discuss with your partner what occured at each deinit() breakpoint and why?
 
-
-
-
-
-
-## Additional Resources
-1.
-
-
-
-
-
-
-
-```Swift
-var brunch = {
-    print("Coffee and bagels")
-}
-```
-
-Everything inside the braces `{}` is the closure. And it is assigned to a variable (could be to a constant too). This is possible because closures are first-class.<br>
-*Note: First-class just means that there are no restrictions in the object's use. It can be created, stored, passed, assigned, return as value. You can treat it as you would any other value or object*
-Remember the syntax of a closure.
-
-![syntax](assets/closuresyntax.png)
-
-
-
-We'll use the sort method as an example.
-
-`sorted(by:)` sorts an array of values of a known type, based on the output of a sorting closure that we provide. Once it completes the sorting process, the `sorted(by:)` method returns a new array of the same type and size as the old one, with its elements in the correct sorted order. The original array is not modified.
-
-`let names = ["Andrea", "Chris", "Marie", "Beth", "Tom"]`
-
-The `sorted(by:)` method accepts a closure that takes two arguments of the same type as the array’s contents, and returns a `Bool` value to say whether the first value should appear before or after the second value once the values are sorted. The sorting closure needs to return true if the first value should appear before the second value, and false otherwise.
-
-
-## In Class Activity II (30 min)
-
-Complete [these](ClosuresChallenges.md) challenges on closures.
-
 ## Wrap Up (5 min)
 
 - Complete challenges
 - Begin first tutorial on closures.
 - Read the content listed below if you need more clarity on closures.
+
+
+## Additional Resources
+1.
