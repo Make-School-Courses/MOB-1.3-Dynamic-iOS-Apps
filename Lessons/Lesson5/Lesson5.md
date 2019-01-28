@@ -6,7 +6,7 @@
 | ----------- | --------- | ------------------------- |
 | 0:00        | 0:05      | Objectives                |
 | 0:05        | 0:10      | Initial Exercise          |
-
+| 0:15        | 0:15      | Allocation/Deallocation   |
 | 0:30        | 0:20      | In Class Activity I       |
 | 0:50        | 0:10      | BREAK                     |
 
@@ -37,8 +37,7 @@ In Pairs, discuss the following interview questions:
 4. Is the default attribute for properties declared as @IBOutlets weak or strong? Why?
 
 
-
-## Memory Allocation/Deallocation  (20 min)
+## Memory Allocation/Deallocation  (15 min)
 ### Memory Leaks, Reference Counting, and Retain cycles
 
 #### Memory Leaks
@@ -72,17 +71,9 @@ As soon as its reference count becomes 0, its memory is deallocated, and its dei
 ***< need simple example code here ? diagram? >***
 
 
-
-
-
-
-
-
-
-
-
-
 ## In Class Activity I (20 min)
+
+***< need to add starte app link >***
 
 Part 1 - Individual
 1. Download LeakyStarship starter app
