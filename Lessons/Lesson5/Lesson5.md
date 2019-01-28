@@ -32,30 +32,79 @@ Poor optimization can result in code issues including memory leaks and potential
 In Pairs, discuss the following interview questions:
 
 1. When and why would you use the keyword weak?
-2. What is a retain cycle?
-- can you give examples of when a retain cycle might occur?
+2. What is a retain cycle? Can you give examples of when a retain cycle might occur?
 3. In Swift, memory management for value types is the same as memory management for reference types ?
 4. Is the default attribute for properties declared as @IBOutlets weak or strong? Why?
 
 
 
+## Memory Allocation/Deallocation  (20 min)
+### Memory Leaks, Reference Counting, and Retain cycles
 
-## What is a Closure? (15 min)
+#### Memory Leaks
+iOS keeps track of how much memory each app uses on a given device, and it is set up to kill apps that use too much.
 
-Apple's definition:<br>
-**"Closures are self-contained blocks of functionality that can be passed around and used in your code."**
+A memory leak occurs when an instance of a reference type remains in memory even after its lifecycle has ended.
 
-In essence, a closure is a block of code that you can assign to a variable or constant. Then pass it around in your code and execute its content later somewhere else.
+Leaked memory still counts as a portion of an app’s total memory, even though the objects causing the leaks are no longer needed or useful.
 
-#### An Analogy
+#### Value Types
+When you create a new instance of a value type, the right amount of memory is set aside for it. Whenever you do anything with it — pass it to a function, store it as a property, etc — Swift creates a copy of the instance.
 
-I tell you to complete a tutorial. When you hear the request you open your computer and start working. Working on the tutorial is a **function**.<br>
+When that instance no longer exists, Swift automatically reclaims its allocated memory.
 
-You post on a Slack channel a question, and wait for someone to read it. The post is a **variable**.<br>
+In Swift, you do not need to anything to manage memory used by value types.
 
-I write a post on the Slack channel saying to complete a tutorial. Sometime later when you get to a study area, you read the post and start working on it. The request, sent trough a Slack post, is a **closure**.
+#### Reference Types
+But passing around an instance of a reference type (class, closure) or storing it as a property does not copy it — it creates an additional reference to the same instance of that reference type.
 
-#### Example: closure with statements
+In other words, you are creating an additional reference to the same memory location on the heap.
+
+**Q:** If there are multiple references to the same instance of a class (object), what is the impact to all its references if any single reference makes a change to it?
+
+#### Reference Counting
+Every class instance has a reference count — which is the number of references to the actual memory on the heap allocated for that instance.
+
+As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.
+
+As soon as its reference count becomes 0, its memory is deallocated, and its deinit() method will run.
+
+***< need simple example code here ? diagram? >***
+
+
+
+
+
+
+
+
+
+
+
+
+## In Class Activity I (20 min)
+
+Part 1 - Individual
+1. Download LeakyStarship starter app
+2. Examine the 3 deinit() funtions in the app
+3. Run the app, click the button on main scene, and examine what happens at each breakpoint
+
+Part 2 - In Pairs
+1. Discuss with your partner what occured at each deinit() breakpoint and why?
+
+
+
+
+
+
+## Additional Resources
+1.
+
+
+
+
+
+
 
 ```Swift
 var brunch = {
@@ -65,91 +114,11 @@ var brunch = {
 
 Everything inside the braces `{}` is the closure. And it is assigned to a variable (could be to a constant too). This is possible because closures are first-class.<br>
 *Note: First-class just means that there are no restrictions in the object's use. It can be created, stored, passed, assigned, return as value. You can treat it as you would any other value or object*
-
-**Q:** What is the type of the closure? <br>
-We can add it in the decaration.
-
-```Swift
-var brunch: () -> () = {
-    print("Coffee and bagels")
-}
-
-brunch()
-```
-
-#### Example: closure with parameters
-
-```Swift
-let brunchOption:(String) -> () = { option in
-    print(option)
-}
-brunchOption("Mimosas and croissants")
-```
-
-**Q:** What is the type of the closure?
-
-We can use the value passed inside the statements of the closure by placing a parameter name `option` followed by the `in` keyword.
-
-The `in` keyword separates the parameter name with the body of the closure.<br>
-When calling the closure, since it accepts a String, we pass the string in that moment.
-
-#### Example: closure that returns a value
-
-```Swift
-let brunchOptionLocation:(String) -> (String) = { option in
-    let greeting = option + " @ Castro St."
-    return greeting
-}
-let result = brunchOptionLocation("Pancakes and smoothies")
-print(result)
-```
-
-**Q:** What is the meaning of `(String) -> (String)`?<br>
-**Q:** How are we using `option`? <br>
-**Q:** How do we return and show the output?
-
-#### Example: passing a closure as a function parameter
-
-```Swift
-func getBrunch(optionClosure:()->()) {
-    print("Going for brunch.")
-}
-
-getBrunch(optionClosure: {
-    print("Anything edible")
-})
-```
-**Q:** What is the output?<br>
-**Q:** Why is the closure statement is not executed?<br>
-
-## In Class Activity I (20 min)
-
-### Function vs Closure
-
-Closures are very similar to functions. In fact, functions are a special type of closures. They have a name and are declared with the keyword `func` whereas closures are nameless.
-
-Take the following function and turn it into a closure. Note each step you make in the transformation. Include how you would call it.
-
-```Swift
-func add(number1: Int, number2: Int) -> Int {
- return number1 + number2
-}
-```
 Remember the syntax of a closure.
 
 ![syntax](assets/closuresyntax.png)
 
-Now list the differences you can find between functions and closures.
 
-Once everyone is done, do the transformation in a big whiteboard for everyone to see and share their insights.
-
-## Optimizing with closures (10 min)
-
-Swift’s closure expressions have a clean, clear style, with optimizations including:
-
-- Inferring parameter and return value types from context
-- Implicit returns from single-expression closures
-- Shorthand argument names
 
 We'll use the sort method as an example.
 
@@ -159,38 +128,6 @@ We'll use the sort method as an example.
 
 The `sorted(by:)` method accepts a closure that takes two arguments of the same type as the array’s contents, and returns a `Bool` value to say whether the first value should appear before or after the second value once the values are sorted. The sorting closure needs to return true if the first value should appear before the second value, and false otherwise.
 
-First approach, using a functions and passing it as a parameter.
-
-```Swift
-func backward(_ s1: String, _ s2: String) -> Bool {
-    return s1 > s2
-}
-var reversedNames = names.sorted(by: backward)
-```
-
-*Note: For characters in strings, “greater than” means “appears later in the alphabet than”. This means that the letter "B" is “greater than” the letter "A".*
-
-Second approach, using a closure expression syntax.
-```Swift
-reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in
-    return s1 > s2
-})
-```
-
-Since the body of the closure is short, we can write in in one line.
-```Swift
-reversedNames = names.sorted(by: { (s1: String, s2: String) -> Bool in return s1 > s2 } )
-```
-
-Also, because the sorting closure is passed as an argument to a method, Swift can **infer the types of its parameters and the type of the value it returns**.
-```Swift
-reversedNames = names.sorted(by: { s1, s2 in return s1 > s2 } )
-```
-
-Swift automatically provides **shorthand argument names** to inline closures, which can be used to refer to the values of the closure’s arguments by the names $0, $1, $2, and so on.
-```Swift
-reversedNames = names.sorted(by: { $0 > $1 } )
-```
 
 ## In Class Activity II (30 min)
 
@@ -201,10 +138,3 @@ Complete [these](ClosuresChallenges.md) challenges on closures.
 - Complete challenges
 - Begin first tutorial on closures.
 - Read the content listed below if you need more clarity on closures.
-
-
-## Additional Resources
-1. [Slides](https://drive.google.com/open?id=1HVs8m91QcMHG5nkqFXVSEIBEQ7cw-2632rGRw3U7ZdM)
-1. [Closures in Swift - an article](https://medium.com/the-andela-way/closures-in-swift-8aef8abc9474)
-1. [From function to closure - article](https://medium.com/ios-os-x-development/introduction-to-closures-in-swift-3-1d46dfaf8a20)
-1. [Apple's documentation on closures](https://docs.swift.org/swift-book/LanguageGuide/Closures.html)
