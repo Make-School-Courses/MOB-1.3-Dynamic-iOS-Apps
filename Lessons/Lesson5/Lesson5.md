@@ -83,6 +83,56 @@ Part 1 - Individual
 Part 2 - In Pairs
 1. Discuss with your partner what occured at each deinit() breakpoint and why?
 
+
+## Automatic Reference Counting (ARC) (xx min)
+
+In 2011, Apple introduced Automated Reference Counting (ARC) for Objective-C.
+
+With ARC, the compiler is now responsible for analyzing your code and inserting retain and release calls where needed.
+
+Swift is built on top of ARC. The compiler manages the reference counts of class instances — so you do not have to.
+
+However, because Swift handles memory automatically, it is still critical to understand how iOS manages memory, as there are some common mistakes that can cause memory issues…
+
+## Strong/Weak/Unowned references (xx min)
+
+### Strong References & Ownership
+A strong reference increments the reference count of the instance to which it points.
+
+By default, all references you create are strong references.
+
+When one instance of a reference type (RefA) has a reference to another (RefB), we say that RefA is an “owner” of RefB. Conversely, we can also say that “RefB has one owner” (as long as RefA is the only instance of a reference type that is holding a reference to RefB).
+
+By retaining a reference to RefB, RefA protects RefA from being deallocated by ARC.
+
+***< TODO: add simple graphic here >***
+
+### Strong Reference Cycles
+
+If two reference types each hold strong references to each other — if RefA retains a reference count for RefB, and Ref B also retains A — they have a strong reference cycle (aka, a retain cycle).
+
+Strong reference cycles are one type of memory leak.
+
+
+### How to Break Strong Reference Cycles
+
+#### Weak References
+
+A variable marked with the weak keyword does not take ownership of the object it refers to — it does not increment the reference count of its referenced object.
+
+When the instance (RefB) to which a weak reference (RefA) refers is successfully deallocated — when RefB’s reference count is zeroed out — RefA will now be nil.
+
+As a weak variable, RefA does not protect RefB from being deallocated by ARC.
+
+This ensures that when you access a weak reference, it will either be a valid object, or nil.
+
+Because weak references can be changed to nil if the instance they point to is deallocated, they come with two inherent requirements:
+
+Weak references must always be declared as Optional, since Optionals are the only types that can become nil.
+
+Weak references can never be declared as let. Instances declared as let cannot change, thus weak references must always be declared as var.
+
+
 ## Wrap Up (5 min)
 
 - Complete challenges
