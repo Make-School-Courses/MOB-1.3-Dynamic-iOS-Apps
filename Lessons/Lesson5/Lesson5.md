@@ -1,36 +1,44 @@
 # Memory Management
 
-## Minute-by-Minute
+## Minute-by-Minute [Optional]
 
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
 | 0:00        | 0:05      | Objectives                |
 | 0:05        | 0:10      | Initial Exercise          |
-| 0:15        | 0:15      | What are closures?        |
+
 | 0:30        | 0:20      | In Class Activity I       |
 | 0:50        | 0:10      | BREAK                     |
-| 1:00        | 0:10      | Optimizing with closures  |
+
 | 1:10        | 0:30      | In Class Activity II      |
 | 1:40        | 0:05      | Wrap Up                   |
 | TOTAL       | 1:45      |                           |
 
 ## Why you should know this
 
-You probably have already used closures in your apps by now without noticing or without knowing exactly how they work. Closures are a powerful way of writing code that performs and looks better. They are also present in many programming languages so knowing how they work will help you recognize them when working in other type of projects and will let you discuss them with other developers.
+The key to developing high-performance iOS apps is to know how your components are consuming memory and how you can optimize memory use.
+
+Poor optimization can result in code issues including memory leaks and potentially fatal errors.
 
 ## Class Learning Objectives/Competencies (5 min)
 
-1. Describe how closures work and how to use them
-1. Declaring and calling closures
-1. List and implement use cases of closures
-1. Describe drawbacks for using closures
+1. Be able to explain and to demonstrate knowledge of how:
+- memory management works in Swift, including when and why to use Strong, Weak, or Unowned
+- to recognize strong reference cycles (retain cycles) and how to use weak references to break them
+- to use built-in tools and techniques to find memory leaks caused by retain cycles
 
 ## Initial Exercise (10 min)
 
-- Apple in 2019 - Discussion time<br>
-[Letter from Tim Cook to Apple investors](https://www.apple.com/newsroom/2019/01/letter-from-tim-cook-to-apple-investors/)<br>
-**Q:** What's the current situation in China?<br>
-**Q:** How often are people upgrading their iPhones?
+In Pairs, discuss the following interview questions:
+
+1. When and why would you use the keyword weak?
+2. What is a retain cycle?
+- can you give examples of when a retain cycle might occur?
+3. In Swift, memory management for value types is the same as memory management for reference types ?
+4. Is the default attribute for properties declared as @IBOutlets weak or strong? Why?
+
+
+
 
 ## What is a Closure? (15 min)
 
