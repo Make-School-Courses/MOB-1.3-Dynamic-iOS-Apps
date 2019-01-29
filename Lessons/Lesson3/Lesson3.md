@@ -41,7 +41,14 @@ In software.
 
 Delegation is a design pattern that enables a class or structure to hand off (or delegate) some of its responsibilities to an instance of another type.
 
-In iOS development, delegation is used as a way for one class to communicate to another class. The example that looks the most familiar to us is UITableViewDelegate.
+In iOS development, delegation is used as a way for one class to communicate to another class. 
+The example that looks the most familiar to us is when using a tableview. The tableview by itself doesn’t know what information to show or the number of rows it needs to display. But they can find out by asking its dataSource. A tableview’s dataSource must conform to the UITableViewDatasouce protocol, which has the right information needed to know what and how to display information.
+
+```
+tableView(_:numberOfRowsInSection:)
+```
+
+UITableViewDelegate 
 
 We can handle events.
 ```
@@ -107,7 +114,7 @@ Share and explain your diagram to a peer and compare both diagrams to see any si
 
 ## Creating our own delegate (25 min)
 
-Download the [starter files]() to try after the explanation.
+Download the [starter files](https://github.com/amelinagzz/delegates-starter) to try after the explanation.
 
 We can take a systematic approach on creating delegates by identifying specific steps when implementing delegates.
 
