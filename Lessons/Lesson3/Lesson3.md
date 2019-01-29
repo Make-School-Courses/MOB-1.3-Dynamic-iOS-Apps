@@ -190,3 +190,4 @@ Change the implementation of the delegate to use a closure in the DelegateDemo p
 1. [Closures as delegates - article](https://medium.com/@dmlebron/using-swift-closures-as-an-alternative-to-delegates-5c3c1a7f45d6)
 1. [Understanding delegates - article](https://www.appcoda.com/swift-delegate/)
 1. [Delegates simple analogy - article](https://blog.bobthedeveloper.io/the-meaning-of-delegate-in-swift-347eaa9674d)
+1. [More on Delegates](https://www.andrewcbancroft.com/2015/04/08/how-delegation-works-a-swift-developer-guide/)
