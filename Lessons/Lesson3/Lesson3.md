@@ -185,6 +185,7 @@ Change the implementation of the delegate to use a closure in the DelegateDemo p
 
 ## Additional Resources
 
+1. [Slides](https://docs.google.com/presentation/d/1NpzBXtQSDZBQw2hs-8h9T-lP5_ZLyTxEIOvn6OuD7hg/edit?usp=sharing)
 1. [Example for delegates](https://medium.com/@jamesrochabrun/implementing-delegates-in-swift-step-by-step-d3211cbac3ef)
 1. [Closures as delegates - article](https://medium.com/@dmlebron/using-swift-closures-as-an-alternative-to-delegates-5c3c1a7f45d6)
 1. [Understanding delegates - article](https://www.appcoda.com/swift-delegate/)
