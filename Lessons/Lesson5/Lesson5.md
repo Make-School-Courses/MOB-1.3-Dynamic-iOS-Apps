@@ -9,7 +9,6 @@
 | 0:15        | 0:15      | Allocation/Deallocation   |
 | 0:30        | 0:20      | In Class Activity I       |
 | 0:50        | 0:10      | BREAK                     |
-
 | 1:10        | 0:30      | In Class Activity II      |
 | 1:40        | 0:05      | Wrap Up                   |
 | TOTAL       | 1:45      |                           |
@@ -73,7 +72,7 @@ As soon as its reference count becomes 0, its memory is deallocated, and its dei
 
 ## In Class Activity I (20 min)
 
-***< TODO: need to add starte app link >***
+***< TODO: need to add starter app link >***
 
 Part 1 - Individual
 1. Download LeakyStarship starter app
@@ -81,7 +80,7 @@ Part 1 - Individual
 3. Run the app, click the button on main scene, and examine what happens at each breakpoint
 
 Part 2 - In Pairs
-1. Discuss with your partner what occured at each deinit() breakpoint and why?
+1. Discuss with your partner what occurred at each deinit() breakpoint and why?
 
 
 ## Automatic Reference Counting (ARC) (xx min)
@@ -118,6 +117,8 @@ Strong reference cycles are one type of memory leak.
 
 #### Weak References
 
+**Q:** Where or when have you seen the weak keyword used?
+
 A variable marked with the weak keyword does not take ownership of the object it refers to — it does not increment the reference count of its referenced object.
 
 When the instance (RefB) to which a weak reference (RefA) refers is successfully deallocated — when RefB’s reference count is zeroed out — RefA will now be nil.
@@ -126,11 +127,52 @@ As a weak variable, RefA does not protect RefB from being deallocated by ARC.
 
 This ensures that when you access a weak reference, it will either be a valid object, or nil.
 
+***< TODO: needs diagram and a code sample >***
+
 Because weak references can be changed to nil if the instance they point to is deallocated, they come with two inherent requirements:
 
-Weak references must always be declared as Optional, since Optionals are the only types that can become nil.
+** Weak references must always be declared as Optional, since Optionals are the only types that can become nil.
 
-Weak references can never be declared as let. Instances declared as let cannot change, thus weak references must always be declared as var.
+### Weak references can never be declared as let. Instances declared as let cannot change, thus weak references must always be declared as var.
+
+
+## In Class Activity II (20 min)
+(Requirements: The LeakyStarship starter app)
+
+Individual
+1. Follow the steps in the Using the Debug Memory Graph Tool to Find and Fix Memory Leaks
+
+
+## Unowned References
+
+Like a weak reference, an unowned references does not increase the retain count of the object it references.
+
+Unlike a weak reference, however, an unowned reference is assumed to always have a value — it behaves somewhat like an implicitly unwrapped optional.
+
+Because of this, an unowned reference is always defined as a non-optional type. An unowned reference cannot be nil.
+
+This makes them easier to manage rather than resorting to using optional binding.
+However, if you try and access an unowned reference, and it’s not there, it will crash the app.
+
+***< TODO: needs diagram and a code sample >***
+
+
+## Closures and Reference Cycles
+
+By default, captured values in closures are strong references.
+
+Because closures — like classes — are reference types, a strong reference cycle can also occur with a closure if you assign it to a property of a class instance, and the body closure captures a reference to that class instance.
+
+***< TODO: small code sample here >***
+
+
+
+## In Class Activity III (20 min)
+(Requirements: The LeakyStarship starter app)
+
+Individual
+1. Part of the iOS developer "toolbox" is the ability to quickly find the most useful information from Internet research. Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; you will need to research conditions under which closures can have strong reference cycles and how to resolve them)
+
 
 
 ## Wrap Up (5 min)
@@ -141,4 +183,10 @@ Weak references can never be declared as let. Instances declared as let cannot c
 
 
 ## Additional Resources
-1.
+- [Strong, Weak & Unowned - an article]https://agostini.tech/2017/07/23/memory-management-in-swift-the-strong-the-weak-and-the-unowned/
+https://krakendev.io/blog/weak-and-unowned-references-in-swift
+- [Avoiding Retain Cycles - an article]https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef
+- Pre-ARC (Manual) Memory Management in iOS
+< add URLs >
+- Reference Types & Value Types in Swift
+< add URLs >
