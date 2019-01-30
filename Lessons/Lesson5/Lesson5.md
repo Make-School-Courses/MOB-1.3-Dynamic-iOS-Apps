@@ -5,7 +5,7 @@
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
 | 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:10      | Initial Exercise          |
+| 0:05        | 0:05      | Initial Exercise          |
 | 0:15        | 0:15      | Allocation/Deallocation   |
 | 0:30        | 0:20      | In Class Activity I       |
 | 0:50        | 0:10      | BREAK                     |
@@ -22,18 +22,15 @@ Poor optimization can result in code issues, including memory leaks and potentia
 ***Important Note:*** *iOS keeps track of how much memory each app uses on a given device, and it is set up to kill apps that consume too much.*
 
 ## Class Learning Objectives/Competencies (5 min)
-
-And the end of this class, you should be able to...
+At the end of this class, you should be able to...
 
 1. Explain how memory management works in Swift, including when and why to use Strong, Weak, or Unowned
 2. Identify and resolve strong reference cycles (retain cycles)
-3. Demonstrate knowledge of:
-- how weak references can be used to break reference cycles
-- how to use built-in tools and techniques to find memory leaks caused by retain cycles
+3. Demonstrate proficiency in using built-in tools and techniques to find memory leaks caused by retain cycles
 
-## Initial Exercise (10 min)
+## Initial Exercise (5 min)
 
-In Pairs, discuss how you would respond to these iOS interview questions:
+In pairs, briefly discuss with your partner your initial, top-of-mind responses to these common interview questions:
 
 1. When and why would you use the keyword *weak*?
 2. What is a *retain cycle*? Can you give examples of when a retain cycle might occur?
@@ -42,6 +39,7 @@ In Pairs, discuss how you would respond to these iOS interview questions:
 
 
 ## Memory Allocation/Deallocation  (15 min)
+
 ### Memory Leaks, Reference Counting, and Retain cycles
 
 #### Memory Leaks
@@ -89,15 +87,17 @@ class Player {
 }
 ```
 
-## In Class Activity I (20 min)
+## In Class Activity I (10 min)
 
 <!-- TODO: need to add starter app link  -->
 
 
 Part 1 - Individual
-1. Download LeakyStarship starter app
-2. Examine the 3 `deinit()` functions in the app
+1. Download the starter app, [LeakyStarship](https://github.com/VanderDev1/LeakyStarship)
+2. Find one of the three (3) `deinit()` functions in the app.
+3. Set a breakpoint that will stop at one of the `deinit()` functions
 3. Run the app, click the button on main scene, and examine what happens at each breakpoint
+(When done, disable all breakpoints)
 
 Part 2 - In Pairs
 1. Discuss with your partner what occurred at each `deinit()` breakpoint and why?
