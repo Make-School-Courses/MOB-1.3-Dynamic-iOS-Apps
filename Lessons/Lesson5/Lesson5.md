@@ -91,9 +91,7 @@ class Player {
 
 ## In Class Activity I (20 min)
 
-***< TODO: need to add starter app link >***
-
-<!-- Test of hidden comment -->
+<!-- TODO: need to add starter app link  -->
 
 
 Part 1 - Individual
