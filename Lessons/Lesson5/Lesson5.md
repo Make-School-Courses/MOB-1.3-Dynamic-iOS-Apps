@@ -23,11 +23,13 @@ Poor optimization can result in code issues, including memory leaks and potentia
 
 ## Class Learning Objectives/Competencies (5 min)
 
-1. Be able to explain how memory management works in Swift, including when and why to use Strong, Weak, or Unowned
-2. Recognize strong reference cycles (retain cycles)
+And the end of this class, you should be able to...
+
+1. Explain how memory management works in Swift, including when and why to use Strong, Weak, or Unowned
+2. Identify and resolve strong reference cycles (retain cycles)
 3. Demonstrate knowledge of:
 - how weak references can be used to break reference cycles
-- to use built-in tools and techniques to find memory leaks caused by retain cycles
+- how to use built-in tools and techniques to find memory leaks caused by retain cycles
 
 ## Initial Exercise (10 min)
 
@@ -153,7 +155,7 @@ This ensures that when you access a weak reference, it will either be a valid ob
 
 ***< TODO: needs code sample >***
 
-Because weak references can be changed to nil if the instance they point to is deallocated, they come with two inherent requirements:
+Because weak references can be changed to `nil` if the instance they point to is deallocated, they come with two inherent requirements:
 
 ** Weak references must always be declared as Optional, since Optionals are the only types that can become nil.
 
