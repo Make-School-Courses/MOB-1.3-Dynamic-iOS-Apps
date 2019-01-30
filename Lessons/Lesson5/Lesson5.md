@@ -156,9 +156,9 @@ This ensures that when you access a weak reference, it will either be a valid ob
 
 Because weak references can be changed to `nil` if the instance they point to is deallocated, they come with two inherent requirements:
 
-** Weak references must always be declared as Optional, since Optionals are the only types that can become nil.
+- Weak references must always be declared as Optional, since Optionals are the only types that can become nil.
 
-### Weak references can never be declared as let. Instances declared as let cannot change, thus weak references must always be declared as var.
+- Weak references can never be declared as let. Instances declared as let cannot change, thus weak references must always be declared as var.
 
 
 ## In Class Activity II (20 min)
@@ -213,10 +213,10 @@ Individual
 ***< TODO: review interview questions again >***
 
 ## Additional Resources
-- [Strong, Weak & Unowned - an article]https://agostini.tech/2017/07/23/memory-management-in-swift-the-strong-the-weak-and-the-unowned/
-https://krakendev.io/blog/weak-and-unowned-references-in-swift
-- [Avoiding Retain Cycles - an article]https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef
-- [Deinitialization - from Apple] https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182
+- [Strong, Weak & Unowned - an article](https://agostini.tech/2017/07/23/memory-management-in-swift-the-strong-the-weak-and-the-unowned/)
+(https://krakendev.io/blog/weak-and-unowned-references-in-swift)
+- [Avoiding Retain Cycles - an article](https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef)
+- [Deinitialization - from Apple](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182)
 - Pre-ARC (Manual) Memory Management in iOS
 < add URLs >
 - Reference Types & Value Types in Swift
