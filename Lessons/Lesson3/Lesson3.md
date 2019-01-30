@@ -176,7 +176,7 @@ Download [this working example](https://github.com/dmlebron/tutorial_closures) a
 
 ## Challenge
 
-Change the implementation of the delegate to use a closure in the DelegateDemo project (the one with the colors). This approach is not the most common but it is a good idea to know there are more options to do the same task.
+Change the implementation of the delegate to use a closure in the DelegateDemo project (the one with the colors). 
 
 ## Wrap Up (5 min)
 
