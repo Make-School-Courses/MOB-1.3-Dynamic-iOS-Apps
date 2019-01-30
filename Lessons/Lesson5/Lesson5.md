@@ -124,13 +124,15 @@ By retaining a reference to RefB, RefA protects RefA from being deallocated by A
 
 ![syntax](assets/Strong_refA_to_refB.png)
 
-***< TODO: add simple graphic here >***
-
 ### Strong Reference Cycles
 
 If two reference types each hold strong references to each other — if RefA retains a reference count for RefB, and Ref B also retains A — they have a strong reference cycle (aka, a retain cycle).
 
 Strong reference cycles are one type of memory leak.
+
+![syntax](assets/strong_ref_cycle.png)
+
+***< TODO: needs code sample >***
 
 
 ### How to Break Strong Reference Cycles
@@ -139,15 +141,17 @@ Strong reference cycles are one type of memory leak.
 
 **Q:** Where or when have you seen the weak keyword used?
 
-A variable marked with the weak keyword does not take ownership of the object it refers to — it does not increment the reference count of its referenced object.
+A variable marked with the *weak* keyword does not take ownership of the object it refers to — it does not increment the reference count of its referenced object.
 
 When the instance (RefB) to which a weak reference (RefA) refers is successfully deallocated — when RefB’s reference count is zeroed out — RefA will now be `nil`.
 
-As a weak variable, RefA does not protect RefB from being deallocated by ARC.
+As a *weak* variable, RefA does not protect RefB from being deallocated by ARC.
 
-This ensures that when you access a weak reference, it will either be a valid object, or nil.
+This ensures that when you access a weak reference, it will either be a valid object, or `nil`.
 
-***< TODO: needs diagram and a code sample >***
+![syntax](assets/weak_reference.png)
+
+***< TODO: needs code sample >***
 
 Because weak references can be changed to nil if the instance they point to is deallocated, they come with two inherent requirements:
 
@@ -202,7 +206,7 @@ Individual
 ## Wrap Up (5 min)
 
 - Complete challenges
-- Begin first tutorial on closures.
+- Begin first tutorial on < topic >.
 - Read the content listed below if you need more clarity on closures.
 
 ***< TODO: review interview questions again >***
