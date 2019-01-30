@@ -49,6 +49,7 @@ A memory leak occurs when an instance of a reference type remains in memory even
 Leaked memory still counts as a portion of an app’s total memory, even though the objects causing the leaks are no longer needed or useful.
 
 #### Value Types
+
 When you create a new instance of a *value type*, the right amount of memory is set aside for it. Whenever you do anything with it, Swift creates a copy of it.
 
 When that instance no longer exists, Swift automatically reclaims its allocated memory.
@@ -56,18 +57,20 @@ When that instance no longer exists, Swift automatically reclaims its allocated 
 In Swift, you do not need to anything to manage memory used by value types.
 
 #### Reference Types
+
 But passing around an instance of a *reference type* (class, closure) or storing it as a property does not copy it — it creates an additional reference to the same instance.
 
 In other words, you are creating an additional reference to the same memory location on the heap.
 
-**Q:** If there are multiple references to the same instance of a class (object), what is the impact to all its references if any single reference makes a change to it?
+**Q:** If there are multiple references to the *same* instance of a class (object), what is the impact to all its references if any single reference makes a change to it?
 
 #### Reference Counting
-Every class instance has a reference count — which is the number of references to the actual memory on the heap allocated for that instance.
+
+Every class instance has a reference count — the number of references to the actual memory on the heap allocated for that instance.
 
 As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.
 
-As soon as its reference count becomes 0, its memory is deallocated, and its **deinit()** function will run.
+As soon as its reference count becomes 0, its memory is deallocated, and its `deinit()` function will run.
 
 ```Swift
 class Player {
@@ -90,31 +93,32 @@ class Player {
 
 Part 1 - Individual
 1. Download LeakyStarship starter app
-2. Examine the 3 deinit() funtions in the app
+2. Examine the 3 `deinit()` functions in the app
 3. Run the app, click the button on main scene, and examine what happens at each breakpoint
 
 Part 2 - In Pairs
-1. Discuss with your partner what occurred at each deinit() breakpoint and why?
+1. Discuss with your partner what occurred at each `deinit()` breakpoint and why?
 
 
 ## Automatic Reference Counting (ARC) (xx min)
 
 In 2011, Apple introduced Automated Reference Counting (ARC) for Objective-C.
 
-With ARC, the compiler is now responsible for analyzing your code and inserting retain and release calls where needed.
+Swift is built on top of ARC.
 
-Swift is built on top of ARC. The compiler manages the reference counts of class instances — so you do not have to.
+With ARC, the compiler is now responsible for analyzing your code and for managing the reference counts of class instances — so you do not have to.
 
 However, because Swift handles memory automatically, it is still critical to understand how iOS manages memory, as there are some common mistakes that can cause memory issues…
 
 ## Strong/Weak/Unowned references (xx min)
 
 ### Strong References & Ownership
+
 A strong reference increments the reference count of the instance to which it points.
 
 By default, all references you create are strong references.
 
-When one instance of a reference type (RefA) has a reference to another (RefB), we say that RefA is an “owner” of RefB. Conversely, we can also say that “RefB has one owner” (as long as RefA is the only instance of a reference type that is holding a reference to RefB).
+When one instance of a reference type (RefA) has a reference to another (RefB), we say that RefA is an “owner” of RefB.
 
 By retaining a reference to RefB, RefA protects RefA from being deallocated by ARC.
 
@@ -135,7 +139,7 @@ Strong reference cycles are one type of memory leak.
 
 A variable marked with the weak keyword does not take ownership of the object it refers to — it does not increment the reference count of its referenced object.
 
-When the instance (RefB) to which a weak reference (RefA) refers is successfully deallocated — when RefB’s reference count is zeroed out — RefA will now be nil.
+When the instance (RefB) to which a weak reference (RefA) refers is successfully deallocated — when RefB’s reference count is zeroed out — RefA will now be `nil`.
 
 As a weak variable, RefA does not protect RefB from being deallocated by ARC.
 
@@ -158,6 +162,8 @@ Individual
 
 
 ## Unowned References
+
+***< TODO: move this to research challenges? >***
 
 Like a weak reference, an unowned references does not increase the retain count of the object it references.
 
@@ -185,8 +191,8 @@ Because closures — like classes — are reference types, a strong reference cy
 (Requirements: The LeakyStarship starter app)
 
 Individual
-1. Part of the iOS developer "toolbox" is the ability to quickly find the most useful information from Internet research. Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; you will need to research conditions under which closures can have strong reference cycles and how to resolve them)
-
+1. Part of the iOS developer "toolbox" is the ability to quickly find the most useful information from Internet research.
+- Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; you will need to research conditions under which closures can have strong reference cycles and how to resolve them)
 
 
 ## Wrap Up (5 min)
@@ -195,6 +201,7 @@ Individual
 - Begin first tutorial on closures.
 - Read the content listed below if you need more clarity on closures.
 
+***< TODO: review interview questions again >***
 
 ## Additional Resources
 - [Strong, Weak & Unowned - an article]https://agostini.tech/2017/07/23/memory-management-in-swift-the-strong-the-weak-and-the-unowned/
