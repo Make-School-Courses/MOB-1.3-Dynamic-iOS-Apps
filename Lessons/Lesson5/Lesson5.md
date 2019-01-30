@@ -112,7 +112,7 @@ With ARC, the compiler is now responsible for analyzing your code and for managi
 
 However, because Swift handles memory automatically, it is still critical to understand how iOS manages memory, as there are some common mistakes that can cause memory issues…
 
-## Strong/Weak/Unowned references (xx min)
+## Strong Reference Cycles (xx min)
 
 ### Strong References & Ownership
 
@@ -136,9 +136,9 @@ Strong reference cycles are one type of memory leak.
 ***< TODO: needs code sample >***
 
 
-### How to Break Strong Reference Cycles
+## How to Break Strong Reference Cycles (Weak & Unowned References)
 
-#### Weak References
+### Weak References
 
 **Q:** Where or when have you seen the weak keyword used?
 
@@ -160,19 +160,7 @@ Because weak references can be changed to `nil` if the instance they point to is
 
 - Weak references can never be declared as let. Instances declared as let cannot change, thus weak references must always be declared as var.
 
-
-## In Class Activity II (20 min)
-(Requirements: The LeakyStarship starter app)
-
-Individual
-1. Follow the steps in the Using the Debug Memory Graph Tool to Find and Fix Memory Leaks
-
-***< TODO: add Tutorial here >***
-
-
-## Unowned References
-
-***< TODO: move this to research challenges? >***
+### Unowned References
 
 Like a weak reference, an unowned references does not increase the retain count of the object it references.
 
@@ -184,6 +172,14 @@ This makes them easier to manage rather than resorting to using optional binding
 However, if you try and access an unowned reference, and it’s not there, it will crash the app.
 
 ***< TODO: needs diagram and a code sample >***
+
+## In Class Activity II (20 min)
+(Requirements: The LeakyStarship starter app)
+
+***< TODO: add Tutorial here >***
+
+Individual
+1. Follow the steps in the Using the Debug Memory Graph Tool tutorial to Find and Fix Memory Leaks
 
 
 ## Closures and Reference Cycles
