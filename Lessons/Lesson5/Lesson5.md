@@ -15,9 +15,9 @@
 
 ## Why you should know this
 
-The key to developing high-performance iOS apps is to know how your components are consuming memory and how you can optimize memory use.
+The key to developing high-performance iOS apps is to know how your components consume memory and how to optimize memory use.
 
-Poor optimization can result in code issues including memory leaks and potentially fatal errors.
+Poor optimization can result in code issues, including memory leaks and potentially fatal errors.
 
 ***Important Note:*** *iOS keeps track of how much memory each app uses on a given device, and it is set up to kill apps that consume too much.*
 
@@ -106,7 +106,7 @@ In 2011, Apple introduced Automated Reference Counting (ARC) for Objective-C.
 
 Swift is built on top of ARC.
 
-With ARC, the compiler is now responsible for analyzing your code and for managing the reference counts of class instances — so you do not have to.
+With ARC, the compiler is now responsible for analyzing your code and for managing reference counts of class instances — so you do not have to.
 
 However, because Swift handles memory automatically, it is still critical to understand how iOS manages memory, as there are some common mistakes that can cause memory issues…
 
@@ -121,6 +121,8 @@ By default, all references you create are strong references.
 When one instance of a reference type (RefA) has a reference to another (RefB), we say that RefA is an “owner” of RefB.
 
 By retaining a reference to RefB, RefA protects RefA from being deallocated by ARC.
+
+![syntax](assets/Strong_refA_to_refB.png)
 
 ***< TODO: add simple graphic here >***
 
@@ -159,6 +161,8 @@ Because weak references can be changed to nil if the instance they point to is d
 
 Individual
 1. Follow the steps in the Using the Debug Memory Graph Tool to Find and Fix Memory Leaks
+
+***< TODO: add Tutorial here >***
 
 
 ## Unowned References
