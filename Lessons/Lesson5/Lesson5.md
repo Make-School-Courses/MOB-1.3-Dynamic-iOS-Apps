@@ -19,7 +19,7 @@ The key to developing high-performance iOS apps is to know how your components a
 
 Poor optimization can result in code issues including memory leaks and potentially fatal errors.
 
-*Important Note: iOS keeps track of how much memory each app uses on a given device, and it is set up to kill apps that use too much.*
+***Important Note:*** *iOS keeps track of how much memory each app uses on a given device, and it is set up to kill apps that consume too much.*
 
 ## Class Learning Objectives/Competencies (5 min)
 
@@ -33,10 +33,10 @@ Poor optimization can result in code issues including memory leaks and potential
 
 In Pairs, discuss how you would respond to these iOS interview questions:
 
-1. When and why would you use the keyword **weak**?
-2. What is a retain cycle? Can you give examples of when a retain cycle might occur?
-3. In Swift, memory management for value types is the same as memory management for reference types ?
-4. Is the default attribute for properties declared as @IBOutlets weak or strong? Why?
+1. When and why would you use the keyword *weak*?
+2. What is a *retain cycle*? Can you give examples of when a retain cycle might occur?
+3. In Swift, is memory management for *value types* the same as memory management for *reference types*?
+4. What is the default attribute declared for an @IBOutlet: *weak* or *strong*? Why?
 
 
 ## Memory Allocation/Deallocation  (15 min)
@@ -49,14 +49,14 @@ A memory leak occurs when an instance of a reference type remains in memory even
 Leaked memory still counts as a portion of an app’s total memory, even though the objects causing the leaks are no longer needed or useful.
 
 #### Value Types
-When you create a new instance of a value type, the right amount of memory is set aside for it. Whenever you do anything with it — pass it to a function, store it as a property, etc — Swift creates a copy of the instance.
+When you create a new instance of a *value type*, the right amount of memory is set aside for it. Whenever you do anything with it, Swift creates a copy of it.
 
 When that instance no longer exists, Swift automatically reclaims its allocated memory.
 
 In Swift, you do not need to anything to manage memory used by value types.
 
 #### Reference Types
-But passing around an instance of a reference type (class, closure) or storing it as a property does not copy it — it creates an additional reference to the same instance of that reference type.
+But passing around an instance of a *reference type* (class, closure) or storing it as a property does not copy it — it creates an additional reference to the same instance.
 
 In other words, you are creating an additional reference to the same memory location on the heap.
 
@@ -67,10 +67,22 @@ Every class instance has a reference count — which is the number of references
 
 As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.
 
-As soon as its reference count becomes 0, its memory is deallocated, and its deinit() method will run.
+As soon as its reference count becomes 0, its memory is deallocated, and its **deinit()** function will run.
 
-***< TODO: need simple example code here ? diagram? >***
-
+```Swift
+class Player {
+    var coinsInPurse: Int
+    init(coins: Int) {
+        coinsInPurse = Bank.distribute(coins: coins)
+    }
+    func win(coins: Int) {
+        coinsInPurse += Bank.distribute(coins: coins)
+    }
+    deinit {
+        Bank.receive(coins: coinsInPurse)
+    }
+}
+```
 
 ## In Class Activity I (20 min)
 
@@ -188,6 +200,7 @@ Individual
 - [Strong, Weak & Unowned - an article]https://agostini.tech/2017/07/23/memory-management-in-swift-the-strong-the-weak-and-the-unowned/
 https://krakendev.io/blog/weak-and-unowned-references-in-swift
 - [Avoiding Retain Cycles - an article]https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef
+- [Deinitialization - from Apple] https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182
 - Pre-ARC (Manual) Memory Management in iOS
 < add URLs >
 - Reference Types & Value Types in Swift
