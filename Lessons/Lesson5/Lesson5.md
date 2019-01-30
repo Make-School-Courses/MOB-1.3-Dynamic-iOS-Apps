@@ -116,15 +116,14 @@ However, because Swift handles memory automatically, it is still critical to und
 
 ### Strong References & Ownership
 
-A strong reference increments the reference count of the instance to which it points.
-
-By default, all references you create are strong references.
-
-When one instance of a reference type (RefA) has a reference to another (RefB), we say that RefA is an “owner” of RefB.
+A strong reference increments the reference count of the instance to which it points. When one instance of a reference type (RefA) has a reference to another (RefB), we say that RefA is an “owner” of RefB.
 
 By retaining a reference to RefB, RefA protects RefA from being deallocated by ARC.
 
 ![syntax](assets/Strong_refA_to_refB.png)
+
+By default, all references you create are strong references.
+
 
 ### Strong Reference Cycles
 
