@@ -2,16 +2,19 @@
 
 ## Minute-by-Minute [Optional]
 
-| **Elapsed** | **Time**  | **Activity**              |
-| ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:05      | Initial Exercise          |
-| 0:15        | 0:15      | Allocation/Deallocation   |
-| 0:30        | 0:20      | In Class Activity I       |
-| 0:50        | 0:10      | BREAK                     |
-| 1:10        | 0:30      | In Class Activity II      |
-| 1:40        | 0:05      | Wrap Up                   |
-| TOTAL       | 1:45      |                           |
+| **Elapsed** | **Time**  | **Activity**                        |
+| ----------- | --------- | ----------------------------------- |
+| 0:00        | 0:05      | Objectives                          |
+| 0:05        | 0:05      | Initial Exercise                    |
+| 0:10        | 0:15      | Allocation/Deallocation             |
+| 0:25        | 0:10      | In Class Activity I                 |
+| 0:35        | 0:20      | Automatic Reference Counting (ARC)  |
+| 0:55        | 0:10      | BREAK                               |
+| 1:05        | 0:20      | In Class Activity II                |
+| 1:25        | 0:05      | Closures and Reference Cycles       |
+| 1:30        | 0:20      | In Class Activity III               |
+| 1:50        | 0:10      | Wrap Up                             |
+| TOTAL       | 2:00      |                                     |
 
 ## Why you should know this
 
@@ -89,9 +92,6 @@ class Player {
 
 ## In Class Activity I (10 min)
 
-<!-- TODO: need to add starter app link  -->
-
-
 Part 1 - Individual
 1. Download the starter app, [LeakyStarship](https://github.com/VanderDev1/LeakyStarship)
 2. Find one of the three (3) `deinit()` functions in the app.
@@ -103,7 +103,7 @@ Part 2 - In Pairs
 1. Discuss with your partner what occurred at each `deinit()` breakpoint and why?
 
 
-## Automatic Reference Counting (ARC) (xx min)
+## Automatic Reference Counting (ARC) (20 min)
 
 In 2011, Apple introduced Automated Reference Counting (ARC) for Objective-C.
 
@@ -113,7 +113,7 @@ With ARC, the compiler is now responsible for analyzing your code and for managi
 
 However, because Swift handles memory automatically, it is still critical to understand how iOS manages memory, as there are some common mistakes that can cause memory issues…
 
-## Strong Reference Cycles (xx min)
+## Strong Reference Cycles (10 min)
 
 ### Strong References & Ownership
 
@@ -138,7 +138,7 @@ Strong reference cycles are one type of memory leak.
 <!-- TODO: needs code sample  -->
 
 
-## How to Break Strong Reference Cycles
+## How to Break Strong Reference Cycles (10 min)
 
 ### Weak & Unowned References
 
@@ -182,16 +182,14 @@ However, if you try and access an unowned reference, and it’s not there, it wi
 
 
 ## In Class Activity II (20 min)
-(Requirements: The LeakyStarship starter app)
 
-<!-- TODO: add Tutorial here  -->
-
+**Requirements:** The [LeakyStarship](https://github.com/VanderDev1/LeakyStarship) starter app
 
 Individual
-1. Follow the steps in the [Using the Debug Memory Graph Tool tutorial](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson5/Mem_Graph_Tutorial/MemGraphTutorial.md) to Find and Fix Memory Leaks
+1. Follow the steps in the [Using the Debug Memory Graph Tool tutorial](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson5/Mem_Graph_Tutorial/MemGraphTutorial.md) to find and fix memory leaks...
 
 
-## Closures and Reference Cycles
+## Closures and Reference Cycles (5 mins)
 
 By default, captured values in closures are strong references.
 
@@ -204,19 +202,23 @@ Because closures — like classes — are reference types, a strong reference cy
 
 
 ## In Class Activity III (20 min)
-(Requirements: The LeakyStarship starter app)
+**Requirements:** The [LeakyStarship](https://github.com/VanderDev1/LeakyStarship) starter app
 
 Individual
 1. Part of the iOS developer "toolbox" is the ability to quickly find the most useful information from Internet research.
 - Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; you will need to research conditions under which closures can have strong reference cycles and how to resolve them)
 
+
 ## Challenges
 
 1. xxx
 
-## Wrap Up (5 min)
+## Wrap Up (10 min)
 
-- Complete challenges
+### 1. Role Play Exercise: Mini Practice Interview
+Pair up. For 3 to 5 minutes in each role, take turns playing a hiring manager and a prospective iOS developer candidate. As the hiring manager, ask your candidate each of the questions we reviewed in the Initial Exercise above.
+
+2. Complete challenges
 - Begin first tutorial on < topic >.
 - Read the content listed below if you need more clarity on closures.
 
