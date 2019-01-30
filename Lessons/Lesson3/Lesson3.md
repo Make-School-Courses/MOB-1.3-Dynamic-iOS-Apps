@@ -173,7 +173,7 @@ Remember closures and completion handlers? These can be used instead of delegate
 Download [this working example](https://github.com/dmlebron/tutorial_closures) and look at the code with a partner. Notice how delegates are being replaced by closures and see how it leads to a similar result.<br>
 **Q:** What does the app do?<br>
 **Q:** Where are closures being used?<br>
-**Q:** How would the approach be with delegates?<br>
+**Q:** How would the approach be with delegates? Change it.<br> 
 
 ## Challenge
 
