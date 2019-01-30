@@ -134,7 +134,8 @@ Strong reference cycles are one type of memory leak.
 
 ![syntax](assets/strong_ref_cycle.png)
 
-***< TODO: needs code sample >***
+
+<!-- TODO: needs code sample  -->
 
 
 ## How to Break Strong Reference Cycles
@@ -155,7 +156,9 @@ This ensures that when you access a weak reference, it will either be a valid ob
 
 ![syntax](assets/weak_reference.png)
 
-***< TODO: needs code sample >***
+
+<!-- TODO: needs code sample  -->
+
 
 Because weak references can be changed to `nil` if the instance they point to is deallocated, they come with two inherent requirements:
 
@@ -174,12 +177,15 @@ Because of this, an unowned reference is always defined as a non-optional type.�
 This makes them easier to manage rather than resorting to using optional binding.
 However, if you try and access an unowned reference, and it’s not there, it will crash the app.
 
-***< TODO: needs diagram and a code sample >***
+
+<!-- TODO: needs diagram and a code sample  -->
+
 
 ## In Class Activity II (20 min)
 (Requirements: The LeakyStarship starter app)
 
-***< TODO: add Tutorial here >***
+<!-- TODO: add Tutorial here  -->
+
 
 Individual
 1. Follow the steps in the Using the Debug Memory Graph Tool tutorial to Find and Fix Memory Leaks
@@ -191,7 +197,9 @@ By default, captured values in closures are strong references.
 
 Because closures — like classes — are reference types, a strong reference cycle can also occur with a closure if you assign it to a property of a class instance, and the body closure captures a reference to that class instance.
 
-***< TODO: small code sample here >***
+
+<!-- TODO: small code sample here -->
+
 
 
 
@@ -202,7 +210,8 @@ Individual
 1. Part of the iOS developer "toolbox" is the ability to quickly find the most useful information from Internet research.
 - Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; you will need to research conditions under which closures can have strong reference cycles and how to resolve them)
 
-## Challenges HOF
+## Challenges
+
 1. xxx
 
 ## Wrap Up (5 min)
@@ -211,7 +220,9 @@ Individual
 - Begin first tutorial on < topic >.
 - Read the content listed below if you need more clarity on closures.
 
-***< TODO: review interview questions again >***
+
+<!-- TODO: review interview questions again -->
+
 
 ## Additional Resources
 - [Strong, Weak & Unowned - an article](https://agostini.tech/2017/07/23/memory-management-in-swift-the-strong-the-weak-and-the-unowned/)
