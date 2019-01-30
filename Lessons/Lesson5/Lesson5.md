@@ -93,6 +93,9 @@ class Player {
 
 ***< TODO: need to add starter app link >***
 
+<!-- Test of hidden comment -->
+
+
 Part 1 - Individual
 1. Download LeakyStarship starter app
 2. Examine the 3 `deinit()` functions in the app
@@ -136,9 +139,11 @@ Strong reference cycles are one type of memory leak.
 ***< TODO: needs code sample >***
 
 
-## How to Break Strong Reference Cycles (Weak & Unowned References)
+## How to Break Strong Reference Cycles
 
-### Weak References
+### Weak & Unowned References
+
+#### Weak References
 
 **Q:** Where or when have you seen the weak keyword used?
 
@@ -160,7 +165,7 @@ Because weak references can be changed to `nil` if the instance they point to is
 
 - Weak references can never be declared as let. Instances declared as let cannot change, thus weak references must always be declared as var.
 
-### Unowned References
+#### Unowned References
 
 Like a weak reference, an unowned references does not increase the retain count of the object it references.
 
@@ -199,6 +204,8 @@ Individual
 1. Part of the iOS developer "toolbox" is the ability to quickly find the most useful information from Internet research.
 - Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; you will need to research conditions under which closures can have strong reference cycles and how to resolve them)
 
+## Challenges HOF
+1. xxx
 
 ## Wrap Up (5 min)
 
