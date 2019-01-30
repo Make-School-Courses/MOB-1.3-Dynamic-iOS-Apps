@@ -110,7 +110,8 @@ Using the example of feeding pets or other if it's easier for you, create a diag
 Try to include the following key words: **delegate**, **delegating object** and **delegate protocol**.
 
 Part 2 - pairs<br>
-Share and explain your diagram to a peer and compare both diagrams to see any similarities or differences
+Share and explain your diagram to a peer and compare both diagrams to see any similarities or differences<br>
+Discuss the table view scenario, who is the delegate and delegator? what is the protocol being used?
 
 ## Creating our own delegate (25 min)
 
