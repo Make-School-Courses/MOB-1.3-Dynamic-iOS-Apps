@@ -188,7 +188,7 @@ However, if you try and access an unowned reference, and it’s not there, it wi
 
 
 Individual
-1. Follow the steps in the [Using the Debug Memory Graph Tool tutorial] (https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson5/Mem_Graph_Tutorial/MemGraphTutorial.md) to Find and Fix Memory Leaks
+1. Follow the steps in the [Using the Debug Memory Graph Tool tutorial](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson5/Mem_Graph_Tutorial/MemGraphTutorial.md) to Find and Fix Memory Leaks
 
 
 ## Closures and Reference Cycles
