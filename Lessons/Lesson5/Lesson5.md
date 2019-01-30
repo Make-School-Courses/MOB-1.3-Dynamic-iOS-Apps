@@ -19,18 +19,21 @@ The key to developing high-performance iOS apps is to know how your components a
 
 Poor optimization can result in code issues including memory leaks and potentially fatal errors.
 
+*Important Note: iOS keeps track of how much memory each app uses on a given device, and it is set up to kill apps that use too much.*
+
 ## Class Learning Objectives/Competencies (5 min)
 
-1. Be able to explain and to demonstrate knowledge of how:
-- memory management works in Swift, including when and why to use Strong, Weak, or Unowned
-- to recognize strong reference cycles (retain cycles) and how to use weak references to break them
+1. Be able to explain how memory management works in Swift, including when and why to use Strong, Weak, or Unowned
+2. Recognize strong reference cycles (retain cycles)
+3. Demonstrate knowledge of:
+- how weak references can be used to break reference cycles
 - to use built-in tools and techniques to find memory leaks caused by retain cycles
 
 ## Initial Exercise (10 min)
 
-In Pairs, discuss the following interview questions:
+In Pairs, discuss how you would respond to these iOS interview questions:
 
-1. When and why would you use the keyword weak?
+1. When and why would you use the keyword **weak**?
 2. What is a retain cycle? Can you give examples of when a retain cycle might occur?
 3. In Swift, memory management for value types is the same as memory management for reference types ?
 4. Is the default attribute for properties declared as @IBOutlets weak or strong? Why?
@@ -40,7 +43,6 @@ In Pairs, discuss the following interview questions:
 ### Memory Leaks, Reference Counting, and Retain cycles
 
 #### Memory Leaks
-iOS keeps track of how much memory each app uses on a given device, and it is set up to kill apps that use too much.
 
 A memory leak occurs when an instance of a reference type remains in memory even after its lifecycle has ended.
 
