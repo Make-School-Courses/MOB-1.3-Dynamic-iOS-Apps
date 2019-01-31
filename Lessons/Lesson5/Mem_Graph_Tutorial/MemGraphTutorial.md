@@ -12,7 +12,7 @@
 
 3. In the Debug area, click the Debug Memory Graph button on the Debug Toolbar:
 
-![syntax](assets/MemoryGraphDebug-Button.png)
+![syntax](assets/purple_square.png)
 
 Let’s observe what occurs in Xcode:
 - on click of the Debug Memory Graph button, Xcode sets a temporary (system) breakpoint in your app at the point where you clicked the button
@@ -31,7 +31,7 @@ at the bottom right of the Navigator pane, click the little rectangular “Show 
 ![syntax](assets/2nd_mem_graph_pic.png)
 
 - Examine the leaks found under the Captain, CrewMember and Starship objects.
-- Also, look briefly at to the memory leaks under two `ContiguousArrayStorage` objects.
+- Also, briefly notice the memory leaks under the two `ContiguousArrayStorage` objects.
 
 ### Finding the Source of the Leak
 
@@ -76,10 +76,9 @@ class CrewMember
 }
 ```
 
-**Q:** Based on what you’ve learned so far about strong reference cycles, how would you fix the memory leak currently created for the CrewMember objects.
+**Q:** Based on what you’ve learned so far about strong reference cycles, how would you go about fixing the memory leak currently existing for the CrewMember objects?
 
 **TODO:**
-- Apply your solution
+- Apply your solution.
 - Run the app again and bring up the Memory Graph Debug tool.
-
-**RESULTS:**
+- Be prepared to explain the effect of your solution on all reference type instances which were causing memory leaks in the original state of the app.
