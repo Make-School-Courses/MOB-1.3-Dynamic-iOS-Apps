@@ -1,5 +1,13 @@
 # Using the Debug Memory Graph Tool
 
+## Learning Objectives/Competencies
+At the end of this tutorial, you should be able to...
+
+1. Identify and resolve a memory leak caused by a *strong reference* cycle (aka, retain cycle)
+3. Demonstrate proficiency in using the Debug Memory Graph Tool to find and fix a memory leak caused by a retain cycle
+
+## Steps to Finding and Resolving The Memory Leaks
+
 ### Identify A Memory Leaky
 
 **Requirement:** LeakyStarship App
@@ -82,3 +90,8 @@ class CrewMember
 - Apply your solution.
 - Run the app again and bring up the Memory Graph Debug tool.
 - Be prepared to explain the effect of your solution on all reference type instances which were causing memory leaks in the original state of the app.
+
+
+## FEEDBACK AND REVIEW
+
+Please take a moment to rate your understanding of learning outcomes from this tutorial, and how we can improve it via our [tutorial feedback form](https://goo.gl/forms/XC9KpW6fvzEPvWS92)

@@ -231,9 +231,8 @@ Individual
 
 ## Wrap Up (10 min)
 
-1. **Role Play Exercise:** -- A Mini Practice Interview
-- Pair up.
-- For 3 to 5 minutes in each role, take turns playing (a) a Hiring Manager, then (b) a Candidate for an iOS developer position.
+1. **Role Play Exercise** - A Mini Practice Interview
+- Pair up. For 3 to 5 minutes in each role, take turns playing (a) a Hiring Manager, then (b) a Candidate for an iOS developer position.
 - As the Hiring Manager, ask your Candidate to answer each of the questions from the Initial Exercise above.
 
 2. Complete Challenges
