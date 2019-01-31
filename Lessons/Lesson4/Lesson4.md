@@ -192,6 +192,7 @@ Your task is to complete it by adding the functionality of buttons and the timer
 ## Wrap Up (5 min)
 
 - Complete challenges
+- Start and possibly finish the ARC page from first tutorial.
 
 ## Additional Resources
 
