@@ -228,16 +228,17 @@ Individual
 1. Look up *weak* and *unowned*:
 - How are they similar? How do they differ?
 - When would you use one over the other?
-- What are the defaults for the following constructs? Why did Apple choose the defaults they assigned to each construct?
-#### arrays?
-##### @IBOutlets?
-2. In a fresh (leaky) version of the LeakyStarship app, use the Memory Graph Tool to examine the two ContiguousArrayStorage objects:
+2. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs?
+- arrays?
+- @IBOutlets?
+What is your guess as to why Apple chose those defaults for each construct?
+3. In a fresh (leaky) version of the LeakyStarship app, use the Memory Graph Tool to examine the two `ContiguousArrayStorage` objects:
 - Research why these objects are causing memory leaks
 - Resolve those memory leaks
-3. Use the **Instruments --> Leaks** tool to identify leaks with LeakyStarship:
-- Execute this [Instruments tutorial by Ray Wenderlich] (https://www.raywenderlich.com/397-instruments-tutorial-with-swift-getting-started)  Leaks tool.
-- Apply what you have learned in that tutorial to the original, leaky version of LeakyStarship
-4. Research how the `isKnownUniquelyReferenced(_:)` function can be used to guard against creation of retain cycles
+4. Use the **Instruments -> Leaks** tool to identify memory leaks:
+- Execute this [Instruments tutorial by Ray Wenderlich](https://www.raywenderlich.com/397-instruments-tutorial-with-swift-getting-started)
+- Apply what you have learned in the above tutorial to the original (leaky) version of LeakyStarship
+5. Research how the `isKnownUniquelyReferenced(_:)` function can be used to guard against creating retain cycles
 - Using a fresh version of the LeakyStarship app, implement the `isKnownUniquelyReferenced(_:)` function to find memory leaks
 
 
