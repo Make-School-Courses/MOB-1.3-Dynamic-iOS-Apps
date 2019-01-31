@@ -60,6 +60,7 @@ When that instance no longer exists, Swift automatically reclaims its allocated 
 In Swift, you do not need to anything to manage memory used by value types.
 
 *Below is a general list of Value and Reference Types in Swift. To learn more, see the ARC section of the Functions Closures and ARC playground from previous lessons, or browse the topic on the Web.*
+
 ![syntax](assets/value_and_ref_types.png)
 
 #### Reference Types
