@@ -59,6 +59,9 @@ When that instance no longer exists, Swift automatically reclaims its allocated 
 
 In Swift, you do not need to anything to manage memory used by value types.
 
+
+<!-- TODO: for value and reference types, list then and maybe reference the ARC playground -->
+
 #### Reference Types
 
 But passing around an instance of a *reference type* (class, closure) or storing it as a property does not copy it — it creates an additional reference to the same instance.
@@ -186,7 +189,7 @@ This makes them easier to manage rather than resorting to using optional binding
 **Requirements:** The [LeakyStarship](https://github.com/VanderDev1/LeakyStarship) starter app
 
 Individual
-1. Follow the steps in the [Using the Debug Memory Graph Tool tutorial](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson5/Mem_Graph_Tutorial/MemGraphTutorial.md) to find and fix memory leaks...
+1. Follow the steps in the [Using the Debug Memory Graph Tool](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson5/Mem_Graph_Tutorial/MemGraphTutorial.md) tutorial to find and fix memory leaks...
 
 **Q** In addition to adding the *weak* keyword, what other change was required?
 - why?
@@ -215,6 +218,9 @@ Individual
 ## Challenges
 
 1. xxx
+
+<!-- TODO: add challenge for researching why arrays have memory leaks -- see contiguous -->
+
 
 ## Wrap Up (10 min)
 

@@ -51,7 +51,7 @@ For now, let’s focus only on the leaks in CrewMember objects.
 
 6. Ctrl+Click (or Right+Click) one of the CrewMember object cubes in the memory graph.
 
-7. The context menu displayed offers several useful choices. Choose the Jump to Definition selection in the dropdown list.
+7. The context menu displayed offers several useful choices. Choose the `Jump to Definition` option in the dropdown list.
 
 Xcode should open your CrewMember class file:
 
