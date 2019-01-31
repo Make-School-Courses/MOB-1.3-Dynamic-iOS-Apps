@@ -27,8 +27,8 @@ Poor optimization can result in code issues, including memory leaks and potentia
 ## Class Learning Objectives/Competencies (5 min)
 At the end of this class, you should be able to...
 
-1. Explain how memory management works in Swift, including when and why to use Strong, Weak, or Unowned
-2. Identify and resolve strong reference cycles (retain cycles)
+1. Explain how memory management works in Swift, including when and why to use *strong*, *weak*, or *unowned*
+2. Identify and resolve *strong reference* cycles (aka, retain cycles)
 3. Demonstrate proficiency in using built-in tools and techniques to find memory leaks caused by retain cycles
 
 ## Initial Exercise (5 min)
@@ -144,8 +144,6 @@ Strong reference cycles are one type of memory leak.
 
 #### Weak References
 
-**Q:** Where or when have you seen the weak keyword used?
-
 A variable marked with the *weak* keyword does not take ownership of the object it refers to — it does not increment the reference count of its referenced object.
 
 When the instance (RefB) to which a weak reference (RefA) refers is successfully deallocated — when RefB’s reference count is zeroed out — RefA will now be `nil`.
@@ -166,6 +164,8 @@ Because weak references can be changed to `nil` if the instance they point to is
 
 - Weak references can never be declared as let. Instances declared as let cannot change, thus weak references must always be declared as var.
 
+**Q:** Where or when have you seen the weak keyword used?
+
 #### Unowned References
 
 Like a weak reference, an unowned references does not increase the retain count of the object it references.
@@ -175,7 +175,7 @@ Unlike a weak reference, however, an unowned reference is assumed to always have
 Because of this, an unowned reference is always defined as a non-optional type. An unowned reference cannot be nil.
 
 This makes them easier to manage rather than resorting to using optional binding.
-However, if you try and access an unowned reference, and it’s not there, it will crash the app.
+*However, if you try and access an unowned reference, and it’s not there, it will crash the app.*
 
 
 <!-- TODO: needs diagram and a code sample  -->
@@ -188,6 +188,9 @@ However, if you try and access an unowned reference, and it’s not there, it wi
 Individual
 1. Follow the steps in the [Using the Debug Memory Graph Tool tutorial](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson5/Mem_Graph_Tutorial/MemGraphTutorial.md) to find and fix memory leaks...
 
+**Q** In addition to adding the *weak* keyword, what other change was required?
+- why?
+
 
 ## Closures and Reference Cycles (5 mins)
 
@@ -196,7 +199,7 @@ By default, captured values in closures are strong references.
 Because closures — like classes — are reference types, a strong reference cycle can also occur with a closure if you assign it to a property of a class instance, and the body closure captures a reference to that class instance.
 
 
-<!-- TODO: small code sample here -->
+<!-- TODO: small code sample here from last class -->
 
 
 
@@ -205,8 +208,8 @@ Because closures — like classes — are reference types, a strong reference cy
 **Requirements:** The [LeakyStarship](https://github.com/VanderDev1/LeakyStarship) starter app
 
 Individual
-1. Part of the iOS developer "toolbox" is the ability to quickly find the most useful information from Internet research.
-- Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; you will need to research conditions under which closures can have strong reference cycles and how to resolve them)
+1. Part of an iOS developer's "toolkit" is the ability to quickly find the most useful information from Internet research.
+- Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; find out how closures can cause strong reference cycles and how to resolve them)
 
 
 ## Challenges
@@ -215,10 +218,10 @@ Individual
 
 ## Wrap Up (10 min)
 
-### 1. Role Play Exercise: Mini Practice Interview
-Pair up. For 3 to 5 minutes in each role, take turns playing a hiring manager and a prospective iOS developer candidate. As the hiring manager, ask your candidate each of the questions we reviewed in the Initial Exercise above.
+1. **Role Play Exercise:** Mini Practice Interview
+Pair up. For 3 to 5 minutes in each role, take turns playing a Hiring Manager and a prospective iOS developer Candidate. As the Hiring Manager, ask your Candidate to answer each of the questions from the Initial Exercise above.
 
-2. Complete challenges
+. Complete challenges
 - Begin first tutorial on < topic >.
 - Read the content listed below if you need more clarity on closures.
 
