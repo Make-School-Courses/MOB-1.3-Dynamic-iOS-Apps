@@ -1,6 +1,6 @@
 # Memory Management
 
-## Minute-by-Minute [Optional]
+## Minute-by-Minute
 
 | **Elapsed** | **Time**  | **Activity**                        |
 | ----------- | --------- | ----------------------------------- |
@@ -228,10 +228,10 @@ Individual
 1. Look up *weak* and *unowned*:
 - How are they similar? How do they differ?
 - When would you use one over the other?
-2. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs?
+2. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs? What is your guess as to why Apple chose those defaults for each construct?
 - arrays?
 - @IBOutlets?
-What is your guess as to why Apple chose those defaults for each construct?
+- Closures?
 3. In a fresh (leaky) version of the LeakyStarship app, use the Memory Graph Tool to examine the two `ContiguousArrayStorage` objects:
 - Research why these objects are causing memory leaks
 - Resolve those memory leaks
