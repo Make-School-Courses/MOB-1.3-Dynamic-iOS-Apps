@@ -59,8 +59,8 @@ When that instance no longer exists, Swift automatically reclaims its allocated 
 
 In Swift, you do not need to anything to manage memory used by value types.
 
-
-<!-- TODO: for value and reference types, list then and maybe reference the ARC playground -->
+*Below is a general list of Value and Reference Types in Swift. To learn more, see the ARC section of the Functions Closures and ARC playground from previous lessons, or browse the topic on the Web.*
+![syntax](assets/value_and_ref_types.png)
 
 #### Reference Types
 
@@ -201,11 +201,18 @@ By default, captured values in closures are strong references.
 
 Because closures — like classes — are reference types, a strong reference cycle can also occur with a closure if you assign it to a property of a class instance, and the body closure captures a reference to that class instance.
 
+```Swift
+func addScore(_ points: Int) -> Int
+{
+    let score = 42
 
-<!-- TODO: small code sample here from last class -->
+    let calculate = {
+        return score + points
+    }
 
-
-
+    return calculate()
+}
+```
 
 ## In Class Activity III (20 min)
 **Requirements:** The [LeakyStarship](https://github.com/VanderDev1/LeakyStarship) starter app
@@ -224,25 +231,18 @@ Individual
 
 ## Wrap Up (10 min)
 
-1. **Role Play Exercise:** Mini Practice Interview
+1. **Role Play Exercise:** -- A Mini Practice Interview
 - Pair up.
-- For 3 to 5 minutes in each role, take turns playing a Hiring Manager and a prospective iOS developer Candidate.
+- For 3 to 5 minutes in each role, take turns playing (a) a Hiring Manager, then (b) a Candidate for an iOS developer position.
 - As the Hiring Manager, ask your Candidate to answer each of the questions from the Initial Exercise above.
 
-2. Complete challenges
-- Begin first tutorial on < topic >.
-- Read the content listed below if you need more clarity on closures.
+2. Complete Challenges
 
-
-<!-- TODO: review interview questions again -->
-
+3. Read content listed below for clarity on the topics relevant to iOS Memory Management covered in this class.
 
 ## Additional Resources
-- [Strong, Weak & Unowned - an article](https://agostini.tech/2017/07/23/memory-management-in-swift-the-strong-the-weak-and-the-unowned/)
-(https://krakendev.io/blog/weak-and-unowned-references-in-swift)
+- [Strong, Weak & Unowned - an article](https://krakendev.io/blog/weak-and-unowned-references-in-swift)
 - [Avoiding Retain Cycles - an article](https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef)
 - [Deinitialization - from Apple](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182)
-- Pre-ARC (Manual) Memory Management in iOS
-< add URLs >
-- Reference Types & Value Types in Swift
-< add URLs >
+- [Reference Types & Value Types in Swift - an article](https://www.raywenderlich.com/9481-reference-vs-value-types-in-swift)
+- [Manual Memory Management in iOS (Pre-ARC) - article](https://www.tomdalling.com/blog/cocoa/an-in-depth-look-at-manual-memory-management-in-objective-c/)
