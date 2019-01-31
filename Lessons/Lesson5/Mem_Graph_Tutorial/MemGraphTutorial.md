@@ -12,7 +12,7 @@
 
 3. In the Debug area, click the Debug Memory Graph button on the Debug Toolbar:
 
-![syntax](assets/purple_square.png)
+![syntax](assets/MemoryGraphDebug-Button.png)
 
 Let’s observe what occurs in Xcode:
 - on click of the Debug Memory Graph button, Xcode sets a temporary (system) breakpoint in your app at the point where you clicked the button
