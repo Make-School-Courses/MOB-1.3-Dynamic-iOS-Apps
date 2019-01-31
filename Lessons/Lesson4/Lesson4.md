@@ -195,6 +195,7 @@ Your task is to complete it by adding the functionality of buttons and the timer
 
 ## Additional Resources
 
+1. [Slides](https://docs.google.com/presentation/d/1I5twDckX8QExxHZbQOn0xVxXrT37e2uUIl0WKXQS8uw/edit?usp=sharing)
 1. [Selector and extensions](https://medium.com/@abhimuralidharan/selectors-in-swift-a-better-approach-using-extensions-aa6b0416e850)
 1. [Target-Action](https://learnappmaking.com/target-action-swift)
 1. [Notifications](https://learnappmaking.com/notification-center-how-to-swift/)
