@@ -179,11 +179,11 @@ class Apartment {
 
 Because weak references can be changed to `nil` if the instance they point to is deallocated, they come with two inherent requirements:
 
-- Weak references must always be declared as Optional, since Optionals are the only types that can become nil.
+- Weak references must always be declared as Optional, since Optionals are the only types that can become `nil`.
 
-- Weak references can never be declared as let. Instances declared as let cannot change, thus weak references must always be declared as var.
+- Weak references can never be declared as `let`. Instances declared as `let` cannot change, thus weak references must always be declared as var.
 
-**Q:** Where or when have you seen the weak keyword used?
+**Q:** Where or when have you seen the `weak` keyword used so far in your iOS work?
 
 #### Unowned References
 
@@ -191,7 +191,7 @@ Like a weak reference, an unowned references does not increase the retain count 
 
 Unlike a weak reference, however, an unowned reference is assumed to always have a value — it behaves somewhat like an implicitly unwrapped optional.
 
-Because of this, an unowned reference is always defined as a non-optional type. An unowned reference cannot be nil.
+Because of this, an unowned reference is always defined as a non-Optional type. An unowned reference *cannot* be `nil`.
 
 This makes them easier to manage rather than resorting to using optional binding.
 *However, if you try and access an unowned reference, and it’s not there, it will crash the app.*
@@ -217,9 +217,9 @@ Because closures — like classes — are reference types, a strong reference cy
 ```Swift
 func addScore(_ points: Int) -> Int
 {
-    let score = 42
+    let score = 42 // capture-able value in closure's surrounding context
 
-    let calculate = {
+    let calculate = { // closure
         return score + points
     }
 
