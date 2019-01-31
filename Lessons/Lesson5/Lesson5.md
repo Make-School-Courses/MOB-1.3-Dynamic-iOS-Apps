@@ -132,15 +132,23 @@ By default, all references you create are strong references.
 
 ### Strong Reference Cycles
 
-If two reference types each hold strong references to each other — if RefA retains a reference count for RefB, and Ref B also retains A — they have a strong reference cycle (aka, a retain cycle).
-
-Strong reference cycles are one type of memory leak.
+If two reference types each hold strong references to each other — if RefA retains a reference count for RefB, and RefB also retains RefA — they have a strong reference cycle (aka, a retain cycle).
 
 ![syntax](assets/strong_ref_cycle.png)
 
+Strong reference cycles are one type of memory leak.
 
-<!-- TODO: needs code sample  -->
+A Simple Example - An instance of the Person class will have a strong reference to an instance of the Apartment class, and the Apartment class instance will also have a strong reference to the instance of the Person class. Neither instance's reference count can ever be 0.
 
+```Swift
+class Person {
+    var apartment: Apartment?
+    }
+
+class Apartment {
+    var tenant: Person?
+}
+```
 
 ## How to Break Strong Reference Cycles (10 min)
 
@@ -154,12 +162,19 @@ When the instance (RefB) to which a weak reference (RefA) refers is successfully
 
 As a *weak* variable, RefA does not protect RefB from being deallocated by ARC.
 
-This ensures that when you access a weak reference, it will either be a valid object, or `nil`.
-
 ![syntax](assets/weak_reference.png)
 
+This ensures that when you access a weak reference, it will either be a valid object, or `nil`.
 
-<!-- TODO: needs code sample  -->
+```Swift
+class Person {
+    weak var apartment: Apartment?
+    }
+
+class Apartment {
+    var tenant: Person?
+}
+```
 
 
 Because weak references can be changed to `nil` if the instance they point to is deallocated, they come with two inherent requirements:
@@ -180,9 +195,6 @@ Because of this, an unowned reference is always defined as a non-optional type.�
 
 This makes them easier to manage rather than resorting to using optional binding.
 *However, if you try and access an unowned reference, and it’s not there, it will crash the app.*
-
-
-<!-- TODO: needs diagram and a code sample  -->
 
 
 ## In Class Activity II (20 min)
@@ -229,15 +241,15 @@ Individual
 - How are they similar? How do they differ?
 - When would you use one over the other?
 2. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs? What is your guess as to why Apple chose those defaults for each construct?
-- arrays?
+- Arrays?
 - @IBOutlets?
 - Closures?
 3. In a fresh (leaky) version of the LeakyStarship app, use the Memory Graph Tool to examine the two `ContiguousArrayStorage` objects:
 - Research why these objects are causing memory leaks
-- Resolve those memory leaks
+- Resolve those leaks
 4. Use the **Instruments -> Leaks** tool to identify memory leaks:
 - Execute this [Instruments tutorial by Ray Wenderlich](https://www.raywenderlich.com/397-instruments-tutorial-with-swift-getting-started)
-- Apply what you have learned in the above tutorial to the original (leaky) version of LeakyStarship
+- Apply what you have learned in the above tutorial to the original (leaky) version of LeakyStarship to find and fix its leaky CrewMember objects
 5. Research how the `isKnownUniquelyReferenced(_:)` function can be used to guard against creating retain cycles
 - Using a fresh version of the LeakyStarship app, implement the `isKnownUniquelyReferenced(_:)` function to find memory leaks
 
