@@ -41,7 +41,7 @@ For now, let’s focus only on the leaks in CrewMember objects.
 
 5. In the Debug Navigator panel, select the CrewMember object you want to examine. If open, close the Assistant Editor and minimize the Debug area to maximize your view of your CrewMember object’s memory graph in Xcode’s middle panel.
 
-![syntax](assets/3rd_mem_graph_pic.png)
+![syntax](../assets/3rd_mem_graph_pic.png)
 
 - Notice that each of the CrewMember objects holds a strong reference to the Captain object — while the Captain object holds a strong reference to each of the CrewMember objects.
 
