@@ -77,8 +77,8 @@ Every class instance has a reference count — the number of references to the a
 
 As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.
 
-##### Using the `deinit()` Function 
-Recall from Lesson 4 that a `deinit()` function is called immediately before a class instance is deallocated. So, you can use this function to perform clean up or other actions just before the instance is deallocated.
+##### The `deinit()` Function, Deallocation & Reference Counts
+Recall from Lesson 4 that a `deinit()` function is called immediately before a class instance is deallocated. Thus, you can use this function to perform clean up or other actions just before the instance is deallocated.
 
 As soon as the instance's reference count becomes 0, its `deinit()` function will run, and its memory will be deallocated.
 
@@ -292,4 +292,5 @@ Individual
 - [Avoiding Retain Cycles - an article](https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef)
 - [Deinitialization - from Apple](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182)
 - [Reference Types & Value Types in Swift - an article](https://www.raywenderlich.com/9481-reference-vs-value-types-in-swift)
+- [Deinitialization to Deallocate Memory Space - a tutorial from tutorialspoint.com](https://www.tutorialspoint.com/swift/swift_deinitialization.htm)
 - [Manual Memory Management in iOS (Pre-ARC) - article](https://www.tomdalling.com/blog/cocoa/an-in-depth-look-at-manual-memory-management-in-objective-c/)
