@@ -181,11 +181,11 @@ class Apartment {
 
 A variable marked with the *weak* keyword does not take ownership of the object it refers to — it does not increment the reference count of its referenced object.
 
-When the instance (RefB) to which a weak reference (RefA) refers is successfully deallocated — when RefB’s reference count is zeroed out — RefA will now be `nil`.
+In the example above, if we add the *weak* attribute to the Apartment variable in the Person class, and the Apartment instance is successfully deallocated, the Person class's reference to it will now be `nil`.
 
-As a *weak* variable, RefA does not protect RefB from being deallocated by ARC.
+As a *weak* variable, Person does not protect Apartment from being deallocated by ARC.
 
-![syntax](assets/weak_reference.png)
+![syntax](assets/weak_ref2.png)
 
 This ensures that when you access a weak reference, it will either be a valid object, or `nil`.
 
