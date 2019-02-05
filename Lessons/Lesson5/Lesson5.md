@@ -270,7 +270,7 @@ Individual
 
 ## Challenges
 
-[REQUIRED]
+[REQUIRED]<br>
 
 1. Look up *weak* and *unowned*:
 - How are they similar? How do they differ?
