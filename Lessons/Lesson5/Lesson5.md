@@ -77,11 +77,14 @@ Every class instance has a reference count — the number of references to the a
 
 As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.
 
-If you recall from the previous Lesson 4, a *deinit()* function is called immediately before a class instance is deallocated. So, you can use this function to perform clean up or other actions just before the instance is deallocated.
+Recall from Lesson 4 that a `deinit()` function is called immediately before a class instance is deallocated. So, you can use this function to perform clean up or other actions just before the instance is deallocated.
 
 As soon as the instance's reference count becomes 0, its `deinit()` function will run, and its memory will be deallocated.
 
 The *deinit()* function in the following example from [Apple](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182) uses a gaming metaphor to illustrate how `deinit()` can be used to manage the behavior of reference type instances just prior to their deallocation.  
+
+When the reference count of an instance of the Player class becomes 0, its coins are returned to the Bank immediately before the instance is removed from memory.
+
 
 ```Swift
 struct Bank {
@@ -105,7 +108,7 @@ class Player {
         coinsInPurse += Bank.vendCoins(coins)
     }
     deinit {
-        Bank.receiveCoins(coinsInPurse)
+        Bank.receiveCoins(coinsInPurse) // Coins are returned to the Bank just prior to Deallocation
     }
 }
 ```
