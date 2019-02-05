@@ -30,7 +30,7 @@ Review the challenge from last class.
 
 ## Target-Action (15 min)
 
-Target-Action is a design patter in which an object holds the information necessary to send a message to another object when an event occurs. It's the pattern used to send messages in response to user-interface events, specifically from UIControl.
+Target-Action is a design pattern in which an object holds the information necessary to send a message to another object when an event occurs. It's the pattern used to send messages in response to user-interface events, specifically from UIControl.
 
 ### Simplifying things
 
@@ -141,7 +141,7 @@ print("Added Observer")
 NotificationCenter.default.addObserver(self, selector: #selector(receivedNotification(_:)), name: Notification.Name("receivedNotification"), object: nil)
 ```
 
-This adds an entry to the Notification Center. Every app has a default notification center property where objects register or post notifications. In this example 'self' will be listening for notifications with name 'didReceiveData' and when that event happens, the function 'onDidReceiveData' will be called.
+This adds an entry to the Notification Center. Every app has a default notification center property where objects register or post notifications. In this example 'self' will be listening for notifications with name 'receivedNotification' and when that event happens, the function 'receivedNotification' will be called.
 
 Function that gets called.
 
@@ -192,9 +192,11 @@ Your task is to complete it by adding the functionality of buttons and the timer
 ## Wrap Up (5 min)
 
 - Complete challenges
+- Start and possibly finish the ARC page from first tutorial.
 
 ## Additional Resources
 
+1. [Slides](https://docs.google.com/presentation/d/1I5twDckX8QExxHZbQOn0xVxXrT37e2uUIl0WKXQS8uw/edit?usp=sharing)
 1. [Selector and extensions](https://medium.com/@abhimuralidharan/selectors-in-swift-a-better-approach-using-extensions-aa6b0416e850)
 1. [Target-Action](https://learnappmaking.com/target-action-swift)
 1. [Notifications](https://learnappmaking.com/notification-center-how-to-swift/)

@@ -41,7 +41,14 @@ In software.
 
 Delegation is a design pattern that enables a class or structure to hand off (or delegate) some of its responsibilities to an instance of another type.
 
-In iOS development, delegation is used as a way for one class to communicate to another class. The example that looks the most familiar to us is UITableViewDelegate.
+In iOS development, delegation is used as a way for one class to communicate to another class. 
+The example that looks the most familiar to us is when using a tableview. The tableview by itself doesn’t know what information to show or the number of rows it needs to display. But they can find out by asking its dataSource. A tableview’s dataSource must conform to the UITableViewDatasouce protocol, which has the right information needed to know what and how to display information.
+
+```
+tableView(_:numberOfRowsInSection:)
+```
+
+UITableViewDelegate 
 
 We can handle events.
 ```
@@ -103,11 +110,12 @@ Using the example of feeding pets or other if it's easier for you, create a diag
 Try to include the following key words: **delegate**, **delegating object** and **delegate protocol**.
 
 Part 2 - pairs<br>
-Share and explain your diagram to a peer and compare both diagrams to see any similarities or differences
+Share and explain your diagram to a peer and compare both diagrams to see any similarities or differences<br>
+Discuss the table view scenario, who is the delegate and delegator? what is the protocol being used?
 
 ## Creating our own delegate (25 min)
 
-Download the [starter files]() to try after the explanation.
+Download the [starter files](https://github.com/amelinagzz/delegates-starter) to try after the explanation.
 
 We can take a systematic approach on creating delegates by identifying specific steps when implementing delegates.
 
@@ -162,14 +170,14 @@ Take the diagram you created earlier and see how you can fit the project to matc
 ## In Class Activity III - pairs (20 min)
 
 Remember closures and completion handlers? These can be used instead of delegates.<br>
-Download [this working example](https://github.com/dmlebron/tutorial_closures) and look at the code with a partner. Notice how delegates are being replaced by closures and see how it leads to a similar result.
+Download [this working example](https://github.com/dmlebron/tutorial_closures) and look at the code with a partner. Notice how delegates are being replaced by closures and see how it leads to a similar result.<br>
 **Q:** What does the app do?<br>
 **Q:** Where are closures being used?<br>
-**Q:** How would the approach be with delegates?<br>
+**Q:** How would the approach be with delegates? Change it.<br> 
 
 ## Challenge
 
-Change the implementation of the delegate to use a closure in the DelegateDemo project (the one with the colors). This approach is not the most common but it is a good idea to know there are more options to do the same task.
+Change the implementation of the delegate to use a closure in the DelegateDemo project (the one with the colors). 
 
 ## Wrap Up (5 min)
 
@@ -178,7 +186,9 @@ Change the implementation of the delegate to use a closure in the DelegateDemo p
 
 ## Additional Resources
 
+1. [Slides](https://docs.google.com/presentation/d/1NpzBXtQSDZBQw2hs-8h9T-lP5_ZLyTxEIOvn6OuD7hg/edit?usp=sharing)
 1. [Example for delegates](https://medium.com/@jamesrochabrun/implementing-delegates-in-swift-step-by-step-d3211cbac3ef)
 1. [Closures as delegates - article](https://medium.com/@dmlebron/using-swift-closures-as-an-alternative-to-delegates-5c3c1a7f45d6)
 1. [Understanding delegates - article](https://www.appcoda.com/swift-delegate/)
 1. [Delegates simple analogy - article](https://blog.bobthedeveloper.io/the-meaning-of-delegate-in-swift-347eaa9674d)
+1. [More on Delegates](https://www.andrewcbancroft.com/2015/04/08/how-delegation-works-a-swift-developer-guide/)
