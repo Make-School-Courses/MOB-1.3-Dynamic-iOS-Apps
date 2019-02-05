@@ -147,7 +147,7 @@ let jsonResult = try? JSONDecoder().decode([].self, from: contents!)
 // print(jsonResult)
 ```
 We can now see all of the data we retrieved from the file.
-If we were to create an object for each entry and save them in an array, before Swift 4, we would need to retrieve properties one by one. This is why external libraries like SwiftyJSON became popular, they made the job less complicated.
+If we were to create an object for each entry and save them in an array, before Swift 4, we would need to retrieve properties one by one. This is why external libraries like [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) became popular, they made the job less complicated.
 
 ## Encoding and Decoding (15 min)
 
