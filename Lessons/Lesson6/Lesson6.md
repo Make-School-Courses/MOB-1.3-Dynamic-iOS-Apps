@@ -268,7 +268,7 @@ var title: String
 ```
 
 ## Challenge (20 min)
-Take the JSON file [Festivals]() and create a project where you decode the contents to display The name of the Festival, the date and the number of artists in the lineup in a TableViewCell.
+Take the JSON file [Festivals](assets/festivals.json) and create a project where you decode the contents to display The name of the Festival, the date and the number of artists in the lineup in a TableViewCell.
 
 ## Wrap Up (5 min)
 **Q:** How does the encoding process work?<br>
