@@ -255,26 +255,7 @@ func addScore(_ points: Int) -> Int
 
 Individual
 1. Part of an iOS developer's "toolkit" is the ability to quickly find the most useful information from Internet research.
-- Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; find out how closures can cause strong reference cycles and how to resolve them)
-
-
-## Challenges
-
-1. Look up *weak* and *unowned*:
-- How are they similar? How do they differ?
-- When would you use one over the other?
-2. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs? What is your guess as to why Apple chose those defaults for each construct?
-- Arrays?
-- @IBOutlets?
-- Closures?
-3. In a fresh (leaky) version of the LeakyStarship app, use the Memory Graph Tool to examine the two `ContiguousArrayStorage` objects:
-- Research why these objects are causing memory leaks
-- Resolve those leaks
-4. Use the **Instruments -> Leaks** tool to identify memory leaks:
-- Execute this [Instruments tutorial by Ray Wenderlich](https://www.raywenderlich.com/397-instruments-tutorial-with-swift-getting-started)
-- Apply what you have learned in the above tutorial to the original (leaky) version of LeakyStarship to find and fix its leaky CrewMember objects
-5. Research how the `isKnownUniquelyReferenced(_:)` function can be used to guard against creating retain cycles
-- Using a fresh version of the LeakyStarship app, implement the `isKnownUniquelyReferenced(_:)` function to find memory leaks
+- Using the tools and knowledge you've experienced in this class, **find and fix the memory leak** in the Starship class (hints: there is a **closure** involved - *find out how closures can cause strong reference cycles and how to resolve them*)
 
 
 ## Wrap Up (10 min)
@@ -286,6 +267,28 @@ Individual
 2. Complete Challenges
 
 3. Read content listed below for clarity on the topics relevant to iOS Memory Management covered in this class.
+
+## Challenges
+
+[REQUIRED]
+1. Look up *weak* and *unowned*:
+- How are they similar? How do they differ?
+- When would you use one over the other?
+2. In a fresh (leaky) version of the LeakyStarship app, use the Memory Graph Tool to examine the two `ContiguousArrayStorage` objects:
+- Research why these objects are causing memory leaks
+- Resolve those leaks
+3. Use the **Instruments -> Leaks** tool to identify memory leaks:
+- Execute this [Instruments tutorial by Ray Wenderlich](https://www.raywenderlich.com/397-instruments-tutorial-with-swift-getting-started)
+- Apply what you have learned in the above tutorial to the original (leaky) version of LeakyStarship to find and fix its leaky CrewMember objects
+
+[OPTIONAL]
+4. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs? What is your guess as to why Apple chose those defaults for each construct?
+- Arrays?
+- @IBOutlets?
+- Closures?
+5. Research how the `isKnownUniquelyReferenced(_:)` function can be used to guard against creating retain cycles
+- Using a fresh version of the LeakyStarship app, implement the `isKnownUniquelyReferenced(_:)` function to find memory leaks
+
 
 ## Additional Resources
 - [Strong, Weak & Unowned - an article](https://krakendev.io/blog/weak-and-unowned-references-in-swift)
