@@ -270,8 +270,7 @@ Individual
 
 ## Challenges
 
-[REQUIRED]<br>
-
+-- REQUIRED --
 1. Look up *weak* and *unowned*:
 - How are they similar? How do they differ?
 - When would you use one over the other?
@@ -282,7 +281,7 @@ Individual
 - Execute this [Instruments tutorial by Ray Wenderlich](https://www.raywenderlich.com/397-instruments-tutorial-with-swift-getting-started)
 - Apply what you have learned in the above tutorial to the original (leaky) version of LeakyStarship to find and fix its leaky CrewMember objects
 
-[OPTIONAL]
+-- OPTIONAL --
 4. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs? What is your guess as to why Apple chose those defaults for each construct?
 - Arrays?
 - @IBOutlets?
