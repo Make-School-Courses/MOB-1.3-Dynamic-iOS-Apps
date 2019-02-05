@@ -282,6 +282,7 @@ Individual
 - Apply what you have learned in the above tutorial to the original (leaky) version of LeakyStarship to find and fix its leaky CrewMember objects
 
 -- OPTIONAL --
+
 4. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs? What is your guess as to why Apple chose those defaults for each construct?
 - Arrays?
 - @IBOutlets?
