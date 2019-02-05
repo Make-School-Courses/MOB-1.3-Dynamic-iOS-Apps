@@ -131,7 +131,7 @@ func path(forResource name: String?, ofType extension: String?) -> String?
 
 The return value will be the full pathname for the resource or `nil` if the file could not be located.
 
-```
+```Swift
 let path = Bundle.main.path(forResource: "fileName", ofType: ".json")
 if let path = path {
     let url = URL(fileURLWithPath: path)
@@ -157,13 +157,13 @@ Excerpt From: Chris Eidhof. “Advanced Swift.”
 
 ### The Codable system has 3 main goals:
 
-##### Universality
+#### Universality
 Should work with structs, enums and classes.
 
-##### Type safety
+#### Type safety
 JSON is often weakly typed, but we're working with Swift so our code works with strongly typed data structures.
 
-##### Reducing boilerplate
+#### Reducing boilerplate
 Writing less code, while the compiler generates what we need automatically.
 
 Types conform to the **Encodable** and/or **Decodable** protocols to state their ability to encode itself and creating and instance from serialized data.
