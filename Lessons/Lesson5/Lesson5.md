@@ -271,6 +271,7 @@ Individual
 ## Challenges
 
 [REQUIRED]
+
 1. Look up *weak* and *unowned*:
 - How are they similar? How do they differ?
 - When would you use one over the other?
