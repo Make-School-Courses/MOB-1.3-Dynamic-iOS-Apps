@@ -77,6 +77,7 @@ Every class instance has a reference count — the number of references to the a
 
 As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.
 
+##### Using the `deinit()` Function 
 Recall from Lesson 4 that a `deinit()` function is called immediately before a class instance is deallocated. So, you can use this function to perform clean up or other actions just before the instance is deallocated.
 
 As soon as the instance's reference count becomes 0, its `deinit()` function will run, and its memory will be deallocated.
