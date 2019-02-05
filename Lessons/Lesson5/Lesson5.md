@@ -123,7 +123,7 @@ However, because Swift handles memory automatically, it is still critical to und
 
 A strong reference increments the reference count of the instance to which it points. When one instance of a reference type (RefA) has a reference to another (RefB), we say that RefA is an “owner” of RefB.
 
-By retaining a reference to RefB, RefA protects RefA from being deallocated by ARC.
+By retaining a reference to RefB, RefA protects RefB from being deallocated by ARC.
 
 ![syntax](assets/Strong_refA_to_refB.png)
 
