@@ -77,22 +77,41 @@ Every class instance has a reference count — the number of references to the a
 
 As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.
 
-As soon as its reference count becomes 0, its memory is deallocated, and its `deinit()` function will run.
+If you recall from the previous Lesson 4, a *deinit()* function is called immediately before a class instance is deallocated. So, you can use this function to perform clean up or other actions just before the instance is deallocated.
+
+As soon as the instance's reference count becomes 0, its `deinit()` function will run, and its memory will be deallocated.
+
+The *deinit()* function in the following example from [Apple](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182) uses a gaming metaphor to illustrate how `deinit()` can be used to manage the behavior of reference type instances just prior to their deallocation.  
 
 ```Swift
+struct Bank {
+    static var coinsInBank = 10_000
+    static func vendCoins(var numberOfCoinsToVend: Int) -> Int {
+        numberOfCoinsToVend = min(numberOfCoinsToVend, coinsInBank)
+        coinsInBank -= numberOfCoinsToVend
+        return numberOfCoinsToVend
+    }
+    static func receiveCoins(coins: Int) {
+        coinsInBank += coins
+    }
+}
+
 class Player {
     var coinsInPurse: Int
     init(coins: Int) {
-        coinsInPurse = Bank.distribute(coins: coins)
+        coinsInPurse = Bank.vendCoins(coins)
     }
-    func win(coins: Int) {
-        coinsInPurse += Bank.distribute(coins: coins)
+    func winCoins(coins: Int) {
+        coinsInPurse += Bank.vendCoins(coins)
     }
     deinit {
-        Bank.receive(coins: coinsInPurse)
+        Bank.receiveCoins(coinsInPurse)
     }
 }
 ```
+
+The `deinit()` function is also useful in identifying possible memory leak situations caused by strong reference cycles...
+
 
 ## In Class Activity I (10 min)
 
