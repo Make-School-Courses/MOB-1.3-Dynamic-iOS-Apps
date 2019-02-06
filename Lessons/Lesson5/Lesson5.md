@@ -77,22 +77,45 @@ Every class instance has a reference count — the number of references to the a
 
 As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.
 
-As soon as its reference count becomes 0, its memory is deallocated, and its `deinit()` function will run.
+##### Using the `deinit()` Function
+Recall from Lesson 4 that a `deinit()` function is called immediately before a class instance is deallocated. Thus, you can use this function to perform clean up or other actions just before the instance is deallocated.
+
+As soon as the instance's reference count becomes 0, its `deinit()` function will run, and its memory will be deallocated.
+
+The *deinit()* function in the following example from [Apple](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182) uses a gaming metaphor to illustrate how `deinit()` can be used to manage the behavior of reference type instances just prior to their deallocation.  
+
+When the reference count of an instance of the Player class becomes 0, its coins are returned to the Bank immediately before the instance is removed from memory.
+
 
 ```Swift
+struct Bank {
+    static var coinsInBank = 10_000
+    static func vendCoins(var numberOfCoinsToVend: Int) -> Int {
+        numberOfCoinsToVend = min(numberOfCoinsToVend, coinsInBank)
+        coinsInBank -= numberOfCoinsToVend
+        return numberOfCoinsToVend
+    }
+    static func receiveCoins(coins: Int) {
+        coinsInBank += coins
+    }
+}
+
 class Player {
     var coinsInPurse: Int
     init(coins: Int) {
-        coinsInPurse = Bank.distribute(coins: coins)
+        coinsInPurse = Bank.vendCoins(coins)
     }
-    func win(coins: Int) {
-        coinsInPurse += Bank.distribute(coins: coins)
+    func winCoins(coins: Int) {
+        coinsInPurse += Bank.vendCoins(coins)
     }
     deinit {
-        Bank.receive(coins: coinsInPurse)
+        Bank.receiveCoins(coinsInPurse) // Coins are returned to the Bank just prior to Deallocation
     }
 }
 ```
+
+**Note:** The `deinit()` function is also useful in identifying possible memory leak situations caused by strong reference cycles...
+
 
 ## In Class Activity I (10 min)
 
@@ -123,7 +146,7 @@ However, because Swift handles memory automatically, it is still critical to und
 
 A strong reference increments the reference count of the instance to which it points. When one instance of a reference type (RefA) has a reference to another (RefB), we say that RefA is an “owner” of RefB.
 
-By retaining a reference to RefB, RefA protects RefA from being deallocated by ARC.
+By retaining a reference to RefB, RefA protects RefB from being deallocated by ARC.
 
 ![syntax](assets/Strong_refA_to_refB.png)
 
@@ -158,11 +181,11 @@ class Apartment {
 
 A variable marked with the *weak* keyword does not take ownership of the object it refers to — it does not increment the reference count of its referenced object.
 
-When the instance (RefB) to which a weak reference (RefA) refers is successfully deallocated — when RefB’s reference count is zeroed out — RefA will now be `nil`.
+In the example above, if we add the *weak* attribute to the Apartment variable in the Person class, and the Apartment instance is successfully deallocated, the Person class's reference to it will now be `nil`.
 
-As a *weak* variable, RefA does not protect RefB from being deallocated by ARC.
+As a *weak* variable, Person does not protect Apartment from being deallocated by ARC.
 
-![syntax](assets/weak_reference.png)
+![syntax](assets/weak_ref2.png)
 
 This ensures that when you access a weak reference, it will either be a valid object, or `nil`.
 
@@ -232,26 +255,7 @@ func addScore(_ points: Int) -> Int
 
 Individual
 1. Part of an iOS developer's "toolkit" is the ability to quickly find the most useful information from Internet research.
-- Using the tools and knowledge you've experienced in this class, find and fix the memory leak in the Starship class (hints: there is a closure involved; find out how closures can cause strong reference cycles and how to resolve them)
-
-
-## Challenges
-
-1. Look up *weak* and *unowned*:
-- How are they similar? How do they differ?
-- When would you use one over the other?
-2. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs? What is your guess as to why Apple chose those defaults for each construct?
-- Arrays?
-- @IBOutlets?
-- Closures?
-3. In a fresh (leaky) version of the LeakyStarship app, use the Memory Graph Tool to examine the two `ContiguousArrayStorage` objects:
-- Research why these objects are causing memory leaks
-- Resolve those leaks
-4. Use the **Instruments -> Leaks** tool to identify memory leaks:
-- Execute this [Instruments tutorial by Ray Wenderlich](https://www.raywenderlich.com/397-instruments-tutorial-with-swift-getting-started)
-- Apply what you have learned in the above tutorial to the original (leaky) version of LeakyStarship to find and fix its leaky CrewMember objects
-5. Research how the `isKnownUniquelyReferenced(_:)` function can be used to guard against creating retain cycles
-- Using a fresh version of the LeakyStarship app, implement the `isKnownUniquelyReferenced(_:)` function to find memory leaks
+- Using the tools and knowledge you've experienced in this class, **find and fix the memory leak** in the Starship class (hints: there is a **closure** involved - *find out how closures can cause strong reference cycles and how to resolve them*)
 
 
 ## Wrap Up (10 min)
@@ -264,9 +268,33 @@ Individual
 
 3. Read content listed below for clarity on the topics relevant to iOS Memory Management covered in this class.
 
+## Challenges
+
+-- REQUIRED --
+1. Look up *weak* and *unowned*:
+- How are they similar? How do they differ?
+- When would you use one over the other?
+2. In a fresh (leaky) version of the LeakyStarship app, use the Memory Graph Tool to examine the two `ContiguousArrayStorage` objects:
+- Research why these objects are causing memory leaks
+- Resolve those leaks
+3. Use the **Instruments -> Leaks** tool to identify memory leaks:
+- Execute this [Instruments tutorial by Ray Wenderlich](https://www.raywenderlich.com/397-instruments-tutorial-with-swift-getting-started)
+- Apply what you have learned in the above tutorial to the original (leaky) version of LeakyStarship to find and fix its leaky CrewMember objects
+
+-- OPTIONAL --
+
+4. What are the defaults (*weak*, *strong*, *unowned*) for the following constructs? What is your guess as to why Apple chose those defaults for each construct?
+- Arrays?
+- @IBOutlets?
+- Closures?
+5. Research how the `isKnownUniquelyReferenced(_:)` function can be used to guard against creating retain cycles
+- Using a fresh version of the LeakyStarship app, implement the `isKnownUniquelyReferenced(_:)` function to find memory leaks
+
+
 ## Additional Resources
 - [Strong, Weak & Unowned - an article](https://krakendev.io/blog/weak-and-unowned-references-in-swift)
 - [Avoiding Retain Cycles - an article](https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef)
 - [Deinitialization - from Apple](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182)
 - [Reference Types & Value Types in Swift - an article](https://www.raywenderlich.com/9481-reference-vs-value-types-in-swift)
+- [Deinitialization to Deallocate Memory Space - a tutorial from tutorialspoint.com](https://www.tutorialspoint.com/swift/swift_deinitialization.htm)
 - [Manual Memory Management in iOS (Pre-ARC) - article](https://www.tomdalling.com/blog/cocoa/an-in-depth-look-at-manual-memory-management-in-objective-c/)
