@@ -293,6 +293,7 @@ Individual
 
 ## Additional Resources
 - [Slides](https://drive.google.com/open?id=1TVRPRTP3KguK0HHIGitffBEW-2ojjjaAQPc4Mpk84Mg)
+- [Weak vs Unowned in a closure](https://www.uraimo.com/2016/10/27/unowned-or-weak-lifetime-and-performance/)(everything that comes before the Performance section)
 - [Strong, Weak & Unowned - an article](https://krakendev.io/blog/weak-and-unowned-references-in-swift)
 - [Avoiding Retain Cycles - an article](https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef)
 - [Deinitialization - from Apple](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html#//apple_ref/doc/uid/TP40014097-CH19-XID_182)
