@@ -40,29 +40,29 @@ xxxx
 ## In Class Activity I (20 min)
 
 For this exercise we will use these 3 resources:
-1. [https://httpbin.org's public API tester](https://httpbin.org/#/Request_inspection/get_headers)
+1.  https://httpbin.org's [public API tester](https://httpbin.org/#/Request_inspection/get_headers)
 2. Nasa's public [Astronomy Picture of the Day API](https://api.nasa.gov/api.html)
-3. The [DailyPlanet starter app](https://github.com/VanderDev1/DailyPlanet)
+3. The [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
 
-Part 1 - Individual
+### Part 1 - Individual
 
-Using httpbin.org's web service **Request Header endpoint,** we will send a **GET request** that will return the **request's HTTP headers** from the web service's Request Inspection endpoint.
+Using the `Request inspection` endpoint's dropdown menu on httpbin.org's web service tester page, we will send a `GET /headers` *request* that will return the `request's HTTP headers` in the corresponding `Response body`.
 
 1. First, examine httpbin.org's exceptional, easy-to-use [web service testing interface](https://httpbin.org) in a web browser on your laptop.
 2. Next, expand the *Request inspection* and its *GET /headers* function. Press the *Try it out* and *Execute* buttons. In the *Responses* fields return, pay particular attention to the "headers" node in the *Response body* field. Also notice the HTTP status code returned (success = 200).
 *(Feel free to experiment a little with this interface when you have time.)*
 
-Part 2 - Individual
+**Part 2 - Individual**
 
 1. Download and run the [DailyPlanet starter app](https://github.com/VanderDev1/DailyPlanet).
-*(Don't worry if the main scene is a blank screen - we'll improve that later!)*
+*(Don't worry if the main scene is a blank screen - we'll improve on that later!)*
 2. View its debug output.
 - Compare your debug output with the results of same *GET /headers* request executed from your web browser.
 3. Study the construction of its `fetchHeaderData()` function.
 
 Part 3 - Individual
 
-**TODO:** Using the implementation steps for URLSession we've covered so far, complete the implementation of the `func fetchNasaDailyImage()` stubs in the starter app and present Nasa's Astronomy Picture of the Day to your users.
+**TODO:** Using the URLSession implementation steps covered so far, complete the implementation of the `fetchNasaDailyImage()` in the starter app and present Nasa's Astronomy Picture of the Day to your users.
 
 **NOTES**
 At the time of this writing, Nasa's pic of the day was:
