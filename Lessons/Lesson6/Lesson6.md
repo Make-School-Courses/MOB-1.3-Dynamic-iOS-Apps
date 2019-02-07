@@ -143,7 +143,7 @@ if let path = path {
 
 ```Swift
 let contents = try? Data(contentsOf: url, options: .alwaysMapped)
-let jsonResult = try? JSONDecoder().decode([].self, from: contents!)
+let jsonResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as ...
 // print(jsonResult)
 ```
 We can now see all of the data we retrieved from the file.
