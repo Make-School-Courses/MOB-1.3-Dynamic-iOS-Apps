@@ -12,12 +12,14 @@ Nearly every professional-level iOS app communicates at some point with an Inter
 
 Fetching and processing data between an app and a web service is an essential skill that all iOS developers must master.
 
-And the most commonly-used protocol for communicating with web servers is **HTTP** (and its secure counterpart, HTTPS) to make GET and POST network requests.
+And the most commonly-used protocol for communicating with web servers is **HTTP** (and its secure counterpart, HTTPS).
 
-Since iOS 7, Apple has provided **URLSession** and its related classes as a complete networking API for uploading or downloading content via HTTP/S.
+Since iOS 7, Apple has provided **URLSession** and its family of related classes as a complete networking API for uploading or downloading content via HTTP/S.
 
 <!--
 **HTTP** and **HTTPS** are robust and stable protocols. They have been widely used in web browsers for a long time. They offer several performance and security advantages, as well as a mature base of easy-to-use development and analysis tools.
+
+to make GET and POST network requests...
 -->
 
 ## Class Learning Objectives/Competencies (5 min)
