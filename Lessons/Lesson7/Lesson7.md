@@ -44,9 +44,9 @@ For this exercise we will use these 3 resources:
 2. Nasa's public [Astronomy Picture of the Day API](https://api.nasa.gov/api.html)
 3. The [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
 
-### Part 1 - Individual
+**Part 1 - Individual**
 
-Using the `Request inspection` endpoint's dropdown menu on httpbin.org's web service tester page, we will send a `GET /headers` *request* that will return the `request's HTTP headers` in the corresponding `Response body`.
+Using the `Request inspection` dropdown on httpbin.org's tester page, we will send a `GET /headers` *request* that will return the `request's HTTP headers` in its `Response body`.
 
 1. First, examine httpbin.org's exceptional, easy-to-use [web service testing interface](https://httpbin.org) in a web browser on your laptop.
 2. Next, expand the *Request inspection* and its *GET /headers* function. Press the *Try it out* and *Execute* buttons. In the *Responses* fields return, pay particular attention to the "headers" node in the *Response body* field. Also notice the HTTP status code returned (success = 200).
@@ -56,31 +56,30 @@ Using the `Request inspection` endpoint's dropdown menu on httpbin.org's web ser
 
 1. Download and run the [DailyPlanet starter app](https://github.com/VanderDev1/DailyPlanet).
 *(Don't worry if the main scene is a blank screen - we'll improve on that later!)*
-2. View its debug output.
-- Compare your debug output with the results of same *GET /headers* request executed from your web browser.
-3. Study the construction of its `fetchHeaderData()` function.
+2. Study the construction of its `fetchHeaderData()` function.
+3. Compare your debug output with the results of same *GET /headers* request executed from your web browser.
 
-Part 3 - Individual
+**Part 3 - Individual**
 
 **TODO:** Using the URLSession implementation steps covered so far, complete the implementation of the `fetchNasaDailyImage()` in the starter app and present Nasa's Astronomy Picture of the Day to your users.
 
-**NOTES**
+**NOTES:**
+
 At the time of this writing, Nasa's pic of the day was:
 https://apod.nasa.gov/apod/image/1902/FoxFur_new_color_2048px.jpg
 
 To get the latest pic of the day:
 - Launch the demo URL in your browser:
 https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
-- find the `"hdurl"` node and copy it into your iOS project
+- find the `hdurl` node and copy it into your iOS project
 
-*[Hints]*
-1. For clues, see the URLSession implementation details of `fetchHeaderData()` function.
+*For clues, see the URLSession implementation details of `fetchHeaderData()` function.*
 
-Part 3 - As A Class
+**Part 4 - As A Class**
 
   Briefly discuss..
 
-1. Where did the response object come from?
+1. Where did the `response` object come from?
 2. Why was the `DispatchQueue.main.async` statement needed?
 
 ``` Swift
@@ -89,4 +88,4 @@ Part 3 - As A Class
 
                        //TODO: Insert downloaded image into imageView
                  }
-                 ```
+```
