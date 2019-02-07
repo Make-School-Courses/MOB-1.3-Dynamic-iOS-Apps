@@ -123,7 +123,7 @@ After your'e done writing the structure use the [JSON validator](https://jsonfor
 
 Data can sometimes be stored in text files inside our app bundle. To retrieve them there is a particular way of doing it. We can either look for a path or a URL. Today we're going to use the path. The call is the following:
 
-```
+```Swift
 func path(forResource name: String?, ofType extension: String?) -> String?
 ```
 `name` is the name of the resource file
@@ -141,7 +141,7 @@ if let path = path {
 
 ## Getting the data from JSON
 
-```
+```Swift
 let contents = try? Data(contentsOf: url, options: .alwaysMapped)
 let jsonResult = try? JSONDecoder().decode([].self, from: contents!)
 // print(jsonResult)
