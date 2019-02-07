@@ -97,7 +97,7 @@ struct Participant{
     let id: String
 }
 
-struct Country{
+struct City{
     let name: String
     let id: String
 }
@@ -109,11 +109,11 @@ enum FestivalType{
 }
 
 struct Festival{
-    let year: String
+    let date: Date
+    let name: String
+    let city: City
+    let lineup: [Participant]
     let type: FestivalType
-    let date: String
-    let lineup : [Participant]
-    let country: Country
 }
 ```
 
@@ -123,7 +123,7 @@ After your'e done writing the structure use the [JSON validator](https://jsonfor
 
 Data can sometimes be stored in text files inside our app bundle. To retrieve them there is a particular way of doing it. We can either look for a path or a URL. Today we're going to use the path. The call is the following:
 
-```
+```Swift
 func path(forResource name: String?, ofType extension: String?) -> String?
 ```
 `name` is the name of the resource file
@@ -141,7 +141,7 @@ if let path = path {
 
 ## Getting the data from JSON
 
-```
+```Swift
 let contents = try? Data(contentsOf: url, options: .alwaysMapped)
 let jsonResult = try? JSONDecoder().decode([].self, from: contents!)
 // print(jsonResult)
@@ -277,7 +277,7 @@ Take the JSON file [Festivals](assets/festivals.json) and create a project where
 - Start Product Hunt tutorial
 
 ## Additional Resources
-
+1. [Slides](https://docs.google.com/presentation/d/1hrtAoznelyYGna7CwhStlU_46rH4JLiMV5DNTowEHYc/edit?usp=sharing)
 1. [XML vs JSON](https://www.cs.tufts.edu/comp/150IDS/final_papers/tstras01.1/FinalReport/FinalReport.html)
 1. [JSON documentation](http://www.json.org)
 1. [JSON format validator](https://jsonformatter.curiousconcept.com)
