@@ -277,7 +277,7 @@ Take the JSON file [Festivals](assets/festivals.json) and create a project where
 - Start Product Hunt tutorial
 
 ## Additional Resources
-
+1. [Slides](https://docs.google.com/presentation/d/1hrtAoznelyYGna7CwhStlU_46rH4JLiMV5DNTowEHYc/edit?usp=sharing)
 1. [XML vs JSON](https://www.cs.tufts.edu/comp/150IDS/final_papers/tstras01.1/FinalReport/FinalReport.html)
 1. [JSON documentation](http://www.json.org)
 1. [JSON format validator](https://jsonformatter.curiousconcept.com)
