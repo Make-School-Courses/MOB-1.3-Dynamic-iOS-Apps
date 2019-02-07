@@ -97,7 +97,7 @@ struct Participant{
     let id: String
 }
 
-struct Country{
+struct City{
     let name: String
     let id: String
 }
@@ -109,11 +109,11 @@ enum FestivalType{
 }
 
 struct Festival{
-    let year: String
+    let date: Date
+    let name: String
+    let city: City
+    let lineup: [Participant]
     let type: FestivalType
-    let date: String
-    let lineup : [Participant]
-    let country: Country
 }
 ```
 
