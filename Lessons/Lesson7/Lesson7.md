@@ -46,15 +46,17 @@ For this exercise we will use these 3 resources:
 
 **Part 1 - Individual**
 
-Using the `Request inspection` dropdown on httpbin.org's tester page, we will send a `GET /headers` *request* that will return the `request's HTTP headers` in its `Response body`.
+Using the `Request inspection` endpoint on httpbin.org's tester page, we will send a `GET /headers` *request* that will return the `request's HTTP headers` in its `Response body`.
 
 1. First, examine httpbin.org's exceptional, easy-to-use [web service testing interface](https://httpbin.org) in a web browser on your laptop.
-2. Next, expand the *Request inspection* and its *GET /headers* function. Press the *Try it out* and *Execute* buttons. In the *Responses* fields return, pay particular attention to the "headers" node in the *Response body* field. Also notice the HTTP status code returned (success = 200).
+2. Next, expand the *Request inspection* dropdown and its *GET /headers* function. Press the `Try it out` and `Execute` buttons. In the *Responses* fields returned, pay particular attention to the `"headers":` node in the *Response body* field. Also notice the HTTP status code returned (success = 200).
+
 *(Feel free to experiment a little with this interface when you have time.)*
 
 **Part 2 - Individual**
 
 1. Download and run the [DailyPlanet starter app](https://github.com/VanderDev1/DailyPlanet).
+
 *(Don't worry if the main scene is a blank screen - we'll improve on that later!)*
 2. Study the construction of its `fetchHeaderData()` function.
 3. Compare your debug output with the results of same *GET /headers* request executed from your web browser.
