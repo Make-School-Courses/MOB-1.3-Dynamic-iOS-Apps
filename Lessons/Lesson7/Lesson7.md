@@ -8,12 +8,6 @@
 |
 
 
-## Class Handouts (5 min)
-
-**Structured Sharing Exercise -- Part 1**
-
-By the end of class, write down your **three** (3) most important responses for each of the question sheets passed out.
-
 ## Why you should know this
 Nearly every professional-level iOS app communicates at some point with an Internet component such as a remote web service.
 
@@ -33,6 +27,13 @@ to make GET and POST network requests...
 At the end of this class, you should be able to...
 
 1. xxx
+
+
+## Class Handouts (5 min)
+
+**Structured Sharing Exercise - Part 1**
+
+By the end of class, write down your **three** (3) most important responses for each of the question sheets passed out.
 
 
 ## Initial Exercise (10 min)
@@ -179,7 +180,7 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
 ## Wrap Up (xx mins)
 
-**Structured Sharing Exercise -- Part 2**
+**Structured Sharing Exercise - Part 2**
 
 At the end of class, turn in all your question sheets. We will use them in Part 3 of this exercises in the next class session.
 
