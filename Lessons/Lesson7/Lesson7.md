@@ -184,6 +184,11 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
 At the end of class, turn in all your question sheets. We will use them in Part 3 of this exercises in the next class session.
 
+### About Next class
+
+- Part 3 of Structured Sharing Exercise
+- The last 40 mins of next class will be dedicated for questions on material so far and/or on student projects.
+
 
 ## Challenges
 
