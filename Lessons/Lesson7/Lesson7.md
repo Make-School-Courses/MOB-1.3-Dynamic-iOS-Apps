@@ -45,6 +45,9 @@ Resources for this exercise:
 - URLRequest
 - SessionDataTask
 - .resume()
+
+<!-- Add graphic and/o code samples -->
+
 2. Briefly share with each other any other tips on how to use built-in Xcode features to work more efficiently. Ideas might include:
 - how to navigate around your code
 - how to debug behaviors in your own code (i.e., using p or po, print statements, etc.)
@@ -79,10 +82,16 @@ For this exercise we will use these 3 resources:
 
 Using the `Request inspection` endpoint on httpbin.org's tester page, we will send a `GET /headers` *request* that will return the `request's HTTP headers` in its `Response body`.
 
+<!-- Add graphic and/o code samples -->
+
+
 1. First, examine httpbin.org's exceptional, easy-to-use [web service testing interface](https://httpbin.org) in a web browser on your laptop.
 2. Next, expand the *Request inspection* dropdown and its *GET /headers* function. Press the `Try it out` and `Execute` buttons. In the *Responses* fields returned, pay particular attention to the `"headers":` node in the *Response body* field. Also notice the HTTP status code returned (success = 200).
 
 *(Feel free to experiment a little with this interface when you have time.)*
+
+<!-- Add graphic and/o code samples -->
+
 
 **Part 2 - Individual**
 
@@ -91,6 +100,9 @@ Using the `Request inspection` endpoint on httpbin.org's tester page, we will se
 *(Don't worry if the main scene is a blank screen - we'll improve on that later!)*
 2. Study the construction of its `fetchHeaderData()` function.
 3. Compare your debug output with the results of same *GET /headers* request executed from your web browser.
+
+<!-- Add graphic and/o code samples -->
+
 
 **Part 3 - Individual**
 
@@ -112,7 +124,8 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
   Briefly discuss..
 
-**Q** Where did the `response` object come from?
+**Q** Looking at the results of either of the 2 fetch functions, what is your guess about where the `response` object came from?
+**Q** Why do you think the developers at httpbin.org bothered to spent time creating a service that would return HTTP headers?
 **Q** Why was the `DispatchQueue.main.async` statement needed?
 
 ``` Swift
