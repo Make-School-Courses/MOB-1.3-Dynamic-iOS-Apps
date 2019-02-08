@@ -27,14 +27,40 @@ At the end of this class, you should be able to...
 
 1. xxx
 
-## Initial Exercise (5 min)
-xxxx
+## Initial Exercise (10 min)
+
+The difference between software developers and other engineers is not about  domain knowledge — its that developers find things out.
+
+We’ve learned that executing efficient Internet searches is a key skill every iOS developers needs.
+
+But we also have — at our fingertips — a powerful tool offering a wealth of insight into most of the Swift and iOS constructs we need to know to get the job done: Xcode.
+
+Resources for this exercise:
+1. [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
+
+**In Pairs (3 to 5 mins)**
+
+1. Using the DailyPlanet starter app as a source, take 3 to 5 minutes to share with each other your favorite tips on how Xcode can be used discover the methods, properties and pre-defined behaviors of the following iOS networking constructs in the starter app:
+- URLSession
+- URLRequest
+- SessionDataTask
+- resume()
+2. Briefly share with each other any other tips on how to use built-in Xcode features to work more efficiently. Ideas might include:
+- how to navigate around your code
+- how to debug behaviors in your own code (i.e., using p or po, print statements, etc.)
+
+**As A Class (3 to 5 mins)**
+- Volunteers to share the most useful technique learned
 
 
 ## URLSession - An Overview
 
 
 <!-- Add graphic and/o code samples -->
+
+``` Swift
+let defaultSession = URLSession(configuration: .default)
+```
 
 
 ## In Class Activity I (20 min)
