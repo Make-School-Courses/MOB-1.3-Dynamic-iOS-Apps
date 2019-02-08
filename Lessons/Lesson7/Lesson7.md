@@ -29,9 +29,9 @@ At the end of this class, you should be able to...
 
 ## Initial Exercise (10 min)
 
-The difference between software developers and other engineers is not about  domain knowledge — its that developers find things out.
+The difference between software developers and other engineers is *not* about domain knowledge — developers find things out.
 
-We’ve learned that executing efficient Internet searches is a key skill every iOS developers needs.
+We’ve learned that executing efficient Internet searches is a key skill every iOS developer needs.
 
 But we also have — at our fingertips — a powerful tool offering a wealth of insight into most of the Swift and iOS constructs we need to know to get the job done: Xcode.
 
@@ -40,11 +40,11 @@ Resources for this exercise:
 
 **In Pairs (3 to 5 mins)**
 
-1. Using the DailyPlanet starter app as a source, take 3 to 5 minutes to share with each other your favorite tips on how Xcode can be used discover the methods, properties and pre-defined behaviors of the following iOS networking constructs in the starter app:
+1. Share your favorite Xcode techniques for finding out the capabilities, behaviors and requirements of these iOS networking constructs found in the DailyPlanet starter app:
 - URLSession
 - URLRequest
 - SessionDataTask
-- resume()
+- .resume()
 2. Briefly share with each other any other tips on how to use built-in Xcode features to work more efficiently. Ideas might include:
 - how to navigate around your code
 - how to debug behaviors in your own code (i.e., using p or po, print statements, etc.)
@@ -61,7 +61,12 @@ Resources for this exercise:
 ``` Swift
 let defaultSession = URLSession(configuration: .default)
 ```
+### configuration ???
 
+### SessionDataTask
+
+
+### .resume()
 
 ## In Class Activity I (20 min)
 
@@ -107,8 +112,8 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
   Briefly discuss..
 
-1. Where did the `response` object come from?
-2. Why was the `DispatchQueue.main.async` statement needed?
+**Q** Where did the `response` object come from?
+**Q** Why was the `DispatchQueue.main.async` statement needed?
 
 ``` Swift
     if let data = data, let image = UIImage(data: data) {
