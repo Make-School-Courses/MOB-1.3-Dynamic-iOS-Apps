@@ -7,6 +7,13 @@
 | 0:00        | 0:05      | Objectives                          |
 |
 
+
+## Class Handouts (5 min)
+
+**Structured Sharing Exercise -- Part 1**
+
+By the end of class, write down your **three** (3) most important responses for each of the question sheets passed out.
+
 ## Why you should know this
 Nearly every professional-level iOS app communicates at some point with an Internet component such as a remote web service.
 
@@ -26,6 +33,7 @@ to make GET and POST network requests...
 At the end of this class, you should be able to...
 
 1. xxx
+
 
 ## Initial Exercise (10 min)
 
@@ -55,21 +63,40 @@ Resources for this exercise:
 **As A Class (3 to 5 mins)**
 - Volunteers to share the most useful technique learned
 
+**Q** What does .resume() do?
+**Q** When does the .resume() function execute?
 
 ## URLSession - An Overview
 
 
-<!-- Add graphic and/o code samples -->
+<!-- Add graphic showing relationship between URLSession Components -->
+
+<!-- Add code samples -->
+
 
 ``` Swift
 let defaultSession = URLSession(configuration: .default)
 ```
-### configuration ???
+### URLSessionConfiguration
 
-### SessionDataTask
+#### Three types:
+
+1. xxx
+
+### URLSessionTask
+
+#### Three types:
+
+1. xxx
 
 
 ### .resume()
+
+### Making HTTP GET Requests Using URLSessionDataTask
+
+
+<!-- Add graphic and/o code samples -->
+
 
 ## In Class Activity I (20 min)
 
@@ -135,3 +162,37 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
                        //TODO: Insert downloaded image into imageView
                  }
 ```
+
+
+## JSON Serialization of HTTP Responses
+
+
+## In Class Activity II (xx min)
+
+
+<!-- Give students simple Deserialization -->
+
+
+## Challenges
+
+<!-- xxx -->
+
+## Wrap Up (xx mins)
+
+**Structured Sharing Exercise -- Part 2**
+
+At the end of class, turn in all your question sheets. We will use them in Part 3 of this exercises in the next class session.
+
+
+## Challenges
+
+<!-- xxx -->
+
+
+## Additional resources
+
+1. [Slides]
+2. [URL Loading System -- from Apple](https://developer.apple.com/documentation/foundation/url_loading_system)
+3. xxx
+
+<!-- xxx -->
