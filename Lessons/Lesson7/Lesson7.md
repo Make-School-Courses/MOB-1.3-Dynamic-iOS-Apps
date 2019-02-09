@@ -20,7 +20,7 @@ Since iOS 7, Apple has provided **URLSession** and its family of related classes
 
 to make GET and POST network requests...
 -->
-<br />
+
 
 ## Class Learning Objectives/Competencies (5 min)
 At the end of this class, you should be able to...
@@ -51,13 +51,13 @@ We also have - at our fingertips — an extremely powerful tool for "finding thi
 
 ### Xcode Techniques  
 
-Resources needed:
-1. The [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
-2. **Xcode**
+Xcode offers a wealth of insight into most of the Swift and iOS constructs we need to know to get the job done.
 
 #### TODO: In Pairs (3 to 5 mins)
 
-Xcode offers a wealth of insight into most of the Swift and iOS constructs we need to know to get the job done.
+Resources needed:
+* The [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
+* **Xcode**
 
 1. Share your favorite Xcode techniques for finding out the capabilities, behaviors and requirements of these iOS networking constructs found in the **DailyPlanet** starter app:
 * `URLSession`
