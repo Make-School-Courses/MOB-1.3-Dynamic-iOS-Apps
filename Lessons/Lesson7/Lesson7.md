@@ -57,27 +57,25 @@ Resources needed:
 Xcode offers a wealth of insight into most of the Swift and iOS constructs we need to know to get the job done.
 
 1. Share your favorite Xcode techniques for finding out the capabilities, behaviors and requirements of these iOS networking constructs found in the **DailyPlanet** starter app:
-- `URLSession`
-- `URLRequest`
+* `URLSession`
+* `URLRequest`
 - `SessionDataTask`
 - `.resume()`
 
-##### Key questions to answer:
-* **Q:** What does `.resume()` do?</br>
-* **Q:** When does the `.resume()` function execute?
 
 <!-- Add graphic and/o code samples -->
 
 2. Briefly share with each other any other tips on how to use built-in Xcode features to work more efficiently. Ideas could include:
-- how to navigate around your code
-- how to debug behaviors in your own code (i.e., using `p` or `po`, `print()` statements, etc.)
+* how to navigate around your code
+* how to debug behaviors in your own code (i.e., using `p` or `po`, `print()` statements, and so on)
 
 #### TODO: As A Class (3 to 5 mins)
 
 1. Volunteers share the most useful techniques learned
-2. Key questions to answer:
-**Q:** What does `.resume()` do?</br>
-**Q:** When does the `.resume()` function execute?
+
+##### Key questions to answer:
+* **Q:** What does `.resume()` do?</br>
+* **Q:** When does the `.resume()` function execute?
 
 
 
