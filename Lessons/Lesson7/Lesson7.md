@@ -77,7 +77,8 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
  - [ ] **Q:** What does `.resume()` do?</br>
  - [ ] **Q:** When does the `.resume()` function execute?
 
-
+<br />
+<br /> 
 
 ## URLSession - An Overview
 
