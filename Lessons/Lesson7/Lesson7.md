@@ -74,8 +74,8 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
 1. Volunteers share the most useful techniques learned
 
 ##### Key questions to answer:
- [ ] **Q:** What does `.resume()` do?</br>
- [ ] **Q:** When does the `.resume()` function execute?
+ - [ ] **Q:** What does `.resume()` do?</br>
+ - [ ] **Q:** When does the `.resume()` function execute?
 
 
 
