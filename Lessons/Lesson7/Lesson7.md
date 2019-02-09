@@ -13,7 +13,7 @@ Nearly every professional-level iOS app communicates at some point with an Inter
 
 And the most commonly-used protocol for communicating with web servers is **HTTP** (and its secure counterpart, HTTPS).
 
-Since iOS 7, Apple has provided **URLSession** and its family of related classes as **a complete networking API** for uploading or downloading content via **HTTP/S.**
+Since iOS 7, Apple has provided **URLSession** and its family of related classes as **a complete networking API** for uploading or downloading content via **HTTP** and HTTPS.
 
 <!--
 **HTTP** and **HTTPS** are robust and stable protocols. They have been widely used in web browsers for a long time. They offer several performance and security advantages, as well as a mature base of easy-to-use development and analysis tools.
@@ -42,7 +42,7 @@ What differentiates software developers from other engineers?
 
     Developers find things out.
 
-We’ve learned that **executing efficient Internet searches** is a key skill every iOS developer needs.
+We’ve learned that executing efficient **Internet searches** is a key skill every iOS developer needs.
 
 We also have - at our fingertips — an extremely powerful tool for "finding things out": **Xcode**
 
@@ -62,15 +62,20 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
 - `SessionDataTask`
 - `.resume()`
 
+##### Key questions to answer:
+* **Q:** What does `.resume()` do?</br>
+* **Q:** When does the `.resume()` function execute?
+
 <!-- Add graphic and/o code samples -->
 
 2. Briefly share with each other any other tips on how to use built-in Xcode features to work more efficiently. Ideas could include:
 - how to navigate around your code
-- how to debug behaviors in your own code (i.e., using p or po, print statements, etc.)
+- how to debug behaviors in your own code (i.e., using `p` or `po`, `print()` statements, etc.)
 
-**TODO: As A Class (3 to 5 mins)**
-- Volunteers to share the most useful technique learned
+#### TODO: As A Class (3 to 5 mins)
 
+1. Volunteers share the most useful techniques learned
+2. Key questions to answer:
 **Q:** What does `.resume()` do?</br>
 **Q:** When does the `.resume()` function execute?
 
