@@ -9,9 +9,7 @@
 
 
 ## Why you should know this
-Nearly every professional-level iOS app communicates at some point with an Internet component such as a remote web service.
-
-Fetching and processing data between an app and a web service is an essential skill that all iOS developers must master.
+Nearly every professional-level iOS app communicates at some point with an Internet component such as a remote web service. Fetching and processing data between an app and a web service is an essential skill that all iOS developers must master.
 
 And the most commonly-used protocol for communicating with web servers is **HTTP** (and its secure counterpart, HTTPS).
 
@@ -38,18 +36,23 @@ By the end of class, write down your **three** (3) most important responses for 
 
 ## Initial Exercise (10 min)
 
-The difference between software developers and other engineers is *not* about domain knowledge — developers find things out.
+What differentiates software developers from other engineers? *Developers find things out.*
 
-We’ve learned that executing efficient Internet searches is a key skill every iOS developer needs.
+We’ve learned that **executing efficient Internet searches** is a key skill every iOS developer needs.
 
-But we also have — at our fingertips — a powerful tool offering a wealth of insight into most of the Swift and iOS constructs we need to know to get the job done: Xcode.
+We also have - at our fingertips — an extremely powerful tool for "finding things out": **Xcode**
+
+### Xcode Techniques  
 
 Resources for this exercise:
 1. [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
+2. Xcode
 
 **In Pairs (3 to 5 mins)**
 
-1. Share your favorite Xcode techniques for finding out the capabilities, behaviors and requirements of these iOS networking constructs found in the DailyPlanet starter app:
+Xcode offers a wealth of insight into most of the Swift and iOS constructs we need to know to get the job done.
+
+1. Share your favorite Xcode techniques for finding out the capabilities, behaviors and requirements of these iOS networking constructs found in the **DailyPlanet** starter app:
 - URLSession
 - URLRequest
 - SessionDataTask
@@ -57,7 +60,7 @@ Resources for this exercise:
 
 <!-- Add graphic and/o code samples -->
 
-2. Briefly share with each other any other tips on how to use built-in Xcode features to work more efficiently. Ideas might include:
+2. Briefly share with each other any other tips on how to use built-in Xcode features to work more efficiently. Ideas could include:
 - how to navigate around your code
 - how to debug behaviors in your own code (i.e., using p or po, print statements, etc.)
 
