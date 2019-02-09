@@ -29,7 +29,6 @@ At the end of this class, you should be able to...
 
 <!-- use Xcode to find things out about foundation classes, JSONDeserialization, xxx -->
 
-<br />
 
 ## Class Handouts (5 min)
 
