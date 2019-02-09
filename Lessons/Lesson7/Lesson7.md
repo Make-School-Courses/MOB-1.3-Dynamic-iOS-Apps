@@ -13,7 +13,7 @@ Nearly every professional-level iOS app communicates at some point with an Inter
 
 And the most commonly-used protocol for communicating with web servers is **HTTP** (and its secure counterpart, HTTPS).
 
-Since iOS 7, Apple has provided **URLSession** and its family of related classes as **a complete networking API** for uploading or downloading content via HTTP/S.
+Since iOS 7, Apple has provided **URLSession** and its family of related classes as **a complete networking API** for uploading or downloading content via **HTTP/S.**
 
 <!--
 **HTTP** and **HTTPS** are robust and stable protocols. They have been widely used in web browsers for a long time. They offer several performance and security advantages, as well as a mature base of easy-to-use development and analysis tools.
@@ -26,10 +26,12 @@ At the end of this class, you should be able to...
 
 1. xxx
 
+<!-- use Xcode to find things out about foundation classes, JSONDeserialization, xxx -->
+
 
 ## Class Handouts (5 min)
 
-**Structured Sharing Exercise - Part 1**
+### Structured Sharing Exercise - Part 1
 
 By the end of class, write down your **three** (3) most important responses for each of the question sheets passed out.
 
@@ -56,7 +58,7 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
 - `URLSession`
 - `URLRequest`
 - `SessionDataTask`
-- `.resume()``
+- `.resume()`
 
 <!-- Add graphic and/o code samples -->
 
@@ -67,7 +69,7 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
 **As A Class (3 to 5 mins)**
 - Volunteers to share the most useful technique learned
 
-**Q:** What does `.resume()` do?
+**Q:** What does `.resume()` do?</br>
 **Q:** When does the `.resume()` function execute?
 
 
@@ -184,7 +186,7 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
 ## Wrap Up (xx mins)
 
-**Structured Sharing Exercise - Part 2**
+### Structured Sharing Exercise - Part 2**
 
 At the end of class, turn in all your question sheets. We will use them in Part 3 of this exercises in the next class session.
 
