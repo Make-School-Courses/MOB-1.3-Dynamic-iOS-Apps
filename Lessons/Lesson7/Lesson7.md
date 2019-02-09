@@ -38,7 +38,9 @@ By the end of class, write down your **three** (3) most important responses for 
 
 ## Initial Exercise (10 min)
 
-What differentiates software developers from other engineers? *Developers find things out.*
+What differentiates software developers from other engineers?
+
+* - Developers find things out.*
 
 We’ve learned that **executing efficient Internet searches** is a key skill every iOS developer needs.
 
@@ -72,7 +74,8 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
 **Q:** What does `.resume()` do?</br>
 **Q:** When does the `.resume()` function execute?
 
-
+</br>
+</br>
 ## URLSession - An Overview
 
 
