@@ -20,6 +20,7 @@ Since iOS 7, Apple has provided **URLSession** and its family of related classes
 
 to make GET and POST network requests...
 -->
+<br />
 
 ## Class Learning Objectives/Competencies (5 min)
 At the end of this class, you should be able to...
@@ -28,6 +29,7 @@ At the end of this class, you should be able to...
 
 <!-- use Xcode to find things out about foundation classes, JSONDeserialization, xxx -->
 
+<br />
 
 ## Class Handouts (5 min)
 
@@ -35,6 +37,7 @@ At the end of this class, you should be able to...
 
 By the end of class, write down your **three** (3) most important responses for each of the question sheets passed out.
 
+<br />
 
 ## Initial Exercise (10 min)
 
@@ -78,7 +81,6 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
  - [ ] **Q:** When does the `.resume()` function execute?
 
 <br />
-<br /> 
 
 ## URLSession - An Overview
 
