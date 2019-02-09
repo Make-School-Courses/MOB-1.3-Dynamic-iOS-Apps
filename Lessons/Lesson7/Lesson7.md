@@ -40,11 +40,13 @@ By the end of class, write down your **three** (3) most important responses for 
 
 What differentiates software developers from other engineers?
 
-    Developers find things out.
+    Developers find things out. [^1]
 
 We’ve learned that executing efficient **Internet searches** is a key skill every iOS developer needs.
 
 We also have - at our fingertips — an extremely powerful tool for "finding things out": **Xcode**
+
+[^1]: *As opposed to the concept of mastering *domain knowledge.*
 
 ### Xcode Techniques  
 
@@ -59,7 +61,7 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
 1. Share your favorite Xcode techniques for finding out the capabilities, behaviors and requirements of these iOS networking constructs found in the **DailyPlanet** starter app:
 * `URLSession`
 * `URLRequest`
-- `SessionDataTask`
+- [ ] `SessionDataTask`
 - `.resume()`
 
 
