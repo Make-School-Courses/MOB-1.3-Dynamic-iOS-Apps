@@ -40,7 +40,7 @@ By the end of class, write down your **three** (3) most important responses for 
 
 What differentiates software developers from other engineers?
 
-    **Developers find things out.**
+    Developers find things out.
 
 We’ve learned that **executing efficient Internet searches** is a key skill every iOS developer needs.
 
@@ -48,11 +48,11 @@ We also have - at our fingertips — an extremely powerful tool for "finding thi
 
 ### Xcode Techniques  
 
-Resources for this exercise:
-1. [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
-2. Xcode
+Resources needed:
+1. The [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
+2. **Xcode**
 
-**In Pairs (3 to 5 mins)**
+#### TODO: In Pairs (3 to 5 mins)
 
 Xcode offers a wealth of insight into most of the Swift and iOS constructs we need to know to get the job done.
 
@@ -68,7 +68,7 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
 - how to navigate around your code
 - how to debug behaviors in your own code (i.e., using p or po, print statements, etc.)
 
-**As A Class (3 to 5 mins)**
+**TODO: As A Class (3 to 5 mins)**
 - Volunteers to share the most useful technique learned
 
 **Q:** What does `.resume()` do?</br>
@@ -82,6 +82,8 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
 <!-- Add graphic showing relationship between URLSession Components -->
 
 <!-- Add code samples -->
+
+<!-- **NOTE** URlession is async... -->
 
 
 ``` Swift
@@ -100,7 +102,7 @@ let defaultSession = URLSession(configuration: .default)
 1. xxx
 
 
-### .resume()
+### The `.resume()` Function
 
 ### Making HTTP GET Requests Using URLSessionDataTask
 
