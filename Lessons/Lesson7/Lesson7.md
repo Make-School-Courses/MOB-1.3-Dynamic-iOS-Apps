@@ -53,10 +53,10 @@ Resources for this exercise:
 Xcode offers a wealth of insight into most of the Swift and iOS constructs we need to know to get the job done.
 
 1. Share your favorite Xcode techniques for finding out the capabilities, behaviors and requirements of these iOS networking constructs found in the **DailyPlanet** starter app:
-- URLSession
-- URLRequest
-- SessionDataTask
-- .resume()
+- `URLSession`
+- `URLRequest`
+- `SessionDataTask`
+- `.resume()``
 
 <!-- Add graphic and/o code samples -->
 
@@ -67,8 +67,9 @@ Xcode offers a wealth of insight into most of the Swift and iOS constructs we ne
 **As A Class (3 to 5 mins)**
 - Volunteers to share the most useful technique learned
 
-**Q** What does .resume() do?
-**Q** When does the .resume() function execute?
+**Q:** What does `.resume()` do?
+**Q:** When does the `.resume()` function execute?
+
 
 ## URLSession - An Overview
 
@@ -155,9 +156,9 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
   Briefly discuss..
 
-**Q** Looking at the results of either of the 2 fetch functions, what is your guess about where the `response` object came from?
-**Q** Why do you think the developers at httpbin.org bothered to spent time creating a service that would return HTTP headers?
-**Q** Why was the `DispatchQueue.main.async` statement needed?
+**Q:** Looking at the results of either of the 2 fetch functions, what is your guess about where the `response` object came from?
+**Q:** Why do you think the developers at httpbin.org bothered to spent time creating a service that would return HTTP headers?
+**Q:** Why was the `DispatchQueue.main.async` statement needed?
 
 ``` Swift
     if let data = data, let image = UIImage(data: data) {
