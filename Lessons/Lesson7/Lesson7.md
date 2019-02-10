@@ -77,13 +77,17 @@ Resources needed:
 
 1. Volunteers share the most useful techniques learned
 
-##### Key questions to answer:
+##### Key Questions:
+<ul>
+<li>**Q:** What does `.resume()` do?</li>
+<li>**Q:** When does the `.resume()` function execute?</li>
+</ul>
+
  - [ ] **Q:** What does `.resume()` do?</br>
  - [ ] **Q:** When does the `.resume()` function execute?
 
-<br />
-
 ***
+<br />
 ## URLSession - An Overview
 
 
