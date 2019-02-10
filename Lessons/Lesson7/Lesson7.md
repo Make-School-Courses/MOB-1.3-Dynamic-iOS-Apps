@@ -97,7 +97,7 @@ Resources needed:
 
 <!-- **NOTE** URlession is async... -->
 
-![syntax](assets/urlsession_suite.png)
+![syntax](assets/full_urlsession_suite.png)
 
 ``` Swift
 let defaultSession = URLSession(configuration: .default)
