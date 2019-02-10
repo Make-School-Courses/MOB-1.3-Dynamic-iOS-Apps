@@ -90,11 +90,10 @@ Resources needed:
 
 It creates an object that coordinates a group of related network data transfer tasks.
 
-</br>
-![syntax](assets/full_urlsession_suite.png)
 
-</br>
-***Important Note:*** *Like most networking APIs, the URLSession API is highly asynchronous. See* Additional Resources *below for more info.*
+    ![syntax](assets/full_urlsession_suite.png)
+
+**Important Note:** *Like most networking APIs, the URLSession API is highly asynchronous. See* Additional Resources *below for more info.*
 
 
 ### URLSessionConfiguration
