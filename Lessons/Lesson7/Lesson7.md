@@ -82,7 +82,6 @@ Resources needed:
  - [ ] **Q:** When does the `.resume()` function execute?
 
 <br />
-----
 
 
 ## URLSession - An Overview
@@ -91,18 +90,29 @@ Resources needed:
 
 It creates an object that coordinates a group of related network data transfer tasks.
 
+</br>
 ![syntax](assets/full_urlsession_suite.png)
 
-
+</br>
 ***Important Note:*** *Like most networking APIs, the URLSession API is highly asynchronous. See* Additional Resources *below for more info.*
 
 
 ### URLSessionConfiguration
 
+Every URLSession instance is initialized using an `URLSessionConfiguration object`, which defines the behavior and policies to use when uploading and downloading data.
+
+URLSessionConfiguration will also let you configure additional HTTP headers, timeout values, caching policies, and other session properties.
+
 #### Three types:
 
-1. xxx
+URLSessionConfiguration objects come in 3 flavors:
 
+1. `.default` - Creates a default configuration object that uses the disk-persisted global cache, credential and cookie storage objects. Can save cache or cookies to disk, credentials to the Keychain.
+2. `.ephemeral` - Similar .default, but all session-related data is stored in memory and will be gone once the session terminates.
+3. `.background` -  Allows the session to perform upload or download tasks in the background, even if the app is suspended> [action]
+
+</br>
+Here is a simple example of a declaration of a `URLSession` instance with the `.default` `URLSessionConfiguration` type applied:
 
 ``` Swift
 let defaultSession = URLSession(configuration: .default)
