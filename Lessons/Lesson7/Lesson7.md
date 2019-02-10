@@ -13,9 +13,11 @@ Nearly every professional-level iOS app communicates at some point with an Inter
 
 And the most commonly-used protocol for communicating with web servers is **HTTP** (and its secure counterpart, HTTPS).
 
-Since iOS 7, Apple has provided **URLSession** and its family of related classes as **a complete networking API** for uploading or downloading content via **HTTP** and HTTPS.
+Since iOS 7, Apple has provided **URLSession** and its suite of related components as **a complete networking API** for uploading or downloading content via **HTTP** and HTTPS.
 
 <!--
+...and its family of related classes...
+
 **HTTP** and **HTTPS** are robust and stable protocols. They have been widely used in web browsers for a long time. They offer several performance and security advantages, as well as a mature base of easy-to-use development and analysis tools.
 
 to make GET and POST network requests...
@@ -81,6 +83,7 @@ Resources needed:
 
 <br />
 
+***
 ## URLSession - An Overview
 
 
@@ -90,6 +93,7 @@ Resources needed:
 
 <!-- **NOTE** URlession is async... -->
 
+![syntax](assets/urlsession_suite.png)
 
 ``` Swift
 let defaultSession = URLSession(configuration: .default)
