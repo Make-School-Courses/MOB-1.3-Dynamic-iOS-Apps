@@ -88,7 +88,7 @@ Resources needed:
 
 `URLSession` is the **key object** responsible for sending and receiving HTTP requests. It natively supports the data, file, ftp, http, and https URL schemes.
 
-It creates an object that coordinates a group of related network data transfer tasks.
+It creates an object that coordinates a group of related network data transfer tasks.</br>
 
 ![syntax](assets/full_urlsession_suite.png)
 
