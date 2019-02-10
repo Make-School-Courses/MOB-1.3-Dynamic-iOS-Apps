@@ -86,27 +86,32 @@ Resources needed:
  - [ ] **Q:** What does `.resume()` do?</br>
  - [ ] **Q:** When does the `.resume()` function execute?
 
-***
 <br />
+***
+<br>
 ## URLSession - An Overview
 
+`URLSession` is the **key object** responsible for sending and receiving HTTP requests. It natively supports the data, file, ftp, http, and https URL schemes.
 
-<!-- Add graphic showing relationship between URLSession Components -->
+It creates an object that coordinates a group of related network data transfer tasks.
 
-<!-- Add code samples -->
+    ![syntax](assets/full_urlsession_suite.png)
 
-<!-- **NOTE** URlession is async... -->
 
-![syntax](assets/full_urlsession_suite.png)
+***Important Note:*** *Like most networking APIs, the URLSession API is highly asynchronous. See* Additional Resources *below for more info.*
 
-``` Swift
-let defaultSession = URLSession(configuration: .default)
-```
+
 ### URLSessionConfiguration
 
 #### Three types:
 
 1. xxx
+
+
+``` Swift
+let defaultSession = URLSession(configuration: .default)
+```
+
 
 ### URLSessionTask
 
@@ -219,10 +224,13 @@ At the end of class, turn in all your question sheets. We will use them in Part 
 <!-- xxx -->
 
 
-## Additional resources
+## Additional Resources
 
 1. [Slides]
 2. [URL Loading System -- from Apple](https://developer.apple.com/documentation/foundation/url_loading_system)
-3. xxx
+< URLSession>
+< URLSession Configuration >
+3. [Asynchronicity and URL Sessions](https://developer.apple.com/documentation/foundation/urlsession)
+(https://stackoverflow.com/questions/45463996/how-does-urlsessiontask-run)
 
 <!-- xxx -->
