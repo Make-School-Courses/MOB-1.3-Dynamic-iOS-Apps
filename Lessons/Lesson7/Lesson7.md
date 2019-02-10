@@ -78,24 +78,20 @@ Resources needed:
 1. Volunteers share the most useful techniques learned
 
 ##### Key Questions:
-<ul>
-<li>**Q:** What does `.resume()` do?</li>
-<li>**Q:** When does the `.resume()` function execute?</li>
-</ul>
-
  - [ ] **Q:** What does `.resume()` do?</br>
  - [ ] **Q:** When does the `.resume()` function execute?
 
 <br />
-***
-<br>
+----
+
+
 ## URLSession - An Overview
 
 `URLSession` is the **key object** responsible for sending and receiving HTTP requests. It natively supports the data, file, ftp, http, and https URL schemes.
 
 It creates an object that coordinates a group of related network data transfer tasks.
 
-    ![syntax](assets/full_urlsession_suite.png)
+![syntax](assets/full_urlsession_suite.png)
 
 
 ***Important Note:*** *Like most networking APIs, the URLSession API is highly asynchronous. See* Additional Resources *below for more info.*
