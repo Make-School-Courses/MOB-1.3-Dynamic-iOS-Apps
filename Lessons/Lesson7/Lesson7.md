@@ -260,7 +260,7 @@ It contains valuable info about the response returned, including:
 - the HTTP headers
 
 
-### Present Result
+### 5. Present Results  
 
 Typically, you will want to process and present the JSON data returned from the GET request.
 
@@ -291,17 +291,13 @@ For this exercise we will use these 3 resources:
 
 Using the `Request inspection` endpoint on httpbin.org's tester page, we will send a `GET /headers` *request* that will return the `request's HTTP headers` in its `Response body`.
 
-<!-- Add graphic and/o code samples -->
+![syntax](assets/request_inspection_endpoint.png) </br>
 
 
 1. First, examine httpbin.org's exceptional, easy-to-use [web service testing interface](https://httpbin.org) in a web browser on your laptop.
 2. Next, expand the *Request inspection* dropdown and its *GET /headers* function. Press the `Try it out` and `Execute` buttons. In the *Responses* fields returned, pay particular attention to the `"headers":` node in the *Response body* field. Also notice the HTTP status code returned (success = 200).
 
 *(Feel free to experiment a little with this interface when you have time.)*
-
-
-![syntax](assets/request_inspection_endpoint.png) </br>
-
 
 
 **Part 2 - Individual**
@@ -363,7 +359,9 @@ When making network requests with HTTP/S, success or failure can occur at severa
 
 Handling errors and validating successful state are key to working with the URLSession family of classes and functions.
 
-Whether or not all the procedures listed below are required or optional depends on your particular implementation of URLSession. However, **handling the error** returned and **converting JSON data** should always be considered as **required** steps .
+**Developer Hints:**
+- Whether or not all the procedures listed below are required or optional depends on your particular implementation of URLSession.
+- However, **handling the error** returned and **converting JSON data** should always be considered as **required** steps .
 
 ### Handle the `error` Object
 
@@ -377,14 +375,14 @@ Check if the `error` object is `nil.` If not, *properly* handle the error (for n
           }
 ```
 
-### Confirm Data Object Returned
+### Confirm the Data Object
 
-Ensure that data has been returned with the response:
+Ensure that a `data` object has been returned with the response:
 
 ``` Swift
         // protect against no data returned from HTTP response...
          guard data != nil else {
-             print("No data")
+             print("No data object")
              return
          }
 ```
@@ -392,7 +390,7 @@ Ensure that data has been returned with the response:
 
 ### Validate HTTP Status
 
-Confirm the HTTP Status Code returned falls within the range of acceptable codes. If not, we want to properly respond to the error condition:
+Confirm that the HTTP Status Code returned falls within the range of acceptable codes. If not, we want to properly respond to the error condition:
 
 ``` Swift
       // Confirm the HTTP Status Code is within the range of acceptable ones
@@ -408,7 +406,7 @@ Confirm the HTTP Status Code returned falls within the range of acceptable codes
 
 Now that we know the response status is good, we can validate the format of the returned data.
 
-The `MIME Type,` a value returned by most web servers, tells us the **format** of the returned data. We want to ensure that the format of the data returned is in the expected format (JSON, in this case).
+The `MIME Type,` a value returned by most web servers, tells us the **format** of the returned data. We want to ensure that the data returned is in the expected format (JSON, in this case):
 
 ``` Swift
         // Validate response data is in expected format
@@ -449,6 +447,8 @@ And we want to properly respond to potential errors by wrapping our JSONSerializ
 
 ## Challenges
 
+1. xxx
+
 <!-- xxx -->
 
 ## Wrap Up (xx mins)
@@ -470,7 +470,7 @@ At the end of class, turn in all your question sheets. We will use them in Part 
 2. [URL Loading System - from Apple](https://developer.apple.com/documentation/foundation/url_loading_system)
 3. [URLSession - from Apple](https://developer.apple.com/documentation/foundation/urlsession)
 4. [The URLSessionDelegate Protocol - from Apple](https://developer.apple.com/documentation/foundation/urlsessiondelegate)
-5. Asynchronicity and URL Sessions:
-[From Apple](https://developer.apple.com/documentation/foundation/urlsession)
+5. Asynchronicity and URL Sessions:</br>
+[From Apple](https://developer.apple.com/documentation/foundation/urlsession)</br>
 [From StackOverflow](https://stackoverflow.com/questions/45463996/how-does-urlsessiontask-run)
 4. [Error Error Handling In Swift With Do-Try-Catch - an article](https://learnappmaking.com/error-handling-swift-do-try-catch/)
