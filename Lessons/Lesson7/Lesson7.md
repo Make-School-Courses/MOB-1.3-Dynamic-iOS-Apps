@@ -213,13 +213,11 @@ The `completion handler` is a closure that is executed when your data task is fi
 
 #### The .resume() function
 
-At this point, your network request has only been set up.
-
-To execute it, you'll need to start it.
+At this point, your network request has only been set up. To execute it, you'll need to start it.
 
 By **default**, Apple has set up all newly-initialized tasks to begin in a **suspended state.** So you need to call the `.resume()` function on a task in order to start it.
 
-#### The Complete Request 
+#### The Complete Request
 
 Except for handling the response, this code snippet depicts the order of the steps required to make our simple GET request:
 
@@ -246,25 +244,20 @@ Except for handling the response, this code snippet depicts the order of the ste
     }
 ```
 
-### 4. Validate and Process the Response
+### 4. Handle the Response
 
 When the `completion handler` closure is executed, you can validate the data returned and process it for presentation to the user, or whatever your app needs to do with it.
 
-
-
 #### URLResponse Object
 
-
-
-
-At the same time, the counterpart of a URLRequest objrectis a URLResponse. This object is returned when you invoke any of the communication methods we are going to learn about.
+< At the same time, the counterpart of a URLRequest objrectis a URLResponse. This object is returned when you invoke any of the communication methods we are going to learn about. >
 
 <!-- Response data? - can be accessed via delegate of completion block -->
 
 
 ### Present Result
 
-
+< for the moment, we'll only print -- usually, JSON >
 
 <!-- Add graphic and/o code samples -->
 
