@@ -146,11 +146,52 @@ The three concrete subclasses of URLSessionTask which you will employ most often
 
 ## Making HTTP GET Requests Using URLSessionDataTask
 
-### Configure the Session
+### 1. Configure the Session
 
-### Set Up the Request
-URLRequest
-URL
+Configuring your `URLSession` object can be as simple as writing a single-line declaration, or you can specific a complex set of specific conditions and parameters to control your session's state and behavior.
+
+The following code illustrates a complex set of configuration parameters applied to a session defined as a `.background` session:
+
+``` Swift
+private lazy var urlSession: URLSession = {
+    let config = URLSessionConfiguration.background(withIdentifier: "MySession")
+    config.isDiscretionary = true
+    config.sessionSendsLaunchEvents = true
+    return URLSession(configuration: config, delegate: self, delegateQueue: nil)
+}()
+```
+
+For this class, we only need the simple, one-line `.default` session configuration:
+
+``` Swift
+let defaultSession = URLSession(configuration: .default)
+```
+
+### 2. Set Up the Request
+
+#### Create the URL Object
+
+The URL class defines a local or remote [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier). It could be a link to a remote HTML webpage, a local file accessed using `file:///,` or any other item qualifying as a URI.
+
+``` Swift
+        // Create URL
+       let url = URL(string: "https://<your_target_web_service>")
+```
+
+#### Create the URLRequest Object
+
+Though it is possible to send a very simple request, the `URLRequest` object properly represents a URL offering configuration parameters for setting the request's body, headers, and access method (GET, POST, etc).
+
+There are several types of constructor signatures available for creating `URLRequest` object. This one requires a valid URL object as an argument:
+
+``` Swift
+    // Create Request
+    let request = URLRequest(url: url!)
+    let url = URL(string: "https://<your_target_web_service>")
+```
+
+**Note:** *The URLRequest(url: url!) is forced unwrapped in case an invalide URL string is provided (for example, "htp:/a.2.3")*
+
 
 ### Make the Request
 
@@ -161,8 +202,11 @@ URL
 
 
 ### Validate and Process the Response
-for now, just print
-convert response to JSON
+
+#### URLResponse Object
+
+
+At the same time, the counterpart of a URLRequest is a URLResponse. This object is returned when you invoke any of the communication methods we are going to learn about.
 
 <!-- Response data? - can be accessed via delegate of completion block -->
 
