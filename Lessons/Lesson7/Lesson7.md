@@ -148,7 +148,7 @@ The three concrete subclasses of URLSessionTask which you will employ most often
 
 ### 1. Configure the Session
 
-Configuring your `URLSession` object can be as simple as writing a single-line declaration, or you can specific a complex set of specific conditions and parameters to control your session's state and behavior.
+Configuring your `URLSession` object can be as simple as writing a single-line declaration, or you can specify a complex set of conditions and parameters to control your session's state and behavior.
 
 The following code illustrates a complex set of configuration parameters applied to a session defined as a `.background` session:
 
@@ -161,7 +161,7 @@ private lazy var urlSession: URLSession = {
 }()
 ```
 
-For this class, we only need the simple, one-line `.default` session configuration:
+For this lesson, we will only work with a simple, one-line `.default` session configuration:
 
 ``` Swift
 let defaultSession = URLSession(configuration: .default)
@@ -171,7 +171,7 @@ let defaultSession = URLSession(configuration: .default)
 
 #### Create the URL Object
 
-The URL class defines a local or remote [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier). It could be a link to a remote HTML webpage, a local file accessed using `file:///,` or any other item qualifying as a URI.
+The `URL` class defines a local or remote [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier). It could be a link to a remote HTML webpage, a local file accessed using `file:///,` or any other item qualifying as a URI.
 
 ``` Swift
         // Create URL
@@ -180,9 +180,9 @@ The URL class defines a local or remote [URI](https://en.wikipedia.org/wiki/Unif
 
 #### Create the URLRequest Object
 
-Though it is possible to send a very simple request, the `URLRequest` object properly represents a URL offering configuration parameters for setting the request's body, headers, and access method (GET, POST, etc).
+Though it is possible to send a very simple request, the `URLRequest` object properly represents a URL and offers configuration parameters for setting the request's body, headers, and access method (GET, POST, etc).
 
-There are several types of constructor signatures available for creating `URLRequest` object. This one requires a valid URL object as an argument:
+There are various constructor signatures available for creating `URLRequest` objects. This one only requires a valid URL object as its single argument:
 
 ``` Swift
     // Create Request
@@ -190,10 +190,10 @@ There are several types of constructor signatures available for creating `URLReq
     let url = URL(string: "https://<your_target_web_service>")
 ```
 
-**Note:** *The URLRequest(url: url!) is forced unwrapped in case an invalide URL string is provided (for example, "htp:/a.2.3")*
+**Note:** *The `URLRequest(url: url!)` is forced unwrapped in case an invalid URL string was provided (for example, ``"htp:/a.2.3"`)*
 
 
-### Make the Request
+### 3. Make the Request
 
 #### The Data task
 
@@ -201,7 +201,7 @@ There are several types of constructor signatures available for creating `URLReq
 
 
 
-### Validate and Process the Response
+### 4. Validate and Process the Response
 
 #### URLResponse Object
 
