@@ -353,21 +353,19 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
 ## Validate and Process the Response
 
-#### Validate the Response
+### Validate the Response
 
 When making network requests with HTTP/S, success or failure can occur at several levels:
 - Any errors with the Response?
 - Was the expected HTTP Status Code returned?
-- Was any data object returned?
 - Was data returned in the correct format?
+- Was a data object returned at all?
 
 Handling errors and validating successful state are key to working with the URLSession family of classes and functions.
 
-Whether or not all the procedures listed below are required or optional depends on your particular implementation of URLSession.
+Whether or not all the procedures listed below are required or optional depends on your particular implementation of URLSession. However, **handling the error** returned and **converting JSON data** should always be considered as **required** steps .
 
-However, **handling the error** returned and **converting JSON data** should always be considered as **required** steps .
-
-#### Handle the `error` Object
+### Handle the `error` Object
 
 Check if the `error` object is `nil.` If not, *properly* handle the error (for now, we'll simply print the error returned):
 
@@ -379,7 +377,7 @@ Check if the `error` object is `nil.` If not, *properly* handle the error (for n
           }
 ```
 
-#### Confirm Data Object Returned
+### Confirm Data Object Returned
 
 Ensure that data has been returned with the response:
 
@@ -392,9 +390,9 @@ Ensure that data has been returned with the response:
 ```
 
 
-#### Validate HTTP Status
+### Validate HTTP Status
 
-Confirm the HTTP Status Code returned falls within the range of acceptable codes. If not, we want to properly respond to the error condition.
+Confirm the HTTP Status Code returned falls within the range of acceptable codes. If not, we want to properly respond to the error condition:
 
 ``` Swift
       // Confirm the HTTP Status Code is within the range of acceptable ones
@@ -406,11 +404,11 @@ Confirm the HTTP Status Code returned falls within the range of acceptable codes
 ```
 
 
-### Validate Data Format
+### Format Validation
 
 Now that we know the response status is good, we can validate the format of the returned data.
 
-The `MIME Type,` a value returned by most web servers, tells us the **format** of the returned data. We want to ensure that the format of the data returned is in the format we expected (in this case, in JSON).
+The `MIME Type,` a value returned by most web servers, tells us the **format** of the returned data. We want to ensure that the format of the data returned is in the expected format (JSON, in this case).
 
 ``` Swift
         // Validate response data is in expected format
@@ -422,12 +420,11 @@ The `MIME Type,` a value returned by most web servers, tells us the **format** o
 
 ### JSON Serialization of HTTP Responses
 
-Finally, we want to convert (*deserialize*) the binary data object returned into a JSON object which we can process as a Swift collection object (dictionary or array).
+Finally, we want to convert (*deserialize*) the binary data object returned into a JSON object that we can process as a Swift collection object (a dictionary or an array).
 
-
+And we want to properly respond to potential errors by wrapping our JSONSerialization work in a `do-try-catch` block:
 
 ``` Swift
-
       ...
             // Convert response data to JSON
             do {
@@ -466,19 +463,14 @@ At the end of class, turn in all your question sheets. We will use them in Part 
 - The last 40 mins of next class will be dedicated for questions on material so far and/or on student projects.
 
 
-## Challenges
-
-<!-- xxx -->
-
 
 ## Additional Resources
 
 1. [Slides]
-2. [URL Loading System -- from Apple](https://developer.apple.com/documentation/foundation/url_loading_system)
-< URLSession>
-< URLSession Configuration >
-< [The URLSessionDelegate Protocol](https://developer.apple.com/documentation/foundation/urlsessiondelegate)
-3. [Asynchronicity and URL Sessions](https://developer.apple.com/documentation/foundation/urlsession)
-[](https://stackoverflow.com/questions/45463996/how-does-urlsessiontask-run)
-
-<!-- xxx -->
+2. [URL Loading System - from Apple](https://developer.apple.com/documentation/foundation/url_loading_system)
+3. [URLSession - from Apple](https://developer.apple.com/documentation/foundation/urlsession)
+4. [The URLSessionDelegate Protocol - from Apple](https://developer.apple.com/documentation/foundation/urlsessiondelegate)
+5. Asynchronicity and URL Sessions:
+[From Apple](https://developer.apple.com/documentation/foundation/urlsession)
+[From StackOverflow](https://stackoverflow.com/questions/45463996/how-does-urlsessiontask-run)
+4. [Error Error Handling In Swift With Do-Try-Catch - an article](https://learnappmaking.com/error-handling-swift-do-try-catch/)
