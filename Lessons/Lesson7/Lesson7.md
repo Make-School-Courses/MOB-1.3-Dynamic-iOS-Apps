@@ -146,6 +146,8 @@ The three concrete subclasses of URLSessionTask which you will employ most often
 
 ## Making HTTP GET Requests Using URLSessionDataTask
 
+The following steps illustrate how to create, send and validate a simple HTTP GET request using a `URLRequest` object and a `URLSessionDataTask` returning its `URLResponse` object using a `completion handler.`
+
 ### 1. Configure the Session
 
 Configuring your `URLSession` object can be as simple as writing a single-line declaration, or you can specify a complex set of conditions and parameters to control your session's state and behavior.
@@ -189,29 +191,75 @@ There are various constructor signatures available for creating `URLRequest` obj
     let request = URLRequest(url: url!)
     let url = URL(string: "https://<your_target_web_service>")
 ```
-
-**Note:** *The `URLRequest(url: url!)` is forced unwrapped in case an invalid URL string was provided (for example, ``"htp:/a.2.3"`)*
-
+**Note:** *`URLRequest(url: url!)` is forced unwrapped in case an invalid URL string was provided (for example, `htp:/a.2.3`)*
 
 ### 3. Make the Request
 
 #### The Data task
 
+To make a request, you create an instance of the `URLSessionDataTask` class, pass it your `URLRequest/URL,` and call its `completion handler.` [^1]
+
+``` Swift
+  ...
+  // Create Data Task
+  let dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+
+    // handle Response Here
+
+    })
+  ...
+```
+
+The `completion handler` is a closure that is executed when your data task is finished and the response to your request has been returned.
+
 #### The .resume() function
 
+By default, Apple has set up all newly-initialized tasks to begin in a suspended state. So you need to call the `.resume()` function on a task in order to start it.
 
+Except for handling the response, this code snippet depicts the order of the steps required to make our simple GET request:
+
+``` Swift
+
+  func someDataFetchFunction() {
+
+        // Configure a .default session
+        let defaultSession = URLSession(configuration: .default)
+
+        // Create URL
+        let url = URL(string: "https://<your_target_web_service>")
+
+        // Create Request
+        let request = URLRequest(url: url!)
+
+        // Create Data Task
+        let dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+
+          // handle Response Here
+
+        })
+        dataTask.resume() // Start the data task
+    }
+```
 
 ### 4. Validate and Process the Response
+
+When the `completion handler` closure is executed, you can validate the data returned and process it for presentation to the user, or whatever your app needs to do with it.
+
+
 
 #### URLResponse Object
 
 
-At the same time, the counterpart of a URLRequest is a URLResponse. This object is returned when you invoke any of the communication methods we are going to learn about.
+
+
+At the same time, the counterpart of a URLRequest objrectis a URLResponse. This object is returned when you invoke any of the communication methods we are going to learn about.
 
 <!-- Response data? - can be accessed via delegate of completion block -->
 
 
-### Present Result To User
+### Present Result
+
+
 
 <!-- Add graphic and/o code samples -->
 
@@ -263,7 +311,7 @@ To get the latest pic of the day:
 https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 - find the `hdurl` node and copy it into your iOS project
 
-*For clues, see the URLSession implementation details of `fetchHeaderData()` function.*
+*For clues, see the URLSession implementation details of the `fetchHeaderData()` function.*
 
 **Part 4 - As A Class**
 
