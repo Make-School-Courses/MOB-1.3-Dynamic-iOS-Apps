@@ -126,14 +126,16 @@ To do the real work of fetching data or downloading/uploading files, a session c
 #### Three types:
 The three concrete subclasses of URLSessionTask which you will employ most often are:
 
-1. **URLSessionDataTask** - Intended for short, often interactive requests to servers such as fetching data by sending HTTP requests (GET, POST, etc). Data tasks send and receive data using NSData objects.
+1. **URLSessionDataTask** - Intended for short, often interactive server requests such as fetching data by sending HTTP requests (GET, POST, etc). Data tasks send and receive data using `NSData` objects.
 2. **URLSessionUploadTask** - Similar to data tasks, but also send data (such as a file) from disk to web service, and they support background uploads while the app is no longer running.
-3. **URLSessionDownloadTask** - Data from a remote service is retrieved in the form of a file and stored in a temporary location. Supports background downloads and uploads while the isn't running.
+3. **URLSessionDownloadTask** - Data from a remote service is retrieved in the form of a file and stored in a temporary location. Supports background downloads/uploads while app the isn't running.
 
-*This diagram illustrates the relationship between the abstract parent class, URLSessionTask, and its three concrete implementations, along with a few of the functions inherited from URLSessionTask:*
+*Diagram illustrating the relationship between the abstract parent class, URLSessionTask, and its 3 concrete implementations, along with a few of the functions inherited from the abstract parent class:*
 
 ![syntax](assets/urlsessiontask_with_subclasses.png) </br>
 
+
+<!--  TODO: code samples here -->
 
 
 <br>
