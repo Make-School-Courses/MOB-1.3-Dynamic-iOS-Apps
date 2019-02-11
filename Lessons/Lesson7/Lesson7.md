@@ -68,7 +68,7 @@ Resources needed:
 - `.resume()`
 
 
-<!-- Add graphic and/o code samples -->
+<!-- Add graphic and/or code samples -->
 
 2. Briefly share with each other any other tips on how to use built-in Xcode features to work more efficiently. Ideas could include:
 * how to navigate around your code
@@ -146,6 +146,28 @@ The three concrete subclasses of URLSessionTask which you will employ most often
 
 ### Making HTTP GET Requests Using URLSessionDataTask
 
+### Configure the session
+
+### Set up the request
+URLRequest
+URL
+
+### Make the request
+
+#### The Data task
+
+#### The .resume() function
+
+
+
+### Validate and Process the Response
+for now, just print
+convert response to JSON
+
+<!-- Response data? - can be accessed via delegate of completion block -->
+
+
+### Present result to user
 
 <!-- Add graphic and/o code samples -->
 
