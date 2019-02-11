@@ -361,13 +361,13 @@ When making network requests with HTTP/S, success or failure can occur at severa
 - Was any data object returned?
 - Was data returned in the correct format?
 
-Handling errors and validating successful state are key to working with the URLSession family of classes and functions
+Handling errors and validating successful state are key to working with the URLSession family of classes and functions.
 
 Whether or not all the procedures listed below are required or optional depends on your particular implementation of URLSession.
 
-However, handling the `error` returned and converting JSON data should always be considered as *required*.
+However, **handling the error** returned and **converting JSON data** should always be considered as **required** steps .
 
-#### Handling the `error` Object
+#### Handle the `error` Object
 
 Check if the `error` object is `nil.` If not, *properly* handle the error (for now, we'll simply print the error returned):
 
@@ -379,9 +379,22 @@ Check if the `error` object is `nil.` If not, *properly* handle the error (for n
           }
 ```
 
-#### Handling the Response Object
+#### Confirm Data Object Returned
 
-Validate that data has been returned with the response:
+Ensure that data has been returned with the response:
+
+``` Swift
+        // protect against no data returned from HTTP response...
+         guard data != nil else {
+             print("No data")
+             return
+         }
+```
+
+
+#### Validate HTTP Status
+
+Confirm the HTTP Status Code returned falls within the range of acceptable codes. If not, we want to properly respond to the error condition.
 
 ``` Swift
       // Confirm the HTTP Status Code is within the range of acceptable ones
