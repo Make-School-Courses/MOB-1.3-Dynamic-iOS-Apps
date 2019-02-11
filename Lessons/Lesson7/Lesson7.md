@@ -90,9 +90,9 @@ Resources needed:
 
 It creates an object that coordinates a group of related network data transfer tasks.</br></br>
 
-![syntax](assets/full_urlsession_suite.png)
+![syntax](assets/full_urlsession_suite.png) </br>
 
-</br>
+
 **Important Note:** *Like most networking APIs, the URLSession API is highly asynchronous. See* Additional Resources *below for more info.*
 
 
@@ -111,7 +111,7 @@ URLSessionConfiguration objects come in 3 flavors:
 3. `.background` -  Allows the session to perform upload or download tasks in the background, even if the app is suspended> [action]
 
 </br>
-Here is a simple example of a declaration of a `URLSession` instance with the `.default` `URLSessionConfiguration` type applied:
+Here is a simple example of a declaration of a `URLSession` instance using the `.default` `URLSessionConfiguration` type:
 
 ``` Swift
 let defaultSession = URLSession(configuration: .default)
@@ -120,12 +120,20 @@ let defaultSession = URLSession(configuration: .default)
 
 ### URLSessionTask
 
+
 #### Three types:
 
 1. xxx
 
 
-### The `.resume()` Function
+![syntax](assets/urlsessiontask_with_subclasses.png) </br>
+
+
+
+
+<!-- ### The `.resume()` Function -->
+
+<!-- Response data? - can be accessed via delegate of completion block -->
 
 ### Making HTTP GET Requests Using URLSessionDataTask
 
