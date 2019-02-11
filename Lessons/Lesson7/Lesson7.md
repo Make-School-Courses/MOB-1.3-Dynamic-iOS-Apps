@@ -144,15 +144,15 @@ The three concrete subclasses of URLSessionTask which you will employ most often
 
 <!-- Response data? - can be accessed via delegate of completion block -->
 
-### Making HTTP GET Requests Using URLSessionDataTask
+## Making HTTP GET Requests Using URLSessionDataTask
 
-### Configure the session
+### Configure the Session
 
-### Set up the request
+### Set Up the Request
 URLRequest
 URL
 
-### Make the request
+### Make the Request
 
 #### The Data task
 
@@ -167,7 +167,7 @@ convert response to JSON
 <!-- Response data? - can be accessed via delegate of completion block -->
 
 
-### Present result to user
+### Present Result To User
 
 <!-- Add graphic and/o code samples -->
 
@@ -238,10 +238,17 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 ```
 
 
-## JSON Serialization of HTTP Responses
+## Validate and Process the Response
+
+### < Error Handling >
+
+
+### JSON Serialization of HTTP Responses
 
 
 ## In Class Activity II (xx min)
+
+<!-- Have Students shut off networking and see results -->
 
 
 <!-- Give students simple Deserialization -->
