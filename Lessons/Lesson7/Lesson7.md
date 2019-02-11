@@ -106,9 +106,9 @@ URLSessionConfiguration will also let you configure additional HTTP headers, tim
 
 URLSessionConfiguration objects come in 3 flavors:
 
-1. `.default` - Creates a default configuration object that uses the disk-persisted global cache, credential and cookie storage objects. Can save cache or cookies to disk, credentials to the Keychain.
-2. `.ephemeral` - Similar .default, but all session-related data is stored in memory and will be gone once the session terminates.
-3. `.background` -  Allows the session to perform upload or download tasks in the background, even if the app is suspended> [action]
+1. **.default** - Creates a default configuration object that uses the disk-persisted global cache, credential and cookie storage objects. Can save cache or cookies to disk, credentials to the Keychain.
+2. **.ephemeral** - Similar to `.default`, but all session-related data is stored in memory and will be gone once the session terminates.
+3. **.background** -  Allows the session to perform upload or download tasks in the background, even if the app is suspended.
 
 </br>
 Here is a simple example of a declaration of a `URLSession` instance using the `.default` `URLSessionConfiguration` type:
@@ -117,14 +117,18 @@ Here is a simple example of a declaration of a `URLSession` instance using the `
 let defaultSession = URLSession(configuration: .default)
 ```
 
-
 ### URLSessionTask
 
+To do the real work of fetching data or downloading/uploading files, a session creates one or more tasks.
+
+URLSessionTask is the abstract class which contains predefined network task behaviors.
 
 #### Three types:
+The 3 concrete subclasses of URLSession class which you will employ most often are:
 
-1. xxx
-
+- [ ] **URLSessionDataTask** - Intended for short, often interactive requests to servers such as fetching data by sending HTTP requests (GET, POST, etc). Data tasks send and receive data using NSData objects.
+2. **URLSessionUploadTask** - Similar to data tasks, but also send data (such as a file) from disk to web service, and they support background uploads while the app is no longer running.
+3. **URLSessionDownloadTask** - Data from a remote service is retrieved in the form of a file and stored in a temporary location. Supports background downloads and uploads while the isn't running.
 
 ![syntax](assets/urlsessiontask_with_subclasses.png) </br>
 
