@@ -211,15 +211,18 @@ To make a request, you create an instance of the `URLSessionDataTask` class, pas
 
 The `completion handler` is a closure that is executed when your data task is finished and the response to your request has been returned.
 
+
+**Note:** *Using a completion handler on completion of a data task is only 1 of the 2 ways URLSession can return data. You can also call methods on an instance of the `URLSessionDelegate` when creating the session.*
+
 #### The .resume() function
 
 At this point, your network request has only been set up. To execute it, you'll need to start it.
 
 By **default**, Apple has set up all newly-initialized tasks to begin in a **suspended state.** So you need to call the `.resume()` function on a task in order to start it.
 
-#### The Complete Request
+#### The Full Request
 
-Except for handling the response, this code snippet depicts the order of the steps required to make our simple GET request:
+Except for handling the response, this code snippet depicts the complete set of steps required to make our simple GET request:
 
 ``` Swift
 
@@ -250,16 +253,31 @@ When the `completion handler` closure is executed, you can validate the data ret
 
 #### URLResponse Object
 
-< At the same time, the counterpart of a URLRequest objrectis a URLResponse. This object is returned when you invoke any of the communication methods we are going to learn about. >
+The counterpart to the URLRequest object, the `URLResponse` object is returned when the `completion handler` closure successfully executes.
 
-<!-- Response data? - can be accessed via delegate of completion block -->
+It contains valuable info about the response returned, including:
+- the HTTP Status Code
+- the HTTP headers
 
 
 ### Present Result
 
-< for the moment, we'll only print -- usually, JSON >
+Typically, you will want to process and present the JSON data returned from the GET request.
 
-<!-- Add graphic and/o code samples -->
+But before we examine how to *serialize/deserialize* the JSON object returned, we'll simply use `print()` statements to examine and confirm what is returned from our request.
+
+``` Swift
+
+  // Create Data Task
+     let dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+
+         print("data is: ", data!)
+         print("response is: ", response!)
+
+     })
+```
+
+Once we are clear on the steps required to process the returned JSON data, we will be set up to present our returned data to the user...
 
 
 ## In Class Activity I (20 min)
@@ -281,7 +299,9 @@ Using the `Request inspection` endpoint on httpbin.org's tester page, we will se
 
 *(Feel free to experiment a little with this interface when you have time.)*
 
-<!-- Add graphic and/o code samples -->
+
+![syntax](assets/request_inspection_endpoint.png) </br>
+
 
 
 **Part 2 - Individual**
@@ -300,11 +320,10 @@ Using the `Request inspection` endpoint on httpbin.org's tester page, we will se
 **TODO:** Using the URLSession implementation steps covered so far, complete the implementation of the `fetchNasaDailyImage()` in the starter app and present Nasa's Astronomy Picture of the Day to your users.
 
 **NOTES:**
-
-At the time of this writing, Nasa's pic of the day was:
+1. At the time of this writing, Nasa's pic of the day was:
 https://apod.nasa.gov/apod/image/1902/FoxFur_new_color_2048px.jpg
 
-To get the latest pic of the day:
+2. To get the latest pic of the day:
 - Launch the demo URL in your browser:
 https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 - find the `hdurl` node and copy it into your iOS project
@@ -315,8 +334,12 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
   Briefly discuss..
 
-**Q:** Looking at the results of either of the 2 fetch functions, what is your guess about where the `response` object came from?
-**Q:** Why do you think the developers at httpbin.org bothered to spent time creating a service that would return HTTP headers?
+**Q:** What is the essential nature (data type) of each of the 3 objects returned when the `completion handler` executes?
+
+- the `response` object?
+- the `data` object?
+- the `error` object?
+
 **Q:** Why was the `DispatchQueue.main.async` statement needed?
 
 ``` Swift
@@ -330,11 +353,84 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 
 ## Validate and Process the Response
 
-### < Error Handling >
+#### Validate the Response
 
+When making network requests with HTTP/S, success or failure can occur at several levels:
+- Any errors with the Response?
+- Was the expected HTTP Status Code returned?
+- Was data returned?
+- Was data returned in the correct format?
+
+#### Handling the `error` Object
+
+
+``` Swift
+          // guard against any errors with this HTTP response
+          guard error == nil else {
+              print ("error: ", error!)
+              return
+          }
+```
+
+#### Handling the Response Object
+
+
+``` Swift
+      // Confirm the HTTP Status Code is within the range of acceptable ones
+        guard let httpResponse = response as? HTTPURLResponse,
+            (200...299).contains(httpResponse.statusCode) else {
+                print("response is: ", response!)
+                return
+        }
+
+
+```
+
+``` Swift
+
+
+```
 
 ### JSON Serialization of HTTP Responses
 
+
+
+``` Swift
+        // Validate response data is in expected format
+          guard let mime = response?.mimeType, mime == "application/json" else {
+              print("Wrong MIME type!")
+              return
+          }
+
+```
+
+``` Swift
+      // Convert response data to JSON
+           do {
+               let jsonObject = try JSONSerialization.jsonObject(with: data!, options: [])
+               print(jsonObject)
+           } catch {
+               print("JSON error: \(error.localizedDescription)")
+           }
+
+```
+
+``` Swift
+          // Validate response data is in expected format 
+            guard let mime = response?.mimeType, mime == "application/json" else {
+                print("Wrong MIME type!")
+                return
+            }
+
+            // Convert response data to JSON
+            do {
+                let jsonObject = try JSONSerialization.jsonObject(with: data!, options: [])
+                print(jsonObject)
+            } catch {
+                print("JSON error: \(error.localizedDescription)")
+            }
+
+```
 
 ## In Class Activity II (xx min)
 
@@ -371,6 +467,7 @@ At the end of class, turn in all your question sheets. We will use them in Part 
 2. [URL Loading System -- from Apple](https://developer.apple.com/documentation/foundation/url_loading_system)
 < URLSession>
 < URLSession Configuration >
+< [The URLSessionDelegate Protocol](https://developer.apple.com/documentation/foundation/urlsessiondelegate)
 3. [Asynchronicity and URL Sessions](https://developer.apple.com/documentation/foundation/urlsession)
 [](https://stackoverflow.com/questions/45463996/how-does-urlsessiontask-run)
 
