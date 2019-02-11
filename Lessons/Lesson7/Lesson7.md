@@ -146,7 +146,7 @@ The three concrete subclasses of URLSessionTask which you will employ most often
 
 ## Making HTTP GET Requests Using URLSessionDataTask
 
-The following steps illustrate how to create, send and validate a simple HTTP GET request using a `URLRequest` object and a `URLSessionDataTask` returning its `URLResponse` object using a `completion handler.`
+The following steps show how to create, send and validate a simple HTTP GET request using a `URLRequest` object and a `URLSessionDataTask` instance that returns its `URLResponse` via a `completion handler.`
 
 ### 1. Configure the Session
 
@@ -189,15 +189,14 @@ There are various constructor signatures available for creating `URLRequest` obj
 ``` Swift
     // Create Request
     let request = URLRequest(url: url!)
-    let url = URL(string: "https://<your_target_web_service>")
 ```
-**Note:** *`URLRequest(url: url!)` is forced unwrapped in case an invalid URL string was provided (for example, `htp:/a.2.3`)*
+**Note:** *The URL passed into `URLRequest(url: url!)` is forced unwrapped in case an invalid URL string was provided (for example, `htp:/a.2.3`)*
 
 ### 3. Make the Request
 
 #### The Data task
 
-To make a request, you create an instance of the `URLSessionDataTask` class, pass it your `URLRequest/URL,` and call its `completion handler.` [^1]
+To make a request, you create an instance of the `URLSessionDataTask` class, pass it your `URLRequest/URL,` and call its `completion handler.`
 
 ``` Swift
   ...
@@ -214,7 +213,13 @@ The `completion handler` is a closure that is executed when your data task is fi
 
 #### The .resume() function
 
-By default, Apple has set up all newly-initialized tasks to begin in a suspended state. So you need to call the `.resume()` function on a task in order to start it.
+At this point, your network request has only been set up.
+
+To execute it, you'll need to start it.
+
+By **default**, Apple has set up all newly-initialized tasks to begin in a **suspended state.** So you need to call the `.resume()` function on a task in order to start it.
+
+#### The Complete Request 
 
 Except for handling the response, this code snippet depicts the order of the steps required to make our simple GET request:
 
