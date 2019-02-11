@@ -9,7 +9,9 @@
 
 
 ## Why you should know this
-Nearly every professional-level iOS app communicates at some point with an Internet component such as a remote web service. Fetching and processing data between an app and a web service is an essential skill that all iOS developers must master.
+Nearly every serious iOS app communicates at some point with an Internet component such as a remote web service.
+
+Fetching and processing data between an app and a web service is an essential skill that all iOS developers must master.
 
 And the most commonly-used protocol for communicating with web servers is **HTTP** (and its secure counterpart, HTTPS).
 
@@ -36,9 +38,8 @@ At the end of this class, you should be able to...
 
 ### Structured Sharing Exercise - Part 1
 
-By the end of class, write down your **three** (3) most important responses for each of the question sheets passed out.
+By the end of class, write down your **three (3) most important** responses for each of the question sheets passed out.
 
-<br />
 
 ## Initial Exercise (10 min)
 
@@ -110,7 +111,6 @@ URLSessionConfiguration objects come in 3 flavors:
 2. **.ephemeral** - Similar to `.default`, but all session-related data is stored in memory and will be gone once the session terminates.
 3. **.background** -  Allows the session to perform upload or download tasks in the background, even if the app is suspended.
 
-</br>
 Here is a simple example of a declaration of a `URLSession` instance using the `.default` `URLSessionConfiguration` type:
 
 ``` Swift
@@ -119,16 +119,18 @@ let defaultSession = URLSession(configuration: .default)
 
 ### URLSessionTask
 
-To do the real work of fetching data or downloading/uploading files, a session creates one or more tasks.
+To do the real work of fetching data or downloading/uploading files, a session creates one or more *tasks.*
 
-URLSessionTask is the abstract class which contains predefined network task behaviors.
+`URLSessionTask` is the *abstract class* which contains predefined network task behaviors.
 
 #### Three types:
-The 3 concrete subclasses of URLSession class which you will employ most often are:
+The three concrete subclasses of URLSessionTask which you will employ most often are:
 
-- [ ] **URLSessionDataTask** - Intended for short, often interactive requests to servers such as fetching data by sending HTTP requests (GET, POST, etc). Data tasks send and receive data using NSData objects.
+1. **URLSessionDataTask** - Intended for short, often interactive requests to servers such as fetching data by sending HTTP requests (GET, POST, etc). Data tasks send and receive data using NSData objects.
 2. **URLSessionUploadTask** - Similar to data tasks, but also send data (such as a file) from disk to web service, and they support background uploads while the app is no longer running.
 3. **URLSessionDownloadTask** - Data from a remote service is retrieved in the form of a file and stored in a temporary location. Supports background downloads and uploads while the isn't running.
+
+*This diagram illustrates the relationship between the abstract parent class, URLSessionTask and its three concrete implementations, as well as a few of the functions inherited from URLSessionTask:*
 
 ![syntax](assets/urlsessiontask_with_subclasses.png) </br>
 
