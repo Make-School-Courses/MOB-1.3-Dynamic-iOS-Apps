@@ -358,11 +358,18 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 When making network requests with HTTP/S, success or failure can occur at several levels:
 - Any errors with the Response?
 - Was the expected HTTP Status Code returned?
-- Was data returned?
+- Was any data object returned?
 - Was data returned in the correct format?
+
+Handling errors and validating successful state are key to working with the URLSession family of classes and functions
+
+Whether or not all the procedures listed below are required or optional depends on your particular implementation of URLSession.
+
+However, handling the `error` returned and converting JSON data should always be considered as *required*.
 
 #### Handling the `error` Object
 
+Check if the `error` object is `nil.` If not, *properly* handle the error (for now, we'll simply print the error returned):
 
 ``` Swift
           // guard against any errors with this HTTP response
@@ -374,6 +381,7 @@ When making network requests with HTTP/S, success or failure can occur at severa
 
 #### Handling the Response Object
 
+Validate that data has been returned with the response:
 
 ``` Swift
       // Confirm the HTTP Status Code is within the range of acceptable ones
@@ -382,18 +390,14 @@ When making network requests with HTTP/S, success or failure can occur at severa
                 print("response is: ", response!)
                 return
         }
-
-
 ```
 
-``` Swift
 
+### Validate Data Format
 
-```
+Now that we know the response status is good, we can validate the format of the returned data.
 
-### JSON Serialization of HTTP Responses
-
-
+The `MIME Type,` a value returned by most web servers, tells us the **format** of the returned data. We want to ensure that the format of the data returned is in the format we expected (in this case, in JSON).
 
 ``` Swift
         // Validate response data is in expected format
@@ -401,27 +405,17 @@ When making network requests with HTTP/S, success or failure can occur at severa
               print("Wrong MIME type!")
               return
           }
-
 ```
 
-``` Swift
-      // Convert response data to JSON
-           do {
-               let jsonObject = try JSONSerialization.jsonObject(with: data!, options: [])
-               print(jsonObject)
-           } catch {
-               print("JSON error: \(error.localizedDescription)")
-           }
+### JSON Serialization of HTTP Responses
 
-```
+Finally, we want to convert (*deserialize*) the binary data object returned into a JSON object which we can process as a Swift collection object (dictionary or array).
+
+
 
 ``` Swift
-          // Validate response data is in expected format 
-            guard let mime = response?.mimeType, mime == "application/json" else {
-                print("Wrong MIME type!")
-                return
-            }
 
+      ...
             // Convert response data to JSON
             do {
                 let jsonObject = try JSONSerialization.jsonObject(with: data!, options: [])
@@ -431,6 +425,9 @@ When making network requests with HTTP/S, success or failure can occur at severa
             }
 
 ```
+
+
+
 
 ## In Class Activity II (xx min)
 
