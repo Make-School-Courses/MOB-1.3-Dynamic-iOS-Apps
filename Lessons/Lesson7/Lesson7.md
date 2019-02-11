@@ -130,12 +130,13 @@ The three concrete subclasses of URLSessionTask which you will employ most often
 2. **URLSessionUploadTask** - Similar to data tasks, but also send data (such as a file) from disk to web service, and they support background uploads while the app is no longer running.
 3. **URLSessionDownloadTask** - Data from a remote service is retrieved in the form of a file and stored in a temporary location. Supports background downloads and uploads while the isn't running.
 
-*This diagram illustrates the relationship between the abstract parent class, URLSessionTask and its three concrete implementations, as well as a few of the functions inherited from URLSessionTask:*
+*This diagram illustrates the relationship between the abstract parent class, URLSessionTask, and its three concrete implementations, along with a few of the functions inherited from URLSessionTask:*
 
 ![syntax](assets/urlsessiontask_with_subclasses.png) </br>
 
 
 
+<br>
 
 <!-- ### The `.resume()` Function -->
 
@@ -250,6 +251,6 @@ At the end of class, turn in all your question sheets. We will use them in Part 
 < URLSession>
 < URLSession Configuration >
 3. [Asynchronicity and URL Sessions](https://developer.apple.com/documentation/foundation/urlsession)
-(https://stackoverflow.com/questions/45463996/how-does-urlsessiontask-run)
+[](https://stackoverflow.com/questions/45463996/how-does-urlsessiontask-run)
 
 <!-- xxx -->
