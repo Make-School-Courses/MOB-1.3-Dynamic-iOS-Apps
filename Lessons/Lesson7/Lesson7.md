@@ -220,6 +220,8 @@ To make a request, you create an instance of the `URLSessionDataTask` class, pas
 
 The `completion handler` is a closure that is executed when your data task is finished and the response to your request has been returned.
 
+<!-- TODO: Add notes on the 3 objects returned: data, response, error -->
+
 
 **Note:** *Using a completion handler on completion of a data task is only 1 of the 2 ways URLSession can return data. You can also call methods on an instance of the `URLSessionDelegate` when creating the session.*
 
@@ -289,10 +291,10 @@ But before we examine how to *serialize/deserialize* the JSON object returned, w
 Once we are clear on the steps required to process the returned JSON data, we will be set up to present our returned data to the user...
 
 
-## In Class Activity I (20 min)
+## In Class Activity I (25 min)
 
 For this exercise we will use these 3 resources:
-1.  https://httpbin.org's [public API tester](https://httpbin.org/#/Request_inspection/get_headers)
+1.  httpbin.org's [public API tester](https://httpbin.org/#/Request_inspection/get_headers)
 2. Nasa's public [Astronomy Picture of the Day API](https://api.nasa.gov/api.html)
 3. The [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
 
@@ -455,9 +457,9 @@ Resources needed:
 * [The Star Wars API (aka, SWAPI)](https://swapi.co)
 
 **TODO:** Use the DailyPlanet app as a "canvas" to practice deserializing JSON from an HTTP request:
-- Create a new function which fetches data from SWAPI's `/starships/` endpoint -- https://swapi.co/api/starships/
-- In your data tasks' completion handler, convert the returned data object to JSON, and print your converted jsonObject to the debug console.
-- If time permits, handle the error returned.
+- Create and call a new function that fetches data from SWAPI's `/starships/` endpoint: https://swapi.co/api/starships/
+- In your data tasks' completion handler, **convert** the returned `data` object to JSON, and **print** your converted `jsonObject` to the debug console.
+- If time permits, handle the `error` returned.
 
 
 ## Challenges
