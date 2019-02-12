@@ -38,10 +38,11 @@ to make GET and POST network requests...
 ## Class Learning Objectives/Competencies (5 min)
 At the end of this class, you should be able to...
 
-1. xxx
-
-<!-- use Xcode to find things out about foundation classes, JSONDeserialization, xxx -->
-
+1. Implement a simple HTTP-based request to a public Internet API using the primary components of the URLSession framework.
+2. Use Xcode's built-in features to research properties and behaviors of Foundation framework data types (e.g., URLSession classes, methods and properties).
+3. Validate HTTP response data and guard against common HTTP error conditions.
+4. Display text and images requested fetched from free web services.
+5. Use JSONSerialization to convert binary Data objects into JSON data.
 
 ## Class Handouts (5 min)
 
@@ -236,12 +237,7 @@ Let's take a moment to examine the `data,` `response,` and `error` objects retur
 
 - `data` - Is an object of type `Data` (aka, `NSData`). NSData objects encapsulate data in a binary format. To manipulate or present its contents, we will have to convert it to a more human-readable format (i.e, JSON).
 - `response` - Is of type `NSHTTPURLResponse,` which is a subclass of `URLResponse.` It contains useful data about the response itself that often comes in handy when analyzing success or failure of a specfic request.
-- `error` - Behind this object is a simple `enum` listed in the official framework docs as "A type representing an error value that can be thrown." If the request is *not* successful, this `error` object will be passed to the completion handler. When the request is successful, this will be `nil.` *(Though we'll see later that the request can still fail, at some level, even if the `error` object is `nil` when after the data task completes.)*
-
-
-
-
-<!-- TODO: Add notes on the 3 objects returned: data, response, error -->
+- `error` - Behind this object is a simple `enum` listed in the official framework docs as "A type representing an error value that can be thrown." If the request is *not* successful, this `error` object will be passed to the completion handler. When the request is successful, this will be `nil.` *(Though we'll see later that the request can still fail, at some level, even if the `error` object is `nil` after the data task completes.)*
 
 
 #### The .resume() function
