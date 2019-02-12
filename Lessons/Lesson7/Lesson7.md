@@ -41,7 +41,7 @@ At the end of this class, you should be able to...
 1. Implement a simple HTTP-based request to a public Internet API using the primary components of the URLSession framework.
 2. Use Xcode's built-in features to research properties and behaviors of Foundation framework data types (e.g., URLSession classes, methods and properties).
 3. Validate HTTP response data and guard against common HTTP error conditions.
-4. Display text and images requested fetched from free web services.
+4. Display text and images fetched from free web services.
 5. Use JSONSerialization to convert binary Data objects into JSON data.
 
 ## Class Handouts (5 min)
@@ -475,7 +475,7 @@ Resources needed:
 
 ## Challenges
 
-1. Research what it means that `URLSession` objects are *asynchronous.*
+1. `URLSession` objects are *asynchronous.* Research what that means and be able to answer the following question:
 - Why did we need to add the following call to `main.async` when presenting the image in **Activity 1**:
 
 ``` Swift
