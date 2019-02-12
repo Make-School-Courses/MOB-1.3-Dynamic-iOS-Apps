@@ -5,7 +5,16 @@
 | **Elapsed** | **Time**  | **Activity**                        |
 | ----------- | --------- | ----------------------------------- |
 | 0:00        | 0:05      | Objectives                          |
-|
+| 0:05        | 0:05      | Class Handouts                   |
+| 0:10        | 0:15      | Initial Exercise                    |
+| 0:25        | 0:20      | URLSession - An Overview             |
+| 0:45        | 0:10      | BREAK                               |
+| 0:55        | 0:25      | In Class Activity I                 |
+| 1:20       | 0:15      | Validate and Process the Response  |
+| 1:35        | 0:20      | In Class Activity II                |
+| 1:45        | 0:05      | Wrap Up                             |
+| TOTAL       | 1:50      |                                     |
+
 
 
 ## Why you should know this
@@ -41,7 +50,7 @@ At the end of this class, you should be able to...
 By the end of class, write down your **three (3) most important** responses for each of the question sheets passed out.
 
 
-## Initial Exercise (10 min)
+## Initial Exercise (15 min)
 
 What differentiates software developers from other engineers?
 
@@ -85,7 +94,7 @@ Resources needed:
 <br />
 
 
-## URLSession - An Overview
+## URLSession - An Overview (20 min)
 
 `URLSession` is the **key object** responsible for sending and receiving HTTP requests. It natively supports the data, file, ftp, http, and https URL schemes.
 
@@ -347,7 +356,7 @@ https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 ```
 
 
-## Validate and Process the Response
+## Validate and Process the Response (15 min)
 
 ### Validate the Response
 
@@ -439,10 +448,16 @@ And we want to properly respond to potential errors by wrapping our JSONSerializ
 
 ## In Class Activity II (xx min)
 
-<!-- Have Students shut off networking and see results -->
+**JSON Deserialization**
 
+Resources needed:
+* The [DailyPlanet](https://github.com/VanderDev1/DailyPlanet) starter app
+* [The Star Wars API (aka, SWAPI)](https://swapi.co)
 
-<!-- Give students simple Deserialization -->
+**TODO:** Use the DailyPlanet app as a "canvas" to practice deserializing JSON from an HTTP request:
+- Create a new function which fetches data from SWAPI's `/starships/` endpoint -- https://swapi.co/api/starships/
+- In your data tasks' completion handler, convert the returned data object to JSON, and print your converted jsonObject to the debug console.
+- If time permits, handle the error returned.
 
 
 ## Challenges
