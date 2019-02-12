@@ -489,7 +489,7 @@ Resources needed:
 
 Using the `/people/` endpoint on the [SWAPI](https://swapi.co) web service, create a **table view** app with **pagination** that:
 - uses a custom cell to present the `"name"` and 2 other properties/items (i.e.. `"height"`) from the JSON response returned
-- when scrolled to end of current set of data, will present the user with the the option to see the next set (i.e., pagination)
+- when scrolled to the end of the currently available data, the app must present the user with the option to imageView the `next` or `previous` set of data (i.e., pagination)
 
 ## Wrap Up (5 mins)
 
