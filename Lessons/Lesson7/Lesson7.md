@@ -316,7 +316,8 @@ Using the `Request inspection` endpoint on httpbin.org's tester page, we will se
 1. Download and run the [DailyPlanet starter app](https://github.com/VanderDev1/DailyPlanet).
 
 *(Don't worry if the main scene is a blank screen - we'll improve on that later!)*
-2. Study the construction of its `fetchHeaderData()` function.
+
+2. Study the construction of its `fetchHeaderData()` function.</br>
 3. Compare your debug output with the results of same *GET /headers* request executed from your web browser.
 
 <!-- Add graphic and/o code samples -->
@@ -327,13 +328,13 @@ Using the `Request inspection` endpoint on httpbin.org's tester page, we will se
 **TODO:** Using the URLSession implementation steps covered so far, complete the implementation of the `fetchNasaDailyImage()` in the starter app and present Nasa's Astronomy Picture of the Day to your users.
 
 **NOTES:**
-1. At the time of this writing, Nasa's pic of the day was:
+1. At the time of this writing, NASA's pic of the day was:
 https://apod.nasa.gov/apod/image/1902/FoxFur_new_color_2048px.jpg
 
 2. To get the latest pic of the day:
-- Launch the demo URL in your browser:
+- Launch the demo URL in your browser -- this will only return **metadata** for NASA's pic of the day:
 https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
-- find the `hdurl` node and copy it into your iOS project
+- in the metadata returned, find the `hdurl` node and copy it into your iOS project
 
 *For clues, see the URLSession implementation details of the `fetchHeaderData()` function.*
 
