@@ -182,7 +182,7 @@ let defaultSession = URLSession(configuration: .default)
 
 #### Create the URL Object
 
-The `URL` class defines a local or remote [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier). It could be a link to a remote HTML webpage, a local file accessed using `file:///,` or any other item qualifying as a URI.
+The `URL` class defines a local or remote [URI](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier). It could be a link to a remote HTML webpage, a local file accessed using `file:///` or any other item qualifying as a `URI.`
 
 ``` Swift
         // Create URL
@@ -203,7 +203,7 @@ There are various constructor signatures available for creating `URLRequest` obj
 
 ### 3. Make the Request
 
-#### The Data task
+#### The Data Task
 
 To make a request, you create an instance of the `URLSessionDataTask` class, pass it your `URLRequest/URL,` and call its `completion handler.`
 
@@ -220,10 +220,29 @@ To make a request, you create an instance of the `URLSessionDataTask` class, pas
 
 The `completion handler` is a closure that is executed when your data task is finished and the response to your request has been returned.
 
+**Note:** *Using a completion handler on completion of a data task is only 1 of the 2 ways URLSession can return data. The other way to return data from a URLSession request requires calling methods on an instance of the `URLSessionDelegate` when creating the session.*
+
+
+##### The Objects Returned
+
+Let's take a moment to examine the `data,` `response,` and `error` objects returned when the data task's completion handler finishes:
+
+``` Swift
+
+  let dataTask = defaultSession.dataTask(with: request, completionHandler: { (data, response, error) ->
+  ...
+
+```
+
+- `data` - Is an object of type `Data` (aka, `NSData`). NSData objects encapsulate data in a binary format. To manipulate or present its contents, we will have to convert it to a more human-readable format (i.e, JSON).
+- `response` - Is of type `NSHTTPURLResponse,` which is a subclass of `URLResponse.` It contains useful data about the response itself that often comes in handy when analyzing success or failure of a specfic request.
+- `error` - Behind this object is a simple `enum` listed in the official framework docs as "A type representing an error value that can be thrown." If the request is *not* successful, this `error` object will be passed to the completion handler. When the request is successful, this will be `nil.` *(Though we'll see later that the request can still fail, at some level, even if the `error` object is `nil` when after the data task completes.)*
+
+
+
+
 <!-- TODO: Add notes on the 3 objects returned: data, response, error -->
 
-
-**Note:** *Using a completion handler on completion of a data task is only 1 of the 2 ways URLSession can return data. You can also call methods on an instance of the `URLSessionDelegate` when creating the session.*
 
 #### The .resume() function
 
@@ -444,8 +463,6 @@ And we want to properly respond to potential errors by wrapping our JSONSerializ
 ```
 
 
-
-
 ## In Class Activity II (xx min)
 
 **JSON Deserialization**
@@ -457,18 +474,18 @@ Resources needed:
 **TODO:** Use the DailyPlanet app as a "canvas" to practice deserializing JSON from an HTTP request:
 - Create and call a new function that fetches data from SWAPI's `/starships/` endpoint: https://swapi.co/api/starships/
 - In your data tasks' completion handler, **convert** the returned `data` object to JSON, and **print** your converted `jsonObject` to the debug console.
-- If time permits, handle the `error` returned.
+- If time permits, handle the HTTP `error` object returned.
 
 
 ## Challenges
 
 1. xxx
 
-<!-- xxx -->
+<!-- use SWAPI people api -- so they have show pagination  -->
 
 ## Wrap Up (xx mins)
 
-### Structured Sharing Exercise - Part 2**
+### Structured Sharing Exercise - Part 2
 
 At the end of class, turn in all your question sheets. We will use them in Part 3 of this exercises in the next class session.
 
