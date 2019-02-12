@@ -475,16 +475,19 @@ Resources needed:
 
 ## Challenges
 
-1. Research what it means that `URLSession` objects are *asynchronous* and why we needed the following construct when presenting the image in Activity 1:
+1. Research what it means that `URLSession` objects are *asynchronous.*
+- Why did we need to add the following call to `main.async` when presenting the image in **Activity 1**:
 
 ``` Swift
     DispatchQueue.main.async {
 
-                         //TODO: Insert downloaded image into imageView
-                   }
+            //TODO: Insert downloaded image into imageView
+        }
 ```
-</br>
-2. Using the `/people/` endpoint on the [SWAPI)](https://swapi.co) web service - https://swapi.co/api/people/ - create a **table view** app with **pagination** that:
+
+2. **Create A Paginating Table View App with JSON Data:**
+
+Using the `/people/` endpoint on the [SWAPI](https://swapi.co) web service, create a **table view** app with **pagination** that:
 - uses a custom cell to present the `"name"` and 2 other properties/items (i.e.. `"height"`) from the JSON response returned
 - when scrolled to end of current set of data, will present the user with the the option to see the next set (i.e., pagination)
 
