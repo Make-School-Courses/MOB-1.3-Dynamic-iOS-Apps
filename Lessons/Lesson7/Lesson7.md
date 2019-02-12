@@ -313,10 +313,7 @@ Using the `Request inspection` endpoint on httpbin.org's tester page, we will se
 
 **Part 2 - Individual**
 
-1. Download and run the [DailyPlanet starter app](https://github.com/VanderDev1/DailyPlanet).
-
-*(Don't worry if the main scene is a blank screen - we'll improve on that later!)*
-
+1. Download and run the [DailyPlanet starter app](https://github.com/VanderDev1/DailyPlanet). *(Don't worry if the main scene is a blank screen - we'll improve on that later!)* </br>
 2. Study the construction of its `fetchHeaderData()` function.</br>
 3. Compare your debug output with the results of same *GET /headers* request executed from your web browser.
 
