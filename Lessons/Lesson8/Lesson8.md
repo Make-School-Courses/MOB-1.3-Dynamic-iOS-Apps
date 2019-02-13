@@ -5,11 +5,15 @@
 | **Elapsed** | **Time**  | **Activity**                        |
 | ----------- | --------- | ----------------------------------- |
 | 0:00        | 0:05      | Objectives                          |
-|
+| 0:xx        | 0:xx      | Initial Exercise                    |
+| 0:x        | 0:xx      | BREAK                               |
+| 0:x        | 0:x      | In Class Activity I                 |
+| xxx      | 0:40      | Cumulative Review |
+| 1:35        | 0:20      | In Class Activity II                |
+| 1:45        | 0:05      | Wrap Up                             |
+| TOTAL       | 1:50      |                                     |
 
-
-
-
+<!-- NOTE -- 40 minutes of this class will be for review of student projects -->
 
 
 ## Why you should know this
@@ -19,6 +23,8 @@
 
 
 ## Class Learning Objectives/Competencies (5 min)
+
+1. xx
 
 
 ## Initial Exercise (15 min)
@@ -31,13 +37,32 @@
 
 
 
-<!-- NOTE -- 40 minutes of this class will be for review of student projects -->
+
+## < Topic 1 >
 
 
-
-## Cumulative Review 5 min)
+## Cumulative Review (40) min)
 
 
 <!-- xxx -->
 
 <!-- xxx -->
+
+
+
+
+## In Class Activity I (25 min)
+
+
+## Challenges
+
+1.
+
+
+## Wrap Up (5 mins)
+
+
+## Additional Resources
+
+1. [Slides]
+2. [xxx]()
