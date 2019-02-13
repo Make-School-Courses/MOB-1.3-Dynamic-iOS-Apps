@@ -1,4 +1,4 @@
-# Requests with authentication
+# Requests with Authentication
 
 ## Minute-by-Minute
 
@@ -29,16 +29,36 @@
 
 ## Initial Exercise (15 min)
 
-**Structured Sharing Exercise - Part 3**
+**Structured Sharing Exercise - Part 3 from last class**
 
 - Come up and review the sheets from last class.
-- Select the one or two sheets you most agree with
+- Select the one or two sheets you agree with most.
+
+In Groups of 3 - (8 min)
 - Share your thoughts about your selection.
 
+As A Class - (6 min)
+- We'll choose 3 review topics. Volunteers to explain each.
 
 
 
-## < Topic 1 >
+
+## Network Authentication for iOS
+
+## Secure HTTP (HTTPS)
+
+
+
+## Two Types
+
+### OAUTH
+
+### API Keys
+
+
+## In Class Activity I (20 min)
+
+
 
 
 ## Cumulative Review (40) min)
@@ -51,7 +71,7 @@
 
 
 
-## In Class Activity I (25 min)
+## In Class Activity X (xx min)
 
 
 ## Challenges
