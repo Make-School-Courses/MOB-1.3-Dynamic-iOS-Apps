@@ -68,7 +68,7 @@ Students by the end of the course will be able to ...
 [Communication patterns]: Lessons/Lesson4/Lesson4.md
 [Memory Management]: Lessons/Lesson5/Lesson5.md
 [JSON in iOS]: Lessons/Lesson6/Lesson6.md
-[Network Requests with URLSession]: Lessons/Lesson7.md
+[Network Requests with URLSession]: Lessons/Lesson7/Lesson7.md
 [Requests with authentication]: Lessons/Lesson8.md
 [Building a networking domain]: Lessons/Lesson9.md
 [Firebase + Alamofire]: Lessons/Lesson10.md
