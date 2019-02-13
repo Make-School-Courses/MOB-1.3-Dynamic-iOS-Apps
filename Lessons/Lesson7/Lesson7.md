@@ -506,7 +506,7 @@ At the end of class, turn in all your question sheets. We will use them in Part 
 
 ## Additional Resources
 
-1. [Slides]
+1. [Slides](https://docs.google.com/presentation/d/1Jy_81HTTE-3atStXg6hQdYDr9jIaa6tkYvNlkfibQvY/edit?usp=sharing)
 2. [URL Loading System - from Apple](https://developer.apple.com/documentation/foundation/url_loading_system)
 3. [URLSession - from Apple](https://developer.apple.com/documentation/foundation/urlsession)
 4. [The URLSessionDelegate Protocol - from Apple](https://developer.apple.com/documentation/foundation/urlsessiondelegate)
