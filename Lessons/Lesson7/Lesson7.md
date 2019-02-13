@@ -459,7 +459,7 @@ And we want to properly respond to potential errors by wrapping our JSONSerializ
 ```
 
 
-## In Class Activity II (xx min)
+## In Class Activity II (20 min)
 
 **JSON Deserialization**
 
