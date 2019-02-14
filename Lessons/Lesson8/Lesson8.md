@@ -83,7 +83,7 @@ Authentication for HTTPS comes in two distinct implementation types:
 ## In Class Activity I (20 min)
 
 Resources needed:
-- Download [The PhotoMatic starter app]()
+- Download [The PhotoMatic starter app](https://github.com/VanderDev1/PhotoMatic.git)
 - An API Key for the Flickr photo web service
 - The Flickr webservice endpoint URL and the name of the method required to access Flickr's free library of Interesting Photos.
 
@@ -111,7 +111,21 @@ But we'll need to obtain an API KEY from Flickr. Here's how:
 
 5. When prompted with the obvious page, choose "Apply For Non-Commercial Key"
 
-...you should get an email?>
+...and you should be presented with your brand-new, Flickr API Key!
+
+
+### Part 2 - As A class
+
+For this exercise, we need:
+
+- [The PhotoMatic starter app](https://github.com/VanderDev1/PhotoMatic.git)
+- The base url for the Flickr API:
+https://api.flickr.com/services/rest
+- The Fli
+
+
+baseURLString = “https://api.flickr.com/services/rest”
+   private let flickrMethod = “flickr.interestingness.getList”
 
 
 <!-- TOODO: at end of activity, in prep for next lessons, have pupils give opinions on the construction of the VC -- as i MVC >
