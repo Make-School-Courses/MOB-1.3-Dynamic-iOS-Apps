@@ -18,8 +18,20 @@
 
 ## Why you should know this
 
+As the use of the **HTTP protocol** evolved, so have the efforts of Internet bad guys to exploit its **many inherent weaknesses** for their own nefarious ends.
 
-<!-- xxx -->
+In fact, HTTP is such an insecure protocol that Apple has all but prohibited its use in iOS apps.
+
+Over the last few releases of iOS, Apple has redesigned iOS's networking frameworks to work natively with **HTTP's secure counterpart: HTTPS.**
+
+And the primary difference between HTTPS and HTTP?
+
+- *HTTPS requires Authentication.*
+
+Thus, every iOS developer *must* know how to implement HTTPS-based network calls with Authentication.
+
+
+<!-- TODO: find exact date and iOS version in which Apple made this changes -->
 
 
 ## Class Learning Objectives/Competencies (5 min)
@@ -50,6 +62,15 @@ As A Class - (6 min)
 
 
 ## Two Types
+
+Authentication for HTTPS comes in two distinct implementation types:
+
+- OAUTH
+- API Keys
+
+
+<!-- TOODO: research and briefly explain each type -->
+
 
 ### OAUTH
 
