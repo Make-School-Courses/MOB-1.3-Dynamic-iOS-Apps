@@ -148,6 +148,8 @@ Endpoint: https://jsonplaceholder.typicode.com/todos <br>
 Parameters: ["title": "Super Cool Post", "completed": 0, "userId": 8]
 1. If you have time left, ty a DELETE request to this endpoint: https://jsonplaceholder.typicode.com/todos/1 and print a message if the request was successful.
 
+**Q:** When is it a good idea to use Alamofire over our own network implementation?<br>
+**Q:** What are the pros and cons of using it?
 ## Firebase
 
 ## In Class Activity II
