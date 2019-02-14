@@ -5,14 +5,14 @@
 | **Elapsed** | **Time**  | **Activity**                        |
 | ----------- | --------- | ----------------------------------- |
 | 0:00        | 0:05      | Objectives                          |
-| 0:xx        | 0:xx      | Initial Exercise                    |
-| 0:x        | 0:xx      | BREAK                               |
-| 0:x        | 0:x      | In Class Activity I                 |
-| xxx      | 0:40      | Cumulative Review |
-| 1:35        | 0:20      | In Class Activity II                |
-| 1:45        | 0:05      | Wrap Up                             |
-| TOTAL       | 1:50      |                                     |
+| 0:05        | 0:15      | Initial Exercise                    |
+| 0:20        | 0:25      | In Class Activity I                                |
+| 0:40        | 0:10      | BREAK                |
+| 0:50      | 0:45      | Cumulative Review |
+| 1:30        | 0:05      | Wrap Up                             |
+| TOTAL       | 1:35      |                                     |
 
+BREAK
 <!-- NOTE -- 40 minutes of this class will be for review of student projects -->
 
 
@@ -36,7 +36,8 @@ Thus, every iOS developer *must* know how to implement HTTPS-based network calls
 
 ## Class Learning Objectives/Competencies (5 min)
 
-1. xx
+1. Make authenticate API requests.
+2. Distinguish between OAUTH and API Key security models.
 
 
 ## Initial Exercise (15 min)
@@ -129,7 +130,8 @@ https://api.flickr.com/services/rest
 1. STEP 1 - Run the starter app
 - it will fail. Why?
 
-2. STEP 2 -
+2. STEP 2 - Fix it...
+
 
 ### Part 3 - In Pairs
 
@@ -138,28 +140,15 @@ In 5 minutes, examine the code in the [The PhotoMatic starter app](https://githu
 **Q** With respect to MVC, what do you notice about the code in this app?
 **Q** What might you do restructure it to optimize its readability, adherence to MVC, and so on?
 
+## Cumulative Review (45) min)
 
-<!-- TOODO: at end of activity, in prep for next lessons, have pupils give opinions on the construction of the VC -- as i MVC >
+As A class, let's review any popular iOS topics from recent class lessons, tutorials, or student projects.
 
-
-
-
-## Cumulative Review (40) min)
-
-
-<!-- xxx -->
-
-<!-- xxx -->
-
-
-
-
-## In Class Activity X (xx min)
 
 
 ## Challenges
 
-1.
+1. Add an Activity Indicator (aka, a "spinner") to the project so that while every images is being downloaded the user is presented with a spinner indicating the network request for each image is in progress.
 
 
 ## Wrap Up (5 mins)
@@ -168,6 +157,4 @@ In 5 minutes, examine the code in the [The PhotoMatic starter app](https://githu
 ## Additional Resources
 
 1. [Slides](https://docs.google.com/presentation/d/18RCyeINXP1lyrqAj0tTBmJrDD9z28ch5AF2iKNBTpss/edit?usp=sharing)
-2. [xxx]()
-
-https://hackernoon.com/mobile-api-security-techniques-682a5da4fe10
+2. [OAUTH](https://hackernoon.com/mobile-api-security-techniques-682a5da4fe10)
