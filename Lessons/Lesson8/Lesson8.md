@@ -57,15 +57,18 @@ As A Class - (6 min)
 
 ## Network Authentication for iOS
 
-## Secure HTTP (HTTPS)
+There can be a variety of options for securing network communications over HTTPS, ranging from very simple to complex ones such as SAML or OAUTH login implementations.
 
+And Internet security techologies
 
+And, as an iOS developer, you will want to know more about those security strategies.
 
-## Two Types
+But to start out, we will focus on the simplest and very commonly used
+
 
 Authentication for HTTPS comes in two distinct implementation types:
 
-- OAUTH
+- OAUTH - Is an "authorization framework enables third-party applications to obtain limited access to a web service." []
 - API Keys
 
 
@@ -78,6 +81,40 @@ Authentication for HTTPS comes in two distinct implementation types:
 
 
 ## In Class Activity I (20 min)
+
+Resources needed:
+- Download [The PhotoMatic starter app]()
+- An API Key for the Flickr photo web service
+- The Flickr webservice endpoint URL and the name of the method required to access Flickr's free library of Interesting Photos.
+
+### Part 1 - Individual
+
+For this activity, we are going to access the Flickr photo sharing and management web service.
+
+
+
+But we'll need to obtain an API KEY from Flickr. Here's how:
+
+#### FIRST STEP: Create A Flickr Account
+
+1. Access the [Flickr API main page](https://www.flickr.com/services/api/)
+
+2. Then click on the API Keys URL to bring up the Login screen:
+
+![syntax](assets/Flickr_API_page.png)
+
+3. Find and select the `Not a Flickr member? Sign up here.` link at the bottom of the Login dialog box
+- Then, click the `I want to create a new Yahoo email address` and *use your Make School email address.*
+*Note: This interface is a little goofy, so ensure all fields are as you intend them to be before choosing `Continue.`*
+
+4. After you create your account, you will need to API Keys URL again to apply for a key.
+
+5. When prompted with the obvious page, choose "Apply For Non-Commercial Key"
+
+...you should get an email?>
+
+
+<!-- TOODO: at end of activity, in prep for next lessons, have pupils give opinions on the construction of the VC -- as i MVC >
 
 
 
@@ -107,3 +144,5 @@ Authentication for HTTPS comes in two distinct implementation types:
 
 1. [Slides]
 2. [xxx]()
+
+https://hackernoon.com/mobile-api-security-techniques-682a5da4fe10
