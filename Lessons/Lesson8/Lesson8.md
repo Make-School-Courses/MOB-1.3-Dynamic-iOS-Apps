@@ -80,7 +80,7 @@ Authentication for HTTPS comes in two distinct implementation types:
 ### API Keys
 
 
-## In Class Activity I (20 min)
+## In Class Activity I (25 min)
 
 Resources needed:
 - Download [The PhotoMatic starter app](https://github.com/VanderDev1/PhotoMatic_Starter.git)
@@ -122,10 +122,21 @@ For this exercise, we need:
 - A valid Flickr API Key
 - The base url for the Flickr API:
 https://api.flickr.com/services/rest
-- The Flickr method to call to download Interesting Photos
+- The Flickr method to call to download Interesting Photos: `flickr.interestingness.getList`
 
 ...and one student volunteer to "drive"
 
+1. STEP 1 - Run the starter app
+- it will fail. Why?
+
+2. STEP 2 -
+
+### Part 3 - In Pairs
+
+In 5 minutes, examine the code in the [The PhotoMatic starter app](https://github.com/VanderDev1/PhotoMatic_Starter.git)
+
+**Q** With respect to MVC, what do you notice about the code in this app?
+**Q** What might you do restructure it to optimize its readability, adherence to MVC, and so on?
 
 
 <!-- TOODO: at end of activity, in prep for next lessons, have pupils give opinions on the construction of the VC -- as i MVC >
