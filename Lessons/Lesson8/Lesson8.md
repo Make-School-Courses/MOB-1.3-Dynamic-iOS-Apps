@@ -156,7 +156,7 @@ https://api.flickr.com/services/rest
 
 ## Additional Resources
 
-1. [Slides]
+1. [Slides](https://docs.google.com/presentation/d/18RCyeINXP1lyrqAj0tTBmJrDD9z28ch5AF2iKNBTpss/edit?usp=sharing)
 2. [xxx]()
 
 https://hackernoon.com/mobile-api-security-techniques-682a5da4fe10
