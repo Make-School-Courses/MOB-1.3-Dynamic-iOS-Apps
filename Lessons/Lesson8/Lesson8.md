@@ -116,6 +116,9 @@ But we'll need to obtain an API KEY from Flickr. Here's how:
 
 ...and you should be presented with your brand-new, Flickr API Key!
 
+<!-- TOODO: add last screen button  -->
+
+
 
 ### Part 2 - As A class
 
@@ -133,6 +136,13 @@ https://api.flickr.com/services/rest
 - it will fail. Why?
 
 2. STEP 2 - Fix it...
+
+
+<!-- TOODO: add section on Copyright, license, cost, restrictions, etc.  -->
+
+<!-- TOODO: show Flickr license page graphic? and URL? -->
+
+
 
 
 ### Part 3 - In Pairs
