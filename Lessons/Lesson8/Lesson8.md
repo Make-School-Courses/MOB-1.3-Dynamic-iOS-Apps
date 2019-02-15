@@ -105,12 +105,14 @@ But we'll need to obtain an API KEY from Flickr. Here's how:
 ![syntax](assets/Flickr_API_page.png)
 
 3. Find and select the `Not a Flickr member? Sign up here.` link at the bottom of the Login dialog box
-- Then, click the `I want to create a new Yahoo email address` and *use your Make School email address.*
+
+- Then, click the `I want to create a new Yahoo email address` and **use your Make School email address.**
+
 *Note: This interface is a little goofy, so ensure all fields are as you intend them to be before choosing `Continue.`*
 
-4. After you create your account, you will need to API Keys URL again to apply for a key.
+4. After you create your account, you will need the API Keys URL again to apply for a key.
 
-5. When prompted with the obvious page, choose "Apply For Non-Commercial Key"
+5. When prompted with the selection page, choose "Apply For Non-Commercial Key"
 
 ...and you should be presented with your brand-new, Flickr API Key!
 
