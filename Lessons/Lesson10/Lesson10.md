@@ -150,13 +150,20 @@ Parameters: ["title": "Super Cool Post", "completed": 0, "userId": 8]
 
 **Q:** When is it a good idea to use Alamofire over our own network implementation?<br>
 **Q:** What are the pros and cons of using it?
+
 ## Firebase
+<!--TODO: Quick intro on what Firebase is and what we can use it for -->
 
 ## In Class Activity II
+- [Loaner app + Firebase](/assets/FirebaseGuide.md) activity.
 
 ## Wrap Up (5 min)
 
+- Complete today's activities.
+- Keep working on your project.
+
 ## Additional Resources
-[Alamofire](https://github.com/Alamofire/Alamofire)
-[JSON placeholder](https://jsonplaceholder.typicode.com)
-[Alamofire walkthrough](https://grokswift.com/rest-with-alamofire-swiftyjson/)
+[Alamofire](https://github.com/Alamofire/Alamofire)<br>
+[JSON placeholder](https://jsonplaceholder.typicode.com)<br>
+[Alamofire walkthrough](https://grokswift.com/rest-with-alamofire-swiftyjson/)<br>
+[Firebase](https://firebase.google.com/docs/ios/setup)
