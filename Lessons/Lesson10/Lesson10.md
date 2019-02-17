@@ -155,7 +155,7 @@ Parameters: ["title": "Super Cool Post", "completed": 0, "userId": 8]
 <!--TODO: Quick intro on what Firebase is and what we can use it for -->
 
 ## In Class Activity II
-- [Loaner app + Firebase](/assets/FirebaseGuide.md) activity.
+- [Loaner app + Firebase](assets/FirebaseGuide.md) activity.
 
 ## Wrap Up (5 min)
 
