@@ -1,6 +1,6 @@
 # Firebase + Loaner App - Guide
 
-For this activity we will be using a pre-made project called Loaner. This app is meant to be used as a a means to track items that you have lent other people. You can keep track of these people using your contact list to get their information and then when they give you your item back, you can mark it as returned.
+For this activity we will be using a pre-made project called [Loaner](https://github.com/Make-School-Labs/loaner/tree/05-Collection-Views). This app is meant to be used as a a means to track items that you have lent other people. You can keep track of these people using your contact list to get their information and then when they give you your item back, you can mark it as returned.
 
 ### Learning Objectives:
 
