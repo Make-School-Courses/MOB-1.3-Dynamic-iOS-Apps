@@ -53,7 +53,6 @@ A domain model is typically implemented as an **[object model](https://en.wikipe
 ![syntax](assets/mvc_with_network_service_layer.png)
 
 
-
 In this class, we will expand our proficiency with MVC by implementing an ___API Layer___ designed to manage access to the data and functionality of the *Model* layer.
 
 ### Separation of Concerns & Code Reuse
