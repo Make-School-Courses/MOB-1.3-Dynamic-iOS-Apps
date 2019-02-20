@@ -64,8 +64,7 @@ It is typically implemented as an **[object model](https://en.wikipedia.org/wiki
 ## Additional Resources
 
 1. [Slides]
-2. [<a name="footnote1">1</a>:Test footnote
- [Domain model - A Wikipedia article](https://en.wikipedia.org/wiki/Domain_model)
+2. [<a name="footnote1">1</a>:[Domain model - A Wikipedia article](https://en.wikipedia.org/wiki/Domain_model)
 3. [xxx]()
 
 
