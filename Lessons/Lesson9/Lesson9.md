@@ -37,9 +37,9 @@ At the end of this class, you should be able to...
 
 ### Domain Model
 
-In software engineering, a **domain model** is a conceptual model of the domain that *incorporates both behavior and data.* [^1]
+In software engineering, a **domain model** is a conceptual model of the domain that *incorporates both behavior and data.* [^REF1]
 
-A domain model is generally implemented as an **[object model]**(https://en.wikipedia.org/wiki/Object_model) within a layer that uses a lower-level layer for persistence and "publishes" an API to a higher-level layer to gain access to the data and behavior of the model.
+A domain model is generally implemented as an **[object model]**(https://en.wikipedia.org/wiki/Object_model) within a layer that uses a lower-level layer for persistence and "publishes" an API to a higher-level layer to gain access to the data and behavior of the model. [^REF1]
 
 
 
@@ -60,7 +60,8 @@ A domain model is generally implemented as an **[object model]**(https://en.wiki
 ## Additional Resources
 
 1. [Slides]
-2. [^1]: [Domain model - A Wikipedia article](https://en.wikipedia.org/wiki/Domain_model)
+2. [^REF1]: Test footnote
+ [Domain model - A Wikipedia article](https://en.wikipedia.org/wiki/Domain_model)
 3. [xxx]()
 
 
