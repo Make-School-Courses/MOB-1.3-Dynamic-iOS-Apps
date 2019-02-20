@@ -45,10 +45,9 @@ At the end of this class, you should be able to...
 **A Definition**</br>
 In software engineering, a **domain model** is a conceptual model of the domain that ___incorporates both behavior and data.___ <sup>[1](#footnote1)</sup>
 
-**Implementation is in Layers**
-
-It is typically implemented as an **[object model](https://en.wikipedia.org/wiki/Object_model)** within a layer that uses:<sup>[1](#footnote1)</sup>
-1. A lower-level layer for persistence and "publishes"
+**Implementation is in Layers**</br>
+It is typically implemented as an **[object model](https://en.wikipedia.org/wiki/Object_model)** - collection of objects or classes through which a program can examine and manipulate specific parts of its world - which is comprised of:<sup>[1](#footnote1)</sup>
+1. A lower-level layer for persistence
 2. An API to a higher-level layer to gain access to the data and behavior of the model.
 
 <!-- Insert graphic here -->
@@ -89,7 +88,7 @@ But behind it all is still separation of concerns...
 
 < Model Object >
 
-< Service Layer >
+< Service Layer  - our API layer >
 
 
 
