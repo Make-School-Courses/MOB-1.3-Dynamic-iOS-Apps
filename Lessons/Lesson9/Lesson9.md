@@ -35,19 +35,69 @@ At the end of this class, you should be able to...
 
 ## Overview
 
-< separation of concerns >
+
+
 
 
 
 ### Domain Model
 
+**A Definition**
 In software engineering, a **domain model** is a conceptual model of the domain that ___incorporates both behavior and data.___ <sup>[1](#footnote1)</sup>
 
-It is typically implemented as an **[object model](https://en.wikipedia.org/wiki/Object_model)** within a layer that uses a lower-level layer for persistence and "publishes" an API to a higher-level layer to gain access to the data and behavior of the model. <sup>[1](#footnote1)</sup>
+**Implementation in Layers**
+It is typically implemented as an **[object model](https://en.wikipedia.org/wiki/Object_model)** within a layer that uses:<sup>[1](#footnote1)</sup>
+1. A lower-level layer for persistence and "publishes"
+2. An API to a higher-level layer to gain access to the data and behavior of the model.
+
+<!-- Insert graphic here -->
+
+
+For this class, we will focus specifically on item 2. above - ___The API Layer___ that manages access to the data and functionality of the *Model* in MVC.
+
+### Separation of Concerns & Code Reuse
+
+< separation of concerns >
+
+
+
+
+### The Evolution of MVC
+
+
+
+
+
+< Variations on MVC >
+
+<!-- Insert graphic here -->
+
+But behind it all is still separation of concerns...
+
+
+< service layer Architecture>
+
+
+< project organization >
+
+<!-- Insert graphic here -->
+
+
+
+< Model Objects >
+
+< Model Object >
+
+< Service Layer >
 
 
 
 ## < Topic 1 >
+
+
+## Best Practices
+
+
 
 
 ## In Class Activity I (25 min)
