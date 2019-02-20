@@ -46,14 +46,14 @@ At the end of this class, you should be able to...
 In software engineering, a **domain model** is a conceptual model of the domain that ___incorporates both behavior and data.___ <sup>[1](#footnote1)</sup>
 
 **Implementation is in Layers**</br>
-It is typically implemented as an **[object model](https://en.wikipedia.org/wiki/Object_model)** - collection of objects or classes through which a program can examine and manipulate specific parts of its world - which is comprised of:<sup>[1](#footnote1)</sup>
+A domain model is typically implemented as an **[object model](https://en.wikipedia.org/wiki/Object_model)** - a collection of objects or classes through which a program can examine and manipulate specific parts of its world - which is comprised of:<sup>[1](#footnote1)</sup>
 1. A lower-level layer for persistence
 2. An API to a higher-level layer to gain access to the data and behavior of the model.
 
 <!-- Insert graphic here -->
 
 
-For this class, we will focus specifically on item 2. above - ___The API Layer___ that manages access to the data and functionality of the *Model* in MVC.
+In this class, we will expand our proficiency with MVC by implementing an ___API Layer___ designed to manage access to the data and functionality of the *Model* layer.
 
 ### Separation of Concerns & Code Reuse
 
