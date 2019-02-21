@@ -145,7 +145,8 @@ struct User:Codable {
 ## In Class Activity I (20 min)
 
 Required resources:
-1. [the XXX Starter App]()
+1. Download the base app, [PhotoMatic](https://github.com/VanderDev1/PhotoMatic_L09.git)
+
 **Individual**
 
 __Scenario:__
@@ -158,6 +159,15 @@ __Scenario:__
 - Where you see quick and practical opportunities, update the code to Swift 4 constructs, including implementing model objects with the `Codable` interface, properly handling Optionals and errors, and so on...
 
 
+For Activity 1
+
+1 insert your api key and valid app is working
+
+- refactor into Service
+
+- redo TO with coddle
+
+- review any other opportunities to improve
 
 <!-- Use the App from Lesson 8, add stubs, have students expand the model -->
 
@@ -178,7 +188,7 @@ Commonly required parameters include:
 - Or any other __headers__ specifically required by your target web service API (a valid API Key, for example)
 
 
-### STEP 1: Set Up the Session and Requests
+### Step 1: Set Up the Session and Requests
 
 Just as we did with our HTTP GET request, we first need to create and configure a **URLSession** and a **URLRequest** object that points to our target web service **URL.**
 
@@ -191,7 +201,7 @@ Just as we did with our HTTP GET request, we first need to create and configure 
 
 <!-- Insert code sample here -->
 
-### STEP 2: Configure the Request
+### Step 2: Configure the Request
 
 #### Specify the httpMethod type
 
@@ -238,7 +248,7 @@ A valid API Key is commonly required for the "Authorization" header field:
 ```
 
 
-### STEP 3: Convert Data to JSON Format
+###  3: Convert Data to JSON Format
 
 To convert our data object to the JSON format, we will use a built-in function of `JSONSerialization:`
 
@@ -263,7 +273,7 @@ let parameters: [String: Any] = [“foo”: “bar”, “numbers”: [1, 2, 3, 
 The `options` array is left blank here, but it can be used to print or to sort the output (see Apple references below for more details).
 
 
-### STEP 4:  Execute Request
+### Step 4:  Execute Request
 
 Finally, the dataTask will execute our POST request with the our specified header values, and its completion block closure will be executed after the response is returned from the web service.
 
@@ -367,6 +377,10 @@ model objects
 Codable interface
 TODO: research why?
 
+
+Ultimately, as your app development experience evolves with the ever-changing iOS practices, you will want to arrive at your own set of best practices...
+
+
 https://github.com/futurice/ios-good-practices
 futurice/ios-good-practices
 -->
@@ -376,7 +390,12 @@ futurice/ios-good-practices
 ## Challenges
 
 1.
-<!-- apply best practices (saving API Key as a plist) -->
+<!-- apply best practices (saving API Key as a plist)
+- add spinner> [action]
+>
+> add Unit test for testing one Failed case when network is not present
+learn how to simulate network disconnect to validate this
+-->
 
 
 
