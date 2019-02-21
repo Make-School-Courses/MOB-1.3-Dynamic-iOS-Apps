@@ -33,9 +33,14 @@ xxx
 ## Class Learning Objectives/Competencies (5 min)
 At the end of this class, you should be able to...
 
-1. xxx
-2. xxx
-
+1. Design and construct a network layer that optimizes:
+- modularity and reusability
+- maintainability
+- extendability
+2. Demonstrate understanding of key application design principles:
+- Separation of Concerns (SoC)
+- Code reuse
+3. Successfully execute an HTTP POST request to a remote web service
 
 ## Initial Exercise (20 min)
 
