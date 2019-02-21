@@ -150,27 +150,24 @@ Required resources:
 **Individual**
 
 __Scenario:__
-- You just got hired as an app developer at a new firm, but you "inherited" code created by several previous developers who no longer work at the company.
+- Congratulations! You just got hired at a new firm. But you "inherited" code created by several previous developers who no longer work at the company.
 - The app was written in an older version of Swift.
-- It was originally a quick “prototype” app developed by engineers new to both iOS and Swift.
+- It was originally created as a quick “prototype” (i.e., it was not designed with maintenance and extension in mind), and it was developed by engineers new to both iOS and Swift.
 
-**TODO:** Using what you’ve learned so far about networking in iOS, your assignment is to:
+**TODO:** Using what you’ve learned so far about iOS networking, your assignment is to:
 - Refactor the code so that it (a) is scalable, and (b) adheres to the tenets of MVC
 - Where you see quick and practical opportunities, update the code to Swift 4 constructs, including implementing model objects with the `Codable` interface, properly handling Optionals and errors, and so on...
 
+**Steps to Complete**
 
-For Activity 1
+1. Validate the App - Insert your own Flickr API Key and confirm the *current working state* of the app.
 
-1 insert your api key and valid app is working
+2. Refactor (or move) all **network calls** and **JSON processing functions** into the **PhotoFetchService**.
 
-- refactor into Service
+3. Recreate the model object (`Photo.swift` class) to implement the Codable interface.
+- Note the impact this change may have to other part of the code base.
 
-- redo TO with coddle
-
-- review any other opportunities to improve
-
-<!-- Use the App from Lesson 8, add stubs, have students expand the model -->
-
+4. Review any other opportunities to improve the app (i.e., handling optionals, etc.). If time permits, make those improvements.
 
 
 
