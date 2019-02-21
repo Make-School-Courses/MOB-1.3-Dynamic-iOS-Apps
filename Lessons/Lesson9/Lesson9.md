@@ -428,7 +428,7 @@ https://jsonplaceholder.typicode.com/todos/6
 
 ## Additional Resources
 
-1. [Slides]
+1. [Slides](https://docs.google.com/presentation/d/11xY23K0gdL2KZgCEZyNi8GnFHGm3W7HqUr4d_9Pkd-A/edit?usp=sharing)
 2. <a name="footnote1"><sup>1</sup></a>[Domain model - A Wikipedia article](https://en.wikipedia.org/wiki/Domain_model)
 3. [Separation of Concerns (withJSONObject) - from Wikepedia](https://en.wikipedia.org/wiki/Separation_of_concerns)
 4. [VIPER Design Pattern - an Article](https://medium.com/yay-its-erica/intro-to-the-viper-design-pattern-swift-3-32e3574dee02)
