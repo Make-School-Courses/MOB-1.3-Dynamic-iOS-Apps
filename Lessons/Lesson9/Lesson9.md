@@ -11,13 +11,9 @@
 | 0:45       | 0:25      | In Class Activity I                 |
 | 1:10        | 0:10      | BREAK                               |
 | 1:15       | 0:15      | HTTP Post Requests |
-| 1:20       | 0:05      | The Request Builder|
-
-| 1:20       | 0:15      | xxx |
-
-
-| 1:45        | 0:05      | Wrap Up                             |
-| TOTAL       | 1:50      |                                     |
+| 1:35       | 0:05      | The Request Builder|
+| 1:40        | 0:05      | Wrap Up                             |
+| TOTAL       | 1:45      |                                     |
 
 
 
