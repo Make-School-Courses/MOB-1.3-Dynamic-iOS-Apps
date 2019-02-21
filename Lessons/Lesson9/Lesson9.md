@@ -158,18 +158,87 @@ __Scenario:__
 <!-- Insert code here -->
 ## HTTP Post Requests
 
-<!-- intRO: similar to HTTP GET -- but in reverse -->
+To add a new item to a web service, we use the HTTP protocol's **POST method.**
+
+Implementing a POST request is a bit like performing a GET request in reverse, except that for a POST you will need to supply additional parameters to the URLRequest object. Commonly required parameters include:
+
+- The __httpMethod type__ (i.e., “POST”)
+- The __content type__ (JSON, in our case)
+- Or any other ___headers___ required by the web service API (a valid API Key, for example)
 
 
-### STEP 1:
+### STEP 1: Set Up the Session and Requests
+
+Just as we did with our HTTP GET request, we first need to create and configure a **URLSession** and a **URLRequest** object that points to our target web service **URL.**
+
+```Swift
+  let session = URLSession.shared
+  let url = URL(string: "https://<your_web_service_url>")
+  var request = URLRequest(url: url!)
+```
+
 
 <!-- Insert code sample here -->
 
-### STEP 2:
+### STEP 2: Configure the Request
+
+#### Specify the httpMethod type
+
+For any web service request other than GET (i.e., POST, PUT, PATCH, DELETE), we need to specify the httpMethod to invoke.
+
+Since we are performing a POST here, we will set httpMethod property to `urlRequest = "POST"`.
+
+```Swift
+  request.httpMethod = "POST"
+```
+
+#### Specify Headers
+
+Next, use the URLRequest `setValue(_:forHTTPHeaderField:)` method to set the values of any HTTP headers you want to provide (except the `Content-Length` header. The session automatically figures out content length  from the size of your data).
+
+**`Content-Type`**
+We use `Content-Type` header to indicate to the web service API the type of data we are sending.
+
+In our case, we want to set out `Content-Type` to `JSON`.
+
+```Swift
+  request.setValue(“application/json”, forHTTPHeaderField: “Content-Type”)
+```
+
+___`Accept`___
+
+The `Accept` request header field is used to specify certain **media types** that are acceptable for the **response**.
+
+We want our response to be returned as JSON, so we `Accept` request header field
+
+```Swift
+  request.setValue(“application/json”, forHTTPHeaderField: “Accept”)
+```
+
+____Other Header Fields__
+
+Follow the same process of using the URLRequest `setValue(_:forHTTPHeaderField:)` method to supply all header fields required for communicating with your target web service.
+
+Supplying a valid API Key for the "Authorization" header field is a very common requirement.
+
+```Swift
+    request.setValue("<insert_valid_API-KEY_here>", forHTTPHeaderField: “Authorization”)
+```
+
 
 <!-- Insert code sample here -->
 
 
+### STEP 3:
+
+
+
+<!-- Insert code sample here -->
+
+### STEP x:
+
+
+<!-- Insert code showing PUTTING IT ALL TOGETHER here -->
 
 
 ## The Request Builder
