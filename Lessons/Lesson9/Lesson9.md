@@ -119,11 +119,19 @@ It's the job of this object to:
 
 ### The Model Object
 
-Sometimes called a *Transfer Object* (aka, a TO), a *Value Object,* or a *Data Transfer Object (DTO),* model objects are an important component of an efficient network service layer.
 
-They represent a single, simplified data instance that can be passed around your code and used in multiple ways. They can be used in data fetch and retrieval operations, data storage/persistence, presentation to the user (i.e., to populate a table cell’s data, for example), and more.
+Sometimes referred to as a ___Transfer Object___ (or a ___TO__), a ___Value Object___, or a ___Data Transfer Object (DTO)___, model objects are an important component of efficient network service and data persistence layers.
 
-A simple example of a `user` represented (modeled) as a Codable struct with 3 properties:
+Model objects most often represent in software - or “model” - a single, simplified instance of a *thing* that exists in the real world such as a person, product, transaction, and so on.
+
+Model objects can be passed around your code and used to simplify data manipulation in a variety operations:
+- data retrieval (fetch)
+- data storage/persistence
+- user presentation (for example, to populate individual table cell data)
+
+…and much more.
+
+This is a classic, simple example of a `user` represented (modeled) as a Codable struct with 3 properties:
 
 ```Swift
 struct User:Codable {
@@ -161,11 +169,13 @@ __Scenario:__
 
 To add a new item to a web service, we use the HTTP protocol's **POST method.**
 
-Implementing a POST request is a bit like performing a GET request in reverse, except that for a POST you will need to supply additional parameters to the URLRequest object. Commonly required parameters include:
+Implementing a POST request is a bit like performing a GET request in reverse, except that for a POST you will need to supply additional parameters to the URLRequest object.
+
+Commonly required parameters include:
 
 - The __httpMethod type__ (i.e., “POST”)
 - The __content type__ (JSON, in our case)
-- Or any other ___headers___ required by the web service API (a valid API Key, for example)
+- Or any other __headers__ specifically required by your target web service API (a valid API Key, for example)
 
 
 ### STEP 1: Set Up the Session and Requests
@@ -185,9 +195,9 @@ Just as we did with our HTTP GET request, we first need to create and configure 
 
 #### Specify the httpMethod type
 
-For any web service request other than GET (i.e., POST, PUT, PATCH, DELETE), we need to specify the httpMethod to invoke.
+For any web service request other than GET (i.e., POST, PUT, PATCH, DELETE), we need to specify the **httpMethod** to invoke.
 
-Since we are performing a POST here, we will set httpMethod property to `urlRequest = "POST"`.
+Since we are performing a POST here, we will set the httpMethod property to `urlRequest = "POST"`.
 
 ```Swift
   request.httpMethod = "POST"
@@ -198,6 +208,7 @@ Since we are performing a POST here, we will set httpMethod property to `urlRequ
 Next, use the URLRequest `setValue(_:forHTTPHeaderField:)` method to set the values of any HTTP headers you want to provide (except the `Content-Length` header. The session automatically figures out content length  from the size of your data).
 
 ___`Content-Type`___
+
 We use `Content-Type` header to indicate to the web service API the type of data we are sending.
 
 In our case, we want to set the `Content-Type` to `JSON`.
@@ -216,7 +227,7 @@ We want our response to be returned as JSON, so we set the `Accept` request head
   request.setValue(“application/json”, forHTTPHeaderField: “Accept”)
 ```
 
-____Other Header Fields___
+___Other Header Fields___
 
 Follow the same process of using the URLRequest `setValue(_:forHTTPHeaderField:)` method to supply all header fields required for communicating with your target web service.
 
@@ -227,19 +238,101 @@ A valid API Key is commonly required for the "Authorization" header field:
 ```
 
 
-<!-- Insert code sample here -->
+### STEP 3: Convert Data to JSON Format
+
+To convert our data object to the JSON format, we will use a built-in function of `JSONSerialization:`
+
+ ```Swift
+ JSONSerialization.data(withJSONObject obj: Any, options opt: JSONSerialization.WritingOptions = []) throws
+```
+
+*What exactly does this function do?* Here is a brief excerpt from Apple's description:
+
+*Generate JSON data from a Foundation object. If the object will not produce valid JSON then an exception will be thrown. Setting the NSJSONWritingPrettyPrinted option will generate JSON with whitespace designed to make the output more readable. If that option is not set, the most compact possible JSON will be generated. If an error occurs, the error parameter will be set and the return value will be nil...*
+
+We convert our data into JSON, then include the converted JSON data into the httpBody of the URL request and handle any errors thrown.
+
+```Swift
+let parameters: [String: Any] = [“foo”: “bar”, “numbers”: [1, 2, 3, 4, 5]]
+       do {
+           let jsonParams = try JSONSerialization.data(withJSONObject: parameters, options: [])
+           postRequest.httpBody = jsonParams
+       } catch { print(“Error: unable to add parameters to POST request.“)}
+```
+
+The `options` array is left blank here, but it can be used to print or to sort the output (see Apple references below for more details).
 
 
-### STEP 3:
+### STEP 4:  Execute Request
 
+Finally, the dataTask will execute our POST request with the our specified header values, and its completion block closure will be executed after the response is returned from the web service.
 
+```Swift
+URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+           if error != nil { print(“POST Request: Communication error: \(error!)“) }
+           if data != nil {
+               do {
+                   let resultObject = try JSONSerialization.jsonObject(with: data!, options: [])
+                   DispatchQueue.main.async(execute: {
+                       print(“Results from POST request:\n\(resultObject)“)
+                   })
+               } catch {
+                   DispatchQueue.main.async(execute: {
+                       print(“Unable to parse JSON response”)
+                   })
+               }
+           } else {
+               DispatchQueue.main.async(execute: {
+                   print(“Received empty response.“)
+               })
+           }
+       }).resume()
+```
 
-<!-- Insert code sample here -->
+**Note:** This example uses the alternate ___shared___ dataTask type: `URLSession.shared.dataTask()`
 
-### STEP x:
+#### Putting It Altogether
 
+The complete code for an HTTP POST request function would resemble this:
 
-<!-- Insert code showing PUTTING IT ALL TOGETHER here -->
+```Swift
+        let session = URLSession.shared
+        let url = URL(string: "https://<your_web_service_url>")
+        var request = URLRequest(url: url!)
+
+        request.httpMethod = “POST”
+        request.setValue(“application/json”, forHTTPHeaderField: “Content-Type”)
+        request.setValue(“application/json”, forHTTPHeaderField: “Accept”)
+        request.setValue(“<insert_valid_API-KEY_here>”, forHTTPHeaderField: “Authorization”)
+
+        let parameters: [String: Any] = [“foo”: “bar”, “numbers”: [1, 2, 3, 4, 5]]
+            do {
+                let jsonParams = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                request.httpBody = jsonParams
+            } catch { print(“Error: unable to add parameters to POST request.“)}
+
+        URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+            if error != nil { print(“POST Request: Communication error: \(error!)“) }
+
+            if data != nil {
+                do {
+                    let resultObject = try JSONSerialization.jsonObject(with: data!, options: [])
+                    DispatchQueue.main.async(execute: {
+                        print(“Results from POST request:\n\(resultObject)“)
+                    })
+                } catch {
+                    DispatchQueue.main.async(execute: {
+                      print(“Unable to parse JSON response”)
+                    })
+                }
+            } else {
+                DispatchQueue.main.async(execute: {
+                    print(“Received empty response.“)
+                })
+        }
+        }).resume()
+```
+
 
 
 ## The Request Builder
@@ -303,3 +396,8 @@ futurice/ios-good-practices
 
 https://en.wikipedia.org/wiki/Separation_of_concerns
 https://medium.com/yay-its-erica/intro-to-the-viper-design-pattern-swift-3-32e3574dee02
+
+[Apple on JSONSerialization reading and writing options]
+https://developer.apple.com/documentation/foundation/jsonserialization/writingoptions
+
+https://developer.apple.com/documentation/foundation/jsonserialization/readingoptions
