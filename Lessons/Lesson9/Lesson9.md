@@ -119,9 +119,9 @@ It's the job of this object to:
 
 ### The Model Object
 
-Sometime scalled a *Transfer Object* (aka, a TO), a *Value Object,* or a *Data Transfer Object (DTO),* model objects are an important component of an efficient network service layer.
+Sometimes called a *Transfer Object* (aka, a TO), a *Value Object,* or a *Data Transfer Object (DTO),* model objects are an important component of an efficient network service layer.
 
-They represent a single, simple data instance that can be used in multiple ways. They can be used in data fetch and retrieval operations, data storage/persistence, presentation to the user (i.e., to populate a table cell’s data, for example), and more.
+They represent a single, simplified data instance that can be passed around your code and used in multiple ways. They can be used in data fetch and retrieval operations, data storage/persistence, presentation to the user (i.e., to populate a table cell’s data, for example), and more.
 
 Here is a classic example of a user represented (modeled) as a Codable struct with 3 properties:
 
@@ -134,28 +134,28 @@ struct User:Codable {
 ```
 
 
-
-### The Request Builder
-
-The Builder design pattern solves problems like:[2]
-
-How can a class (the same construction process) create different representations of a complex object?
-How can a class that includes creating a complex object be simplified?
-
-<!-- Insert code here -->
-
-
-
-
-
-
-< Service Layer  - our API layer >
-
-
 ## In Class Activity I (20 min)
+
+Required resources:
+1. [the XXX Starter App]()
+**Individual**
+
+__Scenario:__
+- You just started a new job and inherited code from a previous developer who is no longer with the company.
+- The app was written in an older version of Swift. It was originally a quick “prototype” app developed by a developer who was new to both iOS and to Swift.
+
+**TODO:** Using what you’ve learned so far about networking in iOS, your assignment is to:
+- refactor the code so that it (a) is scalable, and (b) adheres to the tenets of MVC
+- update the code to Swift 4 constructs
+
+
 
 <!-- Use the App from Lesson 8, add stubs, have students expand the model -->
 
+
+
+
+<!-- Insert code here -->
 ## HTTP Post Requests
 
 <!-- intRO: similar to HTTP GET -- but in reverse -->
@@ -170,16 +170,52 @@ How can a class that includes creating a complex object be simplified?
 <!-- Insert code sample here -->
 
 
+
+
+## The Request Builder
+
+The **Builder** design pattern is a type of **Creational** design pattern that is used to create complex objects step-by-step.
+
+It offers:
+- ___Flexibility___ - Easily create different representations of the same complex object
+- ___Simplicity___ - Simplifies the creation of a complex object.
+
+HTTP request methods GET, POST, DELETE, and so on, are constructed using parameters common to them all. Thus, HTTP requests offer a prime opportunity to employ the Builder pattern to create different types of request objects with commonly shared parameters.
+
+Instead of rewriting the parameters for a separate request object for each HTTP method, a more efficient design is to design a single RequestBuilder object that reuses the commonly shared reqeust parameters, then call a separate function on the RequestBuilder object to create a request for a GET or a POST, respectively.
+
+<!-- Insert code sample here -->
+
+
+
 ## Best Practices
 
+<!-- Best Practices for Network Architecture
+keep controllers light and focused on its job
+when adding anything, ask yourself “does this functionality really belong in the controller
+keep model out of controllers
+API Keys:
+store API keys in Plist
+add to headers is safer than appending
+TODO: research why?
+code reuse
+simple, modular building blocks of specialized objects
+model objects
+Codable interface
+TODO: research why?
 
-
+https://github.com/futurice/ios-good-practices
+futurice/ios-good-practices
+-->
 
 
 
 ## Challenges
 
 1.
+<!-- apply best practices (saving API Key as a plist) -->
+
+
 
 
 ## Wrap Up (5 mins)
