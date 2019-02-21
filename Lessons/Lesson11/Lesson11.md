@@ -5,11 +5,10 @@
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
 | 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:10      | Initial Exercise          |
-| 0:30        | 0:20      | Topic                     |
-| 0:30        | 0:20      | In Class Activity I       |
-| 0:50        | 0:10      | BREAK                     |
-| 1:10        | 0:30      | In Class Activity II      |
+| 0:05        | 0:10      | Socket io                 |
+| 0:15        | 0:40      | In Class Activity I       |
+| 0:55        | 0:10      | BREAK                     |
+| 1:05        | 0:35      | In Class Activity I       |
 | 1:40        | 0:05      | Wrap Up                   |
 | TOTAL       | 1:45      |                           |
 
@@ -34,7 +33,7 @@ Socket.IO is a JavaScript library for real-time web applications (instant messen
 
 Sockets are a popular solution for most real-time systems. They provide a bi-directional communication channel between a client and a server. This means that the server can push messages to all connected clients
 
-## In Class Activity I (80 min)
+## In Class Activity I (75 min)
 
 Follow this in-class [tutorial on sockets](https://github.com/matthewharrilal/Make-ChatRooms-Tutorial). If you get blocked at some point ask instructor for help with clarifying questions.
 
