@@ -123,7 +123,7 @@ Sometimes called a *Transfer Object* (aka, a TO), a *Value Object,* or a *Data T
 
 They represent a single, simplified data instance that can be passed around your code and used in multiple ways. They can be used in data fetch and retrieval operations, data storage/persistence, presentation to the user (i.e., to populate a table cell’s data, for example), and more.
 
-Here is a classic example of a user represented (modeled) as a Codable struct with 3 properties:
+A simple example of a `user` represented (modeled) as a Codable struct with 3 properties:
 
 ```Swift
 struct User:Codable {
@@ -141,12 +141,13 @@ Required resources:
 **Individual**
 
 __Scenario:__
-- You just started a new job and inherited code from a previous developer who is no longer with the company.
-- The app was written in an older version of Swift. It was originally a quick “prototype” app developed by a developer who was new to both iOS and to Swift.
+- You just got hired as an app developer at a new firm, but you "inherited" code created by several previous developers who no longer work at the company.
+- The app was written in an older version of Swift.
+- It was originally a quick “prototype” app developed by engineers new to both iOS and Swift.
 
 **TODO:** Using what you’ve learned so far about networking in iOS, your assignment is to:
-- refactor the code so that it (a) is scalable, and (b) adheres to the tenets of MVC
-- update the code to Swift 4 constructs
+- Refactor the code so that it (a) is scalable, and (b) adheres to the tenets of MVC
+- Where you see quick and practical opportunities, update the code to Swift 4 constructs, including implementing model objects with the `Codable` interface, properly handling Optionals and errors, and so on...
 
 
 
@@ -196,10 +197,10 @@ Since we are performing a POST here, we will set httpMethod property to `urlRequ
 
 Next, use the URLRequest `setValue(_:forHTTPHeaderField:)` method to set the values of any HTTP headers you want to provide (except the `Content-Length` header. The session automatically figures out content length  from the size of your data).
 
-**`Content-Type`**
+___`Content-Type`___
 We use `Content-Type` header to indicate to the web service API the type of data we are sending.
 
-In our case, we want to set out `Content-Type` to `JSON`.
+In our case, we want to set the `Content-Type` to `JSON`.
 
 ```Swift
   request.setValue(“application/json”, forHTTPHeaderField: “Content-Type”)
@@ -207,19 +208,19 @@ In our case, we want to set out `Content-Type` to `JSON`.
 
 ___`Accept`___
 
-The `Accept` request header field is used to specify certain **media types** that are acceptable for the **response**.
+The `Accept` request header field is used to specify certain **media types** that are acceptable for the **response** object returned by the web service.
 
-We want our response to be returned as JSON, so we `Accept` request header field
+We want our response to be returned as JSON, so we set the `Accept` request header field to return JSON.
 
 ```Swift
   request.setValue(“application/json”, forHTTPHeaderField: “Accept”)
 ```
 
-____Other Header Fields__
+____Other Header Fields___
 
 Follow the same process of using the URLRequest `setValue(_:forHTTPHeaderField:)` method to supply all header fields required for communicating with your target web service.
 
-Supplying a valid API Key for the "Authorization" header field is a very common requirement.
+A valid API Key is commonly required for the "Authorization" header field:
 
 ```Swift
     request.setValue("<insert_valid_API-KEY_here>", forHTTPHeaderField: “Authorization”)
