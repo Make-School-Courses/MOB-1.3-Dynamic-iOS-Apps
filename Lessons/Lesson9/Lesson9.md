@@ -8,9 +8,9 @@
 | 0:05        | 0:20      | Initial Exercise                    |
 | 0:25        | 0:10      | Overview               |
 | 0:35        | 0:10      | API Layer Construction                |
-| 0:45       | 0:20      | In Class Activity I                 |
-| 1:05        | 0:10      | BREAK                               |
-| 1:05       | 0:15      | HTTP Post Requests |
+| 0:45       | 0:25      | In Class Activity I                 |
+| 1:10        | 0:10      | BREAK                               |
+| 1:15       | 0:15      | HTTP Post Requests |
 | 1:20       | 0:05      | The Request Builder|
 
 | 1:20       | 0:15      | xxx |
@@ -141,7 +141,7 @@ struct User:Codable {
 ```
 
 
-## In Class Activity I (20 min)
+## In Class Activity I (25 min)
 
 Required resources:
 1. Download the base app, [PhotoMatic](https://github.com/VanderDev1/PhotoMatic_L09.git)
@@ -163,10 +163,12 @@ __Scenario:__
 
 2. Refactor (or move) all **network calls** and **JSON processing functions** into the **PhotoFetchService**.
 
+**TIP:** Simply search for the `//TODO:` comments to see key refactoring points
+
 3. Recreate the model object (`Photo.swift` class) to implement the Codable interface.
 - Note the impact this change may have to other part of the code base.
 
-4. Review any other opportunities to improve the app (i.e., handling optionals, etc.). If time permits, make those improvements.
+4. (If time permits) Review any other opportunities to improve the app (i.e., handling optionals, etc.). If time permits, make those improvements.
 
 
 
@@ -352,66 +354,79 @@ HTTP request methods GET, POST, DELETE, and so on, are constructed using paramet
 
 Instead of rewriting the parameters for a separate request object for each HTTP method, a more efficient design is to design a single RequestBuilder object that reuses the commonly shared reqeust parameters, then call a separate function on the RequestBuilder object to create a request for a GET or a POST, respectively.
 
+
 <!-- Insert code sample here -->
 
 
 
-## Best Practices
 
-<!-- Best Practices for Network Architecture
-keep controllers light and focused on its job
-when adding anything, ask yourself “does this functionality really belong in the controller
-keep model out of controllers
-API Keys:
-store API keys in Plist
-add to headers is safer than appending
-TODO: research why?
-code reuse
-simple, modular building blocks of specialized objects
-model objects
-Codable interface
-TODO: research why?
-
-
-Ultimately, as your app development experience evolves with the ever-changing iOS practices, you will want to arrive at your own set of best practices...
-
-
-https://github.com/futurice/ios-good-practices
-futurice/ios-good-practices
--->
 
 
 
 ## Challenges
 
-1.
-<!-- apply best practices (saving API Key as a plist)
-- add spinner> [action]
->
-> add Unit test for testing one Failed case when network is not present
-learn how to simulate network disconnect to validate this
--->
+**Required Resources:**
+1. [JSONPlaceholder API](https://jsonplaceholder.typicode.com)  - a free "Fake Online REST API for Testing and Prototyping"
 
+For this challenge, we will ___simulate___ an HTTP **POST** request to the JSONPlaceholder API's `todos` endpoint.
 
+**TIP:** The JSONPlaceholder API's home page provides a link to their "How to" page, which provides clues about how to create a successful POST request to their `todos` endpoint. But the code featured there is *JavaScript, not Swift...*
+
+**Your Assignment:**
+
+1. Create a new Xcode **single view** project ___to execute a POST request___ to the https://jsonplaceholder.typicode.com/todos
+
+- For now, your app should have a single button entitled "POST" which will call your POST request functions
+
+2. Create a POST request function
+
+Your POST request should pass data for these parameters:
+- “userId"
+- “title”
+-  “completed”
+
+Appending an actual user id to the endpoint shows you the data structure and parameters needed...
+
+For example, running the following URL for `"userId" = 6` in a browser...
+
+https://jsonplaceholder.typicode.com/todos/6
+
+...will shows the fields and current status for userId 6:
+
+```Swift
+{
+ “userId”: 6,
+ “id”: 101,
+ “title”: “explicabo enim cumque porro aperiam occaecati minima”,
+ “completed”: false
+}
+```
+3. Validate Results:
+
+- errors or successful results<sup>[2](#footnote2)</sup> can be found in your Xcode Debug log, so be sure to print messages to signify success or failure conditions...
+
+4. In constructing your project, follow the practices we learned today for constructing an API Layer:
+
+- Create a Request Builder class to supply the configured request for the POST request (for now -- we will expand this class later in the course)
+
+5. Add a Unit Test for asserting 1 failed/error condition
 
 
 ## Wrap Up (5 mins)
+
+1. Challenge
+2. Next Class
+<!-- 3. Key questions on today's material? -->
+
 
 
 ## Additional Resources
 
 1. [Slides]
 2. <a name="footnote1"><sup>1</sup></a>[Domain model - A Wikipedia article](https://en.wikipedia.org/wiki/Domain_model)
-3. [xxx]()
-
-
-<!-- xxx -->
-
-
-https://en.wikipedia.org/wiki/Separation_of_concerns
-https://medium.com/yay-its-erica/intro-to-the-viper-design-pattern-swift-3-32e3574dee02
-
-[Apple on JSONSerialization reading and writing options]
-https://developer.apple.com/documentation/foundation/jsonserialization/writingoptions
-
-https://developer.apple.com/documentation/foundation/jsonserialization/readingoptions
+3. [Separation of Concerns (withJSONObject) - from Wikepedia](https://en.wikipedia.org/wiki/Separation_of_concerns)
+4. [VIPER Design Pattern - an Article](https://medium.com/yay-its-erica/intro-to-the-viper-design-pattern-swift-3-32e3574dee02)
+5. <a name="footnote2"><sup>2</sup></a>[HTTP response status codes - from Mozzilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+6. Apple on JSONSerialization Reading and Writing Options:</br>
+- [Writing Options - from Apple](https://developer.apple.com/documentation/foundation/jsonserialization/writingoptions)
+- [Reading Options - from Apple](https://developer.apple.com/documentation/foundation/jsonserialization/readingoptions)
