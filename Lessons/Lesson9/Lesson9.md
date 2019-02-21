@@ -6,11 +6,16 @@
 | ----------- | --------- | ----------------------------------- |
 | 0:00        | 0:05      | Objectives                          |
 | 0:05        | 0:20      | Initial Exercise                    |
+| 0:25        | 0:10      | Overview               |
+| 0:35        | 0:10      | API Layer Construction                |
+| 0:45       | 0:20      | In Class Activity I                 |
+| 1:05        | 0:10      | BREAK                               |
+| 1:05       | 0:15      | HTTP Post Requests |
+| 1:20       | 0:05      | The Request Builder|
 
-| 0:x        | 0:xx      | BREAK                               |
-| 0:x        | 0:x      | In Class Activity I                 |
 | 1:20       | 0:15      | xxx |
-| 1:35        | 0:20      | In Class Activity II                |
+
+
 | 1:45        | 0:05      | Wrap Up                             |
 | TOTAL       | 1:50      |                                     |
 
@@ -36,28 +41,22 @@ At the end of this class, you should be able to...
 
 ### As A Class
 
-**Quizlet Game**
+**Quizlet Game** - A fun and easy way to test your iOS knowledge thus far!
 
 
-## Overview
-
-
-
-
-
+## Overview (10 min)
 
 ### Domain Model
 
 **A Definition**</br>
-In software engineering, a **domain model** is a conceptual model of the domain that ___incorporates both behavior and data.___ <sup>[1](#footnote1)</sup>
+In software engineering, a **domain model**<sup>[1](#footnote1)</sup> is a conceptual model of the domain that ___incorporates both behavior and data.___
 
 **Implementation is in Layers**</br>
-A domain model is commonly implemented as an **[object model](https://en.wikipedia.org/wiki/Object_model)** - *a collection of objects or classes through which a program can examine and manipulate specific parts of its world.*<sup>[1](#footnote1)</sup>
+A domain model is commonly implemented as an **[object model](https://en.wikipedia.org/wiki/Object_model)** - *a collection of objects or classes through which a program can examine and manipulate specific parts of its world.*
 
-It is typically comprised of:<sup>[1](#footnote1)</sup>
+It is typically comprised of:
 1. A lower-level **persistence layer**
 2. A higher-level **API layer** to gain access to the data and behavior of the model.
-
 
 
 ![syntax](assets/mvc_with_network_service_layer.png)
@@ -71,7 +70,7 @@ As a design pattern, MVC seeks to promote two important design principles fundam
 
 1. **Separation of Concerns (SoC)** - Represents a ___modular___ approach to constructing an application in which code can be separated into logical sections, each addressing separate areas of functional behavior (concerns). SoC results in higher degrees of freedom for because it hides the need for a given section to know particular information addressed by other sections.
 
- - MVC can separate content from presentation and data-processing (model) from content.
+ - MVC can separate content from presentation, and data-processing (model) from content.
  - Service-oriented design can separate concerns into services.
 
  2. **Reusability** - If correctly implemented, view and model layers can easily be composed of reusable, modular components (though controllers are seldom reusable).
@@ -94,6 +93,8 @@ As a developer, you need to be aware of the pros and cons of emerging iOS design
 But behind them all is simply the principle of **Separation of Concerns** being applied in specific ways to MVC...
 
 
+## API Layer Construction (10 min)
+
 ### Project Organization
 
 Structure and organization are key contributors to effective modularized architecture.
@@ -110,8 +111,7 @@ Creating groups folder is a great place to start.
 
 The core component of our API Layer is the **Service** or **API object.**
 
-It's the job of this object to:
-
+This object's job is to:
 - Fetch, post and process data to and from the target web services
 - Serialize JSON data for manipulation and presentation
 - Provide constructs for handling the successful or failed state of web service requests and responses
@@ -120,18 +120,17 @@ It's the job of this object to:
 ### The Model Object
 
 
-Sometimes referred to as a ___Transfer Object___ (or a ___TO__), a ___Value Object___, or a ___Data Transfer Object (DTO)___, model objects are an important component of efficient network service and data persistence layers.
+Sometimes referred to as a ___Transfer Object___ (or a ___TO___), a ___Value Object___, or a ___Data Transfer Object___ (___DTO___), model objects are an important component of efficient network service and data persistence layers.
 
-Model objects most often represent in software - or “model” - a single, simplified instance of a *thing* that exists in the real world such as a person, product, transaction, and so on.
+In software, model objects most often represent - or “model” - a single, simplified instance of a *thing* that exists in the real world such as a person, product, transaction, and so on.
 
 Model objects can be passed around your code and used to simplify data manipulation in a variety operations:
 - data retrieval (fetch)
 - data storage/persistence
 - user presentation (for example, to populate individual table cell data)
 
-…and much more.
 
-This is a classic, simple example of a `user` represented (modeled) as a Codable struct with 3 properties:
+Here is a classic, simple example of a `user` represented (modeled) as a Codable struct with 3 properties:
 
 ```Swift
 struct User:Codable {
@@ -147,7 +146,7 @@ struct User:Codable {
 Required resources:
 1. Download the base app, [PhotoMatic](https://github.com/VanderDev1/PhotoMatic_L09.git)
 
-**Individual**
+### - Individual Activity -
 
 __Scenario:__
 - Congratulations! You just got hired at a new firm. But you "inherited" code created by several previous developers who no longer work at the company.
@@ -172,7 +171,7 @@ __Scenario:__
 
 
 <!-- Insert code here -->
-## HTTP Post Requests
+## HTTP Post Requests (15 mins)
 
 To add a new item to a web service, we use the HTTP protocol's **POST method.**
 
@@ -214,7 +213,7 @@ Since we are performing a POST here, we will set the httpMethod property to `url
 
 Next, use the URLRequest `setValue(_:forHTTPHeaderField:)` method to set the values of any HTTP headers you want to provide (except the `Content-Length` header. The session automatically figures out content length  from the size of your data).
 
-___`Content-Type`___
+___`Content-Type` Header Field___
 
 We use `Content-Type` header to indicate to the web service API the type of data we are sending.
 
@@ -224,7 +223,7 @@ In our case, we want to set the `Content-Type` to `JSON`.
   request.setValue(“application/json”, forHTTPHeaderField: “Content-Type”)
 ```
 
-___`Accept`___
+___`Accept` Header Field___
 
 The `Accept` request header field is used to specify certain **media types** that are acceptable for the **response** object returned by the web service.
 
@@ -245,7 +244,7 @@ A valid API Key is commonly required for the "Authorization" header field:
 ```
 
 
-###  3: Convert Data to JSON Format
+### Step 3: Convert Data to JSON Format
 
 To convert our data object to the JSON format, we will use a built-in function of `JSONSerialization:`
 
@@ -298,7 +297,7 @@ URLSession.shared.dataTask(with: request, completionHandler: { (data, response, 
 
 **Note:** This example uses the alternate ___shared___ dataTask type: `URLSession.shared.dataTask()`
 
-#### Putting It Altogether
+### Put It Altogether
 
 The complete code for an HTTP POST request function would resemble this:
 
@@ -341,14 +340,13 @@ The complete code for an HTTP POST request function would resemble this:
 ```
 
 
-
-## The Request Builder
+## The Request Builder (5 min)
 
 The **Builder** design pattern is a type of **Creational** design pattern that is used to create complex objects step-by-step.
 
 It offers:
-- ___Flexibility___ - Easily create different representations of the same complex object
-- ___Simplicity___ - Simplifies the creation of a complex object.
+- **Flexibility** - Can easily create different representations of the same complex object
+- __Simplicity__ - It simplifies the creation of a complex object
 
 HTTP request methods GET, POST, DELETE, and so on, are constructed using parameters common to them all. Thus, HTTP requests offer a prime opportunity to employ the Builder pattern to create different types of request objects with commonly shared parameters.
 
