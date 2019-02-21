@@ -23,11 +23,16 @@
 
 ## Why you should know this
 
-xxx
+As a professional iOS developer, you will want to...
 
-<!-- puts request logic into a separate object, and we call this object a store (Figure 28.4). Using a store object minimizes redundant code and simplifies the code that fetches and saves data. Most importantly, it moves the logic for dealing with an external source into a tidy class with a clear and focused goal. This makes code easier to understand, which makes it easier to maintain and debug, as well as share with other programmers on your team.
+1. Design and implement code that:
+- Epitomizes solid application design Principles
+- Is organized, easy to understand, and easy for you and your team mates to debug, extend and maintainability
 
--->
+2. Discern the value of new architectural patterns such as MVVM and VIPER so that you can choose what works best for your app’s design.
+
+3. Demonstrate to potential employers your understanding of best practices for organizing code and programming principles and design patterns:
+
 
 
 ## Class Learning Objectives/Competencies (5 min)
