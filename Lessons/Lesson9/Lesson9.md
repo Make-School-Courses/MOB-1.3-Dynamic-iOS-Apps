@@ -27,7 +27,7 @@ As a professional iOS developer, you will want to...
 
 2. Discern the value of new architectural patterns such as MVVM and VIPER so that you can choose what works best for your app’s design.
 
-3. Demonstrate to potential employers your understanding of best practices for organizing code and programming principles and design patterns:
+3. Demonstrate to potential employers your understanding of best practices for organizing code, as well as core programming principles and design patterns.
 
 
 
