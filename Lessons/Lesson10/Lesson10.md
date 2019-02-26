@@ -48,7 +48,10 @@ Something to note is that we don't need to instantiate a class to use Alamofire'
 
 ## In Class Activity I (25 min)
 
-1. Create a new project copy the following code in your ViewController. This is a network request that looks like the type of requests we've used so far.
+1. Using the pre-made starter app [Lesson10](https://github.com/VanderDev1/Lesson10.git), copy the following code in your ViewController. This is a network request that looks like the type of requests we've used so far.
+
+<!-- Create a new project copy the following code in your ViewController. This is a network request that looks like the type of requests we've used so far.
+-->
 
 ```Swift
         let endpoint: String = "https://jsonplaceholder.typicode.com/todos/1"
