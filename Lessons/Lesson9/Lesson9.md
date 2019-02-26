@@ -373,7 +373,7 @@ Instead of rewriting the parameters for a separate request object for each HTTP 
 
 ## Challenge
 
-**Required Resources:**
+### Required Resources:
 1. The pre-made [starter app for Lesson 10](https://github.com/VanderDev1/Lesson10.git)
 
 2. [JSONPlaceholder API](https://jsonplaceholder.typicode.com)  - a free "Fake Online REST API for Testing and Prototyping"
@@ -382,7 +382,7 @@ For this challenge, we will ___simulate___ an HTTP **POST** request to the JSONP
 
 **TIP:** The JSONPlaceholder API's home page provides a link to their "How to" page, which provides clues about how to create a successful POST request to their `todos` endpoint. But the code featured there is *JavaScript, not Swift...*
 
-**Your Assignment:**
+### Your Assignment:
 
 Inside the `URLSessionApiService` class of the pre-made [starter app for Lesson 10](https://github.com/VanderDev1/Lesson10.git), you are to **create a function** that **executes a POST request** to the https://jsonplaceholder.typicode.com/todos endpoint.
 <!-- Create a new Xcode **single view** project ___to execute a POST request___ to the https://jsonplaceholder.typicode.com/todos -->
