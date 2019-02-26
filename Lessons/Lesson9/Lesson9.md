@@ -371,7 +371,7 @@ Instead of rewriting the parameters for a separate request object for each HTTP 
 
 
 
-## Challenges
+## Challenge
 
 **Required Resources:**
 1. The pre-made [starter app for Lesson 10](https://github.com/VanderDev1/Lesson10.git)
@@ -384,15 +384,15 @@ For this challenge, we will ___simulate___ an HTTP **POST** request to the JSONP
 
 **Your Assignment:**
 
-1. Inside the `URLSessionApiService` class of the pre-made [starter app for Lesson 10](https://github.com/VanderDev1/Lesson10.git), you are to *create* a ___function___ to *execute* a ___POST request___ to the https://jsonplaceholder.typicode.com/todos endpoint.
+Inside the `URLSessionApiService` class of the pre-made [starter app for Lesson 10](https://github.com/VanderDev1/Lesson10.git), you are to *create* a ___function___ to *execute* a ___POST request___ to the https://jsonplaceholder.typicode.com/todos endpoint.
 <!-- Create a new Xcode **single view** project ___to execute a POST request___ to the https://jsonplaceholder.typicode.com/todos -->
 
 <!--
 - For now, your app should have a single button entitled "POST" which will call your POST request functions
 -->
-- The app is already set up with a button to invoke your POST request function
+*Hint:* The app is already set up with a button to invoke your POST request function
 
-2. Creating the POST request function
+1. Creating the POST request function
 
 Your POST request should pass data for these parameters:
 - “userId"
@@ -416,11 +416,11 @@ https://jsonplaceholder.typicode.com/todos/6
 }
 ```
 
-3. Validating Results:
+2. Validating Results:
 
 - errors or successful results<sup>[2](#footnote2)</sup> can be found in your Xcode Debug log, so be sure to print messages to signify *success* or *failure* conditions...
 
-4. In constructing your project, follow the practices we learned today for constructing an API Layer:
+3. In constructing your project, follow practices we learned for constructing an API Layer...
 
 <!--
 - Create a Request Builder class to supply the configured request for the POST request (for now -- we will expand this class later in the course)
