@@ -392,7 +392,7 @@ Inside the `URLSessionApiService` class of the pre-made [starter app for Lesson 
 -->
 **Hint:** The app is already set up with a button to invoke your POST request function
 
-**TODO #1** Create the POST request function:
+**TODO #1 - ** Create the POST request function:
 
 Your POST request should pass data for these parameters:
 - “userId"
@@ -416,7 +416,7 @@ https://jsonplaceholder.typicode.com/todos/6
 }
 ```
 
-**TODO 2.** Validate Results:
+**TODO #2 -** Validate Results:
 
 - errors or successful results<sup>[2](#footnote2)</sup> can be found in your Xcode Debug log, so be sure to print messages to the log to signify *success* or *failure* conditions...
 
