@@ -202,6 +202,7 @@ Just as we did with our HTTP GET request, we first need to create and configure 
   var request = URLRequest(url: url!)
 ```
 
+**Note:** This example uses the alternate ___shared___ URLSession type: `URLSession.shared`
 
 <!-- Insert code sample here -->
 
