@@ -282,7 +282,7 @@ The `options` array is left blank here, but it can be used to print or to sort t
 Finally, the dataTask will execute our POST request with the our specified header values, and its completion block closure will be executed after the response is returned from the web service.
 
 ```Swift
-URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
            if error != nil { print(“POST Request: Communication error: \(error!)“) }
            if data != nil {
                do {
@@ -302,8 +302,9 @@ URLSession.shared.dataTask(with: request, completionHandler: { (data, response, 
            }
        }).resume()
 ```
-
+<!--
 **Note:** This example uses the alternate ___shared___ dataTask type: `URLSession.shared.dataTask()`
+-->
 
 ### Put It Altogether
 
@@ -325,7 +326,7 @@ The complete code for an HTTP POST request function would resemble this:
                 request.httpBody = jsonParams
             } catch { print(“Error: unable to add parameters to POST request.“)}
 
-        URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+        session.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
             if error != nil { print(“POST Request: Communication error: \(error!)“) }
 
             if data != nil {
@@ -358,7 +359,7 @@ It offers:
 
 HTTP request methods GET, POST, DELETE, and so on, are constructed using parameters common to them all. Thus, HTTP requests offer a prime opportunity to employ the Builder pattern to create different types of request objects with commonly shared parameters.
 
-Instead of rewriting the parameters for a separate request object for each HTTP method, a more efficient design is to design a single RequestBuilder object that reuses the commonly shared reqeust parameters, then call a separate function on the RequestBuilder object to create a request for a GET or a POST, respectively.
+Instead of rewriting the parameters for a separate request object for each HTTP method, a more efficient design is to design a single RequestBuilder object that reuses the commonly shared request parameters, then call a separate function on the RequestBuilder object to create a request for a GET or a POST, respectively.
 
 
 <!-- Insert code sample here -->
@@ -428,7 +429,7 @@ https://jsonplaceholder.typicode.com/todos/6
 
 ## Additional Resources
 
-1. [Slides](https://docs.google.com/presentation/d/11xY23K0gdL2KZgCEZyNi8GnFHGm3W7HqUr4d_9Pkd-A/edit?usp=sharing)
+1. [Slides](https://docs.google.com/presentation/d/11xY23K0gdL2KZgCEZyNi8GnFHGm3W7HqUr4d_9Pkd-A/edit?usp=sharingre)
 2. <a name="footnote1"><sup>1</sup></a>[Domain model - A Wikipedia article](https://en.wikipedia.org/wiki/Domain_model)
 3. [Separation of Concerns (withJSONObject) - from Wikepedia](https://en.wikipedia.org/wiki/Separation_of_concerns)
 4. [VIPER Design Pattern - an Article](https://medium.com/yay-its-erica/intro-to-the-viper-design-pattern-swift-3-32e3574dee02)
