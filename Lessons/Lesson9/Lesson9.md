@@ -392,7 +392,7 @@ Inside the `URLSessionApiService` class of the pre-made [starter app for Lesson 
 -->
 **Hint:** The app is already set up with a button to invoke your POST request function
 
-**TODO #1 - ** Create the POST request function:
+**TODO #1 -** Create the POST request function:
 
 Your POST request should pass data for these parameters:
 - “userId"
