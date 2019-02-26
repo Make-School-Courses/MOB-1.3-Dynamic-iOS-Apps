@@ -71,7 +71,7 @@ Students by the end of the course will be able to ...
 [Network Requests with URLSession]: Lessons/Lesson7/Lesson7.md
 [Requests with authentication]: Lessons/Lesson8/Lesson8.md
 [Building a networking domain]: Lessons/Lesson9/Lesson9.md
-[Firebase + Alamofire]: Lessons/Lesson10.md
+[Firebase + Alamofire]: Lessons/Lesson10/Lesson10.md
 [Sockets]: Lessons/Lesson11.md
 [Closures tutorial]: https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC
 [Communication Patterns exercise]: https://github.com/amelinagzz/pom-starter
