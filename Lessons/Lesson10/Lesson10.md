@@ -156,7 +156,10 @@ Parameters: ["title": "Super Cool Post", "completed": 0, "userId": 8]
 **Q:** What are the pros and cons of using it?
 
 ## Firebase
-<!--TODO: Quick intro on what Firebase is and what we can use it for -->
+Firebase is an app development platform that provides developers many tools to build high quality apps that can scale easily.
+
+It has products to store data, handle notifications, do A/B testing, analytics, authentication and more. The ones we'll learn how to use today are the RealTime Database and Storage. These tools will enable us to read and write to a database. 
+
 
 ## In Class Activity II
 - [Loaner app + Firebase](assets/FirebaseGuide.md) activity.
