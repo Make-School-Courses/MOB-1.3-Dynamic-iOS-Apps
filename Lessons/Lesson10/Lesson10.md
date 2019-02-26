@@ -5,13 +5,14 @@
 | **Elapsed** | **Time**  | **Activity**              |
 | ----------- | --------- | ------------------------- |
 | 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:10      | Initial Exercise          |
-| 0:30        | 0:20      | Topic                     |
-| 0:30        | 0:20      | In Class Activity I       |
-| 0:50        | 0:10      | BREAK                     |
-| 1:10        | 0:30      | In Class Activity II      |
-| 1:40        | 0:05      | Wrap Up                   |
-| TOTAL       | 1:45      |                           |
+| 0:05        | 0:05      | Initial Exercise          |
+| 0:10        | 0:05      | Alamofire                 |
+| 0:15        | 0:25      | In Class Activity I       |
+| 0:40        | 0:10      | BREAK                     |
+| 0:50        | 0:05      | Firebase                  |
+| 0:55        | 0:50      | In Class Activity II      |
+| 1:45        | 0:05      | Wrap Up                   |
+| TOTAL       | 1:50      |                           |
 
 ## Why you should know this
 
@@ -163,6 +164,7 @@ Parameters: ["title": "Super Cool Post", "completed": 0, "userId": 8]
 - Keep working on your project.
 
 ## Additional Resources
+[Slides](https://docs.google.com/presentation/d/19Zmcl_UNufLoN_buWqD1es31rw6JHa4boFu2XlFoOF8/edit?usp=sharing)<br>
 [Alamofire](https://github.com/Alamofire/Alamofire)<br>
 [JSON placeholder](https://jsonplaceholder.typicode.com)<br>
 [Alamofire walkthrough](https://grokswift.com/rest-with-alamofire-swiftyjson/)<br>
