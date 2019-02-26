@@ -390,7 +390,7 @@ Inside the `URLSessionApiService` class of the pre-made [starter app for Lesson 
 <!--
 - For now, your app should have a single button entitled "POST" which will call your POST request functions
 -->
-**Hint:** The app is already set up with a button to invoke your POST request function
+___Hint:___ The app is already set up with a button to invoke your POST request function
 
 **TODO #1 -** Create the POST request function:
 
