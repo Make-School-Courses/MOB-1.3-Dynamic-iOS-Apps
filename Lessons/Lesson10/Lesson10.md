@@ -101,7 +101,7 @@ We are going to write the same request using Alamofire.
 
 1. Go to [Alamofire](https://github.com/Alamofire/Alamofire)'s website and follow the instructions to include the library in your project. You will need to create a podfile and install the library via Cocoapods.
 
-1. Now go back to your ViewController and import Alamofire.ab
+1. Now go back to your ViewController and import Alamofire
 1. To make a simple request in Alamofire you will use the following code:
 ```Swift
 Alamofire.request(endpoint).responseJSON { response in
@@ -158,7 +158,7 @@ Parameters: ["title": "Super Cool Post", "completed": 0, "userId": 8]
 ## Firebase
 Firebase is an app development platform that provides developers many tools to build high quality apps that can scale easily.
 
-It has products to store data, handle notifications, do A/B testing, analytics, authentication and more. The ones we'll learn how to use today are the RealTime Database and Storage. These tools will enable us to read and write to a database. 
+It has products to store data, handle notifications, do A/B testing, analytics, authentication and more. The ones we'll learn how to use today are the RealTime Database and Storage. These tools will enable us to read and write to a database.
 
 
 ## In Class Activity II
