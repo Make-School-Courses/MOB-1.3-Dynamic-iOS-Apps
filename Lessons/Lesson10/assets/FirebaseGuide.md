@@ -167,3 +167,27 @@ To this point the app can now create a new entry, modify values and get real tim
 - Once the item is created we need to dismiss the viewControllers to get bak to the main screen.
 - There is a detail view when you select items from the first screen. This view has not been updated to use the correct data. You will need to handle the CNContact type to be able to call the person that has the loaned item.
 - There is an option to mark the item as returned and also an option to delete the item. Both don't work yet. Get this functionality working with Firebase.
+
+Helper function you might need:
+
+```Swift
+ func getContactWithID(contactID: String) -> CNContact {
+        
+        let predicate = CNContact.predicateForContacts(withIdentifiers: [contactID])
+        let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactEmailAddressesKey, CNContactPhoneNumbersKey]
+        var contacts = [CNContact]()
+        let contactsStore = CNContactStore()
+        
+        do {
+            contacts = try contactsStore.unifiedContacts(matching: predicate, keysToFetch: keys as [CNKeyDescriptor])
+            if contacts.count == 0 {
+                print("No contacts found.")
+            }
+        }
+        catch {
+            print("Error fetching contacts.")
+        }
+        let contact = contacts[0]
+        return contact
+    }
+ ```
