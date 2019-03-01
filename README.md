@@ -59,8 +59,8 @@ Students by the end of the course will be able to ...
 |  9 | Thursday, February 21             | [Building a networking domain] | ||
 |  10 |  Tuesday, February 26             | [Firebase + Alamofire] |        FB + AF exercise          |  Class 12 |
 |  11 | Thursday, February 28             | [Sockets] |                     Sockets activity          |  Class 12 |
-|  12 |  Tuesday, March 5             | Final Exams | ||
-|  13 | Thursday, March 7             | Final Class/Presentations | ||
+|  12 |  Tuesday, March 5             | Workshop class/Review | ||
+|  13 | Thursday, March 7             | Final Exam | ||
 
 [Functions and Closures]: Lessons/Lesson1/Lesson1.md
 [Closures and callbacks]: Lessons/Lesson2/Lesson2.md
