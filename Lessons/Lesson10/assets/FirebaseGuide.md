@@ -95,7 +95,18 @@ As you can notice from the creation method, the way we navigate items in the dat
 ### Firebase Storage
 So far, our method saves everything but the image. And this is something we must include. To deal with images we use Firebase Storage. You can find it in the left menu, below Database.
 
-How it works is that it saves files in folders and you decide how to structure the folder hierarchy. For now we'll have a single folder called "items" and each image will have the key/id as the file name.
+How it works is that it saves files in folders and you decide how to structure the folder hierarchy. For now we'll have a single folder called "items" and each image will have the key/id as the file name. Again, change the rules on the Storage so we can read and write without authenticating the user.
+
+Changing the rules:
+```
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write;
+    }
+  }
+}
+```
 
 ```Swift
 func uploadProfileImage(_ image:UIImage, key: String, completion: @escaping ((_ url:URL?)->())) {
