@@ -4,7 +4,7 @@
 
 *Final Exam Format:* Your final exam will be on March 7.  
 
-**Topic 1:  Closures **
+**Topic 1:  Closures**
 
 Ways we learned about this in the course
 - Class 1 and 2 covered closures.
@@ -19,7 +19,7 @@ Ways you can demonstrate your skill / knowledge level of this outcome
 - Understand what capturing values mean.
 - Know the difference between escaping an non escaping closures.
 
-**Topic 2: Prococols and delegation **
+**Topic 2: Prococols and delegation**
 
 Ways we learned about this in the course
 - Class 3 covered delegation.
@@ -28,7 +28,7 @@ Ways you can demonstrate your skill / knowledge level of this outcome
 - Implement delegates in code.
 - Explain how delegation works in iOS.
 
-**Topic 3: Communication Patterns **
+**Topic 3: Communication Patterns**
 
 Ways we learned about this in the course
 - Class 4 covered multiple communication Patterns.
@@ -38,7 +38,7 @@ Ways you can demonstrate your skill / knowledge level of this outcome
 - Identify the Target-action pattern for event handling.
 - Undestand the different components of Notifications and how they work.
 
-**Topic 4: Memory Management **
+**Topic 4: Memory Management**
 
 Ways we learned about this in the course
 - Class 5 covered topic in memory management.
@@ -49,7 +49,7 @@ Ways you can demonstrate your skill / knowledge level of this outcome
 - Identify and resolve reference cycles.
 - Use built in tools and techniques to find memory leaks.
 
-**Topic 5: Network requests **
+**Topic 5: Network requests**
 
 Ways we learned about this in the course
 - Classes 6 to 10 covered networking.
