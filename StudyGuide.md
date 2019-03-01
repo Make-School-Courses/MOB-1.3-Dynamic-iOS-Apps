@@ -19,7 +19,7 @@ Ways you can demonstrate your skill / knowledge level of this outcome
 - Understand what capturing values mean.
 - Know the difference between escaping an non escaping closures.
 
-**Topic 2: Prococols and delegation**
+**Topic 2: Protocols and delegation**
 
 Ways we learned about this in the course
 - Class 3 covered delegation.
