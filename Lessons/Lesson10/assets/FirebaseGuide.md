@@ -175,7 +175,6 @@ This automatic update in data is what makes Firebase great, it allows apps to ha
 
 To this point the app can now create a new entry, modify values and get real time updates. But there is still a lot more to fix.
 
-- Once the item is created we need to dismiss the viewControllers to get bak to the main screen.
 - There is a detail view when you select items from the first screen. This view has not been updated to use the correct data. You will need to handle the CNContact type to be able to call the person that has the loaned item.
 - There is an option to mark the item as returned and also an option to delete the item. Both don't work yet. Get this functionality working with Firebase.
 
