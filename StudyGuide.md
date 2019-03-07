@@ -45,7 +45,7 @@ Ways we learned about this in the course
 - The first tutorial covered memory management basics.
 
 Ways you can demonstrate your skill / knowledge level of this outcome
-- Understand what weak, strong, unwoned are, how arey similar/different.
+- Understand what weak, strong, unowned are, how arey similar/different.
 - Identify and resolve reference cycles.
 - Use built in tools and techniques to find memory leaks.
 
