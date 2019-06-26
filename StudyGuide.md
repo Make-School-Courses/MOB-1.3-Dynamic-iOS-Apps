@@ -2,7 +2,7 @@
 
 *Overview:* Your final exam will focus on the learning outcomes for this course.  Review each outcome thoroughly and ask questions if you are unclear about the outcome or your level of understanding.
 
-*Final Exam Format:* Your final exam will be on March 7.  
+*Final Exam Format:* Your final exam will be on July 2nd.  
 
 **Topic 1:  Closures**
 
