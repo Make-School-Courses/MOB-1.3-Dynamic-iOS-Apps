@@ -11,16 +11,16 @@ Write a closure that takes two integers and returns the sum of the integers. Ass
 
 ### Exercise 3
 
-Write a closure that returns the value 42, without assigning the closure to a variable. Immediately call the closure and also ignore the return value from the closure.
-
-### Exercise 4
-
 Sort the array:
 
 ```Swift
 let numbers = [22, 10, 42, 100, 8, 4]
 ```
 Use a closure and the `sorted(by:)` method.
+
+### Exercise 4
+
+Write a function that takes a closure as input and calls that closure.
 
 ### Exercise 5
 
