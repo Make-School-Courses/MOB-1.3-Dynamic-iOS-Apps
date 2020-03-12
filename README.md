@@ -42,9 +42,9 @@ Students by the end of the course will be able to ...
 |  9  |  Mon, Apr 27   | [Firebase]                              |
 |  10 |  Wed, Apr 30   | [Building a networking layer Pt 1]      |       
 |  11 |  Mon, May 4    | [Building a networking layer Pt 2]      |                  
-|  12 |  Wed, May 6    | [Lab + Review]                          |                    
-|  13 |  Mon, May 11   | [Final Exam]                            |                    
-|  14 |  Wed, May 13   | [Presentations]                         |                     
+|  12 |  Wed, May 6    | Lab + Review                            |                    
+|  13 |  Mon, May 11   | Final Exam                              |                    
+|  14 |  Wed, May 13   | Presentations                           |                     
 
 [Closures and callbacks]: Lessons/Lesson2/Lesson2.md
 [Protocols & Delegation]: Lessons/Lesson3/Lesson3.md
