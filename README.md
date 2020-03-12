@@ -66,11 +66,11 @@ Students by the end of the course will be able to ...
 | Final Project                  |  Wed, Apr 22  |  Fri, May 15 | Link on tracker                      |
 | Moviefy App                    |  Wed, Apr 30  |  Wed, May 6  | Link on tracker                      |
 
-[Pomodoro App](https://github.com/amelinagzz/pom-starter)
-[Giphy tutorial]()
-[Product Hunt tutorial](https://www.makeschool.com/academy/track/product-hunt-api-tutorial)
-[Moviefy App]()
-[Final project]()
+[Pomodoro App]:(https://github.com/amelinagzz/pom-starter)
+[Giphy tutorial]:()
+[Product Hunt tutorial]:(https://www.makeschool.com/academy/track/product-hunt-api-tutorial)
+[Moviefy App]:()
+[Final project]:()
 
 - [Tutorial for Closures & ARC](https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC)
 
