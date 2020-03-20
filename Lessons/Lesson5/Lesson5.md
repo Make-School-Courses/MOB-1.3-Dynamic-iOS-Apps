@@ -48,15 +48,17 @@ In Swift, you do not need to do anything to manage memory used by value types.
 
 <!-- v -->
 
-*Below is a general list of Value and Reference Types in Swift. To learn more, see the ARC section of the Functions Closures and ARC playground from previous lessons, or browse the topic on the Web.*
+*Below is a general list of Value and Reference Types in Swift.*
 
 ![syntax](assets/value_and_ref_types.png)
 
 <!-- > -->
 
-## Reference Types
+## Reference Types & ARC
 
-But passing around an instance of a *reference type* (class, closure) or storing it as a property does not copy it — it creates an additional reference to the same instance.
+With reference types its a different story.
+
+Passing around an instance of a *reference type* (class, closure) or storing it as a property does not copy it — it creates an additional reference to the same instance.
 
 In other words, you are creating an additional reference to the same memory location on the heap.
 
@@ -132,33 +134,43 @@ Part 2 - In Pairs
 
 In 2011, Apple introduced Automated Reference Counting (ARC) for Objective-C.
 
-Swift is built on top of ARC.
+Watch this video on ARC.
 
+<iframe src="https://youtube.com/embed/D2FWPh0IbFA" data-autoplay  width="700" height="500"></iframe>
+
+
+<aside class="notes">
 With ARC, the compiler is now responsible for analyzing your code and for managing reference counts of class instances — so you do not have to.
 
 However, because Swift handles memory automatically, it is still critical to understand how iOS manages memory, as there are some common mistakes that can cause memory issues…
+</aside>
 
 <!-- > -->
 
 ## Strong References & Ownership
 
+<iframe src="https://youtube.com/embed/usvj1E8mGyI" data-autoplay  width="700" height="500"></iframe>
+
+<aside class="notes">
 A **strong** reference increments the reference count of the instance to which it points. When one instance of a reference type (A) has a reference to another (B), we say that A is an “owner” of B.
 
 By retaining a reference to B, A protects B from being deallocated by ARC.
 
-![syntax](assets/Strong_refA_to_refB.png)
-
 By default, all references you create are strong references.
+</aside>
 
 <!-- > -->
 
 ### Strong Reference Cycles
 
+<iframe src="https://youtube.com/embed/9g23hKXZWEg" data-autoplay  width="700" height="500"></iframe>
+
+<aside class="notes">
 If two reference types each hold strong references to each other — if A retains a reference count for B, and B also retains A — they have a strong reference cycle (aka, a retain cycle).
 
-![syntax](assets/strong_ref_cycle.png)
-
 Strong reference cycles are one type of memory leak.
+
+</aside>
 
 <!-- > -->
 
@@ -178,27 +190,26 @@ class Apartment {
 
 ## How to Break Strong Reference Cycles
 
-**Weak References**
+<iframe src="https://youtube.com/embed/3uS6IbDHeTA" data-autoplay  width="700" height="500"></iframe>
 
+
+<aside class="notes">
 A variable marked with the *weak* keyword does not take ownership of the object it refers to — it does not increment the reference count of its referenced object.
 
-In the example above, if we add the *weak* attribute to the Apartment variable in the Person class, and the Apartment instance is successfully deallocated, the Person class's reference to it will now be `nil`.
+In the example above, if we add the *weak* attribute to the tenant variable in the Apartment class, and the Person instance is successfully deallocated, the Apartment class's reference to it will now be `nil`.
 
-As a *weak* variable, Person does not protect Apartment from being deallocated by ARC.
-
-![syntax](assets/weak_ref2.png)
-
-This ensures that when you access a weak reference, it will either be a valid object, or `nil`.
+When you access a weak reference, it will either be a valid object, or `nil`.
+</aside>
 
 <!-- > -->
 
 ```Swift
 class Person {
-    weak var apartment: Apartment?
-    }
+     var apartment: Apartment?
+}
 
 class Apartment {
-    var tenant: Person?
+    weak var tenant: Person?
 }
 ```
 
