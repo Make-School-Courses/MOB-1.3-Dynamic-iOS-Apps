@@ -116,7 +116,7 @@ class Player {
 
 <!-- > -->
 
-## Leaky Starhip
+## Leaky Starship
 
 Part 1 - Individual
 1. Download the starter app, [LeakyStarship](https://github.com/VanderDev1/LeakyStarship)
@@ -137,7 +137,6 @@ In 2011, Apple introduced Automated Reference Counting (ARC) for Objective-C.
 Watch this video on ARC.
 
 <iframe src="https://youtube.com/embed/D2FWPh0IbFA" data-autoplay  width="700" height="500"></iframe>
-
 
 <aside class="notes">
 With ARC, the compiler is now responsible for analyzing your code and for managing reference counts of class instances — so you do not have to.
@@ -251,7 +250,16 @@ Individual
 
 ## Closures and Retain Cycles
 
-VIDEO
+Read [this article](https://www.avanderlee.com/swift/weak-self/) that explains when to use `weak self` and `unowned self`. While you read, discover the answers to:
+
+- Why does a retain cycle happens in the Blog/Blogger example?
+- How can we solve the retain cycle?
+- What is `weak self` inside a closure?
+- When should we NOT use `weak self`?
+- How does a retain cycle occurs in a closure?
+- Where would you use `unowned` over `weak`?
+- Why don’t we need this with value types like structs?
+
 
 <!-- > -->
 
@@ -308,7 +316,6 @@ Individual
 <!-- > -->
 
 ## Additional Resources
-- [Slides](https://drive.google.com/open?id=1TVRPRTP3KguK0HHIGitffBEW-2ojjjaAQPc4Mpk84Mg)
 - [Weak vs Unowned in a closure](https://www.uraimo.com/2016/10/27/unowned-or-weak-lifetime-and-performance/) (everything that comes before the Performance section)
 - [Strong, Weak & Unowned - an article](https://krakendev.io/blog/weak-and-unowned-references-in-swift)
 - [Avoiding Retain Cycles - an article](https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef)
@@ -316,3 +323,4 @@ Individual
 - [Reference Types & Value Types in Swift - an article](https://www.raywenderlich.com/9481-reference-vs-value-types-in-swift)
 - [Deinitialization to Deallocate Memory Space - a tutorial from tutorialspoint.com](https://www.tutorialspoint.com/swift/swift_deinitialization.htm)
 - [Manual Memory Management in iOS (Pre-ARC) - article](https://www.tomdalling.com/blog/cocoa/an-in-depth-look-at-manual-memory-management-in-objective-c/)
+- [Apple Docs](https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html)
