@@ -130,7 +130,7 @@ After you are done writing the structure use the [JSON validator](https://jsonfo
 
 ## Film Locations activity 🎬
 
-Follow [this guide]() to learn how to parse JSON and use it in an Xcode project.
+Follow [this guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson6/assignments/FilmLocations.md) to learn how to parse JSON and use it in an Xcode project.
 
 <!-- > -->
 
@@ -263,7 +263,7 @@ We can control how a type encodes itself by writing a custom CodingKeys enum.
 
 ## Using the Codable Protocol
 
-Follow [this guide]() to practice how to use the Codable protocol.
+Follow [this guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson6/assignments/Codable.md) to practice how to use the Codable protocol.
 
 <!-- > -->
 

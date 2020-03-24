@@ -4,17 +4,17 @@ San Francisco is a great place to film movies. 🎬 Or at least that's what [thi
 
 Today we will build an Xcode project listing all the locations that were once used for a film.
 
-#### 1. Create a new Xcode project
+### 1. Create a new Xcode project
 
 Name it **FilmLocations** and make a repo in Github for it. You will turn in the link for the finished activity in the end.
 
-#### 2. Download the locations.json file
+### 2. Download the locations.json file
 
 Today we will be using the data from the database that was collected in [this file](locations.json). Download the file and drag it to the project inside Xcode.
 
 Take a look at it, notice how data is structured using JSON. Explore the keys, values, objects, arrays.
 
-#### 3. Reading from a file
+### 3. Reading from a file
 
 We are not fetching data from a server. To have reliable data to practice with JSON, we will be using our static data from `locations.json`. So we should learn how to fetch data from a file inside our project. Create a method to retrieve data from a file.
 
@@ -41,7 +41,7 @@ Don't forget to call the method in viewDidLoad `getDataFromFile("locations")`
 
 You saw it? Cool, let's keep going.
 
-#### 4. Getting the contents
+### 4. Getting the contents
 
 We need to get the contents of the file so we can show it in our app.
 
@@ -91,7 +91,7 @@ We should use this data to create our own objects, that's how we know we can pop
 
 **This is a good time to commit and push.**
 
-#### 5. Creating the FilmEntry struct
+### 5. Creating the FilmEntry struct
 
 Create a new file `FilmEntry` with the following properties:
 
@@ -110,7 +110,7 @@ Go back to your main ViewController and add a property in the class that will ho
 var films:[FilmEntry] = []
 ```
 
-#### 6. Parsing objects
+### 6. Parsing objects
 
 Go to where you print the resulting JSON. Let's start getting the data out of it and turning it into objects.
 
@@ -143,7 +143,7 @@ This should populate our array.
 
 **This is a good time to commit and push.**
 
-#### 7. Creating the table view
+### 7. Creating the table view
 
 TableView drill time!
 
@@ -155,7 +155,7 @@ Think of **when should you call `reloadData`**.
 
 **This is a good time to commit and push.**
 
-#### 8. Using an extension
+### 8. Using an extension
 
 Our app works just fine. But let's try cleaning a bit our `getDataFromFile` method by moving the parsing of each object to the structure.
 

@@ -2,7 +2,7 @@
 
 We will keep on working with our Film Locations project. So just in case you haven't pushed it, do it now. You will need to demonstrate both implementations with your commit history. 🤓
 
-#### 1. FilmEntryCodable
+### 1. FilmEntryCodable
 
 Create a new file and call it struct `FilmEntryCodable`. This will be the same as our current `FilmEntry` but we will do it separately so you can keep both implementations.
 
@@ -17,7 +17,7 @@ struct FilmEntryCodable : Codable{
 
 The only difference so far is that we are conforming to the Codable protocol. Let's see how that's useful.
 
-#### 2. Using JSONDecoder
+### 2. Using JSONDecoder
 
 ```swift
 func getDataFromFile(_ fileName:String){
@@ -45,7 +45,7 @@ Run the app and see if our table still works.
 
 Its blank! Where did everything go?
 
-#### 3. Bad naming
+### 3. Bad naming
 
 The first issue with our attempt is that the names of our properties don't match the ones from the JSON structure. For instance, `firstActor` is not the same as `actor_1`.
 
@@ -58,7 +58,7 @@ enum CodingKeys:String,CodingKey
 }
 ```
 
-#### 4. 🐫 vs  🐍
+### 4. 🐫 vs  🐍
 
 In our code we follow camel case convention. But the JSON we get back is using snake case.
 
@@ -105,7 +105,7 @@ Try it now and you should see it working 😀
 
 **This is a good time to commit and push.**
 
-#### 6. Unexpected data types
+### 6. Unexpected data types
 
 Here's a scenario that you might find yourself in in the future. Our structure has the property `releaseYear` as a String. But it could be the case that the server sends it back as Int, and because it's a mismatch in types, our app will fail to decode it.
 
