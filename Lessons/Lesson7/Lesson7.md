@@ -48,7 +48,7 @@ At the end of this class, you should be able to...
 
 ## URLSession
 
-![urlsession](assets/urlsession.jpg) </br>
+![urlsession](assets/urlsession.JPG) </br>
 
 <aside class="notes">
 URLSession is responsible for sending and receiving HTTP requests.
@@ -96,7 +96,7 @@ To do the real work of fetching data or downloading/uploading files, a session c
 
 `URLSessionTask` is the *abstract class* which contains predefined network task behaviors.
 
-![sessiontask](assets/sessiontask.jpg) </br>
+![sessiontask](assets/sessiontask.JPG) </br>
 
 <!-- > -->
 
