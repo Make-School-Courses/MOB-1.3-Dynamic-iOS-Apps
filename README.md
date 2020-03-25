@@ -36,7 +36,7 @@ Students by the end of the course will be able to ...
 |  3  |  Mon, Apr 6    | [Communication patterns]                |  
 |  4  |  Wed, Apr 8    | [Memory Management]                     |
 |  5  |  Mon, Apr 13   | [JSON in iOS]                           |              
-|  6  |  Wed, Apr 15   | [Network Requests with URLSession]      |
+|  6  |  Wed, Apr 15   | [URLSession]      |
 |  7  |  Mon, Apr 20   | [Requests with authentication]          |
 |  8  |  Wed, Apr 22   | [Codable protocol]                      |
 |  9  |  Mon, Apr 27   | [Firebase]                              |
