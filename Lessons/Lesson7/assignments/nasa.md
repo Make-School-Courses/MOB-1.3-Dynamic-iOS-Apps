@@ -9,7 +9,7 @@ For this exercise we will use these 3 resources:
 
 Using the `Request inspection` endpoint on httpbin.org's tester page, we will send a `GET /headers` *request* that will return the `request's HTTP headers` in its `Response body`.
 
-![syntax](equest_inspection_endpoint.png) </br>
+![syntax](request_inspection_endpoint.png) </br>
 
 
 1. First, examine httpbin.org's exceptional, easy-to-use [web service testing interface](https://httpbin.org) in a web browser on your laptop.
