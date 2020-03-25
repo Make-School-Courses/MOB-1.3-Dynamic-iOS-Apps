@@ -46,14 +46,6 @@ At the end of this class, you should be able to...
 
 <!-- > -->
 
-
-2. Briefly share with each other any other tips on how to use built-in Xcode features to work more efficiently. Ideas could include:
-* how to navigate around your code
-* how to debug behaviors in your own code (i.e., using `p` or `po`, `print()` statements, and so on)
-
-
-<!-- > -->
-
 ## URLSession
 
 ![urlsession](assets/urlsession.jpg) </br>
@@ -301,7 +293,7 @@ Once we are clear on the steps required to process the returned JSON data, we wi
 
 ## NASA's picture of the day 🪐
 
-Follow instructions [here]().
+Follow instructions [here](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/nasa.md).
 
 <!-- > -->
 
@@ -409,7 +401,7 @@ And we want to properly respond to potential errors by wrapping our JSONSerializ
 
 ## HW assignment (lab suggestion)
 
-[Practicing requests with SWAPI]()
+[Practicing requests with SWAPI](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md)
 
 <!-- > -->
 
