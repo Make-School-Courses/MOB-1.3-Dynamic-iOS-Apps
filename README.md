@@ -67,7 +67,7 @@ Students by the end of the course will be able to ...
 | Moviefy App                    |  Wed, Apr 30  |  Wed, May 6  | Link on tracker                      |
 
 [Pomodoro App]:(https://github.com/amelinagzz/pom-starter)
-[Giphy tutorial]:()
+[Giphy tutorial]:(https://www.makeschool.com/academy/track/giphy-search-for-ios-hrs)
 [Product Hunt tutorial]:(https://www.makeschool.com/academy/track/product-hunt-api-tutorial)
 [Moviefy App]:()
 [Final project]:()
