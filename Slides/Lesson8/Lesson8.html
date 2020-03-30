@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Syllabus Template Slides</title>
+    <link rel="stylesheet" href="./../css/reveal.css" />
+    <link rel="stylesheet" href="./../css/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./../assets/Reveal/makeschool.css" />
+
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"># Requests with Authentication
+
+## Minute-by-Minute
+
+| **Elapsed** | **Time**  | **Activity**                        |
+| ----------- | --------- | ----------------------------------- |
+| 0:00        | 0:05      | Objectives                          |
+| 0:05        | 0:15      | Initial Exercise                    |
+| 0:20        | 0:25      | In Class Activity I                                |
+| 0:40        | 0:10      | BREAK                |
+| 0:50      | 0:45      | Cumulative Review |
+| 1:30        | 0:05      | Wrap Up                             |
+| TOTAL       | 1:35      |                                     |
+
+BREAK
+<!-- NOTE -- 40 minutes of this class will be for review of student projects -->
+
+
+## Why you should know this
+
+As the use of the **HTTP protocol** evolved, so have the efforts of Internet bad guys to exploit its **many inherent weaknesses** for their own nefarious ends.
+
+In fact, HTTP is such an insecure protocol that Apple has all but prohibited its use in iOS apps.
+
+Over the last few releases of iOS, Apple has redesigned iOS's networking frameworks to work natively with **HTTP's secure counterpart: HTTPS.**
+
+And the primary difference between HTTPS and HTTP?
+
+- *HTTPS requires Authentication.*
+
+Thus, every iOS developer *must* know how to implement HTTPS-based network calls with Authentication.
+
+
+<!-- TODO: find exact date and iOS version in which Apple made this changes -->
+
+
+## Class Learning Objectives/Competencies (5 min)
+
+1. Make authenticate API requests.
+2. Distinguish between OAUTH and API Key security models.
+
+
+## Initial Exercise (15 min)
+
+**Structured Sharing Exercise - Part 3 from last class**
+
+- Come up and review the sheets from last class.
+- Select the one or two sheets you agree with most.
+
+In Groups of 3 - (8 min)
+- Share your thoughts about your selection.
+
+As A Class - (6 min)
+- We'll choose 3 review topics. Volunteers to explain each.
+
+
+
+
+## Network Authentication for iOS
+
+There can be a variety of options for securing network communications over HTTPS, ranging from very simple to complex ones such as SAML or OAUTH login implementations.
+
+And Internet security techologies
+
+And, as an iOS developer, you will want to know more about those security strategies.
+
+But to start out, we will focus on the simplest and very commonly used
+
+
+Authentication for HTTPS comes in two distinct implementation types:
+
+- OAUTH - Is an "authorization framework enables third-party applications to obtain limited access to a web service." []
+- API Keys
+
+
+<!-- TOODO: research and briefly explain each type -->
+
+
+### OAUTH
+
+### API Keys
+
+
+## In Class Activity I (25 min)
+
+Resources needed:
+- Download [The PhotoMatic starter app](https://github.com/VanderDev1/PhotoMatic_Starter.git)
+- An API Key for the Flickr photo web service
+- The Flickr webservice endpoint URL and the name of the method required to access Flickr's free library of Interesting Photos.
+
+### Part 1 - Individual
+
+For this activity, we are going to access the Flickr photo sharing and management web service.
+
+
+
+But we'll need to obtain an API KEY from Flickr. Here's how:
+
+#### FIRST STEP: Create A Flickr Account
+
+1. Access the [Flickr API main page](https://www.flickr.com/services/api/)
+
+2. Then click on the API Keys URL to bring up the Login screen:
+
+![syntax](assets/Flickr_API_page.png)
+
+3. Find and select the `Not a Flickr member? Sign up here.` link at the bottom of the Login dialog box
+
+- Then, click the `I want to create a new Yahoo email address` and **use your Make School email address.**
+
+*<aside class="notes"><p>This interface is a little goofy, so ensure all fields are as you intend them to be before choosing <code>Continue.</code>*</p>
+<ol start="4">
+<li><p>After you create your account, you will need the API Keys URL again to apply for a key.</p>
+</li>
+<li><p>When prompted with the selection page, choose &quot;Apply For Non-Commercial Key&quot;</p>
+</li>
+</ol>
+<p>...and you should be presented with your brand-new, Flickr API Key!</p>
+<!-- TOODO: add last screen button  -->
+
+
+
+<h3 id="part-2---as-a-class">Part 2 - As A class</h3>
+<p>For this exercise, we need:</p>
+<ul>
+<li><a href="https://github.com/VanderDev1/PhotoMatic_Starter.git">The PhotoMatic starter app</a></li>
+<li>A valid Flickr API Key</li>
+<li>The base url for the Flickr API:
+<a href="https://api.flickr.com/services/rest">https://api.flickr.com/services/rest</a></li>
+<li>The Flickr method to call to download Interesting Photos: <code>flickr.interestingness.getList</code></li>
+</ul>
+<p>...and one student volunteer to &quot;drive&quot;</p>
+<ol>
+<li>STEP 1 - Run the starter app</li>
+</ol>
+<ul>
+<li>it will fail. Why?</li>
+</ul>
+<ol start="2">
+<li>STEP 2 - Fix it...</li>
+</ol>
+<!-- TOODO: add section on Copyright, license, cost, restrictions, etc.  -->
+
+<!-- TOODO: show Flickr license page graphic? and URL? -->
+
+
+
+
+<h3 id="part-3---in-pairs">Part 3 - In Pairs</h3>
+<p>In 5 minutes, examine the code in the <a href="https://github.com/VanderDev1/PhotoMatic_Starter.git">The PhotoMatic starter app</a></p>
+<p><strong>Q</strong> With respect to MVC, what do you notice about the code in this app?
+<strong>Q</strong> What might you do restructure it to optimize its readability, adherence to MVC, and so on?</p>
+<h2 id="cumulative-review-45-min">Cumulative Review (45) min)</h2>
+<p>As A class, let&#39;s review any popular iOS topics from recent class lessons, tutorials, or student projects.</p>
+<h2 id="challenges">Challenges</h2>
+<ol>
+<li>Add an Activity Indicator (aka, a &quot;spinner&quot;) to the project so that while every images is being downloaded the user is presented with a spinner indicating the network request for each image is in progress.</li>
+</ol>
+<h2 id="wrap-up-5-mins">Wrap Up (5 mins)</h2>
+<h2 id="additional-resources">Additional Resources</h2>
+<ol>
+<li><a href="https://docs.google.com/presentation/d/18RCyeINXP1lyrqAj0tTBmJrDD9z28ch5AF2iKNBTpss/edit?usp=sharing">Slides</a></li>
+<li><a href="https://hackernoon.com/mobile-api-security-techniques-682a5da4fe10">OAUTH</a></li>
+</ol>
+</aside></script></section></div>
+    </div>
+
+    <script src="./../js/reveal.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../plugin/zoom-js/zoom.js', async: true },
+        { src: './../plugin/notes/notes.js', async: true },
+        { src: './../plugin/math/math.js', async: true }
+      ];
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

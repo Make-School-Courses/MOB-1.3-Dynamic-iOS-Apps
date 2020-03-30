@@ -11,7 +11,7 @@ Most, if not all, mobile apps will need to communicate with an external service 
 ## Prerequisites:  
 
 - [MOB 1.2](https://github.com/Make-School-Courses/MOB-1.2-Introduction-to-iOS-Development-in-Swift)
-- [BEW 1.1](https://github.com/Make-School-Courses/BEW-1.1-RESTful-and-Resourceful-MVC-Architecture)
+- [BEW 1.2]()
 
 ## Learning Outcomes
 
@@ -36,13 +36,13 @@ Students by the end of the course will be able to ...
 |  3  |  Mon, Apr 6    | [Communication patterns]                |  
 |  4  |  Wed, Apr 8    | [Memory Management]                     |
 |  5  |  Mon, Apr 13   | [JSON in iOS]                           |              
-|  6  |  Wed, Apr 15   | [URLSession]      |
+|  6  |  Wed, Apr 15   | [URLSession]                            |
 |  7  |  Mon, Apr 20   | [Requests with authentication]          |
-|  8  |  Wed, Apr 22   | [Codable protocol]                      |
+|  8  |  Wed, Apr 22   | [Lab + Intro final project]             |
 |  9  |  Mon, Apr 27   | [Firebase]                              |
 |  10 |  Wed, Apr 30   | [Building a networking layer Pt 1]      |       
 |  11 |  Mon, May 4    | [Building a networking layer Pt 2]      |                  
-|  12 |  Wed, May 6    | Lab + Review                            |                    
+|  12 |  Wed, May 6    | Generics + Review                       |                    
 |  13 |  Mon, May 11   | Final Exam                              |                    
 |  14 |  Wed, May 13   | Presentations                           |                     
 
