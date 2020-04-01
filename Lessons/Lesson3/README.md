@@ -6,7 +6,7 @@
 
 # Protocols and Delegates
 
-## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Protocols-and-Delegates/README.html ':ignore')
+## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Lesson3/README.html ':ignore')
 
 <!-- > -->
 
