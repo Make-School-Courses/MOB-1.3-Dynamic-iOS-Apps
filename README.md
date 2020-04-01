@@ -46,8 +46,8 @@ Students by the end of the course will be able to ...
 |  13 |  Mon, May 11   | Final Exam                              |                    
 |  14 |  Wed, May 13   | Presentations                           |                     
 
-[Closures and callbacks]: Lessons/Lesson2/Lesson2.md
-[Protocols & Delegation]: Lessons/Lesson3/Lesson3.md
+[Closures and callbacks]: Lessons/Lesson2/README.md
+[Protocols & Delegation]: Lessons/Lesson3/README.md
 [Communication patterns]: Lessons/Lesson4/Lesson4.md
 [Memory Management]: Lessons/Lesson5/Lesson5.md
 [JSON in iOS]: Lessons/Lesson6/Lesson6.md
