@@ -6,7 +6,7 @@
 
 # Closures and Callbacks
 
-## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Closures-and-Callbacks/README.html ':ignore')
+## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Lesson2/README.html ':ignore')
 
 <!-- > -->
 

@@ -48,7 +48,7 @@ Students by the end of the course will be able to ...
 
 [Closures and callbacks]: Lessons/Lesson2/README.md
 [Protocols & Delegation]: Lessons/Lesson3/README.md
-[Communication patterns]: Lessons/Lesson4/Lesson4.md
+[Communication patterns]: Lessons/Lesson4/README.md
 [Memory Management]: Lessons/Lesson5/Lesson5.md
 [JSON in iOS]: Lessons/Lesson6/Lesson6.md
 [URLSession]: Lessons/Lesson7/Lesson7.md
@@ -60,7 +60,7 @@ Students by the end of the course will be able to ...
 
 |         Assignment             | Date Assigned |   Due Date   |            Submission Form           |
 |:------------------------------:|:-------------:|:------------:|:------------------------------------:|
-| [Giphy tutorial]               |  Wed, Apr 1   |  Mon, Apr 13 | Link on tracker                      |
+| [Giphy tutorial]               |  Wed, Apr 1   |  Mon, Apr 6 | Link on tracker                      |
 | [Pomodoro App]                 |  Wed, Apr 6   |  Mon, Apr 13 | Link on tracker                      |
 | [Product Hunt tutorial]        |  Mon, Apr 13  |  Mon, Apr 20 | Link on tracker                      |
 | Final Project                  |  Wed, Apr 22  |  Fri, May 15 | Link on tracker                      |

@@ -1,3 +1,4 @@
 - **[MOB 1.3 - Dynamic iOs Apps](README.md)**
 - **[Closures](Lessons/Lesson2/README.md)**
 - **[Protocols and Delegates](Lessons/Lesson3/README.md)**
+- **[Communication Patterns](Lessons/Lesson4/README.md)**
