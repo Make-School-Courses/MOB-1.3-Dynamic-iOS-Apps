@@ -113,19 +113,9 @@ Here's the method called
 
 <!-- > -->
 
-An alternative to improve readability
+## Example
 
-```Swift
-loginButton.addTarget(self, action: .buttonTapped, for: .touchUpInside)
-```
-
-```Swift
-fileprivate extension Selector {
-    static let buttonTapped = #selector(LoginViewController.login)
-}
-```
-
-*An entity declared fileprivate will only be accessible from within the file it was defined in*
+[Playground example](https://www.ralfebert.de/ios-examples/uikit/uicatalog-playground/UIButton/)
 
 Something to note is that the messages sent can't carry custom information. Which is why we can't send values in a UIButton's target action. They could send the sender that triggered the action as an argument, but that is as far as it goes.
 
