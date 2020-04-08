@@ -49,7 +49,7 @@ Students by the end of the course will be able to ...
 [Closures and callbacks]: Lessons/Lesson2/README.md
 [Protocols & Delegation]: Lessons/Lesson3/README.md
 [Communication patterns]: Lessons/Lesson4/README.md
-[Memory Management]: Lessons/Lesson5/Lesson5.md
+[Memory Management]: Lessons/Lesson5/README.md
 [JSON in iOS]: Lessons/Lesson6/Lesson6.md
 [URLSession]: Lessons/Lesson7/Lesson7.md
 [Requests with authentication]: Lessons/Lesson8/Lesson8.md

@@ -12,11 +12,11 @@
 
 ## Why you should know this
 
-The key to developing high-performance iOS apps is to know how your components consume memory and how to optimize memory use.
+The key to developing **high-performance** iOS apps is to know how your components consume memory and how to optimize memory use.
 
 Poor optimization can result in code issues, including **memory leaks** and potentially **fatal errors**.
 
-***Important Note:*** *iOS keeps track of how much memory each app uses on a given device, and it is set up to kill apps that consume too much.*
+***Important:*** *iOS keeps track of how much memory each app uses on a given device, and it is set up to kill apps that consume too much.*
 
 <!-- > -->
 
@@ -24,27 +24,27 @@ Poor optimization can result in code issues, including **memory leaks** and pote
 
 At the end of this class, you should be able to...
 
-1. Explain how memory management works in Swift, including when and why to use *strong*, *weak*, or *unowned*
-2. Identify and resolve *strong reference* cycles (aka, retain cycles)
-3. Demonstrate proficiency in using built-in tools and techniques to find memory leaks caused by retain cycles
+1. Explain how memory management works in Swift, including when and why to use **strong**, **weak**, or **unowned**
+2. Identify and resolve **strong reference** cycles (aka, retain cycles)
+3. Demonstrate proficiency in using **built-in tools** and techniques to find memory leaks caused by retain cycles
 
 <!-- > -->
 
 ## Memory Leaks
 
-A memory leak occurs when an instance of a *reference type* remains in memory even after its lifecycle has ended.
+<iframe src="https://giphy.com/embed/l3q2MDnkLri1t7i5a" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-Leaked memory still counts as a portion of an app’s total memory, even though the objects causing the leaks are no longer needed or useful.
+When an instance of a **reference type** remains in memory even after its lifecycle has ended. Leaked memory still counts as a portion of an app’s total memory, even though the objects causing the leaks are no longer needed or useful.
 
 <!-- > -->
 
 ## Value Types
 
-When you create a new instance of a *value type*, the right amount of memory is set aside for it. Whenever you do anything with it, Swift creates a copy of it.
+When you create a new instance of a **value type**, the right amount of memory is set aside for it. Whenever you do anything with it, Swift creates a **copy** of it.
 
-When that instance no longer exists, Swift automatically reclaims its allocated memory.
+When that instance no longer exists, Swift automatically reclaims its allocated memory. ♻️
 
-In Swift, you do not need to do anything to manage memory used by value types.
+In Swift, you do not need to do anything to manage memory used by value types. 🙌🏼
 
 <!-- v -->
 
@@ -56,9 +56,9 @@ In Swift, you do not need to do anything to manage memory used by value types.
 
 ## Reference Types & ARC
 
-With reference types its a different story.
+With **reference types** its a different story. 😰
 
-Passing around an instance of a *reference type* (class, closure) or storing it as a property does not copy it — it creates an additional reference to the same instance.
+Passing around an instance of a **reference type** (class, closure) or storing it as a property does not copy it — it creates an additional reference to the same instance.
 
 In other words, you are creating an additional reference to the same memory location on the heap.
 
@@ -66,15 +66,19 @@ In other words, you are creating an additional reference to the same memory loca
 
 ## Reference Counting
 
-Every class instance has a **reference count** — the number of references to the actual memory on the heap allocated for that instance.
+The action to store a **reference count** of every initialized objects (classes, pointers, blocks).
 
-As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.
+Reference count = The number of references to the actual memory allocated for that instance.
+
+**As long as an instance’s reference count is greater than 0, the instance remains alive, and its memory will not be reclaimed.**
 
 <!-- > -->
 
-## Using the `deinit()` function
+## Using the deinit() function
 
-A `deinit()` function is called immediately before a class instance is deallocated. You can use this function to perform clean up or other actions just before the instance is deallocated.
+A `deinit()` function is called immediately before a class instance is deallocated.
+
+You can use this function to perform **clean up** or other actions just before the instance is deallocated.
 
 As soon as the instance's reference count becomes 0, its `deinit()` function will run, and its memory will be deallocated.
 
@@ -86,44 +90,15 @@ The *deinit()* function in the following example from [Apple](https://docs.swift
 
 When the reference count of an instance of the Player class becomes 0, its coins are returned to the Bank immediately before the instance is removed from memory.
 
-
-```Swift
-struct Bank {
-    static var coinsInBank = 10_000
-    static func vendCoins(var numberOfCoinsToVend: Int) -> Int {
-        numberOfCoinsToVend = min(numberOfCoinsToVend, coinsInBank)
-        coinsInBank -= numberOfCoinsToVend
-        return numberOfCoinsToVend
-    }
-    static func receiveCoins(coins: Int) {
-        coinsInBank += coins
-    }
-}
-
-class Player {
-    var coinsInPurse: Int
-    init(coins: Int) {
-        coinsInPurse = Bank.vendCoins(coins)
-    }
-    func winCoins(coins: Int) {
-        coinsInPurse += Bank.vendCoins(coins)
-    }
-    deinit {
-        Bank.receiveCoins(coinsInPurse) // Coins are returned to the Bank just prior to Deallocation
-    }
-}
-```
-
 <!-- > -->
 
 ## Leaky Starship
 
 Part 1 - Individual
 1. Download the starter app, [LeakyStarship](https://github.com/VanderDev1/LeakyStarship)
-2. Find one of the three (3) `deinit()` functions in the app.
+2. Find one of the three `deinit()` functions in the app.
 3. Set a breakpoint that will stop at one of the `deinit()` functions
-3. Run the app, click the button on main scene, and examine what happens at each breakpoint
-(When done, disable all breakpoints)
+3. Run the app, click the button on main scene, and examine what happens at each breakpoint (When done, disable all breakpoints)
 
 Part 2 - In Pairs
 1. Discuss with your partner what occurred at each `deinit()` breakpoint and why?
@@ -132,9 +107,7 @@ Part 2 - In Pairs
 
 ## Automatic Reference Counting (ARC)
 
-In 2011, Apple introduced Automated Reference Counting (ARC) for Objective-C.
-
-Watch this video on ARC.
+In 2011, Apple introduced Automated Reference Counting (ARC) for Objective-C. Watch this video on ARC.
 
 <iframe src="https://youtube.com/embed/D2FWPh0IbFA" data-autoplay  width="700" height="500"></iframe>
 
@@ -173,20 +146,6 @@ Strong reference cycles are one type of memory leak.
 
 <!-- > -->
 
-A Simple Example - An instance of the Person class will have a strong reference to an instance of the Apartment class, and the Apartment class instance will also have a strong reference to the instance of the Person class. Neither instance's reference count can ever be 0.
-
-```Swift
-class Person {
-    var apartment: Apartment?
-}
-
-class Apartment {
-    var tenant: Person?
-}
-```
-
-<!-- > -->
-
 ## How to Break Strong Reference Cycles
 
 <iframe src="https://youtube.com/embed/3uS6IbDHeTA" data-autoplay  width="700" height="500"></iframe>
@@ -202,18 +161,6 @@ When you access a weak reference, it will either be a valid object, or `nil`.
 
 <!-- > -->
 
-```Swift
-class Person {
-     var apartment: Apartment?
-}
-
-class Apartment {
-    weak var tenant: Person?
-}
-```
-
-<!-- > -->
-
 Because weak references can be changed to `nil` if the instance they point to is deallocated, they come with two inherent requirements:
 
 - Weak references must always be declared as Optional, since Optionals are the only types that can become `nil`.
@@ -224,19 +171,46 @@ Because weak references can be changed to `nil` if the instance they point to is
 
 <!-- > -->
 
-## Unowned References
+A Simple Example - An instance of the Person class will have a strong reference to an instance of the Apartment class, and the Apartment class instance will also have a strong reference to the instance of the Person class. Neither instance's reference count can ever be 0.
 
-Like a weak reference, an unowned references does not increase the retain count of the object it references.
+```Swift
+class Person {
+    var apartment: Apartment?
+}
 
-Unlike a weak reference, however, an unowned reference is assumed to always have a value — it behaves somewhat like an implicitly unwrapped optional.
+class Apartment {
+    var tenant: Person?
+}
+```
 
-Because of this, an unowned reference is always defined as a non-Optional type. An unowned reference *cannot* be `nil`.
+How would you fix this? Post you answer in the slack channel.
 
-This makes them easier to manage rather than resorting to using optional binding.
+<!--
+```Swift
+class Person {
+     var apartment: Apartment?
+}
+
+class Apartment {
+    weak var tenant: Person?
+}
+```
+-->
 
 <!-- > -->
 
-## In Class Activity II (20 min)
+## Unowned References
+
+Like a weak reference, an unowned references **does not increase the retain count** of the object it references.
+
+Unlike a weak reference, however, an unowned reference **is assumed to always have a value** — it behaves somewhat like an implicitly unwrapped optional.
+
+Because of this, an unowned reference is always defined as a non-Optional type. An unowned reference **cannot** be `nil`.
+
+
+<!-- > -->
+
+## In Class Activity
 
 **Requirements:** The [LeakyStarship](https://github.com/VanderDev1/LeakyStarship) starter app
 
@@ -244,7 +218,6 @@ Individual
 1. Follow the steps in the [Using the Debug Memory Graph Tool](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson5/Mem_Graph_Tutorial/MemGraphTutorial.md) tutorial to find and fix memory leaks...
 
 **Q** In addition to adding the *weak* keyword, what other change was required?
-- why?
 
 <!-- > -->
 
@@ -260,6 +233,7 @@ Read [this article](https://www.avanderlee.com/swift/weak-self/) that explains w
 - Where would you use `unowned` over `weak`?
 - Why don’t we need this with value types like structs?
 
+**Turn in on Gradescope.**
 
 <!-- > -->
 
@@ -267,9 +241,7 @@ Read [this article](https://www.avanderlee.com/swift/weak-self/) that explains w
 
 **Requirements:** The [LeakyStarship](https://github.com/VanderDev1/LeakyStarship) starter app
 
-Individual
-1. Part of an iOS developer's "toolkit" is the ability to quickly find the most useful information from Internet research.
-- Using the tools and knowledge you've experienced in this class, **find and fix the memory leak** in the Starship class (hints: there is a **closure** involved - *find out how closures can cause strong reference cycles and how to resolve them*)
+- Using the tools and knowledge you've experienced in this class, **find and fix the memory leak** in the Starship class (hints: there is a **closure** involved -
 
 <!-- > -->
 
@@ -277,19 +249,17 @@ Individual
 
 1. **Role Play Exercise** - A Mini Practice Interview
 
-- Pair up. For 3 to 5 minutes in each role, take turns playing (a) a Hiring Manager, then (b) a Candidate for an iOS developer position.
-- As the Hiring Manager, ask your Candidate to answer the following questions:
+- Pair up. For 3 to 5 minutes in each role, take turns playing a Hiring Manager, then a Candidate for an iOS developer position. As the Hiring Manager, ask your Candidate to answer the following questions:
 
 1. When and why would you use the keyword *weak*?
 2. What is a *retain cycle*? Can you give examples of when a retain cycle might occur?
 3. In Swift, is memory management for *value types* the same as memory management for *reference types*?
-4. What is the default attribute declared for an @IBOutlet: *weak* or *strong*? Why?
 
 <!-- > -->
 
 ## Lab suggestions
 
-1. Complete Study Challenges
+1. Complete Classwork
 
 1. Read content listed below for clarity on the topics relevant to iOS Memory Management covered in this class. And take notes 📝 these topics require you to study a little bit of theory before being able to identify these cases in your own code.
 
@@ -316,6 +286,8 @@ Individual
 <!-- > -->
 
 ## Additional Resources
+
+- [Heaps & Stacks by Sarin Swift](https://heartbeat.fritz.ai/memory-management-in-swift-heaps-stacks-baa755abe16a)
 - [Weak vs Unowned in a closure](https://www.uraimo.com/2016/10/27/unowned-or-weak-lifetime-and-performance/) (everything that comes before the Performance section)
 - [Strong, Weak & Unowned - an article](https://krakendev.io/blog/weak-and-unowned-references-in-swift)
 - [Avoiding Retain Cycles - an article](https://medium.com/mackmobile/avoiding-retain-cycles-in-swift-7b08d50fe3ef)

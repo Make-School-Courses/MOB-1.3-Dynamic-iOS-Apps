@@ -2,3 +2,4 @@
 - **[Closures](Lessons/Lesson2/README.md)**
 - **[Protocols and Delegates](Lessons/Lesson3/README.md)**
 - **[Communication Patterns](Lessons/Lesson4/README.md)**
+- **[Memory Management](Lessons/Lesson5/README.md)**
