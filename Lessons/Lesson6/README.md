@@ -6,7 +6,7 @@
 
 # JSON and Swift
 
-## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/JSON-and-Swift/README.html ':ignore')
+## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Lesson6/README.html ':ignore')
 
 <!-- > -->
 
