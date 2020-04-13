@@ -183,7 +183,7 @@ Error handling is important during decoding. Many things can go wrong (missing f
 
 ## Example
 
-Observe how encoding/decoding works in [this example]()
+Observe how encoding/decoding works in [this example](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson6/assignments/example.md)
 
 <!-- > -->
 

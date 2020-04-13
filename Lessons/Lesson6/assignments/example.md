@@ -66,5 +66,3 @@ Strongly typed keys lead to safety but they must eventually be able to turn into
 1. Decoder manages a tree of *decoding continers* where each value travels down recursively in a container hierarchy while initializing values.
 
 If at some point in the hierarchy, an error occurs, the entire process fails.
-
-<!-- > -->`
