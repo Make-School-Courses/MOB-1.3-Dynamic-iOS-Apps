@@ -6,7 +6,7 @@
 
 # Memory Management
 
-## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Memory-Management/README.html ':ignore')
+## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Lesson5/README.html ':ignore')
 
 <!-- > -->
 

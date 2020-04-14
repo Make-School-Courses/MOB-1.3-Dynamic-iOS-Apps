@@ -6,7 +6,7 @@
 
 # Communication Patterns
 
-## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Communication-Patterns/README.html ':ignore')
+## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Lesson4/README.html ':ignore')
 
 <!-- > -->
 

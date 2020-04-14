@@ -217,7 +217,9 @@ Try pasting the `locations.json` content in there and compare your implementatio
 
 Practice your new skill! 🤩
 
-Take the JSON file [Festivals](assets/festivals.json) and create a project where you decode the contents to display The name of the Festival, the date and the number of artists in the lineup in a TableViewCell.
+Take your JSON file from the beginning of the class where you outlined festivals and create a project where you decode the contents to display The name of the festival, the date and the number of artists in the lineup in a TableViewCell.
+
+Start practicing your estimates 😮 and try timing yourself.
 
 <!-- > -->
 
