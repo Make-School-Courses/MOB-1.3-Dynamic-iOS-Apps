@@ -6,7 +6,7 @@
 
 # Network Requests using URLRequest
 
-## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/URLSession/README.html ':ignore')
+## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Lesson7/README.html ':ignore')
 
 <!-- > -->
 
