@@ -1,7 +1,7 @@
 # Pokemon API
 
 Resources needed:
-* [The Pokemon API)](https://pokeapi.co)
+* [The Pokemon API](https://pokeapi.co)
 
 
 ## PART 1
