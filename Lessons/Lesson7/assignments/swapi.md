@@ -1,21 +1,23 @@
-# Star Wars API
+# Pokemon API
 
 Resources needed:
-* [The Star Wars API (aka, SWAPI)](https://swapi.co)
+* [The Pokemon API)](https://pokeapi.co)
 
 
 ## PART 1
 
 Use the DailyPlanet app as a "canvas" to practice deserializing JSON from an HTTP request:
 
-- Create and call a new function that fetches data from SWAPI's `/starships/` endpoint: https://swapi.co/api/starships/
+- Create and call a new function that fetches data from the Pokemon API to fetch a list of Pokemon. This is the endpoint: endpoint: /pokemon
 - In your data tasks' completion handler, **convert** the returned `data` object to JSON, and **print** your converted `jsonObject` to the debug console.
-- If time permits, handle the HTTP `error` object returned.
+- If time permits, handle the HTTP `error` object returned and any other validation you want to include (status, data, etc.)
 
 ## PART 2
 
 **Create A Paginating Table View App with JSON Data:**
 
-Using the `/people/` endpoint on the [SWAPI](https://swapi.co) web service, create a **table view** app with **pagination** that:
-- Uses a custom cell to present the `"name"` and 2 other properties/items (i.e.. `"height"`) from the JSON response returned
-- When scrolled to the end of the currently available data, the app must present the user with the option to imageView the `next` or `previous` set of data (i.e., pagination)
+Create a **table view** app with **pagination** that:
+- Uses a cell to present the name of the pokemon from the JSON response returned
+- When scrolled to the end of the currently available data, the app must fetch new data to enable pagination.
+- Check the section "Resource lists and pagination" straight from the docs: https://pokeapi.co/docs/v2.html/ 
+In the end you will have a table view that keeps on getting new data for Pokemon as you reach the end of the scroll.
