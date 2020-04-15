@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-    <title>Syllabus Template Slides</title>
-    <link rel="stylesheet" href="./../css/reveal.css" />
-    <link rel="stylesheet" href="./../css/theme/black.css" id="theme" />
-    <link rel="stylesheet" href="./../css/highlight/zenburn.css" />
-    <link rel="stylesheet" href="./../css/print/paper.css" type="text/css" media="print" />
-    <link rel="stylesheet" href="./../assets/Reveal/makeschool.css" />
-
-    <script>
-      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
-    </script>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template"><!-- Run this slideshow via the following command: -->
+<!-- Run this slideshow via the following command: -->
 <!-- reveal-md README.md -w -->
 
 
@@ -26,7 +7,9 @@
 # Network Requests using URLRequest
 
 ## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/URLSession/README.html ':ignore')
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Why you should know this
 
 ![intro](assets/intro.jpg)
@@ -48,7 +31,9 @@ Since iOS 7, Apple has provided **URLSession** and its suite of related componen
 
 to make GET and POST network requests...
 -->
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Learning Objectives
 
 At the end of this class, you should be able to...
@@ -56,7 +41,9 @@ At the end of this class, you should be able to...
 1. Implement a simple **HTTP-based request** to a **public Internet API** using the primary components of **URLSession**.
 2. Validate HTTP response data and guard against common HTTP error conditions.
 4. Display text and images fetched from free web services.
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## URLSession
 
 ![urlsession](assets/urlsession.JPG) </br>
@@ -66,29 +53,41 @@ URLSession is responsible for sending and receiving HTTP requests.
 
 Like most networking APIs, the URLSession API is highly asynchronous.
 </aside>
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### URLSessionConfiguration
 
 Every URLSession instance is initialized using an `URLSessionConfiguration` object, which defines the behavior and policies to use when uploading and downloading data.
 
 `URLSessionConfiguration` will also let you configure additional HTTP headers, timeout values, caching policies, and other session properties.
-</script></section><section ><section data-markdown><script type="text/template">
+
+<!-- > -->
+
 #### Three types:
 
 URLSessionConfiguration objects come in 3 flavors:
 
 1. **.default** - Creates a default configuration object that uses the disk-persisted global cache, credential and cookie storage objects. Can save cache or cookies to disk, credentials to the Keychain.
-</script></section><section data-markdown><script type="text/template">
+
+<!-- v -->
+
 2. **.ephemeral** - Similar to `.default`, but all session-related data is stored in memory and will be gone once the session terminates.
-</script></section><section data-markdown><script type="text/template">
+
+<!-- v -->
+
 3. **.background** -  Allows the session to perform upload or download tasks in the background, even if the app is suspended.
-</script></section></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Here is a simple example of a declaration of a `URLSession` instance using the `.default` `URLSessionConfiguration` type:
 
 ``` Swift
 let defaultSession = URLSession(configuration: .default)
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### URLSessionTask
 
 To do the real work of fetching data or downloading/uploading files, a session creates one or more *tasks.*
@@ -96,17 +95,25 @@ To do the real work of fetching data or downloading/uploading files, a session c
 `URLSessionTask` is the class that contains predefined network task behaviors.
 
 ![sessiontask](assets/sessiontask.JPG) </br>
-</script></section><section ><section data-markdown><script type="text/template">
+
+<!-- > -->
+
 #### Three types:
 
 The three concrete subclasses of URLSessionTask which you will employ most often are:
 
 1. **URLSessionDataTask** - Intended for short, often interactive server requests such as fetching data by sending HTTP requests (GET, POST, etc). Data tasks send and receive data using `NSData` objects.
-</script></section><section data-markdown><script type="text/template">
+
+<!-- v -->
+
 2. **URLSessionUploadTask** - Similar to data tasks, but also send data (such as a file) from disk to web service, and they support background uploads while the app is no longer running.
-</script></section><section data-markdown><script type="text/template">
+
+<!-- v -->
+
 3. **URLSessionDownloadTask** - Data from a remote service is retrieved in the form of a file and stored in a temporary location. Supports background downloads/uploads while app the isn't running.
-</script></section></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Making HTTP GET Requests Using URLSessionDataTask
 
 ![steps](assets/steps.jpg)
@@ -114,11 +121,15 @@ The three concrete subclasses of URLSessionTask which you will employ most often
 <aside class = "notes">
 The following steps show how to create, send and validate a simple HTTP GET request using a URLRequest object and a URLSessionDataTask instance that returns its URLResponse via a completion handler.
 </aside>
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Let's make a request - one piece at a time 🧩
 
 Instructions [here]()
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 #### The Full Request
 
 Except for handling the response, this code snippet depicts the complete set of steps required to make our simple GET request:
@@ -145,11 +156,15 @@ Except for handling the response, this code snippet depicts the complete set of 
         dataTask.resume() // Start the data task
     }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## NASA's picture of the day 🪐
 
 Follow instructions [here](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/nasa.md).
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 
 ### Validate the Response
 
@@ -158,13 +173,17 @@ When making network requests with HTTP/S, success or failure can occur at severa
 - Was the expected HTTP Status Code returned?
 - Was data returned in the correct format?
 - Was a data object returned at all?
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 Handling errors and validating successful state are key to working with the URLSession family of classes and functions.
 
 **Developer Hints:**
 - Whether or not all the procedures listed are required or optional depends on your particular implementation of URLSession.
 - However, **handling the error** returned and **converting JSON data** should always be considered as **required** steps .
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Handle the `error` Object
 
 Check if the `error` object is `nil.` If not, *properly* handle the error (for now, we'll simply print the error returned):
@@ -176,7 +195,9 @@ guard error == nil else {
   return
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Confirm the Data Object
 
 Ensure that a `data` object has been returned with the response:
@@ -188,7 +209,9 @@ guard data != nil else {
   return
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Validate HTTP Status
 
 Confirm that the HTTP Status Code returned falls within the range of acceptable codes. If not, we want to properly respond to the error condition:
@@ -200,7 +223,9 @@ guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(http
     return
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ### Format Validation
 
 Now that we know the response status is good, we can validate the format of the returned data.
@@ -214,14 +239,20 @@ guard let mime = response?.mimeType, mime == "application/json" else {
   return
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ![steps2](assets/steps2.jpg)
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 
 ## HW assignment (lab suggestion)
 
 [Practicing requests with SWAPI](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md)
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Interview question
 
 1. `URLSession` objects are *asynchronous.* Research what that means and be able to answer the following question:
@@ -232,7 +263,9 @@ DispatchQueue.main.async {
   //A downloaded image placed into an imageView
 }
 ```
-</script></section><section  data-markdown><script type="text/template">
+
+<!-- > -->
+
 ## Additional Resources
 
 1. [URL Loading System - from Apple](https://developer.apple.com/documentation/foundation/url_loading_system)
@@ -242,54 +275,3 @@ DispatchQueue.main.async {
 [From Apple](https://developer.apple.com/documentation/foundation/urlsession)</br>
 [From StackOverflow](https://stackoverflow.com/questions/45463996/how-does-urlsessiontask-run)
 5. [Error Error Handling In Swift With Do-Try-Catch - an article](https://learnappmaking.com/error-handling-swift-do-try-catch/)
-</script></section></div>
-    </div>
-
-    <script src="./../js/reveal.js"></script>
-
-    <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
-      }
-
-      // Optional libraries used to extend on reveal.js
-      var deps = [
-        { src: './../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
-        { src: './../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: './../plugin/zoom-js/zoom.js', async: true },
-        { src: './../plugin/notes/notes.js', async: true },
-        { src: './../plugin/math/math.js', async: true }
-      ];
-
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        dependencies: deps
-      };
-
-      // options from URL query string
-      var queryOptions = Reveal.getQueryHash() || {};
-
-      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
-    </script>
-
-
-    <script>
-      Reveal.initialize(options);
-    </script>
-  </body>
-</html>

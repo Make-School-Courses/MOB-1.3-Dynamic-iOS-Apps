@@ -4,3 +4,4 @@
 - **[Communication Patterns](Lessons/Lesson4/README.md)**
 - **[Memory Management](Lessons/Lesson5/README.md)**
 - **[JSON in iOS](Lessons/Lesson6/README.md)**
+- **[URLSession](Lessons/Lesson7/README.md)**
