@@ -10,7 +10,8 @@ Use the DailyPlanet app as a "canvas" to practice deserializing JSON from an HTT
 
 - Create and call a new function that fetches data from the Pokemon API to fetch a list of Pokemon. This is the endpoint: endpoint: /pokemon
 - In your data tasks' completion handler, **convert** the returned `data` object to JSON, and **print** your converted `jsonObject` to the debug console.
-- If time permits, handle the HTTP `error` object returned and any other validation you want to include (status, data, etc.)
+- Use a Pokemon struct that conforms to the Codable protocol (it will only have two properties at this point: name and url)
+- Handle the HTTP `error` object returned and any other validation you want to include (status, data, etc.)
 
 ## PART 2
 
