@@ -22,3 +22,12 @@ Create a **table view** app with **pagination** that:
 - When scrolled to the end of the currently available data, the app must fetch new data to enable pagination.
 - Check the section "Resource lists and pagination" straight from the docs: https://pokeapi.co/docs/v2.html/ 
 In the end you will have a table view that keeps on getting new data for Pokemon as you reach the end of the scroll.
+
+
+
+#### Alternative API: https://swapi.dev
+
+The original assignment used the Star Wars API. If you prefer to use this one instead of the Pokemon API you can do so.
+
+- Using the /people/ endpoint 
+- Use a cell to present the "name" and 1 other property/items (i.e.. "height") from the JSON response returned
