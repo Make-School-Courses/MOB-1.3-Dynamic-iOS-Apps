@@ -1,3 +1,61 @@
+# Final project - simulating a Take Home Project
+
+## Introduction
+
+Some companies send take home projects to candidates. This is common for small to medium companies and startups.
+
+Take home projects are an opportunity for candidates to demonstrate skills when it comes to making decisions based on instructions or features that need to be build, while also demonstrating coding ability: how they decide to structure code, wether they used external libraries, preferred method of building UI, etc.
+
+## Description
+
+The app you'll be making is a news app. It will fetch articles from recent news and display them as clickable items that will take you to the full story.
+
+![takehome1](assets/takehome1.png)
+
+## Requirements
+1. Follow the structure shown in the wireframe. You can customize it to your liking but the main components should remain the same.
+1. The first screen of the app shows available categories to choose what kind of news the user wants to browse. You should use a collection view for this. Note that there is a fixed number of categories, you can find them in the docs.
+1. Once the user selects a category, you show them a list of the top news. These results will each be a clickable item. You should use a table view with a custom cell.
+1. When a news item is selected, you'll open the full story from the original source (open the link to the full story in a web view).
+1. The user can go back to the categories screen to keep exploring.
+1. You'll need to use the News API https://newsapi.org and get an Api key to make authenticated requests.
+1. You can use third party libraries
+1. Code must be on Github
+
+## Stretch challenge
+
+Add a search bar in the main screen. Instead of choosing a category, users can directly search news using a keyword. And you'll present results that contain the searched word.
+
+## Rubric
+
+You must score at least 70 points to pass the assignment. Breakdown of points below:
+
+1. **(20 points):** Code quality: MVC structure, separation of concerns, naming conventions, styling.
+1. Categories screen
+  1. **(5 points):** Displaying the right categories
+  1. **(5 points):** Using a collection view.
+1. Top news screen
+  1. **(5 points):** Displaying the top news for the selected category
+  1. **(5 points):** Using a table view.
+  1. **(5 points):** Using a custom cell that follow the wireframe design.
+1. **(5 points):** Displaying content of news in a web view.
+1. **(10 points):** App navigation working
+1. **(20 points):** Use the News API via a modular networking layer built by you
+1. **(5 points):** Handle JSON using Codable Protocol
+1. **(5 points):** Use authenticated requests
+1. **(10 points):** Code on Github with a detailed README by the due date.
+
+
+## Due date
+
+May 13th, 2020
+
+## Resources
+Additional resources that will help with this project, or that can be used as reference.
+
+1. https://newsapi.org/docs
+
+<!--
 # Final project for MOB 1.3
 
 ### Important Dates
@@ -31,3 +89,4 @@ Your solution should incorporate the following tools learned throughout the term
 A full list of expectations for the project can be found in [this rubric](https://docs.google.com/document/d/1skBVPeFrflcgts-qzx84Ym2dDHRJPbtS1SoqoZeamY0/edit?usp=sharing)
 
 To pass the project you need to score **at least 22 points** out of the 32 possible.
+-->

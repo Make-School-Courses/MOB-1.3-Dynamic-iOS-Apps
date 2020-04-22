@@ -172,3 +172,4 @@ Add an **Activity Indicator** (aka, a "spinner") to the project so that while ev
 
 1. [HTTPS image](https://www.cloudflare.com/learning/ssl/why-is-http-not-secure/)
 2. [OAUTH](https://hackernoon.com/mobile-api-security-techniques-682a5da4fe10)
+3. [Apple Sign in](https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple)
