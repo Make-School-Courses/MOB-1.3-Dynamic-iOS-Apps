@@ -55,6 +55,7 @@ Students by the end of the course will be able to ...
 [Requests with authentication]: Lessons/Lesson8/README.md
 [Building a networking domain]: Lessons/Lesson9/Lesson9.md
 [Firebase]: Lessons/Lesson10/Lesson10.md
+[Lab + Intro final project]: Lessons/Lab/README.md
 
 ## Assignment Schedule
 
@@ -63,14 +64,14 @@ Students by the end of the course will be able to ...
 | [Giphy tutorial]               |  Wed, Apr 1   |  Mon, Apr 6 | Link on tracker                      |
 | [Pomodoro App]                 |  Wed, Apr 6   |  Mon, Apr 13 | Link on tracker                      |
 | [Product Hunt tutorial]        |  Mon, Apr 13  |  Mon, Apr 20 | Link on tracker                      |
-| Final Project                  |  Wed, Apr 22  |  Fri, May 15 | Link on tracker                      |
+| Final Project                  |  Wed, Apr 22  |  Fri, May 13 | Link on tracker                      |
 | Moviefy App                    |  Wed, Apr 30  |  Wed, May 6  | Link on tracker                      |
 
 [Pomodoro App]:(https://github.com/amelinagzz/pom-starter)
 [Giphy tutorial]:(https://www.makeschool.com/academy/track/giphy-search-for-ios-hrs)
 [Product Hunt tutorial]:(https://www.makeschool.com/academy/track/product-hunt-api-tutorial)
 [Moviefy App]:()
-[Final project]:()
+[Final project]:(Projects/FinalProject.md)
 
 - [Tutorial for Closures & ARC](https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC)
 

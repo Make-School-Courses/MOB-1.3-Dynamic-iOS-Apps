@@ -128,6 +128,19 @@ And guess what, Swift knows the type of kim should be Keeper<Cat> 🐱
 - What do you think would happen if you tried to instantiate a Keeper with a dog in the morning and a cat in the afternoon?
 - What happens if you try to instantiate a Keeper, but for strings?
 
+## Swift challenge
+
+- Can you write one a function that can determine if **any specific instance of any type** exists in any array that stores objects of that type?
+
+
+## Resources
+
+- https://www.appcoda.com/swift-generics/
+- https://www.hackingwithswift.com/example-code/language/what-are-generics
+https://medium.com/developermind/generics-in-swift-4-4f802cd6f53c
+- Swift Apprentice Book
+
+<!--
 ## Creating a collection
 
 Imagine that instead of looking after only two animals, every keeper looks after a changing number of animals throughout the day. This means a keeper can take care of more than just the morning and afternoon animals. You’d have to do things like the following:
@@ -141,3 +154,4 @@ ryan.lookAfter(anotherCat)
 You want to be able to access the count of all of animals for a keeper like `ryan.countAnimals` and to access the 10th animal via a zero-based index like ryan.animalAtIndex(10)
 
 Your challenge is to update the Keeper type to have this kind of interface. You’ll probably want to include a private array inside Keeper, and then provide methods and properties on Keeper to allow outside access to the array.
+-->

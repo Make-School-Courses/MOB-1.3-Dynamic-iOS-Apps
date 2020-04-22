@@ -5,3 +5,5 @@
 - **[Memory Management](Lessons/Lesson5/README.md)**
 - **[JSON in iOS](Lessons/Lesson6/README.md)**
 - **[URLSession](Lessons/Lesson7/README.md)**
+- **[Authentication](Lessons/Lesson8/README.md)**
+- **[Lab](Lessons/Lab/README.md)**
