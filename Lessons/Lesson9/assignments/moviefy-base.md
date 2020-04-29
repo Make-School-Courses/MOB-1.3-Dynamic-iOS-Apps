@@ -345,7 +345,7 @@ APIClient.shared.getPopularMovies { (result) in
   }
 ```
 
-## Step 8 - Displaying images
+## Step 11 - Displaying images
 
 If you run the app now you'll see the names and dates of the movies in the simulator. But no images so far.
 
@@ -372,7 +372,7 @@ If you run the app again. Now you should see the following:
 
 Congratulations! 🎉 you are on your way to create more requests with your reusable networking layer.
 
-## Step 9 - Now you try it.
+## Step 12 - Now you try it.
 
 Add a new section to the home page to display **Upcoming Movies**.
 
