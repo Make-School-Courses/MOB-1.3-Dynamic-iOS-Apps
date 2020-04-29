@@ -96,9 +96,9 @@ Instead of rewriting the parameters for a separate request object for each HTTP 
 
 Two approaches:
 
-[Moviefy base implementation]()
+[Moviefy base implementation](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson9/assignments/moviefy-base.md)
 
-[Moviefy generic implementation]()
+[Moviefy generic implementation](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson9/assignments/moviefy-plus.md)
 
 Suggestion: Do both in order to identify how they differ.
 
@@ -369,4 +369,4 @@ https://jsonplaceholder.typicode.com/todos/6
 - [Writing Options - from Apple](https://developer.apple.com/documentation/foundation/jsonserialization/writingoptions)
 - [Reading Options - from Apple](https://developer.apple.com/documentation/foundation/jsonserialization/readingoptions)
 - [Writing a network layer - Protocol Oriented](https://medium.com/flawless-app-stories/writing-network-layer-in-swift-protocol-oriented-approach-4fa40ef1f908)
-- [Writing network layer](https://medium.com/@rinradaswift/networking-layer-in-swift-5-111b02db1639) 
+- [Writing network layer](https://medium.com/@rinradaswift/networking-layer-in-swift-5-111b02db1639)
