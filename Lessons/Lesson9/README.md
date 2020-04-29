@@ -45,13 +45,11 @@ As a design pattern, MVC seeks to promote two important design principles fundam
  - MVC can separate content from presentation, and data-processing (model) from content.
  - Service-oriented design can separate concerns into services.
 
- <!-- > -->
+<!-- > -->
 
  2. **Reusability** - If correctly implemented, view and model layers can easily be composed of reusable, modular components (though controllers are seldom reusable).
 
 <!-- > -->
-
-## API Layer Construction
 
 ### Project Organization
 
@@ -73,6 +71,37 @@ This object's job is to:
 - Provide constructs for **handling the successful or failed** state of web service requests and responses
 
 <!-- > -->
+
+## The Request Builder
+
+The **Builder** design pattern is a type of **Creational** design pattern that is used to create complex objects step-by-step.
+
+It offers:
+- **Flexibility** - Can easily create different representations of the same complex object
+- __Simplicity__ - It simplifies the creation of a complex object
+
+<!-- > -->
+
+HTTP request methods GET, POST, DELETE, and so on, are constructed using parameters common to them all.
+
+HTTP requests offer a prime opportunity to employ the Builder pattern to create different types of request objects with commonly shared parameters.
+
+<!-- > -->
+
+Instead of rewriting the parameters for a separate request object for each HTTP method, a more efficient design is to design a single **RequestBuilder** object that reuses the commonly shared request parameters, then call a separate function on the RequestBuilder object to create a request for a GET or a POST, respectively.
+
+<!-- > -->
+
+## Moviefy App
+
+Two approaches:
+
+[Moviefy base implementation]()
+
+[Moviefy generic implementation]()
+
+Suggestion: Do both in order to identify how they differ.
+
 <!--
 ## In Class Activity I (25 min)
 
@@ -274,18 +303,6 @@ The complete code for an HTTP POST request function would resemble this:
 ```
 -->
 
-## The Request Builder
-
-The **Builder** design pattern is a type of **Creational** design pattern that is used to create complex objects step-by-step.
-
-It offers:
-- **Flexibility** - Can easily create different representations of the same complex object
-- __Simplicity__ - It simplifies the creation of a complex object
-
-HTTP request methods GET, POST, DELETE, and so on, are constructed using parameters common to them all. Thus, HTTP requests offer a prime opportunity to employ the Builder pattern to create different types of request objects with commonly shared parameters.
-
-Instead of rewriting the parameters for a separate request object for each HTTP method, a more efficient design is to design a single RequestBuilder object that reuses the commonly shared request parameters, then call a separate function on the RequestBuilder object to create a request for a GET or a POST, respectively.
-
 
 <!--
 ## Challenge
@@ -347,7 +364,9 @@ https://jsonplaceholder.typicode.com/todos/6
 
 ## Additional Resources
 
-3. [Separation of Concerns (withJSONObject) - from Wikepedia](https://en.wikipedia.org/wiki/Separation_of_concerns)
-6. Apple on JSONSerialization Reading and Writing Options:</br>
+- [Separation of Concerns (withJSONObject) - from Wikepedia](https://en.wikipedia.org/wiki/Separation_of_concerns)
+- Apple on JSONSerialization Reading and Writing Options:</br>
 - [Writing Options - from Apple](https://developer.apple.com/documentation/foundation/jsonserialization/writingoptions)
 - [Reading Options - from Apple](https://developer.apple.com/documentation/foundation/jsonserialization/readingoptions)
+- [Writing a network layer - Protocol Oriented](https://medium.com/flawless-app-stories/writing-network-layer-in-swift-protocol-oriented-approach-4fa40ef1f908)
+- [Writing network layer](https://medium.com/@rinradaswift/networking-layer-in-swift-5-111b02db1639) 

@@ -38,7 +38,7 @@ Students by the end of the course will be able to ...
 |  5  |  Mon, Apr 13   | [JSON in iOS]                           |              
 |  6  |  Wed, Apr 15   | [URLSession]                            |
 |  7  |  Mon, Apr 20   | [Requests with authentication]          |
-|  8  |  Wed, Apr 22   | [Lab + Intro final project]             |
+|  8  |  Wed, Apr 22   | [Lab + Intro final project + Generics]  |
 |  9  |  Mon, Apr 27   | [Testing]                              |
 |  10 |  Wed, Apr 30   | [Building a networking layer Pt 1]      |       
 |  11 |  Mon, May 4    | [Building a networking layer Pt 2]      |                  
@@ -53,9 +53,9 @@ Students by the end of the course will be able to ...
 [JSON in iOS]: Lessons/Lesson6/README.md
 [URLSession]: Lessons/Lesson7/README.md
 [Requests with authentication]: Lessons/Lesson8/README.md
-[Building a networking domain]: Lessons/Lesson9/Lesson9.md
+[Building a networking layer Pt 1]: Lessons/Lesson9/README.md
 [Testing]: Lessons/Lesson12/README.md
-[Lab + Intro final project]: Lessons/Lab/README.md
+[Lab + Intro final project + Generics]: Lessons/Lab/README.md
 
 ## Assignment Schedule
 
