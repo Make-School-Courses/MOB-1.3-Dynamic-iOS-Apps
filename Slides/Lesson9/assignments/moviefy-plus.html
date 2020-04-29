@@ -1,8 +1,27 @@
-# Moviefy
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Syllabus Template Slides</title>
+    <link rel="stylesheet" href="./../../css/reveal.css" />
+    <link rel="stylesheet" href="./../../css/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./../../css/highlight/zenburn.css" />
+    <link rel="stylesheet" href="./../../css/print/paper.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="./../../assets/Reveal/makeschool.css" />
+
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>');
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"># Moviefy
 
 **Scenario:**
 
-- Congratulations! You just got hired at a new firm. Your first assignment on the job is to create the first version of an app that rates movies. As the firm grows, more iOS developers will join the team, so you've been asked to make the project easy to understand and scalable.
+- Congratulations! You just got hired at a new firm. Your first assignment on the job is to create the initial version of an app that rates movies. As the firm grows, more iOS developers will join the team, so you've been asked to make the project easy to understand and scalable.
 
 **Your mission:**
 
@@ -17,7 +36,7 @@ Once you get the approval for the account, copy the value for the **v4 key**, th
 
 ## Step 2 - Getting to know the current state of the project
 
-
+![folder](folder.png)
 
 ## Step 3 - The API client
 
@@ -35,7 +54,7 @@ struct APIClient {
 }
 ```
 
-That will the basic structure of a reusable API client, and you can now create a specific version of this Moviefy.
+That will be the basic structure of a reusable API client, and you can now create a specific version of this for Moviefy.
 
 Create a new file and call it **MovieDB**.
 
@@ -75,7 +94,7 @@ Before sending requests, you'll model the response data for the endpoint that re
 
 We know that we want to use the Codable protocol. The configuration to decode the model should be part of the model itself. You'll create a new type to show this.
 
-Create a new file and name it **Model**. These are the contents:
+Create a new file and name it **Model**. Put it in the Model folder. These are the contents:
 
 ```swift
 public protocol Model : Codable {
@@ -100,7 +119,7 @@ public extension Model {
 
 This provides us a common protocol that all of our response models can implement
 
-Now create a new file and name it **Movie**. These are the contents:
+Now locate the file **Movie**. Make sure these are the contents:
 
 ```swift
 struct Movie: Model, Hashable {
@@ -135,7 +154,7 @@ The extension will ensure it is decoded with the right decoder (it could be a cu
 
 ## Step 5 - Creating a request builder
 
-Create a new file and call it **RequestBuilder**.
+Create a new file in the Networking folder, and call it **RequestBuilder**.
 
 Add all the types of requests we can make
 
@@ -162,7 +181,7 @@ public protocol RequestBuilder {
 }
 ```
 
-We want to handle some default functionality with the same configuration add this extension that will serve for all GET requests without a body:
+We want to handle some default functionality with the same configuration. Add this extension that will serve for all GET requests without a body:
 
 ```swift
 public extension RequestBuilder {
@@ -179,7 +198,7 @@ public extension RequestBuilder {
 }
 ```
 
-And last, we create the struct that conforms to the protocol.
+And last, we create the struct that conforms to the protocol. It will have the method type, the url, parameters and header that will be sent.
 
 ```swift
 struct BasicRequestBuilder: RequestBuilder {
@@ -207,7 +226,7 @@ public struct Request {
 }
 ```
 
-It is using Swift's Results type to model a successful value or an error.
+It is using Swift's Result type to model a successful value or an error.
 
 Add a convenience initializer that will make your code readable by giving a clean way of handling all of our custom types.
 
@@ -251,11 +270,11 @@ Our Request type leaves off the interpretation of the data that we expected to r
 
 Go back to your **MovieDB** file where you will start writing requests that are specific to this API.
 
-The first one will be for trending movies.
+The first one will be for popular movies.
 
 ```swift
 extension Request {
-    static func trendingMovies(completion: @escaping (Result<PagedResults<Movie>, Error>) -> Void) -> Request {
+    static func popularMovies(completion: @escaping (Result<PagedResults<Movie>, Error>) -> Void) -> Request {
         Request.basic(baseURL: MovieDB.baseURL, path: "discover/movie", params: [
             URLQueryItem(name: "sort_by", value: "popularity.desc")
         ]) { result in
@@ -272,7 +291,8 @@ We are not decoding yet. This step is something we'll do every time. Let's move 
 ```swift
 public extension Result where Success == Data, Failure == Error {
     func decoding<M: Model>(_ model: M.Type, completion: @escaping (Result<M, Error>) -> Void) {
-      // decode the JSON in the background and call the completion block on the main thread        DispatchQueue.global().async {
+      // decode the JSON in the background and call the completion block on the main thread        
+      DispatchQueue.global().async {
             //Result’s flatMap() method takes the successful case (if it was successful) and applies your block. You can return a new Result that contains a successful value or an error.
             let result = self.flatMap { data -> Result<M, Error> in
                 do {
@@ -293,7 +313,7 @@ public extension Result where Success == Data, Failure == Error {
 
 It's ok if the above is confusing. The idea is to write the complex code once here so you can use it in many places and have those be clean and easy to read and write. You can always go back to study the method later.
 
-You can now call it in the `trendingMovies` method.
+You can now call it in the `popularMovies` method.
 
 ```swift
 result.decoding(PagedResults<Movie>.self, completion: completion)
@@ -302,7 +322,7 @@ result.decoding(PagedResults<Movie>.self, completion: completion)
 This now reads as: *take the result, decode into this type (PagedResults<Movie>), then call this completion block.*
 
 
-You are ready to get the featured movies with this code (place it inside the method `fetchTrending` in the main View Controller)
+You are ready to get the featured movies with this code (place it inside the method `fetchPopular` in the main View Controller)
 
 ```swift
 let api = MovieDB.api
@@ -313,8 +333,9 @@ api.send(request: .trendingMovies(completion: { result in
       self.movies = page.results
       var basicSection = MovieSection()
       basicSection.numberOfItems = self.movies.count
+      basicSection.items = page.results
       self.sections = [TitleSection(title: "Now Trending"), basicSection]
-      self.collectionView.reloadData()
+      self.setupCollectionView()
     case .failure(let error):  print(error)
     }
 }))
@@ -383,14 +404,54 @@ static func configuration(_ completion: @escaping (Result<MovieDBConfiguration, 
     }
 }
 ```
+</script></section></div>
+    </div>
 
-1. Validate the App - Insert your own Flickr API Key and confirm the *current working state* of the app.
+    <script src="./../../js/reveal.js"></script>
 
-2. Refactor (or move) all **network calls** and **JSON processing functions** into the **PhotoFetchService**.
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
 
-**TIP:** Simply search for the `//TODO:` comments to see key refactoring points
+      // Optional libraries used to extend on reveal.js
+      var deps = [
+        { src: './../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+        { src: './../../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: './../../plugin/zoom-js/zoom.js', async: true },
+        { src: './../../plugin/notes/notes.js', async: true },
+        { src: './../../plugin/math/math.js', async: true }
+      ];
 
-3. Recreate the model object (`Photo.swift` class) to implement the Codable interface.
-- Note the impact this change may have to other part of the code base.
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        dependencies: deps
+      };
 
-4. (If time permits) Review any other opportunities to improve the app (i.e., handling optionals, etc.). If time permits, make those improvements.
+      // options from URL query string
+      var queryOptions = Reveal.getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"controls":true,"progress":true,"autoPlayMedia":false,"slideNumber":"c/t","showSlideNumber":"all","controlsTutorial":true,"controlsLayout":"edges","transition":"slide","transitionSpeed":"medium","minScale":0.5,"maxScale":3}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>

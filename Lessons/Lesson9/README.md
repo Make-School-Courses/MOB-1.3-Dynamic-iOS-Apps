@@ -6,7 +6,7 @@
 
 # Building a Network Layer
 
-## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Lesson7/README.html ':ignore')
+## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Lesson9/README.html ':ignore')
 
 <!-- > -->
 
@@ -40,7 +40,7 @@ At the end of this class, you should be able to...
 
 As a design pattern, MVC seeks to promote two important design principles fundamental to OOP:
 
-1. **Separation of Concerns (SoC)** - modular approach to constructing an application in which code can be separated into logical sections, each addressing separate areas of functional behavior (concerns). SoC results in higher degrees of freedom for because it hides the need for a given section to know particular information addressed by other sections.
+1. **Separation of Concerns (SoC)** - modular approach to constructing an application in which code can be separated into logical sections, each addressing separate areas of functional behavior (concerns).
 
  - MVC can separate content from presentation, and data-processing (model) from content.
  - Service-oriented design can separate concerns into services.
@@ -73,7 +73,7 @@ This object's job is to:
 - Provide constructs for **handling the successful or failed** state of web service requests and responses
 
 <!-- > -->
-
+<!--
 ## In Class Activity I (25 min)
 
 Required resources:
@@ -102,11 +102,11 @@ __Scenario:__
 - Note the impact this change may have to other part of the code base.
 
 4. (If time permits) Review any other opportunities to improve the app (i.e., handling optionals, etc.). If time permits, make those improvements.
+-->
 
 
 
-<!-- Insert code here -->
-
+<!--
 ## HTTP Post Requests (15 mins)
 
 To add a new item to a web service, we use the HTTP protocol's **POST method.**
@@ -132,7 +132,6 @@ Just as we did with our HTTP GET request, we first need to create and configure 
 
 **Note:** This example uses the alternate ___shared___ URLSession type: `URLSession.shared`
 
-<!-- Insert code sample here -->
 
 ### Step 2: Configure the Request
 
@@ -231,9 +230,6 @@ session.dataTask(with: request, completionHandler: { (data, response, error) -> 
            }
        }).resume()
 ```
-<!--
-**Note:** This example uses the alternate ___shared___ dataTask type: `URLSession.shared.dataTask()`
--->
 
 ### Put It Altogether
 
@@ -276,9 +272,9 @@ The complete code for an HTTP POST request function would resemble this:
         }
         }).resume()
 ```
+-->
 
-
-## The Request Builder (5 min)
+## The Request Builder
 
 The **Builder** design pattern is a type of **Creational** design pattern that is used to create complex objects step-by-step.
 
@@ -291,14 +287,7 @@ HTTP request methods GET, POST, DELETE, and so on, are constructed using paramet
 Instead of rewriting the parameters for a separate request object for each HTTP method, a more efficient design is to design a single RequestBuilder object that reuses the commonly shared request parameters, then call a separate function on the RequestBuilder object to create a request for a GET or a POST, respectively.
 
 
-<!-- Insert code sample here -->
-
-
-
-
-
-
-
+<!--
 ## Challenge
 
 ### Required Resources:
@@ -313,11 +302,9 @@ For this challenge, we will ___simulate___ an HTTP **POST** request to the JSONP
 ### Your Assignment:
 
 Inside the `URLSessionApiService` class of the pre-made [starter app for Lesson 10](https://github.com/VanderDev1/Lesson10.git), you are to **create a function** that **executes a POST request** to the https://jsonplaceholder.typicode.com/todos endpoint.
-<!-- Create a new Xcode **single view** project ___to execute a POST request___ to the https://jsonplaceholder.typicode.com/todos -->
 
-<!--
-- For now, your app should have a single button entitled "POST" which will call your POST request functions
--->
+
+
 ___Hint:___ The app is already set up with a button to invoke your POST request function
 
 **TODO #1 -** Create the POST request function:
@@ -357,21 +344,10 @@ https://jsonplaceholder.typicode.com/todos/6
 
 -->
 
-## Wrap Up (5 mins)
-
-1. Challenge
-2. Next Class
-<!-- 3. Key questions on today's material? -->
-
-
 
 ## Additional Resources
 
-1. [Slides](https://docs.google.com/presentation/d/11xY23K0gdL2KZgCEZyNi8GnFHGm3W7HqUr4d_9Pkd-A/edit?usp=sharingre)
-2. <a name="footnote1"><sup>1</sup></a>[Domain model - A Wikipedia article](https://en.wikipedia.org/wiki/Domain_model)
 3. [Separation of Concerns (withJSONObject) - from Wikepedia](https://en.wikipedia.org/wiki/Separation_of_concerns)
-4. [VIPER Design Pattern - an Article](https://medium.com/yay-its-erica/intro-to-the-viper-design-pattern-swift-3-32e3574dee02)
-5. <a name="footnote2"><sup>2</sup></a>[HTTP response status codes - from Mozzilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 6. Apple on JSONSerialization Reading and Writing Options:</br>
 - [Writing Options - from Apple](https://developer.apple.com/documentation/foundation/jsonserialization/writingoptions)
 - [Reading Options - from Apple](https://developer.apple.com/documentation/foundation/jsonserialization/readingoptions)
