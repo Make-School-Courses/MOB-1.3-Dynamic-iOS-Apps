@@ -17,6 +17,8 @@ Once you get the approval for the account, copy the value for the **v4 key**, th
 
 ## Step 2 - Getting to know the current state of the project
 
+[Starter Code to download](https://github.com/amelinagzz/moviefy-starter)
+
 ![folder](folder.png)
 
 ## Step 3 - The API client
