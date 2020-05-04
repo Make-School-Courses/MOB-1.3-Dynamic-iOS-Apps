@@ -294,7 +294,7 @@ https://jsonplaceholder.typicode.com/todos/6
 
 You'll collaborate in pairs to add authentication to the app.
 
-Follow [this guide]().
+Follow [this guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson10/assignments/moviefy-pt2.md).
 
 <!-- > -->
 
