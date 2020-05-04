@@ -223,6 +223,9 @@ func startSession(requestToken: String, completion: @escaping (Bool) -> Void) {
      }
   }
   ```
+  
+Create the required `createSession` method in the APIClient.
+
 To understand everything going on here, is important to read how we can authenticate a user through a web service. Here's a short document that explains it, form Apple Docs:
 
 [Authenticating a User Through a Web Service](https://developer.apple.com/documentation/authenticationservices/authenticating_a_user_through_a_web_service)
