@@ -54,6 +54,7 @@ Students by the end of the course will be able to ...
 [URLSession]: Lessons/Lesson7/README.md
 [Requests with authentication]: Lessons/Lesson8/README.md
 [Building a networking layer Pt 1]: Lessons/Lesson9/README.md
+[Building a networking layer Pt 2]: Lessons/Lesson10/README.md
 [Testing]: Lessons/Lesson12/README.md
 [Lab + Intro final project + Generics]: Lessons/Lab/README.md
 

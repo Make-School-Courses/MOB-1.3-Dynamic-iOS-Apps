@@ -8,3 +8,4 @@
 - **[Authentication](Lessons/Lesson8/README.md)**
 - **[Lab](Lessons/Lab/README.md)**
 - **[Network Layer Pt.1](Lessons/Lesson9/README.md)**
+- **[Network Layer Pt.2](Lessons/Lesson10/README.md)**
