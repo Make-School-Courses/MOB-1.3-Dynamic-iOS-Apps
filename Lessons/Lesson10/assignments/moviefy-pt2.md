@@ -210,6 +210,19 @@ guard let authURL = URL(string: "https://www.themoviedb.org/authenticate/\(reque
     session.start()
 ```
 
+```swift
+func startSession(requestToken: String, completion: @escaping (Bool) -> Void) {
+   APIClient.shared.createSession(requestToken: requestToken) { (result) in
+      switch result{
+      case let .success(session):
+         DispatchQueue.main.async {
+           print(session.session_id)
+         }
+      case let .failure(error):
+            print(error)
+     }
+  }
+  ```
 To understand everything going on here, is important to read how we can authenticate a user through a web service. Here's a short document that explains it, form Apple Docs:
 
 [Authenticating a User Through a Web Service](https://developer.apple.com/documentation/authenticationservices/authenticating_a_user_through_a_web_service)
