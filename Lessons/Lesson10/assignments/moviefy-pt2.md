@@ -265,7 +265,7 @@ Now it's your turn to find the way of getting the username and displaying it in 
 
 - [account](https://developers.themoviedb.org/3/account/get-account-details)
 
-## Step 10 - Review
+## Step 10 - Review (if time allows)
 
 With your parter, draw a diagram that explain the auth flow you just implemented.
 
