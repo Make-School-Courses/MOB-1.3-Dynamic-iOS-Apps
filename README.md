@@ -39,10 +39,10 @@ Students by the end of the course will be able to ...
 |  6  |  Wed, Apr 15   | [URLSession]                            |
 |  7  |  Mon, Apr 20   | [Requests with authentication]          |
 |  8  |  Wed, Apr 22   | [Lab + Intro final project + Generics]  |
-|  9  |  Mon, Apr 27   | [Testing]                              |
+|  9  |  Mon, Apr 27   | [Testing]                               |
 |  10 |  Wed, Apr 30   | [Building a networking layer Pt 1]      |       
 |  11 |  Mon, May 4    | [Building a networking layer Pt 2]      |                  
-|  12 |  Wed, May 6    | Generics + Review                       |                    
+|  12 |  Wed, May 6    | [Firebase]                                |                    
 |  13 |  Mon, May 11   | Final Exam                              |                    
 |  14 |  Wed, May 13   | Presentations                           |                     
 
@@ -57,6 +57,8 @@ Students by the end of the course will be able to ...
 [Building a networking layer Pt 2]: Lessons/Lesson10/README.md
 [Testing]: Lessons/Lesson12/README.md
 [Lab + Intro final project + Generics]: Lessons/Lab/README.md
+[Firebase]: Lessons/Lesson13/README.md
+
 
 ## Assignment Schedule
 

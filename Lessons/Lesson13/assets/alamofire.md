@@ -1,40 +1,4 @@
-# Alamofire + Firebase
-
-## Minute-by-Minute
-
-| **Elapsed** | **Time**  | **Activity**              |
-| ----------- | --------- | ------------------------- |
-| 0:00        | 0:05      | Objectives                |
-| 0:05        | 0:05      | Initial Exercise          |
-| 0:10        | 0:05      | Alamofire                 |
-| 0:15        | 0:25      | In Class Activity I       |
-| 0:40        | 0:10      | BREAK                     |
-| 0:50        | 0:05      | Firebase                  |
-| 0:55        | 0:50      | In Class Activity II      |
-| 1:45        | 0:05      | Wrap Up                   |
-| TOTAL       | 1:50      |                           |
-
-## Why you should know this
-
-There are many people in the Swift community that are always looking for ways to make writing apps easier and in a more standardized way. Thanks to them we have many open source libraries we can use and that we can rely on, simply because they have thousands of experienced collaborators. Alamofire is one of them, and is a great alternative to manage network requests. We'll see how, now that we have an understanding of URLSession, it's easier to understand what the library is doing. Another project that we'll use today as our backend is Firebase by Google. Firebase has many products for mobile and web development, the one we'll focus on is Firebase Database which will store and handle all our data in real time.
-
-## Class Learning Objectives/Competencies (5 min)
-
-By the end of this class, you should be able to...
-1. Make network requests using Alamofire.
-1. Set up a project on Firebase Database.
-1. Read, write and delete data from Firebase Database.
-
-## Initial Exercise (5 min)
-
-### Swift podcasts recommendations:
-- [Swift over coffee](https://itunes.apple.com/us/podcast/swift-over-coffee/id1435076502?mt=2) by Paul Hudson and Sean Allen (also on Spotify)<br>
-- [Swift community podcast](https://www.swiftcommunitypodcast.org)<br>
-- [Swift by Sundell](https://www.swiftbysundell.com/podcast)<br>
-- [Swift Unwrapped](https://spec.fm/podcasts/swift-unwrapped)<br>
-- [Fireside Swift](https://www.firesideswift.com)
-
-## Alamofire (5 min)
+# Alamofire 
 
 Alamofire is a networking library for iOS, written in Swift. It's a wrapper around Apple's Foundation networking suite. It simplifies handling requests and responses, serializing JSON, authentication, among other things.
 
@@ -154,24 +118,3 @@ Parameters: ["title": "Super Cool Post", "completed": 0, "userId": 8]
 
 **Q:** When is it a good idea to use Alamofire over our own network implementation?<br>
 **Q:** What are the pros and cons of using it?
-
-## Firebase
-Firebase is an app development platform that provides developers many tools to build high quality apps that can scale easily.
-
-It has products to store data, handle notifications, do A/B testing, analytics, authentication and more. The ones we'll learn how to use today are the RealTime Database and Storage. These tools will enable us to read and write to a database.
-
-
-## In Class Activity II
-- [Loaner app + Firebase](assets/FirebaseGuide.md) activity.
-
-## Wrap Up (5 min)
-
-- Complete today's activities.
-- Keep working on your project.
-
-## Additional Resources
-[Slides](https://docs.google.com/presentation/d/19Zmcl_UNufLoN_buWqD1es31rw6JHa4boFu2XlFoOF8/edit?usp=sharing)<br>
-[Alamofire](https://github.com/Alamofire/Alamofire)<br>
-[JSON placeholder](https://jsonplaceholder.typicode.com)<br>
-[Alamofire walkthrough](https://grokswift.com/rest-with-alamofire-swiftyjson/)<br>
-[Firebase](https://firebase.google.com/docs/ios/setup)
