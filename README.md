@@ -90,7 +90,7 @@ To pass this course you must meet the following requirements:
 - Complete all listed assignments with at least 70% on their rubric
 - Pass the final project with at least 70% on its rubric
 - Pass the final summative assessment according to the rubric as specified in this class
-    - This will be further explained in the [study guide](ADD_STUDY_GUIDE_LNK)
+    - This will be further explained in the [study guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/StudyGuide.md)
 - Actively participate in class and abide by the attendance policy
 - Make up all classwork from all absences
 
