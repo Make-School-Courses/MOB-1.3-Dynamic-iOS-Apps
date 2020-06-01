@@ -25,10 +25,37 @@ Students by the end of the course will be able to ...
 
 ## Schedule
 ---
-**Course Dates:** Monday, March 30 – Wednesday, May 13, 2020
 
-**Class Times:** Monday and Wednesday at 2:45–5:30pm
+**Course Dates:** Monday, June 1 – Friday, July 17, 2020 (7 weeks)
 
+**Class Times:** Monday, Wednesday, and Friday at 9:30–11:20am (20 class sessions)
+
+| Class |          Date          |                 Topics                  |
+|:-----:|:----------------------:|:---------------------------------------:|
+|  1 |  Mon, June 1               | [Closures and callbacks]               |
+|  2 |  Wed, June 3               | [Protocols & Delegation]               |
+|  3 |  Fri, June 5               | [Giphy Tutorial]                       |
+|  4 |  Mon, June 8               | [Communication patterns]               |
+|  5 |  Wed, June 10              | [Memory Management Pt. 1]              |
+|  6 |  Fri, June 12              | [Memory Management Pt. 2]              |
+|  7 |  Mon, June 15              | [JSON in iOS]                          |
+|  8 |  Wed, June 17              | [Codable Protocol]                     |
+|  9 |  Fri, June 19              | [Product Hunt Tutorial]                |
+| 10 |  Mon, June 22              | [URL Session]                          |
+| 11 |  Wed, June 24              | [Pokemon assignment]                   |
+| 12 |  Fri, June 26              | [Requests with authentication]         |
+| 13 |  Mon, June 29              | [Lab + Intro final project + Generics] |
+| 14 |  Wed, July 1               | [Testing]                              |  
+| -  |  Fri, July 3               | **NO CLASS - INDEPENDENCE DAY OBSERVED**|
+| 15 |  Mon, July 6               | [Building a networking layer Pt 1]     |
+| 16 |  Wed, July 8               | [Building a networking layer Pt 2]     |
+| 17 |  Fri, July 10              | [Structured Lab]                       |
+| 18 |  Mon, July 13              | [Firebase]                             |
+| 19 |  Wed, July 15              | Final Exam                             |
+| 20 |  Fri, July 17              | Presentations                          |
+
+
+<!--
 | Class |     Date     |                 Topics                  |  
 |:-----:|:------------:|:---------------------------------------:|
 |  1  |  Mon, Mar 30   | [Closures and callbacks]                |  
@@ -42,9 +69,10 @@ Students by the end of the course will be able to ...
 |  9  |  Mon, Apr 27   | [Testing]                               |
 |  10 |  Wed, Apr 30   | [Building a networking layer Pt 1]      |       
 |  11 |  Mon, May 4    | [Building a networking layer Pt 2]      |                  
-|  12 |  Wed, May 6    | [Firebase]                                |                    
+|  12 |  Wed, May 6    | [Firebase]                              |                    
 |  13 |  Mon, May 11   | Final Exam                              |                    
 |  14 |  Wed, May 13   | Presentations                           |                     
+-->
 
 [Closures and callbacks]: Lessons/Lesson2/README.md
 [Protocols & Delegation]: Lessons/Lesson3/README.md
@@ -62,13 +90,13 @@ Students by the end of the course will be able to ...
 
 ## Assignment Schedule
 
-|         Assignment             | Date Assigned |   Due Date   |            Submission Form           |
-|:------------------------------:|:-------------:|:------------:|:------------------------------------:|
-| [Giphy tutorial]               |  Wed, Apr 1   |  Mon, Apr 6 | Link on tracker                      |
-| [Pomodoro App]                 |  Wed, Apr 6   |  Mon, Apr 13 | Link on tracker                      |
-| [Product Hunt tutorial]        |  Mon, Apr 13  |  Mon, Apr 20 | Link on tracker                      |
-| Final Project                  |  Wed, Apr 22  |  Fri, May 13 | Link on tracker                      |
-| Moviefy App                    |  Wed, Apr 30  |  Wed, May 6  | Link on tracker                      |
+|         Assignment             | Date Assigned |   Due Date   |
+|:------------------------------:|:-------------:|:------------:|
+| [Giphy tutorial]               |    |   |
+| [Pomodoro App]                 |    |   |
+| [Product Hunt tutorial]        |    |   |
+| Final Project                  |    |   |
+| Moviefy App                    |    |   |
 
 [Pomodoro App]:(https://github.com/amelinagzz/pom-starter)
 [Giphy tutorial]:(https://www.makeschool.com/academy/track/giphy-search-for-ios-hrs)
