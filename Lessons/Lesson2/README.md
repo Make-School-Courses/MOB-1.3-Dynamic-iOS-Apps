@@ -105,6 +105,12 @@ greeting("Tahoe 🐶")
 
 <!-- v -->
 
+## Review practice
+
+- [First 2 sections on the playground](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson2/Closures%20Review.playground.zip)
+
+<!-- v -->
+
 ## Trailing closures  
 
 We can send closures as parameters to functions. If the closure happens to be the last parameter sent, we can use **trailing closure syntax**
@@ -260,6 +266,10 @@ By default, all closures are non escaping. This helps with memory management.
 
 <!-- > -->
 
+![escaping](assets/escaping.jpg)
+
+<!-- > -->
+
 In a **non escaping closure**, the lifecycle looks like this:
 
 1. Passing the closure to a function as argument
@@ -270,6 +280,10 @@ In a **non escaping closure**, the lifecycle looks like this:
 <aside class ="notes">
 A non-escaping closure does not outlive the function from where it was called.
 </aside>
+
+<!-- > -->
+
+![nonescaping](assets/nonescaping.jpg)
 
 <!-- > -->
 
@@ -322,7 +336,7 @@ Share with the rest of the class via slack.
 
 ## Lab time
 
-- Playground to review closures
+- [Last 2 sections on the playground](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson2/Closures%20Review.playground.zip)
 
 Suggestion<br>
 - Read the articles on the additional resources section and write down questions you still have about closures. Send them to the slack channel.
