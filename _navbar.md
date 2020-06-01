@@ -1,5 +1,5 @@
 <!-- _navbar.md -->
 
 *  **[Syllabus](README.md)**
-*  **[Tracker](make.sc/mob1.3-tracker)**
+*  **[Tracker](https://www.gradescope.com)**
 * [Make School](https://www.makeschool.com)
