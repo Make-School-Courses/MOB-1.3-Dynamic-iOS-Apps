@@ -41,7 +41,7 @@ Students by the end of the course will be able to ...
 |  7 |  Mon, June 15              | [JSON in iOS]                          |
 |  8 |  Wed, June 17              | [Codable Protocol]                     |
 |  9 |  Fri, June 19              | [Product Hunt Tutorial]                |
-| 10 |  Mon, June 22              | [URL Session]                          |
+| 10 |  Mon, June 22              | [URLSession]                          |
 | 11 |  Wed, June 24              | [Pokemon assignment]                   |
 | 12 |  Fri, June 26              | [Requests with authentication]         |
 | 13 |  Mon, June 29              | [Lab + Intro final project + Generics] |
@@ -77,8 +77,10 @@ Students by the end of the course will be able to ...
 [Closures and callbacks]: Lessons/Lesson2/README.md
 [Protocols & Delegation]: Lessons/Lesson3/README.md
 [Communication patterns]: Lessons/Lesson4/README.md
-[Memory Management]: Lessons/Lesson5/README.md
+[Memory Management Pt. 1]: Lessons/Lesson5/README.md
+[Memory Management Pt. 2]: Lessons/Lesson5/README.md
 [JSON in iOS]: Lessons/Lesson6/README.md
+[Codable Protocol]: Lessons/Lesson6/README.md
 [URLSession]: Lessons/Lesson7/README.md
 [Requests with authentication]: Lessons/Lesson8/README.md
 [Building a networking layer Pt 1]: Lessons/Lesson9/README.md
