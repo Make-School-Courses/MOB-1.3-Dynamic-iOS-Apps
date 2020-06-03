@@ -12,7 +12,11 @@
 
 # Why you should know this
 
-The delegate pattern is widely used in iOS development to communicate between objects. We've seen it before in `UITableViews` and `UICollectionViews`. If we understand how the delegate pattern works, we can implement our own to have more control over how our classes communicate.
+The delegate pattern is widely used in iOS development to communicate between objects.
+
+We've seen it before in `UITableViews` and `UICollectionViews`.
+
+If we understand how the delegate pattern works, we can implement our own to have more control over how our classes communicate.
 
 <!-- > -->
 
@@ -28,8 +32,8 @@ The delegate pattern is widely used in iOS development to communicate between ob
 
 Meaning in the real world.
 
-*To delegate* as a verb means to give control.<br>
-*A delegate* as a noun means a person acting on behalf of another.
+**To delegate** as a verb means to give control.<br>
+**A delegate** as a noun means a person acting on behalf of another.
 
 <!-- > -->
 
@@ -38,6 +42,8 @@ In software.
 Delegation is a **design pattern** that enables a class or structure to hand off (or delegate) some of its responsibilities to an instance of another type.
 
 In iOS development, delegation is used as a way for one class to **communicate** to another class. It'a a communication pattern.
+
+<!-- > -->
 
 The example that looks the most familiar to us is when using a tableview. The tableview by itself doesn’t know what information to show or the number of rows it needs to display. But they can find out by asking its dataSource.
 
@@ -49,8 +55,11 @@ A tableview’s dataSource must conform to the `UITableViewDatasouce` protocol, 
 
 We'll represent the communication pattern using the following analogy.
 
-Boss- Knows the bugs that need to be fixed, and knows how to do it.
-Intern - Doesn't know anything and is just waiting for instructions from the senior dev.
+**Boss** - Knows the bugs that need to be fixed, chooses what comes next.
+
+**Intern** - Doesn't know anything and is just waiting for instructions from the boss.
+
+<!-- > -->
 
 The Boss will choose ticket to fix a bug and assign it to the Intern. Once they receive instructions, the Intern can act according to the task.
 
@@ -60,7 +69,7 @@ Download the [supporting files](https://github.com/amelinagzz/delegate-starter) 
 
 ## BossVC
 
-- Set up a protocol, the commands it gives to the Intern.
+- Set up a protocol, this represents commands given to the Intern.
 
 ```swift
 protocol TaskSelectionProtocol{
@@ -68,7 +77,7 @@ protocol TaskSelectionProtocol{
 }
 ```
 
-Here he have a list for command for the Intern, it could be one or more.
+Here we have a list of commands for the Intern, could be one item or more.
 
 <!-- > -->
 
@@ -101,7 +110,7 @@ dismiss(animated: true, completion: nil)
 bossVC.selectionDelegate = self
 ```
 
-Here the InternVC is telling the BossVC instance that it wants to be its intern, by assigning itself as the selectionDelegate.
+Here the `InternVC` is telling the `BossVC` instance that it wants to be its intern, **by assigning itself as the selectionDelegate**.
 
 <!-- > -->
 
