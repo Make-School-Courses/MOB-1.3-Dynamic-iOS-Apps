@@ -88,13 +88,14 @@ Students by the end of the course will be able to ...
 [Testing]: Lessons/Lesson12/README.md
 [Lab + Intro final project + Generics]: Lessons/Lab/README.md
 [Firebase]: Lessons/Lesson13/README.md
+[Giphy Tutorial](https://www.makeschool.com/academy/track/giphy-search-for-ios-hrs)
 
 
 ## Assignment Schedule
 
 |         Assignment             | Date Assigned |   Due Date   |
 |:------------------------------:|:-------------:|:------------:|
-| [Giphy tutorial]               |    |   |
+| [Giphy tutorial]               |  June 5  | June 8  |
 | [Pomodoro App]                 |    |   |
 | [Product Hunt tutorial]        |    |   |
 | Final Project                  |    |   |
