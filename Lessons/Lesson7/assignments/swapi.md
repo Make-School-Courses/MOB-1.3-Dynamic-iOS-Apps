@@ -36,7 +36,7 @@ In the end you will have a table view that keeps on getting new data for Pokemon
 
 - [Sample 1](https://github.com/tron1991/Pokemon-API-Swift)
 - [Sample 2](https://github.com/Frog-Frog/Pokedex)
--
+
 
 #### Alternative API: https://swapi.dev
 
