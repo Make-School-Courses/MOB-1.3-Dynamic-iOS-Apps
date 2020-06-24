@@ -20,14 +20,22 @@ Use the DailyPlanet app as a "canvas" to practice deserializing JSON from an HTT
 Create a **table view** app with **pagination** that:
 - Uses a cell to present the name of the pokemon from the JSON response returned
 - When scrolled to the end of the currently available data, the app must fetch new data to enable pagination.
-- Check the section "Resource lists and pagination" straight from the docs: https://pokeapi.co/docs/v2.html/ 
+- Check the section "Resource lists and pagination" straight from the docs: https://pokeapi.co/docs/v2.html/
 In the end you will have a table view that keeps on getting new data for Pokemon as you reach the end of the scroll.
 
+
+## Example implementations
+
+- [Example 1](https://github.com/caocmai/mob1.3-fetching-from-api)
+
+- Example with images in table view
+
+![demo](pokemondemo.gif)
 
 
 #### Alternative API: https://swapi.dev
 
 The original assignment used the Star Wars API. If you prefer to use this one instead of the Pokemon API you can do so.
 
-- Using the /people/ endpoint 
+- Using the /people/ endpoint
 - Use a cell to present the "name" and 1 other property/items (i.e.. "height") from the JSON response returned

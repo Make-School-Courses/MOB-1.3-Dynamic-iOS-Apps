@@ -249,7 +249,7 @@ guard let mime = response?.mimeType, mime == "application/json" else {
 
 ## HW assignment (lab suggestion)
 
-[Practicing requests with SWAPI](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md)
+[Practicing requests with the Pokemon API](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md)
 
 <!-- > -->
 
