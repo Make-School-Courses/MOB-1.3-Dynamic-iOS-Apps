@@ -88,8 +88,9 @@ Students by the end of the course will be able to ...
 [Testing]: Lessons/Lesson12/README.md
 [Lab + Intro final project + Generics]: Lessons/Lab/README.md
 [Firebase]: Lessons/Lesson13/README.md
-[Giphy Tutorial]:(https://www.makeschool.com/academy/track/giphy-search-for-ios-hrs)
-[Pokemon Assignment]:[https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md]
+[Giphy Tutorial]:https://www.makeschool.com/academy/track/giphy-search-for-ios-hrs
+[Pokemon assignment]:https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md
+[Product Hunt Tutorial]:https://www.makeschool.com/academy/track/product-hunt-api-tutorial
 
 
 ## Assignment Schedule
