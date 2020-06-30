@@ -24,7 +24,6 @@ Students by the end of the course will be able to ...
 1. Parse a JSON network response using the Codable protocol
 
 ## Schedule
----
 
 **Course Dates:** Monday, June 1 – Friday, July 17, 2020 (7 weeks)
 
@@ -98,7 +97,7 @@ Students by the end of the course will be able to ...
 |         Assignment             | Date Assigned |   Due Date   |
 |:------------------------------:|:-------------:|:------------:|
 | [Giphy tutorial]               |  June 5  | June 8  |
-| [Pomodoro App]                 |    |   |
+| [Pomodoro App]                 |          |   |
 | [Product Hunt tutorial]        |    |   |
 | Final Project                  |    |   |
 | Moviefy App                    |    |   |
