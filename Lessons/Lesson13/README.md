@@ -86,7 +86,7 @@ Watch intro video
 Your task is to take the implementation of an app that's a photo journal and include Firebase to use their backend services.
 
 - Starter Code: [Link to repo](https://github.com/WesleyEspinoza/FirebaseStarter)
-- Guided video to follow along: [Link to Youtube](https://youtu.be/xiFUHiReGxc)
+- Guided video to follow along: [Link to Youtube](https://www.youtube.com/watch?v=NWF3rFZCFo4&feature=youtu.be)
 
 <!-- > -->
 

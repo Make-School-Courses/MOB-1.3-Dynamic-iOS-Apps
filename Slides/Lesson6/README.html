@@ -31,13 +31,13 @@
 
 Many applications receive information from a server. It doesn't matter how the implementation of handling the data happens, there's a **standard format** that can be recognized by every client app.
 
-Years ago, **XML**(1996) was widely used for this purpose. But recent trends point that **JSON**(2002) has become the most popular data-interchange format and that it will continue to dominate the web.
+Years ago, **XML**(1996) was widely used for this purpose. Recently **JSON**(2002) has become the most popular format for transmitting data over the web.
 </script></section><section  data-markdown><script type="text/template">
 ## Learning Objectives
 
 1. Identify JSON structures and create your own
 1. Reading data from a file
-1. Deserialize a JSON file
+1. Encoding/Decoding a JSON file
 1. Turning data into objects using the Codable protocol
 </script></section><section  data-markdown><script type="text/template">
 ## JSON quick intro/review
@@ -138,7 +138,7 @@ What did we just do in the Film Locations project?
 
 <!--decoded data into JSON-->
 </script></section><section  data-markdown><script type="text/template">
-Types conform to the **Encodable** and/or **Decodable** protocols to state their ability to encode themselves and to create an instance from serialized data.
+Types conform to the **Encodable** and/or **Decodable** protocols to state their ability to encode themselves and to create an instance from data.
 
 Most types will adapt both, so the standard library came up with a typealias for both: the **Codable** protocol.
 
