@@ -134,7 +134,6 @@ APIClient.shared.createRequestToken { (result) in
     case let .success(token):
     DispatchQueue.main.async {
         print(token.request_token)
-        self.authorizeRequestToken(from: self, requestToken: token.request_token)
     }
     case let .failure(error):
         print(error)
