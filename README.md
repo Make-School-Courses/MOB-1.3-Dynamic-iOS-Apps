@@ -11,7 +11,6 @@ Most, if not all, mobile apps will need to communicate with an external service 
 ## Prerequisites:  
 
 - [MOB 1.2](https://github.com/Make-School-Courses/MOB-1.2-Introduction-to-iOS-Development-in-Swift)
-- [BEW 1.2]()
 
 ## Course Specifics
 
@@ -31,86 +30,54 @@ Students by the end of the course will be able to ...
 
 ## Schedule
 
-**Course Dates:** Monday, June 1 – Friday, July 17, 2020 (7 weeks)
+**Course Dates:** Monday, Mar 29 – Wed, May 12, 2021 (7 weeks)
 
-**Class Times:** Monday, Wednesday, and Friday at 9:30–11:20am (20 class sessions)
+**Class Times:** Monday, Wednesday at 2:45–5:30pm (13 class sessions)
 
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
-|  1 |  Mon, June 1               | [Closures and callbacks]               |
-|  2 |  Wed, June 3               | [Protocols & Delegation]               |
-|  3 |  Fri, June 5               | [Giphy Tutorial]                       |
-|  4 |  Mon, June 8               | [Communication patterns]               |
-|  5 |  Wed, June 10              | [Memory Management Pt. 1]              |
-|  6 |  Fri, June 12              | [Memory Management Pt. 2]              |
-|  7 |  Mon, June 15              | [JSON in iOS]                          |
-|  8 |  Wed, June 17              | [Codable Protocol]                     |
-|  9 |  Fri, June 19              | [Product Hunt Tutorial]                |
-| 10 |  Mon, June 22              | [URLSession]                          |
-| 11 |  Wed, June 24              | [Pokemon assignment]                   |
-| 12 |  Fri, June 26              | [Requests with authentication]         |
-| 13 |  Mon, June 29              | [Lab + Intro final project + Generics] |
-| 14 |  Wed, July 1               | [Testing]                              |  
-| -  |  Fri, July 3               | **NO CLASS - INDEPENDENCE DAY OBSERVED**|
-| 15 |  Mon, July 6               | [Building a networking layer Pt 1]     |
-| 16 |  Wed, July 8               | [Building a networking layer Pt 2]     |
-| 17 |  Fri, July 10              | [Structured Lab]                       |
-| 18 |  Mon, July 13              | [Firebase]                             |
-| 19 |  Wed, July 15              | Final Exam                             |
-| 20 |  Fri, July 17              | Presentations                          |
-
-
-<!--
-| Class |     Date     |                 Topics                  |  
-|:-----:|:------------:|:---------------------------------------:|
-|  1  |  Mon, Mar 30   | [Closures and callbacks]                |  
-|  2  |  Wed, Apr 1    | [Protocols & Delegation]                |
-|  3  |  Mon, Apr 6    | [Communication patterns]                |  
-|  4  |  Wed, Apr 8    | [Memory Management]                     |
-|  5  |  Mon, Apr 13   | [JSON in iOS]                           |              
-|  6  |  Wed, Apr 15   | [URLSession]                            |
-|  7  |  Mon, Apr 20   | [Requests with authentication]          |
-|  8  |  Wed, Apr 22   | [Lab + Intro final project + Generics]  |
-|  9  |  Mon, Apr 27   | [Testing]                               |
-|  10 |  Wed, Apr 30   | [Building a networking layer Pt 1]      |       
-|  11 |  Mon, May 4    | [Building a networking layer Pt 2]      |                  
-|  12 |  Wed, May 6    | [Firebase]                              |                    
-|  13 |  Mon, May 11   | Final Exam                              |                    
-|  14 |  Wed, May 13   | Presentations                           |                     
--->
+|  1 |  Mon, Mar 29               | [Closures and callbacks]               |
+|  2 |  Wed, Mar 31               | **No Class - Cesar Chavez**            |
+|  3 |  Mon, Apr 5                | [Protocols & Delegation]               |
+|  3 |  Wed, Apr 7                | [Communication patterns]               |
+|  4 |  Mon, Apr 12               | [[Memory Management]                   |
+|  5 |  Wed, Apr 14               | [JSON in iOS] + [Codable Protocol]     |
+|  6 |  Mon, Apr 19               | [URLSession]                           |
+|  7 |  Wed, Apr 21               | [Authentication]                       |
+|  8 |  Mon, Apr 26               | [Lab + Intro final project + Generics] |
+|  9 |  Wed, Apr 28               | [[Building a networking layer Pt 1]]   |
+| 10 |  Mon, May 3                | [[Building a networking layer Pt 2]]   |
+| 11 |  Wed, May 5                | [Firebase]                             |
+| 12 |  Mon, May 10               | [Lab]                                  |
+| 13 |  Wed, May 12               | [Final Exam]                           |  
 
 [Closures and callbacks]: Lessons/Lesson2/README.md
 [Protocols & Delegation]: Lessons/Lesson3/README.md
 [Communication patterns]: Lessons/Lesson4/README.md
-[Memory Management Pt. 1]: Lessons/Lesson5/README.md
-[Memory Management Pt. 2]: Lessons/Lesson5/README.md
+[Memory Management]: Lessons/Lesson5/README.md
 [JSON in iOS]: Lessons/Lesson6/README.md
 [Codable Protocol]: Lessons/Lesson6/README.md
 [URLSession]: Lessons/Lesson7/README.md
-[Requests with authentication]: Lessons/Lesson8/README.md
+[Authentication]: Lessons/Lesson8/README.md
 [Building a networking layer Pt 1]: Lessons/Lesson9/README.md
 [Building a networking layer Pt 2]: Lessons/Lesson10/README.md
 [Testing]: Lessons/Lesson12/README.md
 [Lab + Intro final project + Generics]: Lessons/Lab/README.md
 [Firebase]: Lessons/Lesson13/README.md
-[Giphy Tutorial]:https://www.makeschool.com/academy/track/giphy-search-for-ios-hrs
-[Pokemon assignment]:https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md
-[Product Hunt Tutorial]:https://www.makeschool.com/academy/track/product-hunt-api-tutorial
 
+## Tutorials + Assignments Schedule
 
-## Assignment Schedule
-
-|         Assignment             | Date Assigned |   Due Date   |
-|:------------------------------:|:-------------:|:------------:|
-| [Giphy tutorial]               |  June 5  | June 8  |
-| [Pomodoro App]                 |          |   |
-| [Product Hunt tutorial]        |    |   |
-| Final Project                  |    |   |
-| Moviefy App                    |    |   |
+|         Name                 |   Type    | Date Assigned |   Due Date   |
+|:----------------------------:|:---------:|:-------------:|:------------:|
+| [Pomodoro App]               | In-class  |  Apr 5        |   Apr 12  |
+| [Product Hunt tutorial]      | Tutorial  |  Apr 12       |   Apr 19  |
+| [Pokemon assignment]         | In-class  |  Apr 19       |   Apr 26  |
+| [Moviefy App]                | Tutorial  |  Apr 28       |   Apr 28  |
+| [Final Project]              | Project   |  Apr 26       |   May 12  |
 
 [Pomodoro App]:(https://github.com/amelinagzz/pom-starter)
-[Giphy tutorial]:(https://www.makeschool.com/academy/track/giphy-search-for-ios-hrs)
-[Product Hunt tutorial]:(https://www.makeschool.com/academy/track/product-hunt-api-tutorial)
+[Pokemon assignment]:https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md
+[Product Hunt Tutorial]:https://www.makeschool.com/academy/track/product-hunt-api-tutorial
 [Moviefy App]:()
 [Final project]:(Projects/FinalProject.md)
 
@@ -125,16 +92,13 @@ Individual project covering core concepts from this course.
 
 To pass this course you must meet the following requirements:
 
-- Complete all listed assignments with at least 70% on their rubric
+- Complete all tutorials
+- Complete at least 80% of in-class assignments
 - Pass the final project with at least 70% on its rubric
 - Pass the final summative assessment according to the rubric as specified in this class
     - This will be further explained in the [study guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/StudyGuide.md)
 - Actively participate in class and abide by the attendance policy
 - Make up all classwork from all absences
-
-Notes:
-- Turn in all required projects and assignments on their due date. Failing to do so will result in a penalty of 20 points less on the overall grade of the assignment.
-- The last day to turn in any missing work is Friday, May 15th before midnight. Anything received after will be an automatic 0 on the rubric.
 
 ## Resources
 
