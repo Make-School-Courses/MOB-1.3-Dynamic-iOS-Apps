@@ -40,16 +40,16 @@ Students by the end of the course will be able to ...
 |  2 |  Wed, Mar 31               | **No Class - Cesar Chavez**            |
 |  3 |  Mon, Apr 5                | [Protocols & Delegation]               |
 |  3 |  Wed, Apr 7                | [Communication patterns]               |
-|  4 |  Mon, Apr 12               | [[Memory Management]                   |
+|  4 |  Mon, Apr 12               | [Memory Management]                   |
 |  5 |  Wed, Apr 14               | [JSON in iOS] + [Codable Protocol]     |
 |  6 |  Mon, Apr 19               | [URLSession]                           |
 |  7 |  Wed, Apr 21               | [Authentication]                       |
 |  8 |  Mon, Apr 26               | [Lab + Intro final project + Generics] |
-|  9 |  Wed, Apr 28               | [[Building a networking layer Pt 1]]   |
-| 10 |  Mon, May 3                | [[Building a networking layer Pt 2]]   |
-| 11 |  Wed, May 5                | [Firebase]                             |
-| 12 |  Mon, May 10               | [Lab]                                  |
-| 13 |  Wed, May 12               | [Final Exam]                           |  
+|  9 |  Wed, Apr 28               | [Building a networking layer Pt 1]   |
+| 10 |  Mon, May 3                | [Building a networking layer Pt 2]   |
+| 11 |  Wed, May 5                | [Firebase]                           |
+| 12 |  Mon, May 10               | Lab                                  |
+| 13 |  Wed, May 12               | Final Exam - [study guide]           |  
 
 [Closures and callbacks]: Lessons/Lesson2/README.md
 [Protocols & Delegation]: Lessons/Lesson3/README.md
@@ -64,6 +64,7 @@ Students by the end of the course will be able to ...
 [Testing]: Lessons/Lesson12/README.md
 [Lab + Intro final project + Generics]: Lessons/Lab/README.md
 [Firebase]: Lessons/Lesson13/README.md
+[study guide]: https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/StudyGuide.md
 
 ## Tutorials + Assignments Schedule
 
