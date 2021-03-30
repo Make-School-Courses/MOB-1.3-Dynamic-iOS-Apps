@@ -14,9 +14,9 @@ Most, if not all, mobile apps will need to communicate with an external service 
 
 ## Course Specifics
 
-**Course Delivery**: online | 7 weeks | 14 sessions
+**Course Delivery**: online | 7 weeks | 13 sessions
 
-**Course Credits**: 3 units | 37.5 Seat Hours | 75 Total Hours
+**Course Credits**: 3 units | 75 Total Hours
 
 ## Learning Outcomes
 
@@ -30,26 +30,26 @@ Students by the end of the course will be able to ...
 
 ## Schedule
 
-**Course Dates:** Monday, Mar 29 – Wed, May 12, 2021 (7 weeks)
+**Course Dates:** Tuesday, Mar 30 – Thursday, May 13, 2021 (7 weeks)
 
-**Class Times:** Monday, Wednesday at 2:45–5:30pm (13 class sessions)
+**Class Times:** Tuesday, Thursday at 1:45–2:30pm (13 class sessions)
 
 | Class |          Date          |                 Topics                  |
 |:-----:|:----------------------:|:---------------------------------------:|
-|  1 |  Mon, Mar 29               | [Closures and callbacks]               |
-|  2 |  Wed, Mar 31               | **No Class - Cesar Chavez**            |
-|  3 |  Mon, Apr 5                | [Protocols & Delegation]               |
-|  3 |  Wed, Apr 7                | [Communication patterns]               |
-|  4 |  Mon, Apr 12               | [Memory Management]                   |
-|  5 |  Wed, Apr 14               | [JSON in iOS] + [Codable Protocol]     |
-|  6 |  Mon, Apr 19               | [URLSession]                           |
-|  7 |  Wed, Apr 21               | [Authentication]                       |
-|  8 |  Mon, Apr 26               | [Lab + Intro final project + Generics] |
-|  9 |  Wed, Apr 28               | [Building a networking layer Pt 1]   |
-| 10 |  Mon, May 3                | [Building a networking layer Pt 2]   |
-| 11 |  Wed, May 5                | [Firebase]                           |
-| 12 |  Mon, May 10               | Lab                                  |
-| 13 |  Wed, May 12               | Final Exam - [study guide]           |  
+|  1 |  Tue, Mar 30               | [Closures and callbacks]               |
+|  2 |  Thu, Apr 1                | **No Class - Cesar Chavez**            |
+|  3 |  Tue, Apr 6                | [Protocols & Delegation]               |
+|  3 |  Thu, Apr 8                | [Communication patterns]               |
+|  4 |  Tue, Apr 13               | [Memory Management]                    |
+|  5 |  Thu, Apr 15               | [JSON in iOS]                          |
+|  6 |  Tue, Apr 20               | [Codable Protocol]                     |
+|  7 |  Thu, Apr 22               | [URLSession]                           |
+|  8 |  Tue, Apr 27               | [Authentication]                       |
+|  9 |  Thu, Apr 29               | [Intro final project + Generics][      |
+| 10 |  Tue, May 4                | Building a networking layer Pt 1]      |
+| 11 |  Thu, May 6                | [Building a networking layer Pt 2]     |
+| 12 |  Tue, May 11               | [Firebase]                             |
+| 13 |  Thu, May 13               | Lab + Final Exam - [study guide]       |  
 
 [Closures and callbacks]: Lessons/Lesson2/README.md
 [Protocols & Delegation]: Lessons/Lesson3/README.md
@@ -82,8 +82,6 @@ Students by the end of the course will be able to ...
 [Moviefy App]:()
 [Final project]:(Projects/FinalProject.md)
 
-- [Tutorial for Closures & ARC](https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC)
-
 ## Final project
 
 Individual project covering core concepts from this course.
@@ -103,8 +101,8 @@ To pass this course you must meet the following requirements:
 
 ## Resources
 
-An [extra class](Lessons/Lesson11.md) on Sockets with a tutorial.
-
+- An [extra class](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson11/Lesson11.md) on Sockets with a tutorial.
+- [Tutorial for Closures & ARC](https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC)
 ##  Information Resources
 
 Any additional resources you may need (online books, etc.) can be found here. You can also find additional resources through the library linked below:

@@ -192,20 +192,6 @@ Running the program should work as expected now -->
 
 <!-- > -->
 
-## Completion Handlers
-
-Remember closures and completion handlers? These can be used instead of delegates.
-
-Download [this working example](https://github.com/dmlebron/tutorial_closures) and look at the code to find out how delegates are being replaced by closures and see how it leads to a similar result.<br>
-
-In groups of 3 answer the following:
-
-**Q:** What does the app do?<br>
-**Q:** Where are closures being used?<br>
-**Q:** How would the approach be with delegates? Change it.<br>
-
-<!-- > -->
-
 ## Class Assignment
 
 **Individually**

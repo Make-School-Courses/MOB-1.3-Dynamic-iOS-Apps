@@ -25,13 +25,6 @@ You probably have already used closures in your apps by now without noticing or 
 1. List and implement use cases of closures
 1. Describe drawbacks for using closures
 
-## Initial Exercise (10 min)
-
-- Apple in 2019 - Discussion time<br>
-[Letter from Tim Cook to Apple investors](https://www.apple.com/newsroom/2019/01/letter-from-tim-cook-to-apple-investors/)<br>
-**Q:** What's the current situation in China?<br>
-**Q:** How often are people upgrading their iPhones?
-
 ## What is a Closure? (15 min)
 
 Apple's definition:<br>
@@ -41,11 +34,6 @@ In essence, a closure is a block of code that you can assign to a variable or co
 
 #### An Analogy
 
-I tell you to complete a tutorial. When you hear the request you open your computer and start working. Working on the tutorial is a **function**.<br>
-
-You post on a Slack channel a question, and wait for someone to read it. The post is a **variable**.<br>
-
-I write a post on the Slack channel saying to complete a tutorial. Sometime later when you get to a study area, you read the post and start working on it. The request, sent trough a Slack post, is a **closure**.
 
 #### Example: closure with statements
 
@@ -59,7 +47,7 @@ Everything inside the braces `{}` is the closure. And it is assigned to a variab
 *Note: First-class just means that there are no restrictions in the object's use. It can be created, stored, passed, assigned, return as value. You can treat it as you would any other value or object*
 
 **Q:** What is the type of the closure? <br>
-We can add it in the decaration.
+We can add it in the declaration.
 
 ```Swift
 var brunch: () -> () = {

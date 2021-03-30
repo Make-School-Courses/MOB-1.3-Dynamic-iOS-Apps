@@ -29,24 +29,28 @@ Some uses cases of closures:
 - Completion handlers
 - Creating views
 - Higher order Functions
+- Passing data
 
 <!-- > -->
 
 ## Learning objectives
 
 1. Identify use cases of closures
-1. Understand what capturing values mean
 1. Know the difference between escaping and non escaping closures
 1. Implement closures as completion handlers
+1. Use closures to pass data between View Controllers
 
 <!-- > -->
 
 ## Initial Exercise
 
-1. Breakout session in pairs to brainstorm everything you know about closures.
+1. Brainstorm everything you know about closures.
+
+<!--
 2. Then write an example.
 3. Post it in the slack channel.
 4. React to other's example with ✔️ if you understand it and ❓if you are unsure of why it works.
+-->
 
 <!-- v -->
 
@@ -107,14 +111,13 @@ greeting("Tahoe 🐶")
 
 ## Review practice
 
-- [First 2 sections on the playground](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson2/Closures%20Review.playground.zip)
+- [Closures 01 - Replit](https://replit.com/team/MOB13/Closures-01)
 
 <!-- v -->
 
 ## Trailing closures  
 
 We can send closures as parameters to functions. If the closure happens to be the last parameter sent, we can use **trailing closure syntax**
-
 
 ```Swift
 func washHands(action:()->()) {
@@ -138,46 +141,7 @@ The closure is written outside of the function call parentheses, this is known a
 
 <!-- v -->
 
-## Pair Activity
-
-<aside class = "notes">
-1. Try in a piece of paper first.
-3. Now write it in a playground. Do not use auto correct.
-4. Explain your code to a partner, why it worked and if it didn't, discuss what it needs to be fixed.
-
-</aside>
-
-Complete the code.
-
-```swift
-func giveAdvice(action:(String, String) -> String) {
-  //missing code
-}
-
-//missing function call
-```
-
-So that it prints:
-
-```
-When working from home...
-X's advice is to X.
-```
-
-<!---
-func giveAdvice(action:(String, String) -> String) {
-    print("When working from home...")
-    print(action("Adriana", "follow a daily schedule."))
-}
-
-giveAdvice{(passenger:String, destination:String) -> String in
-    return "\(passenger)'s advice is to \(destination)"
-}
---->
-
-<!-- > -->
-
-### Capturing values
+## Capturing values
 
 Closures have a distinct feature that makes them stand out: they can capture values from their surrounding context.
 
@@ -189,7 +153,7 @@ From Apple's documentation:
 Variables, functions and closures have a scope. This scope determines if we can access any of them. Simply if a variable, function or closure isn't in a scope, we can access it.
 </aside>
 
-<!-- > -->
+<!-- v -->
 
 ```Swift
 let location = "San Francisco"
@@ -204,9 +168,7 @@ explore()
 The closure assigned to "explore" closes over the local variable "location" since it is available in the scope that the closure is defined in. We can access the constant without declaring it locally inside the closure.
 </aside>
 
-<!-- > -->
-
-## In Class Activity
+<!-- v -->
 
 Here's another example of closures closing over variables.
 
@@ -214,11 +176,9 @@ Here's another example of closures closing over variables.
 func addScore(_ points: Int) -> Int
 {
     let score = 42
-
     let calculate = {
         return score + points
     }
-
     return calculate()
 }
 
@@ -226,14 +186,22 @@ let value = addScore(11)
 print(value)
 ```
 
-Take a screenshot of the code and using different colors or any other way to mark a difference, show where the **global** scope, **local** scope and **closure** scope are.
+<!-- > -->
 
-<!-- v -->
+## Trailing Closure Practice
 
-Once everyone is done, discuss the solution.
+- [Closures 02 - Replit](https://replit.com/team/MOB13/Closures-02)
 
-- Closures only capture elements that are used in the closure. When a variable isn’t accessed in the closure, it isn’t captured.
-- Capturing only works one way. The closure captures the scope it is defined in, but code “outside” a closure doesn’t have access to values “inside” the closure. Like a one way mirror.
+<!---
+func giveAdvice(action:(String, String) -> String) {
+    print("When working from home...")
+    print(action("Adriana", "follow a daily schedule."))
+}
+
+giveAdvice{(passenger:String, destination:String) -> String in
+    return "\(passenger)'s advice is to \(destination)"
+}
+--->
 
 <!-- > -->
 
@@ -264,7 +232,7 @@ This means that the closure outlives the function (it is called after the functi
 By default, all closures are non escaping. This helps with memory management.
 </aside>
 
-<!-- > -->
+<!-- v -->
 
 ![escaping](assets/escaping.jpg)
 
@@ -281,7 +249,7 @@ In a **non escaping closure**, the lifecycle looks like this:
 A non-escaping closure does not outlive the function from where it was called.
 </aside>
 
-<!-- > -->
+<!-- v -->
 
 ![nonescaping](assets/nonescaping.jpg)
 
@@ -289,36 +257,9 @@ A non-escaping closure does not outlive the function from where it was called.
 
 ## Completion handler activity
 
-Closures are used in completion handlers.
+- [Closures 03 - Replit](https://replit.com/team/MOB13/Closures-03)
 
-Take a look at the code snippet and analyze how closures are being used and the order in which lines get executed.
-
-```Swift
-func flyAway(finalStage: String){
-    print("\(finalStage) emerged, flying away... ")
-}
-
-func metamorphosis(initialStage:String, completion: (String) -> Void){
-    print("Caterpillar creates cocoon.")
-    // They stay inside for up to 21 days.
-    for _ in 1...21 {
-        print("\(initialStage) inside cocoon")
-    }
-    completion("🦋")
-}
-
-metamorphosis(initialStage:"🐛", completion: flyAway)
-
-```
-
-<!-- > -->
-
-**Q:** Where is the lengthy task being simulated?<br>
-**Q:** Can you make the last call using a trailing closure?<br>
-
-Now implement your own example. Make sure to put in a context, get creative 🌮 👽 💣.
-
-<!-- > -->
+<!--
 
 ## Creating an analogy
 
@@ -332,14 +273,24 @@ How they work as completion handlers?
 
 Share with the rest of the class via slack.
 
+-->
+
 <!-- > -->
 
-## Lab time
+## Completion Handlers
 
-- [Last 2 sections on the playground](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson2/Closures%20Review.playground.zip)
+Download [this working example](https://github.com/dmlebron/tutorial_closures) and look at the code to find out how closures are being used to pass data between view controllers<br>
 
-Suggestion<br>
-- Read the articles on the additional resources section and write down questions you still have about closures. Send them to the slack channel.
+Identify:
+- **Q:** What does the app do?<br>
+- **Q:** Where are closures being used?<br>
+
+<!-- > -->
+
+## Self Study
+
+- [HOF with closures: Closures 04 - Replit](https://replit.com/team/MOB13/Closures-04)
+- [Shorthand arguments: Closures 05 - Replit](https://replit.com/team/MOB13/Closures-4)
 
 <!-- > -->
 
