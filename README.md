@@ -45,8 +45,8 @@ Students by the end of the course will be able to ...
 |  6 |  Tue, Apr 20               | [Codable Protocol]                     |
 |  7 |  Thu, Apr 22               | [URLSession]                           |
 |  8 |  Tue, Apr 27               | [Authentication]                       |
-|  9 |  Thu, Apr 29               | [Intro final project + Generics][      |
-| 10 |  Tue, May 4                | Building a networking layer Pt 1]      |
+|  9 |  Thu, Apr 29               | [Intro final project + Generics]       |
+| 10 |  Tue, May 4                | [Building a networking layer Pt 1]     |
 | 11 |  Thu, May 6                | [Building a networking layer Pt 2]     |
 | 12 |  Tue, May 11               | [Firebase]                             |
 | 13 |  Thu, May 13               | Lab + Final Exam - [study guide]       |  
