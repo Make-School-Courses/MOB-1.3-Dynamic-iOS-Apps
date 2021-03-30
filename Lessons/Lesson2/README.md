@@ -255,7 +255,7 @@ A non-escaping closure does not outlive the function from where it was called.
 
 <!-- > -->
 
-## Completion handler activity
+## Completion handler practice
 
 - [Closures 03 - Replit](https://replit.com/team/MOB13/Closures-03)
 
