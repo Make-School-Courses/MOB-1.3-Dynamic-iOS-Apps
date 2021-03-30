@@ -62,7 +62,7 @@ Students by the end of the course will be able to ...
 [Building a networking layer Pt 1]: Lessons/Lesson9/README.md
 [Building a networking layer Pt 2]: Lessons/Lesson10/README.md
 [Testing]: Lessons/Lesson12/README.md
-[Lab + Intro final project + Generics]: Lessons/Lab/README.md
+[Intro final project + Generics]: Lessons/Lab/README.md
 [Firebase]: Lessons/Lesson13/README.md
 [study guide]: https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/StudyGuide.md
 
