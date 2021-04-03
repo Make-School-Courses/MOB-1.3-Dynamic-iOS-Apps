@@ -21,18 +21,6 @@
 
 <!-- > -->
 
-## Why you should know this
-
-Some uses cases of closures:
-- Animations
-- Fetching data from external APIs
-- Completion handlers
-- Creating views
-- Higher order Functions
-- Passing data
-
-<!-- > -->
-
 ## Learning objectives
 
 1. Identify use cases of closures
@@ -205,6 +193,16 @@ giveAdvice{(passenger:String, destination:String) -> String in
 
 <!-- > -->
 
+## Self Study
+
+<iframe src="https://youtube.com/embed/tRK0sGymo24" data-autoplay  width="700" height="500"></iframe>
+
+<!-- > -->
+
+<iframe src="https://youtube.com/embed/6nN2YFQQY4A" data-autoplay  width="700" height="500"></iframe>
+
+<!-- > -->
+
 ## Escaping and non escaping closures
 
 Closures come in two different variants - **escaping** and **non-escaping**.
@@ -287,7 +285,7 @@ Identify:
 
 <!-- > -->
 
-## Self Study
+## Closures Practice using HOF
 
 - [HOF with closures: Closures 04 - Replit](https://replit.com/team/MOB13/Closures-04)
 - [Shorthand arguments: Closures 05 - Replit](https://replit.com/team/MOB13/Closures-4)
