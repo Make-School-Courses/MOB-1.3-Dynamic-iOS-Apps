@@ -16,8 +16,6 @@ If we think about how apps work, we can see they're usually multiple screens dis
 
 In this last remark, there are several methods or patterns we can use to achieve communication between elements in an app.
 
-You already know about delegates and callbacks. Others you have probably seen already and even used. Today we'll go over how they work.
-
 <!-- > -->
 
 ## Learning Objectives
@@ -38,27 +36,30 @@ It's the pattern used to send messages in response to user-interface events, spe
 
 ### Simplifying things
 
-Sending a message (**the action**) to an object (**the target**).
+The Target-Action object has:
 
-**Target** - Where an action is fired, the object to receive the message.<br>
-**Action** - A selector method to be called called in response of the event.
+1. Target - The object that will be notified
+2. Action - The method that will be used
+3. Event that will trigger the Target-Action
 
 <!-- > -->
 
 ### An example: Buttons.
 
+<img src="https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/Art/target_action.jpg">
+
+<aside class="notes">
 Buttons send a message when they have been tapped.
 
 If the target is specified then the action message, it is sent to the object.
-
-In case it is not specified (nil) then the action message goes up in the responder chain to look for an object that can receive it (not common). Only one object gets to handle the action.
+</aside>
 
 <!-- > -->
 
 ### What are selectors?
 
 **Unrecognized selector sent to instance**<br>
-Who has encountered this error in which the app crashes?<br>
+Wave you ever seen this error in which the app crashes?<br>
 What was the problem?
 
 <!-- > -->
@@ -67,7 +68,7 @@ A: Xcode couldn't find the method being called.
 
 <!-- > -->
 
-Selectors are the names of methods used to execute code at runtime. They are the way of telling objects like buttons "When tapped, send **this** message to **this** object".
+Selectors are the names of methods used to execute code at runtime. They are the way of telling objects, like buttons, "When tapped, send **this** message to **this** object".
 
 The name of the method that will be called and the object to send the message to are **not known until runtime**.
 
@@ -87,7 +88,7 @@ loginButton.setTitle("Login", for: .normal)
 Adding the target
 
 ```swift
-loginButton.addTarget(self, action: #selector(LoginViewController.login), for: .touchUpInside)
+loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
 ```
 
 <!-- > -->
@@ -95,23 +96,38 @@ loginButton.addTarget(self, action: #selector(LoginViewController.login), for: .
 Created a UIButton and called `addTarget(_:action:for:)` with these parameters:
 
 1. **target** is `self`
-1. **action** is ``#selector(LoginViewController.login)``
+1. **action** is ``#selector(login)``
 1. **event** is `.touchUpInside`
 
-When the event `.touchUpInside` occurs, send the message execute `login` to `self`
+When the event `.touchUpInside` occurs, send a message to `self` to execute `login`
 
 <!-- > -->
 
 Here's the method called
 
 ```Swift
-@objc func login(sender: UIButton){
+@objc func login(){
   print("Button tapped")
-  print(sender.titleLabel?.text)
 }
 ```
 
-<!-- > -->
+<!-- v -->
+
+Variation passing in the sender object
+
+
+```swift
+loginButton.addTarget(self, action: #selector(login(sender:)), for: .touchUpInside)
+
+@objc func login(sender: UIButton){
+  print("Button tapped")
+  //Because you received the sender as a parameter, you can access its properties.
+  print(sender.titleLabel?.text)
+}
+
+```
+
+<!-- v -->
 
 ## Example
 
@@ -121,7 +137,7 @@ Something to note is that the messages sent can't carry custom information. Whic
 
 <!-- > -->
 
-## Passing arguments un the target action
+## Passing arguments in the target action
 
 There are times when we need to pass more arguments to a method call when tapping buttons. We know the target-action pattern can at most include the sender as a parameter.
 
@@ -133,22 +149,28 @@ One workaround is the use of **tags** in UIButtons. But there are other options.
 
 **Try this:**
 
-1. Subclass UIButton.
-2. Add a dictionary as a property that has strings as keys and any value as the values.
-3. Include initializers
+1. Subclass UIButton
+2. Add an array of Strings as a property
+
+<!-- v -->
 
 ```swift
-override init(frame: CGRect)
-required init?(coder aDecoder: NSCoder)
+class CustomButton: UIButton{
+    var arrayValues: [String]!
+    convenience init(values: [String]){
+        self.init()
+        self.arrayValues = values
+    }
+}
 ```
 
-<!-- > -->
+<!-- v -->
 
 4. Create a UIButton and use Target-Action to fire a method when tapped.
-5. Include parameters in the button's dictionary `loginButton.params["firstValue"] = "Hello"`
+5. Include parameters in the button's array
 6. Print these values when the method is called.
 
-<!-- > -->
+<!-- v -->
 
 ## Notifications
 
@@ -197,7 +219,6 @@ Function that gets called.
   self.view.backgroundColor = UIColor.purple       
 }
 ```
-Note: Observers need to be removed, or else you send a message to something that doesn't exist.
 
 <!-- > -->
 
@@ -212,6 +233,8 @@ Needs the name of the notification and the object that posts the notification.
 <!-- > -->
 
 ### Unsubscribing
+
+**Note:** Observers need to be removed, or else you send a message to something that doesn't exist.
 
 ```swift
 deinit {
@@ -235,30 +258,25 @@ Tips
 
 ## Pomodoro App
 
-Learn what the Pomodoro technique is: [go to video](https://youtu.be/V5l1NPYyH4k)
+1. Learn what the Pomodoro technique is: [go to video](https://youtu.be/V5l1NPYyH4k)
 
-Then download [this](https://github.com/amelinagzz/pom-starter) starter app that serves as a time tracker for the Pomodoro technique.
+2. Then follow the instruction in [this repo](https://github.com/amelinagzz/pom-starter).
 
-<!-- > -->
-
-Your task is to complete it by adding the functionality of buttons and the timer.
-
-Both use the **Target-Action** pattern. Then every time the user completes a cycle of 4 Pomodoros, use a **notification** to update the count in the initial screen.
-
-When the user leaves the timer screen they should see how many cycles they completed for the day.
+3. Submit your completed version to Gradescope.
 
 <!-- > -->
 
-## Lab - suggestions
+## Self Study - suggested resources
 
-- Complete classwork.
-- Keep working on the Giphy tutorial due tonight.
+- [Notification Center video by iOS Academy](https://www.youtube.com/watch?v=Kr3G9C22_-Q)
+- [Section on Selectors](https://learnappmaking.com/target-action-swift/#using-selectors-in-swift)
 
 <!-- > -->
 
 ## Additional Resources
 
 1. [Selector and extensions](https://medium.com/@abhimuralidharan/selectors-in-swift-a-better-approach-using-extensions-aa6b0416e850)
-1. [Target-Action](https://learnappmaking.com/target-action-swift)
+1. [Target- Action Apple Archives](https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)
+1. [Target-Action - article](https://learnappmaking.com/target-action-swift)
 1. [Notifications](https://learnappmaking.com/notification-center-how-to-swift/)
 1. [Notifications](https://medium.com/@dmytro.anokhin/notification-in-swift-d47f641282fa)

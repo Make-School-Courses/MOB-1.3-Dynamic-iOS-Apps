@@ -1,7 +1,7 @@
 - **[MOB 1.3 - Dynamic iOs Apps](README.md)**
 - **[Closures & Callbacks](Lessons/Lesson2/README.md)**
-- **[Protocols & Delegation](Lessons/Lesson3/README.md)**
 - **[Communication patterns](Lessons/Lesson4/README.md)**
+- **[Protocols & Delegation](Lessons/Lesson3/README.md)**
 - **[Memory Management](Lessons/Lesson5/README.md)**
 - **[JSON in iOS](Lessons/Lesson6/README.md)**
 - **[Codable Protocol](Lessons/Lesson6/README.md)**

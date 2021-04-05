@@ -38,8 +38,8 @@ Students by the end of the course will be able to ...
 |:-----:|:----------------------:|:---------------------------------------:|
 |  1 |  Tue, Mar 30               | [Closures and callbacks]               |
 |  2 |  Thu, Apr 1                | **No Class - Cesar Chavez**            |
-|  3 |  Tue, Apr 6                | [Protocols & Delegation]               |
-|  3 |  Thu, Apr 8                | [Communication patterns]               |
+|  3 |  Tue, Apr 6                | [Communication patterns]               |
+|  3 |  Thu, Apr 8                | [Protocols & Delegation]               |
 |  4 |  Tue, Apr 13               | [Memory Management]                    |
 |  5 |  Thu, Apr 15               | [JSON in iOS]                          |
 |  6 |  Tue, Apr 20               | [Codable Protocol]                     |
