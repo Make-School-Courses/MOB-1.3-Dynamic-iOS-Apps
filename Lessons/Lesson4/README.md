@@ -10,7 +10,7 @@
 
 <!-- > -->
 
-# Why you should know this
+## Why you should know this
 
 If we think about how apps work, we can see they're usually multiple screens displaying or passing information.
 
@@ -32,24 +32,22 @@ Target-Action is a **design pattern** in which an object holds the information n
 
 It's the pattern used to send messages in response to user-interface events, specifically from **UIControl**.
 
-<!-- > -->
+<!-- v -->
 
 ### Simplifying things
 
 The Target-Action object has:
 
-1. Target - The object that will be notified
-2. Action - The method that will be used
-3. Event that will trigger the Target-Action
+1. **Target** - The object that will be notified
+2. **Action** - The method that will be used
+3. **Event** that will trigger the Target-Action
 
-<!-- > -->
-
-### An example: Buttons.
+<!-- v -->
 
 <img src="https://developer.apple.com/library/archive/documentation/General/Conceptual/Devpedia-CocoaApp/Art/target_action.jpg">
 
 <aside class="notes">
-Buttons send a message when they have been tapped.
+Buttons are an example of this pattern, they send a message when they have been tapped.
 
 If the target is specified then the action message, it is sent to the object.
 </aside>
@@ -58,17 +56,18 @@ If the target is specified then the action message, it is sent to the object.
 
 ### What are selectors?
 
-**Unrecognized selector sent to instance**<br>
+**Unrecognized selector sent to instance**
+
 Wave you ever seen this error in which the app crashes?<br>
 What was the problem?
 
 <!-- > -->
 
-A: Xcode couldn't find the method being called.
+**A:** Xcode couldn't find the method being called 😰
 
 <!-- > -->
 
-Selectors are the names of methods used to execute code at runtime. They are the way of telling objects, like buttons, "When tapped, send **this** message to **this** object".
+Selectors are the **names of methods** used to execute code at runtime.
 
 The name of the method that will be called and the object to send the message to are **not known until runtime**.
 
@@ -139,21 +138,9 @@ Something to note is that the messages sent can't carry custom information. Whic
 
 ## Passing arguments in the target action
 
-There are times when we need to pass more arguments to a method call when tapping buttons. We know the target-action pattern can at most include the sender as a parameter.
+[CustomButton Replit](https://replit.com/team/MOB13/TargetAction)
 
-One workaround is the use of **tags** in UIButtons. But there are other options. We could subclass `UIButton` and include any parameters we need there.
-
-<!-- > -->
-
-## Activity - Experimenting with UIButton
-
-**Try this:**
-
-1. Subclass UIButton
-2. Add an array of Strings as a property
-
-<!-- v -->
-
+<!--
 ```swift
 class CustomButton: UIButton{
     var arrayValues: [String]!
@@ -163,22 +150,17 @@ class CustomButton: UIButton{
     }
 }
 ```
+-->
 
-<!-- v -->
+<!-- > -->
 
-4. Create a UIButton and use Target-Action to fire a method when tapped.
-5. Include parameters in the button's array
-6. Print these values when the method is called.
-
-<!-- v -->
-
-## Notifications
+## Notifications 📣
 
 Notifications can broadcast messages between relatively unrelated parts of your code. They use the **Observer pattern** to inform registered observers when a notification comes in, using a central dispatcher called `Notification Center`.
 
 The Notification Center deals with registering observers and delivering notifications.
 
-<!-- > -->
+<!-- v -->
 
 Notifications can  include a payload in form of their property called `userInfo`, which is a dictionary.
 
@@ -201,12 +183,19 @@ Has 3 components
 
 ### Registering for notifications
 
+This adds an entry to the Notification Center.
+
 ```swift
 print("Added Observer")
-NotificationCenter.default.addObserver(self, selector: #selector(receivedNotification(_:)), name: Notification.Name("receivedNotification"), object: nil)
+NotificationCenter.default.addObserver(self,
+  selector: #selector(receivedNotification(_:)),
+  name: Notification.Name("receivedNotification"),
+  object: nil)
 ```
 
-This adds an entry to the Notification Center. Every app has a default notification center property where objects register or post notifications. In this example 'self' will be listening for notifications with name 'receivedNotification' and when that event happens, the function 'receivedNotification' will be called.
+<aside class="notes>
+Every app has a default notification center property where objects register or post notifications. In this example 'self' will be listening for notifications with name 'receivedNotification' and when that event happens, the function 'receivedNotification' will be called.
+</aside>
 
 <!-- > -->
 
@@ -224,25 +213,36 @@ Function that gets called.
 
 ### Posting notifications
 
+Needs the name of the notification and the object that posts the notification.
+
 ```Swift
 print("Post Notification")
-NotificationCenter.default.post(name: Notification.Name("receivedNotification"), object: self)
+NotificationCenter.default.post(
+  name: Notification.Name("receivedNotification"),
+  object: self)
 ```
-Needs the name of the notification and the object that posts the notification.
 
 <!-- > -->
 
 ### Unsubscribing
 
-**Note:** Observers need to be removed, or else you send a message to something that doesn't exist.
+⚠️ Observers need to be removed, or else you send a message to something that doesn't exist.
 
 ```swift
 deinit {
   print("Removed Observer")
-  NotificationCenter.default.removeObserver(self, name: Notification.Name("receivedNotification"), object: nil)
+  NotificationCenter.default.removeObserver(self,
+    name: Notification.Name("receivedNotification"),
+    object: nil)
 }
 ```
 *A deinitializer is called immediately before a class instance is deallocated. Swift automatically deallocates your instances when they are no longer needed, to free up resources.*
+
+<!-- > -->
+
+## Practice - Checking for understanding
+
+[Notifications syntax practice - Replit](https://replit.com/team/MOB13/NotificationCenter)
 
 <!-- > -->
 
@@ -260,7 +260,7 @@ Tips
 
 1. Learn what the Pomodoro technique is: [go to video](https://youtu.be/V5l1NPYyH4k)
 
-2. Then follow the instruction in [this repo](https://github.com/amelinagzz/pom-starter).
+2. Then follow the instructions in [this repo](https://github.com/amelinagzz/pom-starter).
 
 3. Submit your completed version to Gradescope.
 
