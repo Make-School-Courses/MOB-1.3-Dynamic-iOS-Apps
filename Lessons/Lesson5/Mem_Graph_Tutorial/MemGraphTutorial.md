@@ -6,19 +6,16 @@ At the end of this tutorial, you should be able to...
 1. Identify and resolve a memory leak caused by a *strong reference* cycle (aka, retain cycle)
 3. Demonstrate proficiency in using the Debug Memory Graph Tool to find and fix a memory leak caused by a retain cycle
 
-## Steps to Finding and Resolving The Memory Leaks
+## Steps to Find and Resolve Memory Leaks
 
 ### Identify A Memory Leaky
 
-**Requirement:** LeakyStarship App
+**Requirement:** [LeakyStarship App](https://github.com/VanderDev1/LeakyStarship)
 
-1. Ensure that the active scheme in your Xcode project is set to Debug:
 
-<!-- TODO: screen shot here -->
+1. Run the LeakyStarship starter app and click the button two or three times…
 
-2. Run the LeakyStarship starter app and click the button two or three times…
-
-3. In the Debug area, click the Debug Memory Graph button on the Debug Toolbar:
+2. In the Debug area, click the Debug Memory Graph button on the Debug Toolbar:
 
 ![syntax](assets/MemoryGraphDebug-Button.png)
 
@@ -33,7 +30,7 @@ Let’s observe what occurs in Xcode:
 
 ![syntax](assets/purple_square.png)
 
-4. Now, let’s focus the Debug Navigator on only those objects in memory causing memory leaks:
+3. Now, let’s focus the Debug Navigator on only those objects in memory causing memory leaks:
 at the bottom right of the Navigator pane, click the little rectangular “Show only leaked blocks” icon
 
 ![syntax](assets/2nd_mem_graph_pic.png)
@@ -47,7 +44,7 @@ Let’s examine the source of one of the memory leaks caused by strong reference
 
 For now, let’s focus only on the leaks in CrewMember objects.
 
-5. In the Debug Navigator panel, select the CrewMember object you want to examine. If open, close the Assistant Editor and minimize the Debug area to maximize your view of your CrewMember object’s memory graph in Xcode’s middle panel.
+4. In the Debug Navigator panel, select the CrewMember object you want to examine. If open, close the Assistant Editor and minimize the Debug area to maximize your view of your CrewMember object’s memory graph in Xcode’s middle panel.
 
 ![syntax](assets/3rd_mem_graph_pic.png)
 
@@ -57,9 +54,9 @@ For now, let’s focus only on the leaks in CrewMember objects.
 
 ### Fixing The Leak
 
-6. Ctrl+Click (or Right+Click) one of the CrewMember object cubes in the memory graph.
+5. Ctrl+Click (or Right+Click) one of the CrewMember object cubes in the memory graph.
 
-7. The context menu displayed offers several useful choices. Choose the `Jump to Definition` option in the dropdown list.
+6. The context menu displayed offers several useful choices. Choose the `Jump to Definition` option in the dropdown list.
 
 Xcode should open your CrewMember class file:
 
@@ -89,8 +86,11 @@ class CrewMember
 **TODO:**
 - Apply your solution.
 - Run the app again and bring up the Memory Graph Debug tool.
-- Be prepared to explain the effect of your solution on all reference type instances which were causing memory leaks in the original state of the app.
+- You should be able to explain the effect of your solution on all reference type instances which were causing memory leaks in the original state of the app.
 
+## When you are done:
+
+- Take a screenshot of the Memory Graph Debug tool without the memory leaks. Send it to the instructor over Slack.
 
 ## FEEDBACK AND REVIEW
 
