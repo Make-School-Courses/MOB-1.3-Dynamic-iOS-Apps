@@ -157,11 +157,11 @@ public typealias Codable = Encodable & Decodable
 
 <!-- > -->
 
-## Codable example
-
 [Example - Repl.it](https://replit.com/@AdrianaGonzale2/Codable)
 
 <!-- > -->
+
+## Benefits
 
 **Universality** <br>
 Should work with structs, enums and classes.
