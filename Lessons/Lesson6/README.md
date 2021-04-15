@@ -4,7 +4,7 @@
 
 <!-- .slide: class="header" -->
 
-# JSON and Swift
+# JSON and the Codable Protocol
 
 ## [Slides](https://make-school-courses.github.io/MOB-1.3-Dynamic-iOS-Apps/Slides/Lesson6/README.html ':ignore')
 
@@ -14,16 +14,16 @@
 
 Many applications receive information from a server. It doesn't matter how the implementation of handling the data happens, there's a **standard format** that can be recognized by every client app.
 
-Years ago, **XML**(1996) was widely used for this purpose. Recently **JSON**(2002) has become the most popular format for transmitting data over the web.
+Years ago, **XML**(1996) was widely used for this purpose. Since 2002 **JSON** has been the most popular format for transmitting data over the web.
 
 <!-- > -->
 
 ## Learning Objectives
 
-1. Identify JSON structures and create your own
-1. Reading data from a file
-1. Encoding/Decoding a JSON file
-1. Turning data into objects using the Codable protocol
+1. **Identify JSON** structures and create your own
+1. **Read data** from a file
+1. **Encoding/Decoding** a JSON file with JSONSerialization
+1. **Encoding/Decoding** a JSON file with the Codable protocol
 
 <!-- > -->
 
@@ -66,7 +66,7 @@ Numbers are regular numbers like any language.
 
 <!-- > -->
 
-In the end, JSON is a way of communicating using very specific rules that every entity involved can agree on.
+In the end, JSON is a way of communicating using very specific rules that every entity involved can agree on. 🌎
 
 <!-- > -->
 
@@ -93,7 +93,7 @@ In the end, JSON is a way of communicating using very specific rules that every 
 
 Without using a format validator, create your own JSON file to represent a list of festivals. Include two festival entries. They do not have to be real.
 
-Consider you have this structs as reference:
+Consider you have these structs as reference:
 
 ```Swift
 struct Participant{
@@ -127,29 +127,25 @@ After you are done writing the structure use the [JSON validator](https://jsonfo
 
 <!-- > -->
 
-## Film Locations activity 🎬
-
-Follow [this guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson6/assignments/FilmLocations.md) to learn how to parse JSON and use it in an Xcode project.
-
-<!-- > -->
-
 ## Encoding and Decoding
 
 ![encode](assets/encode.jpg)
 
 <aside class = "notes">
-“Serializing a program’s internal data structures into some kind of data interchange format and vice versa is one of the most common programming tasks. Swift calls these operations encoding and decoding. One of the headline features of Swift 4 is a standardized design for encoding and decoding data that all custom types can opt into.”
+“Serializing a program’s internal data structures into some kind of data interchange format and vice versa is one of the most common programming tasks. Swift calls these operations encoding and decoding.”
 
 Excerpt From: Chris Eidhof. “Advanced Swift.”
 </aside>
 
 <!-- > -->
 
-What did we just do in the Film Locations project?
+## JSON Serialization
 
-<!--decoded data into JSON-->
+[Example - Replit](https://replit.com/join/dptpiexq-adrianagonzale2)
 
 <!-- > -->
+
+## Codable Protocol
 
 Types conform to the **Encodable** and/or **Decodable** protocols to state their ability to encode themselves and to create an instance from data.
 
@@ -161,13 +157,19 @@ public typealias Codable = Encodable & Decodable
 
 <!-- > -->
 
-#### Universality
+## Codable example
+
+[Example - Repl.it](https://replit.com/@AdrianaGonzale2/Codable)
+
+<!-- > -->
+
+**Universality** <br>
 Should work with structs, enums and classes.
 
-#### Type safety
+**Type safety** <br>
 JSON is often weakly typed, but we're working with Swift so our code works with strongly typed data structures.
 
-#### Reducing boilerplate
+**Reducing boilerplate** <br>
 Writing less code, while the compiler generates what we need automatically.
 
 <!-- > -->
@@ -175,15 +177,9 @@ Writing less code, while the compiler generates what we need automatically.
 When we have a value that conforms to the Codable protocol we can:
 
 - Create an **encoder** to serialize the value into JSON. (**JSONEncoder** is built-in in Swift)
-- Create a **decoder** that takes the serialized data and turns it into an instance of the original type. . (**JSONDecoder** is built-in in Swift)
+- Create a **decoder** that takes the serialized data and turns it into an instance of the original type. (**JSONDecoder** is built-in in Swift)
 
 Error handling is important during decoding. Many things can go wrong (missing fields, type mismatches, corrupted data, etc.)
-
-<!-- > -->
-
-## Example
-
-Observe how encoding/decoding works in [this example](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson6/assignments/example.md)
 
 <!-- > -->
 
@@ -195,12 +191,6 @@ We can control how a type encodes itself by writing a custom CodingKeys enum.
 
 <!-- > -->
 
-## Using the Codable Protocol
-
-Follow [this guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson6/assignments/Codable.md) to practice how to use the Codable protocol.
-
-<!-- > -->
-
 ## Generating structs
 
 This time we created our structs from scratch to understand where everything comes from.
@@ -209,9 +199,19 @@ In the future, if you are given the JSON data to review it first, you can genera
 
 [quicktype.io](https://app.quicktype.io)
 
-Try pasting the `locations.json` content in there and compare your implementation with the autogenerated one. It can definitely serve as a starting point 😉
+It can definitely serve as a starting point in the future. 😉
 
 <!-- > -->
+
+## Film Locations activity 🎬
+
+**Part 1:** Follow [this guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson6/assignments/FilmLocations.md) to practice how to parse JSON and use it in an Xcode project using JSONSerialization.
+
+**Part 2:** Follow [this guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson6/assignments/Codable.md) to practice how to use the Codable protocol.
+
+<!-- > -->
+
+<!--
 
 ## Lab time
 
@@ -221,7 +221,7 @@ Take your JSON file from the beginning of the class where you outlined festivals
 
 Start practicing your estimates 😮 and try timing yourself.
 
-<!-- > -->
+-->
 
 ## Practice questions
 

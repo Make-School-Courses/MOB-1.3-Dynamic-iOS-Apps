@@ -41,8 +41,8 @@ Students by the end of the course will be able to ...
 |  3 |  Tue, Apr 6                | [Communication patterns]               |
 |  3 |  Thu, Apr 8                | [Protocols & Delegation]               |
 |  4 |  Tue, Apr 13               | [Memory Management]                    |
-|  5 |  Thu, Apr 15               | [JSON in iOS]                          |
-|  6 |  Tue, Apr 20               | [Codable Protocol]                     |
+|  5 |  Thu, Apr 15               | [JSON and the Codable Protocol]        |
+|  6 |  Tue, Apr 20               | Lab - Review & Questions               |
 |  7 |  Thu, Apr 22               | [URLSession]                           |
 |  8 |  Tue, Apr 27               | [Authentication]                       |
 |  9 |  Thu, Apr 29               | [Intro final project + Generics]       |
@@ -55,8 +55,7 @@ Students by the end of the course will be able to ...
 [Protocols & Delegation]: Lessons/Lesson3/README.md
 [Communication patterns]: Lessons/Lesson4/README.md
 [Memory Management]: Lessons/Lesson5/README.md
-[JSON in iOS]: Lessons/Lesson6/README.md
-[Codable Protocol]: Lessons/Lesson6/README.md
+[JSON and the Codable Protocol]: Lessons/Lesson6/README.md
 [URLSession]: Lessons/Lesson7/README.md
 [Authentication]: Lessons/Lesson8/README.md
 [Building a networking layer Pt 1]: Lessons/Lesson9/README.md
@@ -71,8 +70,8 @@ Students by the end of the course will be able to ...
 |         Name                 |   Type    | Date Assigned |   Due Date   |
 |:----------------------------:|:---------:|:-------------:|:------------:|
 | [Pomodoro App]               | In-class  |  Apr 5        |   Apr 12  |
-| [Product Hunt tutorial]      | Tutorial  |  Apr 12       |   Apr 19  |
-| [Pokemon assignment]         | In-class  |  Apr 19       |   Apr 26  |
+| [Product Hunt tutorial]      | Tutorial  |  Apr 15       |   Apr 20  |
+| [Pokemon assignment]         | In-class  |  Apr 22       |   Apr 26  |
 | [Moviefy App]                | Tutorial  |  Apr 28       |   Apr 28  |
 | [Final Project]              | Project   |  Apr 26       |   May 12  |
 
