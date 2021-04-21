@@ -70,9 +70,9 @@ Students by the end of the course will be able to ...
 |         Name                 |   Type    | Date Assigned |   Due Date   |
 |:----------------------------:|:---------:|:-------------:|:------------:|
 | [Pomodoro App]               | In-class  |  Apr 5        |   Apr 12  |
-| [Product Hunt tutorial]      | Tutorial  |  Apr 15       |   Apr 20  |
-| [Pokemon assignment]         | In-class  |  Apr 22       |   Apr 26  |
-| [Moviefy App]                | Tutorial  |  Apr 28       |   Apr 28  |
+| [Product Hunt tutorial]      | Tutorial  |  Apr 21       |   Apr 26  |
+| [Pokemon assignment]         | In-class  |  Apr 22       |   Apr 28  |
+| [Moviefy App]                | Tutorial  |  Apr 28       |   May 6   |
 | [Final Project]              | Project   |  Apr 26       |   May 12  |
 
 [Pomodoro App]:(https://github.com/amelinagzz/pom-starter)
