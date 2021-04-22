@@ -157,13 +157,13 @@ Except for handling the response, this code snippet depicts the complete set of 
     }
 ```
 
-<!-- > -->
+<!--
 
 ## NASA's picture of the day 🪐
 
 Follow instructions [here](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/nasa.md).
 
-<!-- > -->
+-->
 
 
 ### Validate the Response
@@ -247,16 +247,16 @@ guard let mime = response?.mimeType, mime == "application/json" else {
 <!-- > -->
 
 
-## HW assignment (lab suggestion)
+## HW assignment
 
-[Practicing requests with the Pokemon API](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md)
+[Practicing requests with the Pokemon API + UI](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md)
 
 <!-- > -->
 
 ## Interview question
 
 1. `URLSession` objects are *asynchronous.* Research what that means and be able to answer the following question:
-- Why did we need to add the following call to `main.async` when presenting the image in **Activity 1**:
+- Why do we need to add the following call to `main.async` when presenting an image from a network call:
 
 ```swift
 DispatchQueue.main.async {

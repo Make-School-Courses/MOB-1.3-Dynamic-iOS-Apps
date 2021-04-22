@@ -1,6 +1,6 @@
 # Jigsaw - making a request 🧩
 
-- Class will be divided into two groups.
+- Class will be divided into groups.
 - Depending on how many members, choose one or two of the following links, making sure all the links are taken.
 
 - [Link 1](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/request/handle.md)
@@ -15,20 +15,10 @@
 
 - Each member will write their step as they explain the importance of it and what it is doing.
 
-- You will make a network call to fetch a To-do item using the tool [JSONPlaceholder](https://jsonplaceholder.typicode.com)
+- You will make a network call to fetch the information for the Pokemon of your choice, using the [Pokemon API](https://pokeapi.co)
 
 - When you are done, someone try the code in a playground to see if it works.
 
-You should see something like this in the console:
+- Use Decodable to parse the data into a struct to print out just the name and id of the Pokemon.
 
-```swift
-{
-    completed = 0;
-    id = 1;
-    title = "delectus aut autem";
-    userId = 1;
-}
-
-
-```
 - Share the codeshare link with the instructor (send it over slack).

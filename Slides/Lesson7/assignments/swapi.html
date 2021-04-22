@@ -25,23 +25,23 @@ Resources needed:
 
 ## PART 1
 
-Use the DailyPlanet app as a "canvas" to practice deserializing JSON from an HTTP request:
-
-- Create and call a new function that fetches data from the Pokemon API to fetch a list of Pokemon. This is the endpoint: endpoint: /pokemon
+- Create and call a function that fetches data from the Pokemon API to fetch a list of Pokemon. This is the endpoint: `/pokemon`
 - In your data tasks' completion handler, **convert** the returned `data` object to JSON, and **print** your converted `jsonObject` to the debug console.
 - Use a Pokemon struct that conforms to the Codable protocol (it will only have two properties at this point: name and url)
 - Handle the HTTP `error` object returned and any other validation you want to include (status, data, etc.)
 
 ## PART 2
 
-**Create A Paginating Table View App with JSON Data:**
-
-Create a **table view** app with **pagination** that:
-- Uses a cell to present the name of the pokemon from the JSON response returned
+Create a **table view** that supports **pagination**:
+- Uses a cell to present the name of the Pokemon from the JSON response returned
 - When scrolled to the end of the currently available data, the app must fetch new data to enable pagination.
 - Check the section "Resource lists and pagination" straight from the docs: https://pokeapi.co/docs/v2.html/
 In the end you will have a table view that keeps on getting new data for Pokemon as you reach the end of the scroll.
 
+## PART 3
+
+- Besides just showing the name of the Pokemon, include their picture in the cell.
+- Use this library to load pictures: [Kingfisher](https://github.com/onevcat/Kingfisher)
 
 ## Example implementations
 
@@ -59,7 +59,7 @@ In the end you will have a table view that keeps on getting new data for Pokemon
 
 #### Alternative API: https://swapi.dev
 
-The original assignment used the Star Wars API. If you prefer to use this one instead of the Pokemon API you can do so.
+If you don't feel like fetching Pokemon, use the Star Wars API.
 
 - Using the /people/ endpoint
 - Use a cell to present the "name" and 1 other property/items (i.e.. "height") from the JSON response returned

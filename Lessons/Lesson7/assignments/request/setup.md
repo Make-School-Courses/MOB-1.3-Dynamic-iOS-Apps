@@ -22,6 +22,4 @@ There are various constructor signatures available for creating `URLRequest` obj
 let request = URLRequest(url: url!)
 ```
 
-**When you contribute in the making of the request, share: Are there other initializers for the URLRequest? What's another option?**
-
 <!-- > -->
