@@ -44,11 +44,11 @@ Students by the end of the course will be able to ...
 |  5 |  Thu, Apr 15               | [JSON and the Codable Protocol]        |
 |  6 |  Tue, Apr 20               | Lab - Review & Questions               |
 |  7 |  Thu, Apr 22               | [URLSession]                           |
-|  8 |  Tue, Apr 27               | [Authentication]                       |
-|  9 |  Thu, Apr 29               | [Intro final project + Generics]       |
+|  8 |  Tue, Apr 27               | Pokedex solution                       |
+|  9 |  Thu, Apr 29               | [Authentication]                       |
 | 10 |  Tue, May 4                | [Building a networking layer Pt 1]     |
 | 11 |  Thu, May 6                | [Building a networking layer Pt 2]     |
-| 12 |  Tue, May 11               | [Firebase]                             |
+| 12 |  Tue, May 11               | [Generics] + [Firebase]                |
 | 13 |  Thu, May 13               | Lab + Final Exam - [study guide]       |  
 
 [Closures and callbacks]: Lessons/Lesson2/README.md
@@ -61,7 +61,7 @@ Students by the end of the course will be able to ...
 [Building a networking layer Pt 1]: Lessons/Lesson9/README.md
 [Building a networking layer Pt 2]: Lessons/Lesson10/README.md
 [Testing]: Lessons/Lesson12/README.md
-[Intro final project + Generics]: Lessons/Lab/README.md
+[Generics]: Lessons/Lab/README.md
 [Firebase]: Lessons/Lesson13/README.md
 [study guide]: https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/StudyGuide.md
 
@@ -71,12 +71,12 @@ Students by the end of the course will be able to ...
 |:----------------------------:|:---------:|:-------------:|:------------:|
 | [Pomodoro App]               | In-class  |  Apr 5        |   Apr 12  |
 | [Product Hunt tutorial]      | Tutorial  |  Apr 21       |   Apr 26  |
-| [Pokemon assignment]         | In-class  |  Apr 22       |   Apr 28  |
+| [Pokedex assignment]         | In-class  |  Apr 22       |   Apr 28  |
 | [Moviefy App]                | Tutorial  |  Apr 28       |   May 6   |
 | [Final Project]              | Project   |  Apr 26       |   May 12  |
 
 [Pomodoro App]:(https://github.com/amelinagzz/pom-starter)
-[Pokemon assignment]:https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md
+[Pokedex assignment]:https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md
 [Product Hunt Tutorial]:https://www.makeschool.com/academy/track/product-hunt-api-tutorial
 [Moviefy App]:()
 [Final project]:(Projects/FinalProject.md)
