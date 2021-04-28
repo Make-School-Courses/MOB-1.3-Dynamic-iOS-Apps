@@ -44,7 +44,7 @@ Students by the end of the course will be able to ...
 |  5 |  Thu, Apr 15               | [JSON and the Codable Protocol]        |
 |  6 |  Tue, Apr 20               | Lab - Review & Questions               |
 |  7 |  Thu, Apr 22               | [URLSession]                           |
-|  8 |  Tue, Apr 27               | Pokedex solution                       |
+|  8 |  Tue, Apr 27               | [Pokedex solution]                     |
 |  9 |  Thu, Apr 29               | [Authentication]                       |
 | 10 |  Tue, May 4                | [Building a networking layer Pt 1]     |
 | 11 |  Thu, May 6                | [Building a networking layer Pt 2]     |
@@ -64,6 +64,7 @@ Students by the end of the course will be able to ...
 [Generics]: Lessons/Lab/README.md
 [Firebase]: Lessons/Lesson13/README.md
 [study guide]: https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/StudyGuide.md
+[Pokedex solution]: https://youtu.be/uddx-IrIHV8
 
 ## Tutorials + Assignments Schedule
 
