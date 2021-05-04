@@ -79,7 +79,7 @@ Students by the end of the course will be able to ...
 [Pomodoro App]:(https://github.com/amelinagzz/pom-starter)
 [Pokedex assignment]:https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md
 [Product Hunt Tutorial]:https://www.makeschool.com/academy/track/product-hunt-api-tutorial
-[Moviefy App]:()
+[Moviefy App]:(https://www.makeschool.com/mediabook/oa/tutorials/moviefy-app-004/getting-started/)
 [Final project]:(Projects/FinalProject.md)
 
 ## Final project
