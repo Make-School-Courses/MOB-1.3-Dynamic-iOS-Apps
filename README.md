@@ -47,9 +47,9 @@ Students by the end of the course will be able to ...
 |  8 |  Tue, Apr 27               | [Pokedex solution]                     |
 |  9 |  Thu, Apr 29               | [Authentication]                       |
 | 10 |  Tue, May 4                | [Building a networking layer Pt 1]     |
-| 11 |  Thu, May 6                | [Building a networking layer Pt 2]     |
-| 12 |  Tue, May 11               | [Generics] + [Firebase]                |
-| 13 |  Thu, May 13               | Lab + Final Exam - [study guide]       |  
+| 11 |  Thu, May 6                | [Generics]                             |
+| 12 |  Tue, May 11               | [Building a networking layer Pt 2] + [Firebase]|
+| 13 |  Thu, May 13               | Final Exam - [study guide]       |  
 
 [Closures and callbacks]: Lessons/Lesson2/README.md
 [Protocols & Delegation]: Lessons/Lesson3/README.md
@@ -61,7 +61,7 @@ Students by the end of the course will be able to ...
 [Building a networking layer Pt 1]: Lessons/Lesson9/README.md
 [Building a networking layer Pt 2]: Lessons/Lesson10/README.md
 [Testing]: Lessons/Lesson12/README.md
-[Generics]: Lessons/Lab/README.md
+[Generics]: Lessons/Generics/README.md
 [Firebase]: Lessons/Lesson13/README.md
 [study guide]: https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/StudyGuide.md
 [Pokedex solution]: https://youtu.be/uddx-IrIHV8
@@ -73,14 +73,17 @@ Students by the end of the course will be able to ...
 | [Pomodoro App]               | In-class  |  Apr 5        |   Apr 12  |
 | [Product Hunt tutorial]      | Tutorial  |  Apr 21       |   Apr 26  |
 | [Pokedex assignment]         | In-class  |  Apr 22       |   Apr 28  |
-| [Moviefy App]                | Tutorial  |  Apr 28       |   May 6   |
+| [Moviefy App]                | Tutorial/Project  |  May 4       |   May 12   |
+
+<!--
 | [Final Project]              | Project   |  Apr 26       |   May 12  |
+-->
 
 [Pomodoro App]:(https://github.com/amelinagzz/pom-starter)
 [Pokedex assignment]:https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson7/assignments/swapi.md
 [Product Hunt Tutorial]:https://www.makeschool.com/academy/track/product-hunt-api-tutorial
 [Moviefy App]:https://www.makeschool.com/mediabook/oa/tutorials/moviefy-app-004/getting-started/
-[Final project]: Projects/FinalProject.md
+<!-- [Final project]: Projects/FinalProject.md -->
 
 ## Final project
 
@@ -103,6 +106,7 @@ To pass this course you must meet the following requirements:
 
 - An [extra class](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson11/Lesson11.md) on Sockets with a tutorial.
 - [Tutorial for Closures & ARC](https://github.com/MakeSchool-Tutorials/Functions-Closures-and-ARC)
+
 ##  Information Resources
 
 Any additional resources you may need (online books, etc.) can be found here. You can also find additional resources through the library linked below:

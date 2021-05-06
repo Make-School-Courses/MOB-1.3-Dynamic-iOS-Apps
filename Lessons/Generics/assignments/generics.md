@@ -9,7 +9,7 @@ enum PetKind{
 }
 ```
 
-We also want to model employees  who look after the pets.
+We also want to model employees who look after the pets.
 
 ```swift
 struct KeeperKind {
@@ -24,9 +24,9 @@ let catKeeper = KeeperKind(keeperOf: .cat)
 let dogKeeper = KeeperKind(keeperOf: .dog)
 ```
 
-This works by changing the value of the types. If we add more animals to the store we can keep creating different type of keepers.
+This works by changing the value of the `PetKind` enum. If we add more animals to the store we can keep creating different type of keepers as well.
 
-Now suppose that instead of defining a single type PetKind that represents all kinds of pets, you chose to define a distinct type for every kind of pet you sell. This is common if you’re working in an OOP style, where you model the pets’ behaviors with different methods for each pet.
+Now suppose that for each kind of pet you want to model their behavior. At this point we realize that enums might not be enough, and we decide to use classes instead.
 
 Then you would have something like this:
 
@@ -46,7 +46,7 @@ Soon this becomes a problem since you would need to create a keeper class for ea
 
 We want a way to declare a relationship in which every possible pet type implies the existence of a corresponding keeper type. But we don't want to do this manually.
 
-**Generics provide a mechanism for using one set of types to define a new set of types.**
+**Generics provide a mechanism for using one set of types to define a new set of types.** 🤯
 
 We can create a generic type for keepers:
 
@@ -54,19 +54,17 @@ We can create a generic type for keepers:
 class Keeper<Animal> {}
 ```
 
-And this automatically implies that we can use it to create keepers for every animal.
+This automatically implies that we can use it to create keepers for every animal.
 
 ```swift
 var catKeeper = Keeper<Cat>()
 ```
 
-`Keeper` is the name of a generic type. It works as a template to create real **concrete types**.
+`Keeper` is the name of a **generic type**. It works as a template to create real **concrete types**.
 
-In order to define a generic type like `Keeper<Animal>` you  need to choose the name of the generic type and of the type parameter. The name of the type parameter should clarify the relationship between the type parameter and the generic type. You’ll encounter names like T (short for Type) from time to time, but these names should be avoided when the type parameter has a clear role such as Animal.
+In order to define a generic type like `Keeper<Animal>` you  need to choose the name of the generic type and of the type parameter. The name of the type parameter should clarify the relationship between the type parameter and the generic type. You’ll encounter names like T (short for Type) from time to time, but these names should be avoided when the type parameter has a clear role such as `Animal`.
 
-The generic type `Keeper<Animal>` defines a family of new types. Every new concrete type for different animals become specializations, all of them implied by all the possible types that can be created.
-
-We want to keep a better track of animals and their keepers. Place the following code in a playground :
+So back to the problem, we want to keep a better track of animals and their keepers. You'll find the following code in `main.swift` :
 
 ```swift
 class Cat {
@@ -96,7 +94,7 @@ class Keeper<Animal> {
 
 Suppose every keeper is responsible for one animal in the morning and another in the afternoon. You can express this by adding properties for the morning and afternoon animals. These animals will be the same type.
 
-Update the Keeper class:
+Update the Keeper class to look like this:
 
 ```swift
 class Keeper<Animal> {
@@ -112,21 +110,22 @@ class Keeper<Animal> {
 }
 ```
 
-Now when you instantiate a Keeper, Swift will make sure, at compile time, that the morning and afternoon types are the same.
+Now, when you instantiate a Keeper, Swift will make sure at compile time, that the morning and afternoon types are the same.
+
+Add the following to `main.swift` and check out the type for `kim` in the console.
 
 ```swift
-let kim = Keeper(name: "Kim",
-                   morningCare: Cat(name: "Arlo"),
-                   afternoonCare: Cat(name: "Nova"))
+let kim = Keeper(name: "Kim", morningCare: Cat(name: "Arlo"), afternoonCare: Cat(name: "Nova"))
+print(kim)
 ```
 
-And guess what, Swift knows the type of kim should be Keeper<Cat> 🐱
+What's the type for `kim`?
 
 ## Challenges
 
-- Try instantiating another Keeper but this time for dogs.
-- What do you think would happen if you tried to instantiate a Keeper with a dog in the morning and a cat in the afternoon?
-- What happens if you try to instantiate a Keeper, but for strings?
+- Instantiate another Keeper but this time for dogs.
+- What do you think would happen if you tried to instantiate a Keeper with a dog in the morning and a cat in the afternoon? How would you fixthe current code to suppor this?
+
 
 ## Swift challenge
 
