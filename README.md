@@ -88,7 +88,7 @@ Students by the end of the course will be able to ...
 ## Final project
 
 Individual project covering core concepts from this course.
-- [Final project](Projects/FinalProject.md)
+- [Final project](Projects/MoviefyExtended.md)
 
 ## Evaluation
 
