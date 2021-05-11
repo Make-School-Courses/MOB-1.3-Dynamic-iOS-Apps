@@ -20,11 +20,19 @@ At the end of this class, you should be able to...
 
 <!-- > -->
 
-## HTTP Post Requests
+## POST vs GET
 
-To add a new item to a web service, we use the HTTP protocol's **POST method.**
+What's the difference between a POST and a GET request? 🤔
+
+<!-- > -->
+
+## POST requests
+
+To make a change in the server side (create, update, delete), we use the HTTP protocol's **POST method.**
 
 Implementing a POST request is a bit like performing a GET request, except that for a POST you will need to supply additional parameters to the `URLRequest` object.
+
+<!-- > -->
 
 Commonly required parameters include:
 
@@ -62,9 +70,9 @@ Since we are performing a POST here, we will set the httpMethod property to `url
 
 ### Specify Headers
 
-Next, use the URLRequest `setValue(_:forHTTPHeaderField:)` method to set the values of any HTTP headers you want to provide (except the `Content-Length` header.
+Next, use the URLRequest `setValue(_:forHTTPHeaderField:)` method to set the values of any HTTP headers you want to provide except the `Content-Length` header.
 
-The session automatically figures out content length  from the size of your data).
+The session automatically figures out content length  from the size of your data.
 
 <!-- > -->
 
@@ -106,21 +114,18 @@ A valid API Key is commonly required for the "Authorization" header field:
 
 ### Step 3: Convert Data to JSON Format
 
-To convert our data object to the JSON format, we will use a built-in function of `JSONSerialization:`
+ `JSONSerialization`
 
  ```Swift
  JSONSerialization.data(withJSONObject obj: Any, options opt: JSONSerialization.WritingOptions = []) throws
 ```
 
-<!-- > -->
-
-*What exactly does this function do?* Here is a brief excerpt from Apple's description:
-
-*Generate JSON data from a Foundation object. If the object will not produce valid JSON then an exception will be thrown. Setting the NSJSONWritingPrettyPrinted option will generate JSON with whitespace designed to make the output more readable. If that option is not set, the most compact possible JSON will be generated. If an error occurs, the error parameter will be set and the return value will be nil...*
+`Codable`
+Mapping values to a specific type.
 
 <!-- > -->
 
-We convert our data into JSON, then include the converted JSON data into the httpBody of the URL request and handle any errors thrown.
+We convert our data into JSON, then include the converted JSON data into the **httpBody** of the URL request and handle any errors thrown.
 
 ```Swift
 let parameters: [String: Any] = ["foo": "bar", "numbers": [1, 2, 3, 4, 5]]
@@ -206,16 +211,16 @@ let parameters: [String: Any] = ["foo": "bar", "numbers": [1, 2, 3, 4, 5]]
 
 <!-- > -->
 
-## Warmup with requests
+## Warmup with POST requests
 
-Create a playground to do a post request like the previous example.
+Create a playground to do a POST request like the previous example.
 
-Use the [JSONPlaceholder API](https://jsonplaceholder.typicode.com), specifically their [TODOs simulation](https://jsonplaceholder.typicode.com/guide.html) to create a new entry to a TODO list.
+Use the [JSONPlaceholder API](https://jsonplaceholder.typicode.com). Make a POST request that creates a new entry in a TODO list.
 
 Your POST request should pass data for these parameters:
 - "userId"
 - "title"
--  "completed"
+- "completed"
 
 <!-- > -->
 
@@ -292,9 +297,7 @@ https://jsonplaceholder.typicode.com/todos/6
 
 ## Moviefy Pt. 2
 
-You'll collaborate in pairs to add authentication to the app.
-
-Follow [this guide](https://github.com/Make-School-Courses/MOB-1.3-Dynamic-iOS-Apps/blob/master/Lessons/Lesson10/assignments/moviefy-pt2.md).
+Complete the second part of the [Moviefy Tutorial](https://www.makeschool.com/mediabook/oa/tutorials/moviefy-app-004/getting-started/) that introduces authentication.
 
 <!-- > -->
 
