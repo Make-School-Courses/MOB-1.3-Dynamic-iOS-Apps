@@ -73,7 +73,7 @@ Students by the end of the course will be able to ...
 | [Pomodoro App]               | In-class  |  Apr 5        |   Apr 12  |
 | [Product Hunt tutorial]      | Tutorial  |  Apr 21       |   Apr 26  |
 | [Pokedex assignment]         | In-class  |  Apr 22       |   Apr 28  |
-| [Moviefy App]                | Tutorial/Project  |  May 4       |   May 12   |
+| [Moviefy App]                | Tutorial/Project  |  May 4       |   May 16   |
 
 <!--
 | [Final Project]              | Project   |  Apr 26       |   May 12  |
