@@ -4,7 +4,7 @@
 
 After completing the [Moviefy tutorial](https://www.makeschool.com/mediabook/oa/tutorials/moviefy-app-004/getting-started/), include the following requirements to show mastery of learning outcomes in this course.
 
-## Requirements not included in the tutorial
+## Requirements
 
 1. Display movies from another category or genre
 1. Handle login/logout flow with Access-Token
@@ -20,14 +20,14 @@ After completing the [Moviefy tutorial](https://www.makeschool.com/mediabook/oa/
 You must score at least 70 points to pass the assignment. Breakdown of points below:
 
 1. **(20 points):** Code quality: MVC structure, separation of concerns, naming conventions, styling.
-1. Movies screen
+2. Movies screen
   1. **(10 points):** Displaying movies for at least two categories
   1. **(5 points):** Using a collection view.
-1. Authentication
+3. Authentication
   1. **(10 points):** Users can authenticate with the TMDB API
   1. **(5 points):** Users can logout
-1. **(10 points):** App navigation working
-1. **(20 points):** Modular Networking layer
-1. **(5 points):** Handles JSON using at least Decodable Protocol
-1. **(5 points):** Use authenticated requests
-1. **(10 points):** Code on Github with a detailed README by the due date.
+4. **(10 points):** App navigation working
+5. **(20 points):** Modular Networking layer
+6. **(5 points):** Handles JSON using at least Decodable Protocol
+7. **(5 points):** Use authenticated requests
+8. **(10 points):** Code on Github with a detailed README by the due date.
